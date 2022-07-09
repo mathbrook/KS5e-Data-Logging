@@ -43,4 +43,3 @@ _The next steps are optional - only if you want to plot the result_
 
 ## Developer's Guide
 _Way too lazy to do right now, I'll get to it after comp hopefully_
-# KS5e-Data-Logging

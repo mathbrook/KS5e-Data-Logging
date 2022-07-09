@@ -178,7 +178,7 @@ def parse_ID_MC_CURRENT_INFORMATION(raw_message):
 
 def parse_ID_MC_VOLTAGE_INFORMATION(raw_message):
     message = "MC_voltage_information"
-    labels = ["dc_bus_voltage", "output_voltage", "phase_ab_voltage", "phase_bc_voltage"]
+    labels = ["dc_bus_voltage", "output_voltage", "Vd_voltage", "Vq_voltage"]
     values = [
         hex_to_decimal(raw_message[0:4], 16, True) / Multipliers.MC_VOLTAGE_INFORMATION_DC_BUS_VOLTAGE.value,
         hex_to_decimal(raw_message[4:8], 16, True) / Multipliers.MC_VOLTAGE_INFORMATION_OUTPUT_VOLTAGE.value,
@@ -189,24 +189,37 @@ def parse_ID_MC_VOLTAGE_INFORMATION(raw_message):
     return [message, labels, values, units]
 
 def parse_ID_MC_FLUX_INFORMATION(raw_message):
-    if DEBUG: print("UNFATAL ERROR: Do not know how to parse CAN ID 0xA8.")
-    return "UNPARSEABLE"
+    message = "MC_flux_information"
+    labels = ["Flux_Command", "Flux_Feedback", "Id_Feedback", "Iq_Feedback"]
+    values = [
+        hex_to_decimal(raw_message[0:4], 16, True) / 1000,
+        hex_to_decimal(raw_message[4:8], 16, True) / 1000,
+        hex_to_decimal(raw_message[8:12], 16, True) / 1000,
+        hex_to_decimal(raw_message[12:16], 16, True) / 1000
+    ]
+    units = ["W", "W", "A", "A"]
+    return [message, labels, values, units]
     
 def parse_ID_MC_INTERNAL_VOLTAGES(raw_message):
-    if DEBUG: print("UNFATAL ERROR: Do not know how to parse CAN ID 0xA9.")
-    return "UNPARSEABLE"
+    message = "MC_INTERNAL_VOLTAGES"
+    labels = ["12V_Voltage"]
+    values = [
+        hex_to_decimal(raw_message[12:16], 16, True)/100
+    ]
+    units = ["V"]
+    return [message, labels, values, units]
 
 def parse_ID_MC_INTERNAL_STATES(raw_message):
     message = "MC_internal_states"
     labels = [
         "vsm_state",
         "inverter_state", 
-        "relay_active_1", 
-        "relay_active_2", 
-        "relay_active_3", 
-        "relay_active_4", 
-        "relay_active_5", 
-        "relay_active_6", 
+        # "relay_active_1", 
+        # "relay_active_2", 
+        # "relay_active_3", 
+        # "relay_active_4", 
+        # "relay_active_5", 
+        # "relay_active_6", 
         "inverter_run_mode", 
         "inverter_active_discharge_state", 
         "inverter_command_mode", 
@@ -215,13 +228,13 @@ def parse_ID_MC_INTERNAL_STATES(raw_message):
         "direction_command"
     ]
     
-    relay_state = hex_to_decimal(raw_message[6:8], 8, False)
-    relay_state_1 = bin_to_bool(str(relay_state & 0x01))
-    relay_state_2 = bin_to_bool(str((relay_state & 0x02) >> 1))
-    relay_state_3 = bin_to_bool(str((relay_state & 0x04) >> 2))
-    relay_state_4 = bin_to_bool(str((relay_state & 0x08) >> 3))
-    relay_state_5 = bin_to_bool(str((relay_state & 0x10) >> 4))
-    relay_state_6 = bin_to_bool(str((relay_state & 0x20) >> 5))
+    ##relay_state = hex_to_decimal(raw_message[6:8], 8, False)
+    # relay_state_1 = bin_to_bool(str(relay_state & 0x01))
+    # relay_state_2 = bin_to_bool(str((relay_state & 0x02) >> 1))
+    # relay_state_3 = bin_to_bool(str((relay_state & 0x04) >> 2))
+    # relay_state_4 = bin_to_bool(str((relay_state & 0x08) >> 3))
+    # relay_state_5 = bin_to_bool(str((relay_state & 0x10) >> 4))
+    # relay_state_6 = bin_to_bool(str((relay_state & 0x20) >> 5))
     inverter_run_mode_discharge_state = hex_to_decimal(raw_message[8:10], 8, False)
     inverter_run_mode = bin_to_bool(str(inverter_run_mode_discharge_state & 1))
     inverter_active_discharge_status = bin_to_bool(str(inverter_run_mode_discharge_state >> 5))
@@ -232,12 +245,12 @@ def parse_ID_MC_INTERNAL_STATES(raw_message):
     values = [
         hex(hex_to_decimal(raw_message[0:4], 16, False)),
         hex(int(raw_message[4:6], 16)), 
-        relay_state_1, 
-        relay_state_2,
-        relay_state_3, 
-        relay_state_4, 
-        relay_state_5, 
-        relay_state_6, 
+        # relay_state_1, 
+        # relay_state_2,
+        # relay_state_3, 
+        # relay_state_4, 
+        # relay_state_5, 
+        # relay_state_6, 
         inverter_run_mode, 
         inverter_active_discharge_status, 
         hex(int(raw_message[10:12], 16)), 
@@ -245,163 +258,85 @@ def parse_ID_MC_INTERNAL_STATES(raw_message):
         inverter_enable_lockout, 
         hex(hex_to_decimal(raw_message[14:16], 16, False))
     ]
-    units = ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    units = ["", "", "", "", "", "", "",""]
     return [message, labels, values, units]
 
 def parse_ID_MC_FAULT_CODES(raw_message):
-    message = "MC_fault_codes"
-    labels = [
-        # "post_fault_lo",
-        # "post_lo_hw_gate_desaturation_fault",
-        # "post_lo_hw_overcurrent_fault",
-        # "post_lo_accelerator_shorted",
-        # "post_lo_accelerator_opened",
-        # "post_lo_current_sensor_low",
-        # "post_lo_current_sensor_high",
-        # "post_lo_module_temperature_low",
-        # "post_lo_module_temperature_high",
-        # "post_lo_ctrl_pcb_temperature_low",
-        # "post_lo_ctrl_pcb_temperature_high",
-        # "post_lo_gate_drive_pcb_temperature_low",
-        # "post_lo_gate_drive_temperature_high",
-        # "post_lo_5v_sense_voltage_low",
-        # "post_lo_5v_sense_voltage_high",
-        # "post_lo_12v_sense_voltage_low",
-        # "post_lo_12v_sense_voltage_high",
-        # "post_fault_hi",
-        # "post_hi_25v_sense_voltage_low",
-        # "post_hi_25v_sense_voltage_high",
-        # "post_hi_15v_sense_voltage_low",
-        # "post_hi_15v_sense_voltage_high",
-        # "post_hi_dc_bus_voltage_high",
-        # "post_hi_dc_bus_voltage_low",
-        # "post_hi_precharge_timeout",
-        # "post_hi_precharge_voltage_failure",
-        # "post_hi_eeprom_checksum_invalidate",
-        # "post_hi_eeproom_data_out_of_range",
-        # "post_hi_eeprom_update_required",
-        # "post_hi_reserved1",
-        # "post_high_reserved2",
-        # "post_high_reserved3",
-        # "post_hi_brake_shorted",
-        # "post_hi_brake_open",
-        "run_fault_lo",
-        "run_lo_motor_overspeed_fault",
-        "run_lo_overcurrent_fault",
-        "run_lo_overvoltage_fault", 
-        "run_lo_inverter_overtemperature_fault",
-        # "run_lo_accelerator_input_shorted_fault",
-        # "run_lo_accelerator_input_open_fault",
-        "run_lo_direction_command_fault",
-        "run_lo_inverter_response_timeout_fault",
-        "run_lo_hardware_gate_desaturation_fault",
-        "run_lo_hardware_overcurrent_fault",
-        "run_lo_undervoltage_fault",
-        "run_lo_can_command_message_lost_fault",
-        "run_lo_motor_overtemperature_fault",
-        "run_lo_reserved1",
-        "run_lo_reserved2",
-        "run_lo_reserved3",
-        "run_fault_hi",
-        # "run_hi_brake_input_shorted_fault", 
-        # "run_hi_brake_input_open_fault",
-        "run_hi_module_a_overtemperature_fault",
-        "run_hi_module_b_overtemperature_fault", 
-        "run_hi_module_c_overtemperature_fault",
-        "run_hi_pcb_overtemperature_fault",
-        "run_hi_gate_drive_board_1_overtemperature_fault",
-        "run_hi_gate_drive_board_2_overtemperature_fault",
-        "run_hi_gate_drive_board_3_overtemperature_fault",
-        "run_hi_current_sensor_fault",
-        # "run_hi_reserved1",
-        # "run_hi_reserved2",
-        # "run_hi_reserved3",
-        # "run_hi_reserved4", 
-        "run_hi_resolver_not_connected", 
-        "run_hi_inverter_discharge_active"
-    ]
-
     post_fault_lo = hex_to_decimal(raw_message[0:4], 16, False)
     post_fault_hi = hex_to_decimal(raw_message[4:8], 16, False)
     run_fault_lo = hex_to_decimal(raw_message[8:12], 16, False)
     run_fault_hi = hex_to_decimal(raw_message[12:16], 16, False)
+    if((run_fault_hi>0) or (run_fault_lo>0)):
+        message = "MC_fault_codes"
+        values=[]
+        labels=[]
+        labels = [
+            "run_fault_lo",
+            "run_lo_motor_overspeed_fault",
+            "run_lo_overcurrent_fault",
+            "run_lo_overvoltage_fault", 
+            "run_lo_inverter_overtemperature_fault",
+            "run_lo_direction_command_fault",
+            "run_lo_inverter_response_timeout_fault",
+            "run_lo_hardware_gate_desaturation_fault",
+            "run_lo_hardware_overcurrent_fault",
+            "run_lo_undervoltage_fault",
+            "run_lo_can_command_message_lost_fault",
+            "run_lo_motor_overtemperature_fault",
+            "run_lo_reserved1",
+            "run_lo_reserved2",
+            "run_lo_reserved3",
+            "run_fault_hi",
+            "run_hi_module_a_overtemperature_fault",
+            "run_hi_module_b_overtemperature_fault", 
+            "run_hi_module_c_overtemperature_fault",
+            "run_hi_pcb_overtemperature_fault",
+            "run_hi_gate_drive_board_1_overtemperature_fault",
+            "run_hi_gate_drive_board_2_overtemperature_fault",
+            "run_hi_gate_drive_board_3_overtemperature_fault",
+            "run_hi_current_sensor_fault",
+            "run_hi_resolver_not_connected", 
+            "run_hi_inverter_discharge_active"
+        ]
 
-    values = [
-        # hex(hex_to_decimal(raw_message[0:4], 16, False)),
-        # bin_to_bool(str(post_fault_lo & 0x0001)),
-        # bin_to_bool(str((post_fault_lo & 0x0002) >> 1)),
-        # bin_to_bool(str((post_fault_lo & 0x0004) >> 2)),
-        # bin_to_bool(str((post_fault_lo & 0x0008) >> 3)),
-        # bin_to_bool(str((post_fault_lo & 0x0010) >> 4)),
-        # bin_to_bool(str((post_fault_lo & 0x0020) >> 5)),
-        # bin_to_bool(str((post_fault_lo & 0x0040) >> 6)),
-        # bin_to_bool(str((post_fault_lo & 0x0080) >> 7)),
-        # bin_to_bool(str((post_fault_lo & 0x0100) >> 8)),
-        # bin_to_bool(str((post_fault_lo & 0x0200) >> 9)),
-        # bin_to_bool(str((post_fault_lo & 0x0400) >> 10)),
-        # bin_to_bool(str((post_fault_lo & 0x0800) >> 11)),
-        # bin_to_bool(str((post_fault_lo & 0x1000) >> 12)),
-        # bin_to_bool(str((post_fault_lo & 0x2000) >> 13)),
-        # bin_to_bool(str((post_fault_lo & 0x4000) >> 14)),
-        # bin_to_bool(str((post_fault_lo & 0x8000) >> 15)),
-        # hex(hex_to_decimal(raw_message[4:8], 16, False)),
-        # bin_to_bool(str(post_fault_hi & 0x0001)),
-        # bin_to_bool(str((post_fault_hi & 0x0002) >> 1)),
-        # bin_to_bool(str((post_fault_hi & 0x0004) >> 2)),
-        # bin_to_bool(str((post_fault_hi & 0x0008) >> 3)),
-        # bin_to_bool(str((post_fault_hi & 0x0010) >> 4)),
-        # bin_to_bool(str((post_fault_hi & 0x0020) >> 5)),
-        # bin_to_bool(str((post_fault_hi & 0x0040) >> 6)),
-        # bin_to_bool(str((post_fault_hi & 0x0080) >> 7)),
-        # bin_to_bool(str((post_fault_hi & 0x0100) >> 8)),
-        # bin_to_bool(str((post_fault_hi & 0x0200) >> 9)),
-        # bin_to_bool(str((post_fault_hi & 0x0400) >> 10)),
-        # bin_to_bool(str((post_fault_hi & 0x0800) >> 11)),
-        # bin_to_bool(str((post_fault_hi & 0x1000) >> 12)),
-        # bin_to_bool(str((post_fault_hi & 0x2000) >> 13)),
-        # bin_to_bool(str((post_fault_hi & 0x4000) >> 14)),
-        # bin_to_bool(str((post_fault_hi & 0x8000) >> 15)),
-        hex(hex_to_decimal(raw_message[8:12], 16, False)),
-        str(run_fault_lo & 0x0001),
-        bin_to_bool(str((run_fault_lo & 0x0002) >> 1)),
-        bin_to_bool(str((run_fault_lo & 0x0004) >> 2)),
-        bin_to_bool(str((run_fault_lo & 0x0008) >> 3)),
-        # bin_to_bool(str((run_fault_lo & 0x0010) >> 4)),
-        # bin_to_bool(str((run_fault_lo & 0x0020) >> 5)),
-        bin_to_bool(str((run_fault_lo & 0x0040) >> 6)),
-        bin_to_bool(str((run_fault_lo & 0x0080) >> 7)),
-        bin_to_bool(str((run_fault_lo & 0x0100) >> 8)),
-        bin_to_bool(str((run_fault_lo & 0x0200) >> 9)),
-        bin_to_bool(str((run_fault_lo & 0x0400) >> 10)),
-        bin_to_bool(str((run_fault_lo & 0x0800) >> 11)),
-        bin_to_bool(str((run_fault_lo & 0x1000) >> 12)),
-        bin_to_bool(str((run_fault_lo & 0x2000) >> 13)),
-        bin_to_bool(str((run_fault_lo & 0x4000) >> 14)),
-        bin_to_bool(str((run_fault_lo & 0x8000) >> 15)),
-        hex(hex_to_decimal(raw_message[12:16], 16, False)),
-        # bin_to_bool(str(run_fault_hi & 0x0001)),
-        # bin_to_bool(str((run_fault_hi & 0x0002) >> 1)),
-        bin_to_bool(str((run_fault_hi & 0x0004) >> 2)),
-        bin_to_bool(str((run_fault_hi & 0x0008) >> 3)),
-        bin_to_bool(str((run_fault_hi & 0x0010) >> 4)),
-        bin_to_bool(str((run_fault_hi & 0x0020) >> 5)),
-        bin_to_bool(str((run_fault_hi & 0x0040) >> 6)),
-        bin_to_bool(str((run_fault_hi & 0x0080) >> 7)),
-        bin_to_bool(str((run_fault_hi & 0x0100) >> 8)),
-        bin_to_bool(str((run_fault_hi & 0x0200) >> 9)),
-        # bin_to_bool(str((run_fault_hi & 0x0400) >> 10)),
-        # bin_to_bool(str((run_fault_hi & 0x0800) >> 11)),
-        # bin_to_bool(str((run_fault_hi & 0x1000) >> 12)),
-        # bin_to_bool(str((run_fault_hi & 0x2000) >> 13)),
-        bin_to_bool(str((run_fault_hi & 0x4000) >> 14)),
-        bin_to_bool(str((run_fault_hi & 0x8000) >> 15))
-    ]
+        
 
-    units = []
-    for i in range(len(labels)):
-        units.append("")
-  
-    return [message, labels, values, units]
+        values = [
+            hex(hex_to_decimal(raw_message[8:12], 16, False)),
+            str(run_fault_lo & 0x0001),
+            bin_to_bool(str((run_fault_lo & 0x0002) >> 1)),
+            bin_to_bool(str((run_fault_lo & 0x0004) >> 2)),
+            bin_to_bool(str((run_fault_lo & 0x0008) >> 3)),
+            bin_to_bool(str((run_fault_lo & 0x0040) >> 6)),
+            bin_to_bool(str((run_fault_lo & 0x0080) >> 7)),
+            bin_to_bool(str((run_fault_lo & 0x0100) >> 8)),
+            bin_to_bool(str((run_fault_lo & 0x0200) >> 9)),
+            bin_to_bool(str((run_fault_lo & 0x0400) >> 10)),
+            bin_to_bool(str((run_fault_lo & 0x0800) >> 11)),
+            bin_to_bool(str((run_fault_lo & 0x1000) >> 12)),
+            bin_to_bool(str((run_fault_lo & 0x2000) >> 13)),
+            bin_to_bool(str((run_fault_lo & 0x4000) >> 14)),
+            bin_to_bool(str((run_fault_lo & 0x8000) >> 15)),
+            hex(hex_to_decimal(raw_message[12:16], 16, False)),
+            bin_to_bool(str((run_fault_hi & 0x0004) >> 2)),
+            bin_to_bool(str((run_fault_hi & 0x0008) >> 3)),
+            bin_to_bool(str((run_fault_hi & 0x0010) >> 4)),
+            bin_to_bool(str((run_fault_hi & 0x0020) >> 5)),
+            bin_to_bool(str((run_fault_hi & 0x0040) >> 6)),
+            bin_to_bool(str((run_fault_hi & 0x0080) >> 7)),
+            bin_to_bool(str((run_fault_hi & 0x0100) >> 8)),
+            bin_to_bool(str((run_fault_hi & 0x0200) >> 9)),
+            bin_to_bool(str((run_fault_hi & 0x4000) >> 14)),
+            bin_to_bool(str((run_fault_hi & 0x8000) >> 15))
+        ]
+
+        units = []
+        for i in range(len(labels)):
+            units.append("")
+    
+        return [message, labels, values, units]
+    else:
+        return "UNPARSEABLE"
 
 def parse_ID_MC_TORQUE_TIMER_INFORMATION(raw_message):
     message = "MC_torque_timer_information"
@@ -446,16 +381,17 @@ def parse_ID_MC_DIAGNOSTIC_DATA(raw_message):
 
 def parse_ID_MC_COMMAND_MESSAGE(raw_message):
     message = "MC_command_message"
-    labels = ["requested_torque", "angular_velocity", "direction", "inverter_enable", "discharge_enable", "command_torque_limit"]
+    labels = ["requested_torque","inverter_enable"]
+    ##labels = ["requested_torque", "angular_velocity", "direction", "inverter_enable", "discharge_enable", "command_torque_limit"]
     values = [
         hex_to_decimal(raw_message[0:4], 16, True) / Multipliers.MC_COMMAND_MESSAGE_REQUESTED_TORQUE.value,
-        hex_to_decimal(raw_message[4:8], 16, True), 
-        hex(int(raw_message[9], 16)),
+        ##hex_to_decimal(raw_message[4:8], 16, True), 
+        ##hex(int(raw_message[9], 16)),
         hex_to_decimal(raw_message[10], 4, False), 
-        hex_to_decimal(raw_message[11], 4, False), 
-        hex_to_decimal(raw_message[12:16], 16, True)
+        ##hex_to_decimal(raw_message[11], 4, False), 
+        ##hex_to_decimal(raw_message[12:16], 16, True)
     ]
-    units = ["Nm", "", "", "", "", "Nm"]
+    units = ["Nm", ""]
     return [message, labels, values, units]
 
 def parse_ID_MC_READ_WRITE_PARAMETER_COMMAND(raw_message):
@@ -559,9 +495,8 @@ def parse_ID_MCU_PEDAL_READINGS(raw_message):
     message = "MCU_pedal_readings"
     labels = ["accelerator_pedal_1", "accelerator_pedal_2", "brake_transducer_1", "brake_transducer_2"]
 
-    accelerator_1 = round(hex_to_decimal(raw_message[0:4], 16, False) / Multipliers.MCU_PEDAL_READINGS_ACCELERATOR_PEDAL_1.value - 2080.0/11.0, 2)
-    accelerator_2 = round(hex_to_decimal(raw_message[4:8], 16, False) / Multipliers.MCU_PEDAL_READINGS_ACCELERATOR_PEDAL_2.value - 175.0, 2)
-
+    accelerator_1 = round(hex_to_decimal(raw_message[0:4], 16, False))
+    accelerator_2 = round(hex_to_decimal(raw_message[4:8], 16, False))
     # If the linear regression occasionally results in a negative value, set it to 0.0
     if accelerator_1 < 0.0:
         accelerator_1 = 0.0
@@ -998,14 +933,24 @@ def parse_ID_ORIONBMS_MESSAGE2(raw_message):
     message= "Orion BMS2"
     labels=["PackCurrent","PackInst Volt", "PackOpenVolt", "PackSummedVolt"]
     values=[
-        round(hex_to_decimal(raw_message[0:2],8,True)),
+        round(hex_to_decimal(raw_message[0:2],8,False)),
         round(hex_to_decimal(raw_message[2:4],8,False)),
         round(hex_to_decimal(raw_message[4:6],8,False)),
         round(hex_to_decimal(raw_message[6:8],8,False))
     ]
     units=["Amps","Volts","Volts","Volts"]
     return [message,labels,values,units]
+def parse_ID_PRECHARGE(raw_message):
+    message= "Precharge"
+    labels=["State","AccVoltage", "TSVoltage"]
+    values=[
+        round(hex_to_decimal(raw_message[0:2],8,False)),
+        round(hex_to_decimal(raw_message[2:6],16,False)),
+        round(hex_to_decimal(raw_message[6:10],16,False))
+    ]
+    units=["State","V","V"]
 
+    return [message,labels,values,units]
 
 ########################################################################
 # Custom Parsing Functions End
@@ -1069,6 +1014,7 @@ def parse_message(raw_id, raw_message):
     #i added these below
     if raw_id == "6B1": return parse_ID_ORIONBMS_MESSAGE1(raw_message)
     if raw_id == "6B2": return parse_ID_ORIONBMS_MESSAGE2(raw_message)
+    if raw_id == "69": return parse_ID_PRECHARGE(raw_message)
 
     # Should not come to here if CAN ID was valid
     if DEBUG: print("UNFATAL ERROR: Invalid CAN ID: 0x" + raw_id)
