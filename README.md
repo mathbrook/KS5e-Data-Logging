@@ -1,7 +1,6 @@
-![HyTech Logo](https://hytechracing.gatech.edu/images/hytech_logo_small.png)
-# HyTech Custom Parsers
+
 ## Intro
-Welcome to the folder containing all the HyTech Racing data acquisition services. The entire system is Python and MatLab based.
+Welcome to the folder containing all the BENNESAW BATE Racing data acquisition services. The entire system is Python and MatLab based.
 
 This guide is split into two parts: a **User's Guide** and a **Developer's Guide**:
 - If you will be working on these files (i.e. you are a data aq member), you will need to refer to the **Developer's Guide**
