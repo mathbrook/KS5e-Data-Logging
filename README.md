@@ -6,13 +6,13 @@ This guide is split into two parts: a **User's Guide** and a **Developer's Guide
 - If you will be working on these files (i.e. you are a data aq member), you will need to refer to the **Developer's Guide**
 - Otherwise, the **User's Guide** should suffice for everyone else
 
-_If you have any questions or need troubleshooting, feel free to reach out to Bo Han Zhu on Teams or via email: bohanzhu9@gatech.edu_
+_If you have any questions or need troubleshooting, feel free to reach out to Mathewos Samson on Teams or via email: msamson1@students.kennesaw.edu_
 
 ## Setup
 1. Python 3 is required, and may be installed here: https://www.python.org/downloads/. Make sure it is added to PATH
 2. For MatLab, you will need an education/work license to get it for free. Follow GT's instructions here: https://www.matlab.gatech.edu/
     - Really the only thing you need MatLab for is to plot the data after parsing. Otherwise, just having Python is enough
-3. If you have not done so already, clone the overarching GitHub repo (e.g. code-2022) or download it as a zip, extract, and save to somewhere safe
+3. If you have not done so already, clone the GitHub repo or download it as a zip, extract, and save to somewhere safe
 4. Change directory to here. For example, if you are in code-2022, all you have to do is `cd Telemetry`
 5. Once you are here, download the needed pip libraries by issuing the command `pip install -r requirements.txt`
 
