@@ -947,7 +947,7 @@ def parse_ID_ORIONBMS_MESSAGE1(raw_message):
     return [message,labels,values,units]
 def parse_ID_ORIONBMS_MESSAGE2(raw_message):
     message= "Orion BMS2"
-    labels=["PackCurrent","PackInst Volt", "PackOpenVolt", "PackSummedVolt"]
+    labels=["PackCurrent","PackInstVolt", "PackOpenVolt", "PackSummedVolt"]
     values=[
         round(hex_to_decimal(raw_message[0:2],8,False)),
         round(hex_to_decimal(raw_message[2:4],8,False)),
