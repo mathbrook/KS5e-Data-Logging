@@ -74,6 +74,22 @@ def bin_to_bool(bin):
 @input: A string of a hexadecimal raw message
 @return: A four-element list [message, label[], value[], unit[]] 
 '''
+def parse_ID_FBHNODE1(raw_message):
+    message="Fbhnode1"
+    labels=["roll","heading"]
+    values=[
+        hex_to_decimal(raw_message[0:8],32,True) / 100,hex_to_decimal(raw_message[8:16],32,True)/100
+    ]
+    units = ["deg","deg"]
+    return [message, labels, values, units]
+def parse_ID_FBHNODE2(raw_message):
+    message="Fbhnode2"
+    labels=["pitch"]
+    values=[
+        hex_to_decimal(raw_message[0:8],32,True) / 100
+    ]
+    units = ["deg"]
+    return [message, labels, values, units]
 
 def parse_ID_MC_TEMPERATURES1(raw_message):
     message = "MC_temperatures_1"
@@ -192,10 +208,10 @@ def parse_ID_MC_FLUX_INFORMATION(raw_message):
     message = "MC_flux_information"
     labels = ["Flux_Command", "Flux_Feedback", "Id_Feedback", "Iq_Feedback"]
     values = [
-        hex_to_decimal(raw_message[0:4], 16, True) / 1000,
-        hex_to_decimal(raw_message[4:8], 16, True) / 1000,
-        hex_to_decimal(raw_message[8:12], 16, True) / 1000,
-        hex_to_decimal(raw_message[12:16], 16, True) / 1000
+        hex_to_decimal(raw_message[0:4], 16, True) / 10,
+        hex_to_decimal(raw_message[4:8], 16, True) / 10,
+        hex_to_decimal(raw_message[8:12], 16, True) / 10,
+        hex_to_decimal(raw_message[12:16], 16, True) / 10
     ]
     units = ["W", "W", "A", "A"]
     return [message, labels, values, units]
@@ -1015,6 +1031,8 @@ def parse_message(raw_id, raw_message):
     if raw_id == "6B1": return parse_ID_ORIONBMS_MESSAGE1(raw_message)
     if raw_id == "6B2": return parse_ID_ORIONBMS_MESSAGE2(raw_message)
     if raw_id == "69": return parse_ID_PRECHARGE(raw_message)
+    if raw_id == "5AA" : return parse_ID_FBHNODE1(raw_message)
+    if raw_id == "5AB" : return parse_ID_FBHNODE2(raw_message)
 
     # Should not come to here if CAN ID was valid
     if DEBUG: print("UNFATAL ERROR: Invalid CAN ID: 0x" + raw_id)
