@@ -1,21 +1,21 @@
 close all
 %% 
 % Usage:
-% 1. Load the data struct into the Workspace
+% 1. Load the data struct into the Workspace (output.mat)
 % 2. Run individual sections of the script to plot the desired data
-%%ballz
-figure
-hold on
-plot(S.roll(:,1)/1000,S.roll(:,2));
-plot(S.heading(:,1)/1000,S.heading(:,2));
-plot(S.pitch(:,1)/1000,S.pitch(:,2));
-
-legend({'roll', ...
-    'heading','pitch'})
-xlabel('Time (s)')
-title('roll n heading test')
-h = zoom;
-set(h,'Motion','horizontal','Enable','on');
+%% Test Plot for Daq Bulkhead Node
+% figure
+% hold on
+% plot(S.roll(:,1)/1000,S.roll(:,2));
+% plot(S.heading(:,1)/1000,S.heading(:,2));
+% plot(S.pitch(:,1)/1000,S.pitch(:,2));
+% 
+% legend({'roll', ...
+%     'heading','pitch'})
+% xlabel('Time (s)')
+% title('roll n heading test')
+% h = zoom;
+% set(h,'Motion','horizontal','Enable','on');
 %% Torque, Vehicle Speed, Current, mega plot
 figure
 
@@ -32,9 +32,9 @@ plot(motor_speed(:,1)/1000,motor_speed(:,2)/100);
 plot(S.dc_bus_current(:,1)/1000, S.dc_bus_current(:,2)./4);
 plot(commanded_torque(:,1)/1000,commanded_torque(:,2)./10);
 plot(requested_torque(:,1)/1000,requested_torque(:,2)./10);
-plot(uptime(:,1)/1000,uptime(:,2));
+plot(uptime(:,1)/1000,uptime(:,2)/10);
 plot(busVoltage(:,1)/1000,busVoltage(:,2)./10);
-plot(pedal_time/1000, (pedal_data./10)-93, '.-');
+plot(pedal_time/1000, (pedal_data./100), '.-');
 
 legend({'Motor Speed (RPM)*0.01', ...
     'Current (A)*0.25',...1
@@ -44,7 +44,7 @@ legend({'Motor Speed (RPM)*0.01', ...
     'DC Voltage(V*0.1)', ...
     'Accel position'})
 xlabel('Time (s)')
-ylim([-10 300]);
+ylim([-10 100]);
 title('Torque, Speed, Current')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
@@ -121,15 +121,15 @@ front_brakes_time = S.brake_transducer_1(:, 1);
 
 pedal_data = S.accelerator_pedal_1(:, 2);
 pedal_time = S.accelerator_pedal_1(:, 1);
-
-% Normalizing and cleaning pedal traces
-front_brakes_data = front_brakes_data - mode(front_brakes_data);
-front_brakes_data(front_brakes_data < 0) = 0;
-front_brakes_data = front_brakes_data/max(front_brakes_data);
-
-pedal_data = pedal_data - mode(pedal_data);
-pedal_data(pedal_data < 0) = 0;
-pedal_data = pedal_data/max(pedal_data);
+% 
+% % Normalizing and cleaning pedal traces
+% front_brakes_data = front_brakes_data - mode(front_brakes_data);
+% front_brakes_data(front_brakes_data < 0) = 0;
+% front_brakes_data = front_brakes_data/max(front_brakes_data);
+% 
+% pedal_data = pedal_data - mode(pedal_data);
+% pedal_data(pedal_data < 0) = 0;
+% pedal_data = pedal_data/max(pedal_data);
 
 hold on
 plot(pedal_time, pedal_data, '.-');
@@ -172,7 +172,7 @@ plot(S.id_command(:,1)/1000,S.id_command(:,2),'-');
 %%plot(S.Vd_voltage(:,1)/1000,S.Vd_voltage(:,2),'m');
 %%plot(S.Vq_voltage(:,1)/1000,S.Vq_voltage(:,2),'y');
 
-%%plot(time, power, '.-');
+plot(time, power, '.-');
 plot(S.commanded_torque(:,1)/1000,S.commanded_torque(:,2)/10);
 plot(S.Iq_Feedback(:,1)/1000,S.Iq_Feedback(:,2));
 %%plot(S.State(:,1)/1000,S.State(:,2)*50);
@@ -190,7 +190,7 @@ legend({'Current','Voltage', ...
     'Id Command (A)',......
     ...'Phase A current','phase b curr','phase c curr', ...
     ...'D-axis V','Q-axis V', ...
-    ...'Power', ...
+    'Power', ...
     'Commanded Torque (Nm)/10','Iq feedback (A)','Motor speed(RPM)/10'})
 %%legend({'Current','Voltage','Power'})
 
@@ -206,24 +206,30 @@ plot(S.module_a_temperature(:,1)/1000,S.module_a_temperature(:,2))
 plot(S.module_b_temperature(:,1)/1000,S.module_b_temperature(:,2)) 
 plot(S.module_c_temperature(:,1)/1000,S.module_c_temperature(:,2))
 plot(S.motor_temperature(:,1)/1000,S.motor_temperature(:,2))
-plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)./10) 
+plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)./10)
+plot(S.hightemp(:,1)/1000,S.hightemp(:,2))
+plot(S.lowtemp(:,1)/1000,S.lowtemp(:,2))
 grid on
 
-legend({'MCU Gate Driver Board Temperature','MCU Control Board Temperature','MCU Module A Temperature','MCU Module B Temperature','MCU Module C Temperature','Motor Temperature','Current/10 (A)'})
+legend({'MCU Gate Driver Board Temperature','MCU Control Board Temperature','MCU Module A Temperature','MCU Module B Temperature','MCU Module C Temperature','Motor Temperature','Current/10 (A)','Pack Highest Cell Temp','Pack Lowest Cell Temp'})
 xlabel('Time (s)')
 ylabel('Temperature (C)')
 title('Cooling Loop Temperature Plots')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
-%% Accumulator Cell Temperatures
+%% BMS Acc Voltage Readings vs Inverter Readings and Current
 figure
 hold on
-plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)./10)
+plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2))
+plot(S.PackCurrent(:,1)/1000,S.PackCurrent(:,2)/10)
+plot(S.dc_bus_voltage(:,1)/1000,S.dc_bus_voltage(:,2))
 plot(S.PackInstVolt(:,1)/1000,S.PackInstVolt(:,2))
-ylabel('Temperature (C) or Humidity (%)')
+plot(S.PackOpenVolt(:,1)/1000,S.PackOpenVolt(:,2))
+plot(S.PackSummedVolt(:,1)/1000,S.PackSummedVolt(:,2))
+ylabel('yes')
 xlabel('Time (s)')
-title('Accumulator Cell Temperatures: Segment 4 Detailed View')
-legend({'Temp1','Temp2','Temp3','Temp4','Temp5','Temp6','Temp7','Temp8', 'SHT Hum', 'SHT Temp'},'Location','southeast')
+title('BMS Acc Voltage Readings vs Inverter Readings and Current')
+legend('DC Bus Current','Dc Bus Voltage','Instant Voltage','Open Voltage','Summed Voltage')
 
 %% Accumulator Capacity Analysis
 current = S.dc_bus_current; %Amps
@@ -289,55 +295,4 @@ plot(uniqueCurrent, averageVoltage,'.-')
 xlabel('Current')
 ylabel('Voltage')
 title('Accumulator Voltage Drop Analysis')
-
-%% IMU Accelerometer
-figure
-
-lat_accel = S.lat_accel;
-long_accel = S.long_accel;
-vert_accel = S.vert_accel;
-hold on
-
-plot(lat_accel(:,1)/1000,lat_accel(:,2));
-plot(long_accel(:,1)/1000,long_accel(:,2));
-plot(vert_accel(:,1)/1000,vert_accel(:,2));
-xlabel('Time (s)');
-ylabel('m/s^2');
-legend({'Lateral Acceleration','Longitudinal Acceleration','Vertical Acceleration'})
-title('IMU Accelerometer')
-
-figure
-
-yaw = S.yaw;
-pitch = S.pitch;
-roll = S.roll;
-hold on
-
-plot(yaw(:,1)/1000,yaw(:,2));
-plot(pitch(:,1)/1000,pitch(:,2));
-plot(roll(:,1)/1000,roll(:,2));
-xlabel('Time (s)')
-ylabel('deg/s')
-legend({'Yaw','Pitch', 'Roll'})
-title('IMU Gyroscope')
-
-%% SAB
-figure
-
-cooling_loop_fluid_temp = S.cooling_loop_fluid_temp;
-amb_air_temp = S.amb_air_temp;
-fl_susp_lin_pot = S.fl_susp_lin_pot;
-fr_susp_lin_pot = S.fr_susp_lin_pot;
-bl_susp_lin_pot = S.bl_susp_lin_pot;
-br_susp_lin_pot = S.br_susp_lin_pot;
-hold on
-plot(cooling_loop_fluid_temp(:,1)/1000,cooling_loop_fluid_temp(:,2));
-plot(amb_air_temp(:,1)/1000,amb_air_temp(:,2));
-plot(fl_susp_lin_pot(:,1)/1000,fl_susp_lin_pot(:,2));
-plot(fr_susp_lin_pot(:,1)/1000,fr_susp_lin_pot(:,2));
-plot(bl_susp_lin_pot(:,1)/1000,bl_susp_lin_pot(:,2));
-plot(br_susp_lin_pot(:,1)/1000,br_susp_lin_pot(:,2));
-legend({'Cooling Loop Fluid Temperature (C)','Ambient Air Temperature (C)','Front-Left Suspension Linear Potentiometer (mm)','Front-Right Suspension Linear Potentiometer (mm)','Back-Left Suspension Linear Potentiometer (mm)', 'Back-Right Suspension Linear Potentiometer (mm)'})
-xlabel('Time (s)')
-title('Sensor Acquisition Board All Sensors')
 

@@ -513,6 +513,8 @@ def parse_ID_MCU_PEDAL_READINGS(raw_message):
 
     accelerator_1 = round(hex_to_decimal(raw_message[0:4], 16, False))
     accelerator_2 = round(hex_to_decimal(raw_message[4:8], 16, False))
+    brake_1 = round(hex_to_decimal(raw_message[8:12], 16, False))
+    brake_2 = round(hex_to_decimal(raw_message[12:16], 16, False))
     # If the linear regression occasionally results in a negative value, set it to 0.0
     if accelerator_1 < 0.0:
         accelerator_1 = 0.0
@@ -522,10 +524,10 @@ def parse_ID_MCU_PEDAL_READINGS(raw_message):
     values = [
         accelerator_1, 
         accelerator_2, 
-        round(hex_to_decimal(raw_message[8:12], 16, False) / Multipliers.MCU_PEDAL_READINGS_BRAKE_TRANDUCER_1.value, 2), 
-        round(hex_to_decimal(raw_message[12:16], 16, False) / Multipliers.MCU_PEDAL_READINGS_BRAKE_TRANDUCER_2.value, 2)
+        brake_1, 
+        brake_2
     ]
-    units = ["%", "%", "psi", "psi"]
+    units = ["%", "%", "%", "%"]
     return [message, labels, values, units]
 
 def parse_ID_MCU_ANALOG_READINGS(raw_message):
@@ -949,20 +951,24 @@ def parse_ID_ORIONBMS_MESSAGE2(raw_message):
     message= "Orion BMS2"
     labels=["PackCurrent","PackInstVolt", "PackOpenVolt", "PackSummedVolt"]
     values=[
-        round(hex_to_decimal(raw_message[0:2],8,False)),
-        round(hex_to_decimal(raw_message[2:4],8,False)),
-        round(hex_to_decimal(raw_message[4:6],8,False)),
-        round(hex_to_decimal(raw_message[6:8],8,False))
+        round(hex_to_decimal(raw_message[0:4],16,True)),
+        round(hex_to_decimal(raw_message[4:8],16,True))/10,
+        round(hex_to_decimal(raw_message[8:12],16,True))/10,
+        round(hex_to_decimal(raw_message[12:16],16,True))/100
     ]
     units=["Amps","Volts","Volts","Volts"]
     return [message,labels,values,units]
 def parse_ID_PRECHARGE(raw_message):
     message= "Precharge"
     labels=["State","AccVoltage", "TSVoltage"]
+    state = hex_to_decimal(raw_message[0:2],8,False)
+    accV = hex_to_decimal(raw_message[2:4],8,False) + hex_to_decimal(raw_message[4:6],8,False)*100
+    tsV = hex_to_decimal(raw_message[6:8],8,False) + hex_to_decimal(raw_message[8:10],8,False)*100
+
     values=[
-        round(hex_to_decimal(raw_message[0:2],8,False)),
-        round(hex_to_decimal(raw_message[2:6],16,False)),
-        round(hex_to_decimal(raw_message[6:10],16,False))
+        state,
+        accV,
+        tsV
     ]
     units=["State","V","V"]
 
