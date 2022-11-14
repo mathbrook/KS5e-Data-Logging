@@ -509,7 +509,7 @@ def parse_ID_MCU_STATUS(raw_message):
 
 def parse_ID_MCU_PEDAL_READINGS(raw_message):
     message = "MCU_pedal_readings"
-    labels = ["accelerator_pedal_1", "accelerator_pedal_2", "brake_transducer_1", "brake_transducer_2"]
+    labels = ["accelerator_pedal_1", "accelerator_pedal_2", "brake_transducer_1", "steering_sensor"]
 
     accelerator_1 = round(hex_to_decimal(raw_message[0:4], 16, False))
     accelerator_2 = round(hex_to_decimal(raw_message[4:8], 16, False))
@@ -522,8 +522,8 @@ def parse_ID_MCU_PEDAL_READINGS(raw_message):
     values = [
         accelerator_1, 
         accelerator_2, 
-        round(hex_to_decimal(raw_message[8:12], 16, False) / Multipliers.MCU_PEDAL_READINGS_BRAKE_TRANDUCER_1.value, 2), 
-        round(hex_to_decimal(raw_message[12:16], 16, False) / Multipliers.MCU_PEDAL_READINGS_BRAKE_TRANDUCER_2.value, 2)
+        round(hex_to_decimal(raw_message[8:12], 16, False)), 
+        round(hex_to_decimal(raw_message[12:16], 16, False))
     ]
     units = ["%", "%", "psi", "psi"]
     return [message, labels, values, units]
@@ -745,14 +745,12 @@ def parse_ID_MCU_GPS_READINGS(raw_message):
 
 def parse_ID_MCU_WHEEL_SPEED(raw_message):
     message = "MCU_wheel_speed"
-    labels = ["rpm_front_left", "rpm_front_right", "rpm_back_left", "rpm_back_right"]
+    labels = ["rpm_front_left", "rpm_front_right"]
     values = [
-        hex_to_decimal(raw_message[0:4], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_FRONT_LEFT.value,
-        hex_to_decimal(raw_message[4:8], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_FRONT_RIGHT.value,
-        hex_to_decimal(raw_message[8:12], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_BACK_LEFT.value,
-        hex_to_decimal(raw_message[12:16], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_BACK_RIGHT.value
+        hex_to_decimal(raw_message[0:8], 32, False)/100,
+        hex_to_decimal(raw_message[8:16], 32, False)/100
     ]
-    units = ["rpm", "rpm", "rpm", "rpm"]
+    units = ["rpm", "rpm"]
     return [message, labels, values, units]
 
 # @TODO: FIX THIS with more data
@@ -949,22 +947,37 @@ def parse_ID_ORIONBMS_MESSAGE2(raw_message):
     message= "Orion BMS2"
     labels=["PackCurrent","PackInstVolt", "PackOpenVolt", "PackSummedVolt"]
     values=[
-        round(hex_to_decimal(raw_message[0:2],8,False)),
-        round(hex_to_decimal(raw_message[2:4],8,False)),
-        round(hex_to_decimal(raw_message[4:6],8,False)),
-        round(hex_to_decimal(raw_message[6:8],8,False))
+        round(hex_to_decimal(raw_message[0:4],16,True)),
+        round(hex_to_decimal(raw_message[4:8],16,True))/10,
+        round(hex_to_decimal(raw_message[8:12],16,True))/10,
+        round(hex_to_decimal(raw_message[12:16],16,True))/100
     ]
     units=["Amps","Volts","Volts","Volts"]
     return [message,labels,values,units]
 def parse_ID_PRECHARGE(raw_message):
     message= "Precharge"
     labels=["State","AccVoltage", "TSVoltage"]
+    state = hex_to_decimal(raw_message[0:2],8,False)
+    accV = hex_to_decimal(raw_message[2:4],8,False) + hex_to_decimal(raw_message[4:6],8,False)*100
+    tsV = hex_to_decimal(raw_message[6:8],8,False) + hex_to_decimal(raw_message[8:10],8,False)*100
+
     values=[
-        round(hex_to_decimal(raw_message[0:2],8,False)),
-        round(hex_to_decimal(raw_message[2:6],16,False)),
-        round(hex_to_decimal(raw_message[6:10],16,False))
+        state,
+        accV,
+        tsV
     ]
     units=["State","V","V"]
+    return [message,labels,values,units]
+def parse_ID_SHONK_POTS(raw_message):
+    message= "Shock_Pots"
+    labels=["Shonk_FL","Shonk_FR", "Shonk_RL","Shonk_RR"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,False)),
+        round(hex_to_decimal(raw_message[4:8],16,False)),
+        round(hex_to_decimal(raw_message[8:12],16,False)),
+        round(hex_to_decimal(raw_message[12:16],16,False))
+    ]
+    units=["","","",""]
 
     return [message,labels,values,units]
 
@@ -1033,6 +1046,10 @@ def parse_message(raw_id, raw_message):
     if raw_id == "69": return parse_ID_PRECHARGE(raw_message)
     if raw_id == "5AA" : return parse_ID_FBHNODE1(raw_message)
     if raw_id == "5AB" : return parse_ID_FBHNODE2(raw_message)
+    if raw_id == "C6" : return parse_ID_MCU_WHEEL_SPEED(raw_message)
+    if raw_id == "C5" : return parse_ID_SHONK_POTS(raw_message)
+    #if raw_id == "C7" : return parse_ID_FAN_SPEED_CMD(raw_message)
+    
 
     # Should not come to here if CAN ID was valid
     if DEBUG: print("UNFATAL ERROR: Invalid CAN ID: 0x" + raw_id)
