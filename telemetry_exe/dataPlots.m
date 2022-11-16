@@ -212,15 +212,35 @@ ylabel('Temperature (C)')
 title('Cooling Loop Temperature Plots')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
+
 %% Accumulator Cell Temperatures
 figure
+
 hold on
-plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)./10)
-plot(S.PackInstVolt(:,1)/1000,S.PackInstVolt(:,2))
-ylabel('Temperature (C) or Humidity (%)')
+plot(S.hightemp(:,1)/1000,S.hightemp(:,2))
+plot(S.lowtemp(:,1)/1000,S.lowtemp(:,2))
+yyaxis right
+plot(S.Cell_0(:,1)/1000,S.Cell_0(:,2))
+plot(S.Cell_1(:,1)/1000,S.Cell_1(:,2))
+plot(S.Cell_2(:,1)/1000,S.Cell_2(:,2))
+plot(S.Cell_3(:,1)/1000,S.Cell_3(:,2))
+plot(S.Cell_4(:,1)/1000,S.Cell_4(:,2))
+plot(S.Cell_5(:,1)/1000,S.Cell_5(:,2))
+plot(S.Cell_6(:,1)/1000,S.Cell_0(:,2))
+plot(S.Cell_7(:,1)/1000,S.Cell_1(:,2))
+plot(S.Cell_8(:,1)/1000,S.Cell_2(:,2))
+plot(S.Cell_9(:,1)/1000,S.Cell_3(:,2))
+plot(S.Cell_10(:,1)/1000,S.Cell_4(:,2))
+plot(S.Cell_11(:,1)/1000,S.Cell_5(:,2))
+
+grid on
+
+legend({'HighTemp','LowTemp','Cell 0','Cell 1','Cell 2','Cell 3','Cell 4','Cell 5'})
 xlabel('Time (s)')
-title('Accumulator Cell Temperatures: Segment 4 Detailed View')
-legend({'Temp1','Temp2','Temp3','Temp4','Temp5','Temp6','Temp7','Temp8', 'SHT Hum', 'SHT Temp'},'Location','southeast')
+ylabel('Temperature (C)')
+title('Energus voltage Vs BMS Thermistors')
+h = zoom;
+set(h,'Motion','horizontal','Enable','on');
 
 %% Accumulator Capacity Analysis
 current = S.dc_bus_current; %Amps

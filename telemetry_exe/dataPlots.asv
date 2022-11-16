@@ -200,27 +200,34 @@ plot(S.module_a_temperature(:,1)/1000,S.module_a_temperature(:,2))
 plot(S.module_b_temperature(:,1)/1000,S.module_b_temperature(:,2)) 
 plot(S.module_c_temperature(:,1)/1000,S.module_c_temperature(:,2))
 plot(S.motor_temperature(:,1)/1000,S.motor_temperature(:,2))
-plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)) 
+plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)*0.25) 
 plot(S.hightemp(:,1)/1000,S.hightemp(:,2))
 plot(S.lowtemp(:,1)/1000,S.lowtemp(:,2))
-plot(S.DCL(:,1)/1000,S.DCL(:,2));
+%%plot(S.DCL(:,1)/1000,S.DCL(:,2));
 grid on
 
-legend({'MCU Gate Driver Board Temperature','MCU Control Board Temperature','MCU Module A Temperature','MCU Module B Temperature','MCU Module C Temperature','Motor Temperature','Current (A)','Pack High Cell Temp(C)','Low Pack Cell Temp(C)','Discharge Current Limit (A)'})
+legend({'MCU Gate Driver Board Temperature','MCU Control Board Temperature','MCU Module A Temperature','MCU Module B Temperature','MCU Module C Temperature','Motor Temperature','Current (A)*0.25','Pack High Cell Temp(C)','Low Pack Cell Temp(C)'})
 xlabel('Time (s)')
 ylabel('Temperature (C)')
 title('Cooling Loop Temperature Plots')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
+
 %% Accumulator Cell Temperatures
 figure
+
 hold on
-plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)./10)
-plot(S.PackInstVolt(:,1)/1000,S.PackInstVolt(:,2))
-ylabel('Temperature (C) or Humidity (%)')
+plot(S.Cell_0(:,1)/1000,S.Cell_0(:,2))
+
+%%plot(S.DCL(:,1)/1000,S.DCL(:,2));
+grid on
+
+legend({'MCU Gate Driver Board Temperature','MCU Control Board Temperature','MCU Module A Temperature','MCU Module B Temperature','MCU Module C Temperature','Motor Temperature','Current (A)*0.25','Pack High Cell Temp(C)','Low Pack Cell Temp(C)'})
 xlabel('Time (s)')
-title('Accumulator Cell Temperatures: Segment 4 Detailed View')
-legend({'Temp1','Temp2','Temp3','Temp4','Temp5','Temp6','Temp7','Temp8', 'SHT Hum', 'SHT Temp'},'Location','southeast')
+ylabel('Temperature (C)')
+title('Cooling Loop Temperature Plots')
+h = zoom;
+set(h,'Motion','horizontal','Enable','on');
 
 %% Accumulator Capacity Analysis
 current = S.dc_bus_current; %Amps
@@ -405,20 +412,22 @@ legend({'TS Voltage','acc v','state'});
 figure
 rpm_fl = S.rpm_front_left;
 rpm_fr = S.rpm_front_right;
+shonk_multiplier=0.0001875;
 hold on 
-plot(S.Shonk_FL(:,1),S.Shonk_FL(:,2));
-plot(S.Shonk_FR(:,1),S.Shonk_FR(:,2));
-plot(S.Shonk_RL(:,1),S.Shonk_RL(:,2));
-plot(S.Shonk_RR(:,1),S.Shonk_RR(:,2));
+
+plot(S.Shonk_FL(:,1)/1000,75-S.Shonk_FL(:,2)*shonk_multiplier/5*75,'LineWidth',2);
+plot(S.Shonk_FR(:,1)/1000,75-S.Shonk_FR(:,2)*shonk_multiplier/5*75,'LineWidth',2);
+plot(S.Shonk_RL(:,1)/1000,S.Shonk_RL(:,2)*shonk_multiplier/5*100,'LineWidth',2);
+plot(S.Shonk_RR(:,1)/1000,S.Shonk_RR(:,2)*shonk_multiplier/5*100,'LineWidth',2);
 yyaxis right
 vehicle_speed_mph = S.motor_speed;
 vehicle_speed_mph(:,2) = S.motor_speed(:,2).*(10/29).*18.*pi.*60./63360; %%correct mph equation
-plot(vehicle_speed_mph(:,1),vehicle_speed_mph(:,2));
-%%scatter(S.motor_speed(:,1),1000);
-plot(S.commanded_torque(:,1),S.commanded_torque(:,2)*10,'.-');
-plot(rpm_fl(:,1),rpm_fl(:,2).*18.*pi.*60./63360);
-plot(rpm_fr(:,1),rpm_fr(:,2).*18.*pi.*60./63360);
-y
-legend({'Shonk FL','Shonk FR','Shonk RL','Shonk RR','Vehicle MPH','Torque command Nm','FL MPH','FR MPH'});
+plot(vehicle_speed_mph(:,1)/1000,vehicle_speed_mph(:,2),'LineWidth',2);
+%%scatter(S.motor_speed(:,1)/1000,1000);
+plot(S.commanded_torque(:,1)/1000,S.commanded_torque(:,2)/4,'.-');
+plot(rpm_fl(:,1)/1000,rpm_fl(:,2).*18.*pi.*60./63360,'LineWidth',2);
+plot(rpm_fr(:,1)/1000,rpm_fr(:,2).*18.*pi.*60./63360,'LineWidth',2);
+ylim([-10 60])
+legend({'Shonk FL mm','Shonk FR mm','Shonk RR mm','Shonk RL mm','Vehicle MPH','Torque command Nm * 0.25','FL MPH','FR MPH'});
 
 

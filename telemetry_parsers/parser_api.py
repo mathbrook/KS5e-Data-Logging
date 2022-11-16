@@ -980,7 +980,45 @@ def parse_ID_SHONK_POTS(raw_message):
     units=["","","",""]
 
     return [message,labels,values,units]
+def parse_ID_ACU_TEMP_SENSORS(raw_message):
+    message= "Energus_Voltages"
+    board_id = round(hex_to_decimal(raw_message[0:2],8,False))
+    if(board_id == 0):
+        labels=["Cell_0","Cell_12", "Cell_24","Cell_36","Cell_48"]
+    elif(board_id == 1):
+        labels=["Cell_1","Cell_13", "Cell_25","Cell_37","Cell_49"]
+    elif(board_id == 2):
+        labels=["Cell_2","Cell_14", "Cell_26","Cell_38","Cell_50"]       
+    elif(board_id == 3):
+        labels=["Cell_3","Cell_15", "Cell_27","Cell_39","Cell_51"]
+    elif(board_id == 4):
+        labels=["Cell_4","Cell_16", "Cell_28","Cell_40","Cell_52"]
+    elif(board_id == 5):
+        labels=["Cell_5","Cell_17", "Cell_29","Cell_41","Cell_53"]
+    elif(board_id == 6):
+        labels=["Cell_6","Cell_18", "Cell_30","Cell_42","Cell_54"]
+    elif(board_id == 7):
+        labels=["Cell_7","Cell_19", "Cell_31","Cell_43","Cell_55"]
+    elif(board_id == 8):
+        labels=["Cell_8","Cell_20", "Cell_32","Cell_44","Cell_56"]
+    elif(board_id == 9):
+        labels=["Cell_9","Cell_21", "Cell_33","Cell_45","Cell_57"]
+    elif(board_id == 10):
+        labels=["Cell_10","Cell_22", "Cell_34","Cell_46","Cell_58"]
+    elif(board_id == 11):
+        labels=["Cell_11","Cell_23", "Cell_35","Cell_47","Cell_59"]
+    else:
+        labels=["Cell_69","Cell_23", "Cell_35","Cell_47","Cell_59"]
+    values=[
+        round(hex_to_decimal(raw_message[2:4],8,False))/100,
+        round(hex_to_decimal(raw_message[4:6],8,False))/100,
+        round(hex_to_decimal(raw_message[6:8],8,False))/100,
+        round(hex_to_decimal(raw_message[8:10],8,False))/100,
+        round(hex_to_decimal(raw_message[10:12],8,False))/100
+    ]
+    units=["V","V","V","V","V"]
 
+    return [message,labels,values,units]
 ########################################################################
 # Custom Parsing Functions End
 ########################################################################
@@ -1043,6 +1081,7 @@ def parse_message(raw_id, raw_message):
     #i added these below
     if raw_id == "6B1": return parse_ID_ORIONBMS_MESSAGE1(raw_message)
     if raw_id == "6B2": return parse_ID_ORIONBMS_MESSAGE2(raw_message)
+    if raw_id == "6B3": return parse_ID_ACU_TEMP_SENSORS(raw_message)
     if raw_id == "69": return parse_ID_PRECHARGE(raw_message)
     if raw_id == "5AA" : return parse_ID_FBHNODE1(raw_message)
     if raw_id == "5AB" : return parse_ID_FBHNODE2(raw_message)
