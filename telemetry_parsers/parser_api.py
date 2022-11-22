@@ -31,9 +31,14 @@ def hex_to_decimal(hex, bits, is_signed):
     @return: The corresponding decimal value as an integer.
     """
 
-    # Swaps to small-endian
+    # # Swaps to small-endian
+    # value = ""
+    # for i in range(bits // 4):
+    #     if i % 2 == 0:
+    #         value = hex[i:i+2] + value
+    # value = int(value, 16)
     value = ""
-    for i in range(bits // 4):
+    for i in range(bits//4,-1,-1):
         if i % 2 == 0:
             value = hex[i:i+2] + value
     value = int(value, 16)
@@ -1019,6 +1024,91 @@ def parse_ID_ACU_TEMP_SENSORS(raw_message):
     units=["V","V","V","V","V"]
 
     return [message,labels,values,units]
+#MS3 parsing starts here
+def parse_ID_MEGASQUIRT_GP0(raw_message):
+    message= "MS3_GP0"
+    labels=["Seconds","PW1", "PW2","RPM"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,False)),
+        round(hex_to_decimal(raw_message[4:8],16,False))*0.001,
+        round(hex_to_decimal(raw_message[8:12],16,False))*0.001,
+        round(hex_to_decimal(raw_message[12:16],16,False))
+    ]
+    units=["s","ms","ms","rpm"]
+    return [message,labels,values,units]
+
+def parse_ID_MEGASQUIRT_GP1(raw_message):
+    message= "MS3_GP1"
+    labels=["adv_deg","squirt", "engine","afr_target_1","arf_target_2","wbo2_en1","wbo2_en2"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,False))*0.1,
+        round(hex_to_decimal(raw_message[4:6],8,False)),
+        round(hex_to_decimal(raw_message[6:8],8,False)),
+        round(hex_to_decimal(raw_message[8:10],8,False))*0.1,
+        round(hex_to_decimal(raw_message[10:12],8,False))*0.1,
+        round(hex_to_decimal(raw_message[12:14],8,False)),
+        round(hex_to_decimal(raw_message[14:16],8,False)),
+    ]
+    units=["deg BTDC","","","AFR","AFR","",""]
+    return [message,labels,values,units]
+
+
+def parse_ID_MEGASQUIRT_GP2(raw_message):
+    message= "MS3_GP2"
+    labels=["baro","map", "mat","coolant"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.1,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.1,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.1,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.1
+    ]
+    units=["kPa","kPa","degF","degF"]
+    return [message,labels,values,units]
+
+def parse_ID_MEGASQUIRT_GP3(raw_message):
+    message= "MS3_GP3"
+    labels=["TPS","Batt", "AFR1_OLD","AFR2_OLD"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.1,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.1,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.1,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.1
+    ]
+    units=["%","V","AFR","AFR"]
+    return [message,labels,values,units]
+def parse_ID_MEGASQUIRT_GP4(raw_message):
+    message= "MS3_GP4"
+    labels=["knock","ego_corr1", "ego_corr2","air_correction"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.1,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.1,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.1,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.1
+    ]
+    units=["%","%","%","%"]
+    return [message,labels,values,units]
+def parse_ID_MEGASQUIRT_GP5(raw_message):
+    message= "MS3_GP5"
+    labels=["warmcor","tpsaccel", "tpsfuelcut","barocor"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.1,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.1,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.1,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.1
+    ]
+    units=["%","%","%","%"]
+    return [message,labels,values,units]
+def parse_ID_MEGASQUIRT_GP6(raw_message):
+    message= "MS3_GP6"
+    labels=["totalcor","ve1", "ve2","iacstep"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.1,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.1,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.1,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.1
+    ]
+    units=["","","",""]   
+    return [message,labels,values,units]
 ########################################################################
 # Custom Parsing Functions End
 ########################################################################
@@ -1088,7 +1178,12 @@ def parse_message(raw_id, raw_message):
     if raw_id == "C6" : return parse_ID_MCU_WHEEL_SPEED(raw_message)
     if raw_id == "C5" : return parse_ID_SHONK_POTS(raw_message)
     #if raw_id == "C7" : return parse_ID_FAN_SPEED_CMD(raw_message)
-    
+    if raw_id =="5F0" : return parse_ID_MEGASQUIRT_GP0(raw_message)
+    if raw_id =="5F1" : return parse_ID_MEGASQUIRT_GP1(raw_message)
+    if raw_id =="5F2" : return parse_ID_MEGASQUIRT_GP2(raw_message)
+    if raw_id =="5F3" : return parse_ID_MEGASQUIRT_GP3(raw_message)
+    if raw_id =="5F4" : return parse_ID_MEGASQUIRT_GP4(raw_message)
+    if raw_id =="5F5" : return parse_ID_MEGASQUIRT_GP5(raw_message)
 
     # Should not come to here if CAN ID was valid
     if DEBUG: print("UNFATAL ERROR: Invalid CAN ID: 0x" + raw_id)

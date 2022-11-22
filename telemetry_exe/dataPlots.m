@@ -443,4 +443,32 @@ plot(rpm_fr(:,1)/1000,rpm_fr(:,2).*18.*pi.*60./63360,'LineWidth',2);
 ylim([-10 60])
 legend({'Shonk FL mm','Shonk FR mm','Shonk RR mm','Shonk RL mm','Vehicle MPH','Torque command Nm * 0.25','FL MPH','FR MPH'});
 
+%% tuff but IC
+figure
+hold on
+plot(S.RPM(:,1)/1000,S.RPM(:,2)/1000);
+plot(S.PW1(:,1)/1000,S.PW1(:,2));
+plot(S.PW2(:,1)/1000,S.PW2(:,2));
+yyaxis right
+plot(S.Seconds(:,1)/1000,S.Seconds(:,2));
+legend({'RPM','PW1(ms)','PW2(ms)','ECU ontime(S)'})
+%% rpm vs TPS
+tiledlayout(2,1)
+ax1 = nexttile;
+hold on
 
+plot(S.RPM(:,1)/1000,S.RPM(:,2));
+legend({'RPM'});
+
+title('TPS vs Motor RPM')
+ylim([-10 12000]);
+xlabel('Time (s)')
+ax2 = nexttile;
+hold on
+plot(S.TPS(:,1)/1000,S.TPS(:,2));
+legend({'TPS (%)'});
+xlabel('Time (s)')
+ylim([-10 110]);
+
+set(gca,'XMinorTick','on')
+linkaxes([ax1 ax2],'x')
