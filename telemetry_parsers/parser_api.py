@@ -1109,6 +1109,29 @@ def parse_ID_MEGASQUIRT_GP6(raw_message):
     ]
     units=["","","",""]   
     return [message,labels,values,units]
+def parse_ID_MEGASQUIRT_GP13(raw_message):
+    message= "MS3_GP13"
+    labels=["sensors_one","sensors_two", "sensors_three","sensors_four"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.01,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.01,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.01,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.01
+    ]
+    units=["","","",""]   
+    return [message,labels,values,units]
+def parse_ID_MEGASQUIRT_GP14(raw_message):
+    message= "MS3_GP14"
+    labels=["sensors_five","sensors_six", "sensors_seven","sensors_eight"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,True))*0.01,
+        round(hex_to_decimal(raw_message[4:8],16,True))*0.01,
+        round(hex_to_decimal(raw_message[8:12],16,True))*0.01,
+        round(hex_to_decimal(raw_message[12:16],16,True))*0.01
+    ]
+    units=["","","",""]   
+    return [message,labels,values,units]
+
 ########################################################################
 # Custom Parsing Functions End
 ########################################################################
@@ -1184,6 +1207,8 @@ def parse_message(raw_id, raw_message):
     if raw_id =="5F3" : return parse_ID_MEGASQUIRT_GP3(raw_message)
     if raw_id =="5F4" : return parse_ID_MEGASQUIRT_GP4(raw_message)
     if raw_id =="5F5" : return parse_ID_MEGASQUIRT_GP5(raw_message)
+    if raw_id =="5FD" : return parse_ID_MEGASQUIRT_GP13(raw_message)
+    if raw_id =="5FE" : return parse_ID_MEGASQUIRT_GP14(raw_message)
 
     # Should not come to here if CAN ID was valid
     if DEBUG: print("UNFATAL ERROR: Invalid CAN ID: 0x" + raw_id)

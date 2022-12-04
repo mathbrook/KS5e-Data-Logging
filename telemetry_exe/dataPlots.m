@@ -472,3 +472,37 @@ ylim([-10 110]);
 
 set(gca,'XMinorTick','on')
 linkaxes([ax1 ax2],'x')
+%% batt voltage,
+
+t1 = tiledlayout(4,1);
+
+hold on
+ax1=nexttile;
+plot(S.Batt(:,1)/1000,S.Batt(:,2));
+title('Battery Voltage');
+legend({'Battery Voltage'});
+ax2=nexttile;
+plot(S.coolant(:,1)/1000,S.coolant(:,2));
+title('coolant temp')
+legend({'Coolant Temp (F)'});
+ax3=nexttile;
+plot(S.RPM(:,1)/1000,S.RPM(:,2));
+title('Engine RPM')
+legend({'RPM'});
+ax4=nexttile;
+hold on
+plot(S.sensors_one(:,1)/1000,S.sensors_one(:,2));
+%%plot(S.sensors_two(:,1)/1000,S.sensors_two(:,2));
+%%plot(S.sensors_three(:,1)/1000,S.sensors_three(:,2));
+plot(S.sensors_four(:,1)/1000,S.sensors_four(:,2));
+plot(S.sensors_five(:,1)/1000,S.sensors_five(:,2));
+%%plot(S.sensors_six(:,1)/1000,S.sensors_six(:,2));
+%%plot(S.sensors_seven(:,1)/1000,S.sensors_seven(:,2));
+%%plot(S.sensors_eight(:,1)/1000,S.sensors_eight(:,2));
+legend({'sensor1','sensor4','sensor5'});
+title('Analog sensors')
+linkaxes([ax1 ax2 ax3 ax4],'x')
+asdf = "yo"
+title(t1,asdf);
+xlabel(t1,"yo");
+ylabel(t1,"plz");
