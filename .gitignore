@@ -247,9 +247,17 @@ Telemetry/autoparse/log
 Telemetry/autoparse/webserver/uploads
 Telemetry/telemetry_py/*.txt
 *.csv
-
+*.zip
 # Other data aq outputs
 *.pyc
 *.o
 *.log
 __pycache__/
+telemetry_exe/*.mat
+telemetry_exe/*.fig
+telemetry_exe/output.mat
+telemetry_exe/Raw_Data/*.zip
+telemetry_exe/Raw_Data/*.csv
+telemetry_exe/Parsed_Data/*.zip
+telemetry_exe/Parsed_Data/*.csv
+*.pyc
