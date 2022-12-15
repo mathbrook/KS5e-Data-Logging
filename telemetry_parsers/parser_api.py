@@ -674,6 +674,7 @@ def parse_ID_BMS_STATUS(raw_message):
         "BMS_shutdown_h_above_threshold"
     ]
 
+
     error_flags = hex_to_decimal(raw_message[6:10], 16, False)
     flags = hex_to_decimal(raw_message[14:16], 8, False)
     values = [
@@ -1029,7 +1030,6 @@ def get_dbc_files():
     # Get all the DBC files for parsing and add them together
     try:
         path_name = 'DBC_Files'
-
         file_path = []
         file_count = 0
         for root, dirs, files in os.walk(path_name, topdown=False):
@@ -1052,12 +1052,12 @@ def get_dbc_files():
 def print_all_the_shit_in_dbc_file(db):
     dbc_ids=[]
     for message in db.messages:
-        #print(str(vars(message)) + "\n")
+        # print(str(vars(message)) + "\n")
         dbc_ids.append(message.frame_id)
-        print(str(message.name)+" ID: "+str(message.frame_id)+" Note: "+str(message.comment))
-        print("\tsignals: ")
-        for signal in message.signals:
-            print("\t\t"+ signal.name)
+        # print(str(message.name)+" ID: "+str(message.frame_id)+" Note: "+str(message.comment))
+        # print("\tsignals: ")
+        # for signal in message.signals:
+            # print("\t\t"+ signal.name)
     return dbc_ids
 
 def parse_message(id, data, db,dbc_ids,unknown_ids):
@@ -1079,6 +1079,14 @@ def parse_message(id, data, db,dbc_ids,unknown_ids):
         unknown_ids.append(id)
     return "INVALID_ID"
 
+def parse_message_better(id, data, db,dbc_ids,unknown_ids):
+    if int(id,16) in dbc_ids:
+        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data))
+        return parsed_message
+    if (id not in unknown_ids) & (int(id,16) not in dbc_ids):
+        unknown_ids.append(id)
+    return "INVALID_ID"
+
 def parse_time(raw_time):
     '''
     @brief: Converts raw time into human-readable time.
@@ -1090,6 +1098,27 @@ def parse_time(raw_time):
     time = str(datetime.utcfromtimestamp(raw_time).strftime('%Y-%m-%dT%H:%M:%S'))
     time = time + "." + str(ms).zfill(3) + "Z"
     return time
+def parse_used_ids(filename,dbc_for_parsing,dbc_ids,unknown_ids):
+    header_list = ["Time"]
+    infile = open("Raw_Data/" + filename, "r")
+    flag_first_line=True
+    for line in infile.readlines():
+        if flag_first_line:
+            flag_first_line = False
+        else:
+            raw_id = line.split(",")[1]
+            length = line.split(",")[2]
+            raw_message = line.split(",")[3]
+            if length == 0 or raw_message == "\n":
+                continue
+            raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
+            raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
+            current_message = parse_message_better(raw_id,raw_message,dbc_for_parsing,dbc_ids,unknown_ids)
+            if current_message != "INVALID_ID":
+                for i in current_message:
+                    if i not in header_list:
+                        header_list.append(i)
+    return header_list
 
 def parse_file(filename,dbc):
     '''
@@ -1101,20 +1130,29 @@ def parse_file(filename,dbc):
     '''
 
     # Array to keep track of IDs we can't parse
+
     unknown_ids = []
     # Array to keep track of IDs we CAN parse
     dbc_ids = print_all_the_shit_in_dbc_file(dbc)
+    header_list = parse_used_ids(filename,dbc,dbc_ids,unknown_ids)
+    # Miscellaneous shit lol
+    nextline = [""] * len(header_list)
+    header_string=",".join(header_list)
+
 
     infile = open("Raw_Data/" + filename, "r")
     outfile = open("Parsed_Data/" + filename, "w")
+    outfile2 = open("Better_Parsed_Data/Better" + filename, "w")
 
+    flag_second_line = True
     flag_first_line = True
+    last_time=''
     for line in infile.readlines():
         # On the first line, do not try to parse. Instead, set up the CSV headers.
         if flag_first_line:
             flag_first_line = False
             outfile.write("time,id,message,label,value,unit\n")
-
+            outfile2.write(header_string+"\n")
         # Otherwise attempt to parse the line.
         else:
             raw_time = line.split(",")[0]
@@ -1148,9 +1186,27 @@ def parse_file(filename,dbc):
                 unit = table[3][i].strip()
 
                 outfile.write(time + ",0x" + raw_id + "," + message + "," + label + "," + value + "," + unit + "\n")
+            current_message = parse_message_better(raw_id,raw_message,dbc,dbc_ids,unknown_ids)
+            if current_message != "INVALID_ID":
+                for i in current_message:
+                    nextline[header_list.index(str(i))]=str(current_message[i])
+            if time == last_time:
+                continue
+            elif flag_second_line==True:
+                flag_second_line = False
+                print("Second Line")
+                continue
+            elif time != last_time:
+                # write our line to file
+                # clear it out and begin putting new values in it
+                last_time = time
+                nextline[header_list.index("Time")]=raw_time
+                outfile2.write(",".join(nextline) + "\n")
+                nextline = [""] * len(header_list)
     print("These IDs not found in DBC: " +str(unknown_ids))
     infile.close()
     outfile.close()
+    outfile2.close()
     return
 
 def parse_folder():
@@ -1174,6 +1230,9 @@ def parse_folder():
     # Creates Parsed_Data folder if not there.
     if not os.path.exists("Parsed_Data"):
         os.makedirs("Parsed_Data")
+        # Creates Parsed_Data folder if not there.
+    if not os.path.exists("Better_Parsed_Data"):
+        os.makedirs("Better_Parsed_Data")
     # Generate the main DBC file object for parsing
     dbc_file = get_dbc_files()
     # Loops through files and call parse_file on each raw CSV.
@@ -1384,3 +1443,5 @@ def create_mat():
         print('Saved struct in output.mat file.')
     except:
         print('FATAL ERROR: Failed to create .mat file')
+
+

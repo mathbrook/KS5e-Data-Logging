@@ -87,14 +87,14 @@ h = zoom;
 set(h,'Motion','horizontal','Enable','on');
 
 %% IDK what this gon be
-motor_speed = S.motor_speed;
+motor_speed = S.D2_Motor_Speed;
 vehicle_speed_mph = motor_speed;
 vehicle_speed_mph(:,2) = motor_speed(:,2).*(10/29).*0.000284091.*pi.*60;
 figure
 hold on
-plot(S.dc_bus_current(:,1)/1000, S.dc_bus_current(:,2), '.-');
-plot(S.dc_bus_voltage(:,1)/1000, S.dc_bus_voltage(:,2), '.-'); 
-plot(S.iq_command(:,1)/1000,S.iq_command(:,2));
+plot(S.D4_DC_Bus_Current(:,1)/1000, S.D4_DC_Bus_Current(:,2), '.-');
+plot(S.D1_DC_Bus_Voltage(:,1)/1000, S.D1_DC_Bus_Voltage(:,2), '.-'); 
+plot(S.D4_Iq_Command(:,1)/1000,S.D4_Iq_Command(:,2));
 plot(S.id_command(:,1)/1000,S.id_command(:,2),'.-');
 plot(vehicle_speed_mph(:,1)/1000,vehicle_speed_mph(:,2)*10);
 plot(S.commanded_torque(:,1)/1000,S.commanded_torque(:,2));
@@ -217,15 +217,28 @@ set(h,'Motion','horizontal','Enable','on');
 figure
 
 hold on
+plot(S.hightemp(:,1)/1000,S.hightemp(:,2))
+plot(S.lowtemp(:,1)/1000,S.lowtemp(:,2))
+yyaxis right
 plot(S.Cell_0(:,1)/1000,S.Cell_0(:,2))
+plot(S.Cell_1(:,1)/1000,S.Cell_1(:,2))
+plot(S.Cell_2(:,1)/1000,S.Cell_2(:,2))
+plot(S.Cell_3(:,1)/1000,S.Cell_3(:,2))
+plot(S.Cell_4(:,1)/1000,S.Cell_4(:,2))
+plot(S.Cell_5(:,1)/1000,S.Cell_5(:,2))
+plot(S.Cell_6(:,1)/1000,S.Cell_0(:,2))
+plot(S.Cell_7(:,1)/1000,S.Cell_1(:,2))
+plot(S.Cell_8(:,1)/1000,S.Cell_2(:,2))
+plot(S.Cell_9(:,1)/1000,S.Cell_3(:,2))
+plot(S.Cell_10(:,1)/1000,S.Cell_4(:,2))
+plot(S.Cell_11(:,1)/1000,S.Cell_5(:,2))
 
-%%plot(S.DCL(:,1)/1000,S.DCL(:,2));
 grid on
 
-legend({'MCU Gate Driver Board Temperature','MCU Control Board Temperature','MCU Module A Temperature','MCU Module B Temperature','MCU Module C Temperature','Motor Temperature','Current (A)*0.25','Pack High Cell Temp(C)','Low Pack Cell Temp(C)'})
+legend({'HighTemp','LowTemp','Cell 0','Cell 1','Cell 2','Cell 3','Cell 4','Cell 5'})
 xlabel('Time (s)')
 ylabel('Temperature (C)')
-title('Cooling Loop Temperature Plots')
+title('Energus voltage Vs BMS Thermistors')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
 

@@ -263,3 +263,8 @@ telemetry_exe/Parsed_Data/*.csv
 *.pyc
 telemetry_exe/PlottingPlayground.m
 *.asv
+*.pyc
+*.xlsx
+*.pyc
+telemetry_parsers/__pycache__/parser_api.cpython-310.pyc
+telemetry_parsers/__pycache__/parser_api.cpython-310.pyc

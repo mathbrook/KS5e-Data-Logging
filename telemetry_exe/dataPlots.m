@@ -38,13 +38,14 @@ plot(pedal_time/1000, (pedal_data./10)-93, '.-');
 plot(S.DCL(:,1)/1000,S.DCL(:,2));
 
 legend({'Motor Speed (RPM)*0.01', ...
-    'Current (A)*0.25',...1
+    'Current (A)*0.25',...
     'Commanded Torque*0.1 (Nm)', ...
     'Requested Torque*0.1 (Nm)', ...
     'Uptime (s)', ...
     'DC Voltage(V*0.1)', ...
     'Accel position',"DCL"})
 xlabel('Time (s)')
+ylim("auto")
 ylim([-10 300]);
 title('Torque, Speed, Current')
 h = zoom;
@@ -87,24 +88,20 @@ h = zoom;
 set(h,'Motion','horizontal','Enable','on');
 
 %% IDK what this gon be
-motor_speed = S.motor_speed;
+motor_speed = S.D2_Motor_Speed;
 vehicle_speed_mph = motor_speed;
 vehicle_speed_mph(:,2) = motor_speed(:,2).*(10/29).*0.000284091.*pi.*60;
 figure
 hold on
-plot(S.dc_bus_current(:,1)/1000, S.dc_bus_current(:,2), '.-');
-plot(S.dc_bus_voltage(:,1)/1000, S.dc_bus_voltage(:,2), '.-'); 
-plot(S.iq_command(:,1)/1000,S.iq_command(:,2));
-plot(S.id_command(:,1)/1000,S.id_command(:,2),'.-');
+plot(S.D4_DC_Bus_Current(:,1)/1000, S.D4_DC_Bus_Current(:,2), '.-');
+plot(S.D1_DC_Bus_Voltage(:,1)/1000, S.D1_DC_Bus_Voltage(:,2), '.-'); 
+plot(S.D4_Iq_Command(:,1)/1000,S.D4_Iq_Command(:,2));
 plot(vehicle_speed_mph(:,1)/1000,vehicle_speed_mph(:,2)*10);
-plot(S.commanded_torque(:,1)/1000,S.commanded_torque(:,2));
-plot(S.Iq_Feedback(:,1)/1000,S.Iq_Feedback(:,2));
-plot(S.PackCurrent(:,1)/1000,S.PackCurrent(:,2)/10);
 grid on
 xlabel('Time (s)')
 ylabel('stuff')
 title('stuff')
-legend({'DC current','DC voltage','iq command', 'id command','mph','commanded torque','iq feedback','DC BMS current'})
+legend({'DC current','DC voltage','iq command','mph'})
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
 %% Pedal Input Traces
