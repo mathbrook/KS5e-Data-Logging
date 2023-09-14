@@ -20,6 +20,9 @@ import os
 import sys
 from multipliers import Multipliers
 from datetime import datetime
+import cantools
+import pandas as pd
+import csv
 
 DEBUG = False # Set True for option error print statements
 
@@ -509,7 +512,7 @@ def parse_ID_MCU_STATUS(raw_message):
 
 def parse_ID_MCU_PEDAL_READINGS(raw_message):
     message = "MCU_pedal_readings"
-    labels = ["accelerator_pedal_1", "accelerator_pedal_2", "brake_transducer_1", "brake_transducer_2"]
+    labels = ["accelerator_pedal_1", "accelerator_pedal_2", "brake_transducer_1", "steering_sensor"]
 
     accelerator_1 = round(hex_to_decimal(raw_message[0:4], 16, False))
     accelerator_2 = round(hex_to_decimal(raw_message[4:8], 16, False))
@@ -673,6 +676,7 @@ def parse_ID_BMS_STATUS(raw_message):
         "BMS_shutdown_h_above_threshold"
     ]
 
+
     error_flags = hex_to_decimal(raw_message[6:10], 16, False)
     flags = hex_to_decimal(raw_message[14:16], 8, False)
     values = [
@@ -747,14 +751,12 @@ def parse_ID_MCU_GPS_READINGS(raw_message):
 
 def parse_ID_MCU_WHEEL_SPEED(raw_message):
     message = "MCU_wheel_speed"
-    labels = ["rpm_front_left", "rpm_front_right", "rpm_back_left", "rpm_back_right"]
+    labels = ["rpm_front_left", "rpm_front_right"]
     values = [
-        hex_to_decimal(raw_message[0:4], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_FRONT_LEFT.value,
-        hex_to_decimal(raw_message[4:8], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_FRONT_RIGHT.value,
-        hex_to_decimal(raw_message[8:12], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_BACK_LEFT.value,
-        hex_to_decimal(raw_message[12:16], 16, False) / Multipliers.MCU_WHEEL_SPEED_RPM_BACK_RIGHT.value
+        hex_to_decimal(raw_message[0:8], 32, False)/100,
+        hex_to_decimal(raw_message[8:16], 32, False)/100
     ]
-    units = ["rpm", "rpm", "rpm", "rpm"]
+    units = ["rpm", "rpm"]
     return [message, labels, values, units]
 
 # @TODO: FIX THIS with more data
@@ -971,77 +973,120 @@ def parse_ID_PRECHARGE(raw_message):
         tsV
     ]
     units=["State","V","V"]
+    return [message,labels,values,units]
+def parse_ID_SHONK_POTS(raw_message):
+    message= "Shock_Pots"
+    labels=["Shonk_FL","Shonk_FR", "Shonk_RL","Shonk_RR"]
+    values=[
+        round(hex_to_decimal(raw_message[0:4],16,False)),
+        round(hex_to_decimal(raw_message[4:8],16,False)),
+        round(hex_to_decimal(raw_message[8:12],16,False)),
+        round(hex_to_decimal(raw_message[12:16],16,False))
+    ]
+    units=["","","",""]
 
     return [message,labels,values,units]
+def parse_ID_ACU_TEMP_SENSORS(raw_message):
+    message= "Energus_Voltages"
+    board_id = round(hex_to_decimal(raw_message[0:2],8,False))
+    if(board_id == 0):
+        labels=["Cell_0","Cell_12", "Cell_24","Cell_36","Cell_48"]
+    elif(board_id == 1):
+        labels=["Cell_1","Cell_13", "Cell_25","Cell_37","Cell_49"]
+    elif(board_id == 2):
+        labels=["Cell_2","Cell_14", "Cell_26","Cell_38","Cell_50"]       
+    elif(board_id == 3):
+        labels=["Cell_3","Cell_15", "Cell_27","Cell_39","Cell_51"]
+    elif(board_id == 4):
+        labels=["Cell_4","Cell_16", "Cell_28","Cell_40","Cell_52"]
+    elif(board_id == 5):
+        labels=["Cell_5","Cell_17", "Cell_29","Cell_41","Cell_53"]
+    elif(board_id == 6):
+        labels=["Cell_6","Cell_18", "Cell_30","Cell_42","Cell_54"]
+    elif(board_id == 7):
+        labels=["Cell_7","Cell_19", "Cell_31","Cell_43","Cell_55"]
+    elif(board_id == 8):
+        labels=["Cell_8","Cell_20", "Cell_32","Cell_44","Cell_56"]
+    elif(board_id == 9):
+        labels=["Cell_9","Cell_21", "Cell_33","Cell_45","Cell_57"]
+    elif(board_id == 10):
+        labels=["Cell_10","Cell_22", "Cell_34","Cell_46","Cell_58"]
+    elif(board_id == 11):
+        labels=["Cell_11","Cell_23", "Cell_35","Cell_47","Cell_59"]
+    else:
+        labels=["Cell_69","Cell_23", "Cell_35","Cell_47","Cell_59"]
+    values=[
+        round(hex_to_decimal(raw_message[2:4],8,False))/100,
+        round(hex_to_decimal(raw_message[4:6],8,False))/100,
+        round(hex_to_decimal(raw_message[6:8],8,False))/100,
+        round(hex_to_decimal(raw_message[8:10],8,False))/100,
+        round(hex_to_decimal(raw_message[10:12],8,False))/100
+    ]
+    units=["V","V","V","V","V"]
 
+    return [message,labels,values,units]
 ########################################################################
 # Custom Parsing Functions End
 ########################################################################
+def get_dbc_files():
+    # Get all the DBC files for parsing and add them together
+    try:
+        path_name = 'DBC_Files'
+        file_path = []
+        file_count = 0
+        for root, dirs, files in os.walk(path_name, topdown=False):
+            for name in files:
+                if ".dbc" in name or ".DBC" in name:
+                    fp = os.path.join(root, name)
+                    file_path.append(fp)
+                    file_count += 1
+    except:
+        print('FATAL ERROR: Process failed at step 1.')
+        sys.exit(0)
+    mega_dbc=cantools.database.Database()
+    for filename in file_path:
+        with open (filename, 'r') as newdbc:
+            mega_dbc.add_dbc(newdbc)
 
-def parse_message(raw_id, raw_message):
-    '''
-    @brief: Calls the corresponding custom parsing function depending on the CAN ID.
-    @inputs: A string representing the raw CAN ID and an string of a hexadecimal raw message.
-    @return: A four-element list [message, label[], value[], unit[]] if CAN ID is valid, otherwise system exit.
-    '''
-    if raw_id == "A0": return parse_ID_MC_TEMPERATURES1(raw_message)
-    if raw_id == "A1": return parse_ID_MC_TEMPERATURES2(raw_message)
-    if raw_id == "A2": return parse_ID_MC_TEMPERATURES3(raw_message)
-    if raw_id == "A3": return parse_ID_MC_ANALOG_INPUTS_VOLTAGES(raw_message)
-    if raw_id == "A4": return parse_ID_MC_DIGITAL_INPUTS_STATUS(raw_message)
-    if raw_id == "A5": return parse_ID_MC_MOTOR_POSITION_INFORMATION(raw_message)
-    if raw_id == "A6": return parse_ID_MC_CURRENT_INFORMATION(raw_message)
-    if raw_id == "A7": return parse_ID_MC_VOLTAGE_INFORMATION(raw_message)
-    if raw_id == "A8": return parse_ID_MC_FLUX_INFORMATION(raw_message)
-    if raw_id == "A9": return parse_ID_MC_INTERNAL_VOLTAGES(raw_message)
-    if raw_id == "AA": return parse_ID_MC_INTERNAL_STATES(raw_message)
-    if raw_id == "AB": return parse_ID_MC_FAULT_CODES(raw_message)
-    if raw_id == "AC": return parse_ID_MC_TORQUE_TIMER_INFORMATION(raw_message)
-    if raw_id == "AD": return parse_ID_MC_FLUX_WEAKENING_OUTPUT(raw_message)
-    if raw_id == "AE": return parse_ID_MC_FIRMWARE_INFORMATION(raw_message)
-    if raw_id == "AF": return parse_ID_MC_DIAGNOSTIC_DATA(raw_message)
-    
-    if raw_id == "C0": return parse_ID_MC_COMMAND_MESSAGE(raw_message)
-    if raw_id == "C1": return parse_ID_MC_READ_WRITE_PARAMETER_COMMAND(raw_message)
-    if raw_id == "C2": return parse_ID_MC_READ_WRITE_PARAMETER_RESPONSE(raw_message)
-    if raw_id == "C3": return parse_ID_MCU_STATUS(raw_message)
-    if raw_id == "C4": return parse_ID_MCU_PEDAL_READINGS(raw_message)
-    if raw_id == "CC": return parse_ID_MCU_ANALOG_READINGS(raw_message)
+    print('Step 1: found ' + str(file_count) + ' files in the DBC files folder')
+    return mega_dbc
 
-    if raw_id == "D5": return parse_ID_BMS_ONBOARD_TEMPERATURES(raw_message)
-    if raw_id == "D6": return parse_ID_BMS_ONBOARD_DETAILED_TEMPERATURES(raw_message)
-    if raw_id == "D7": return parse_ID_BMS_VOLTAGES(raw_message)
-    if raw_id == "D8": return parse_ID_BMS_DETAILED_VOLTAGES(raw_message)
-    if raw_id == "D9": return parse_ID_BMS_TEMPERATURES(raw_message)
-    if raw_id == "DA": return parse_ID_BMS_DETAILED_TEMPERATURES(raw_message)
-    if raw_id == "DB": return parse_ID_BMS_STATUS(raw_message)
-    if raw_id == "DC": return parse_ID_FH_WATCHDOG_TEST(raw_message)
-    if raw_id == "DD": return parse_ID_CCU_STATUS(raw_message)
-    if raw_id == "DE": return parse_ID_BMS_BALANCING_STATUS(raw_message)
+def print_all_the_shit_in_dbc_file(db):
+    dbc_ids=[]
+    for message in db.messages:
+        # print(str(vars(message)) + "\n")
+        dbc_ids.append(message.frame_id)
+        # print(str(message.name)+" ID: "+str(message.frame_id)+" Note: "+str(message.comment))
+        # print("\tsignals: ")
+        # for signal in message.signals:
+            # print("\t\t"+ signal.name)
+    return dbc_ids
 
-    if raw_id == "E0": return parse_ID_BMS_READ_WRITE_PARAMETER_COMMAND(raw_message)
-    if raw_id == "E1": return parse_ID_BMS_PARAMETER_RESPONSE(raw_message)
-    if raw_id == "E2": return parse_ID_BMS_COULOMB_COUNTS(raw_message)
-    if raw_id == "E7": return parse_ID_MCU_GPS_READINGS(raw_message)
-    if raw_id == "EA": return parse_ID_MCU_WHEEL_SPEED(raw_message)
-    if raw_id == "EB": return parse_ID_DASHBOARD_STATUS(raw_message)
-    if raw_id == "92": return parse_ID_SAB_READINGS_FRONT(raw_message)
-    if raw_id == "93": return parse_ID_SAB_READINGS_REAR(raw_message)
-    if raw_id == "EE": return parse_ID_SAB_READINGS_GPS(raw_message)
+def parse_message(id, data, db,dbc_ids,unknown_ids):
+    labels=[]
+    values=[]
+    units=[]
+    if int(id,16) in dbc_ids:
+        actual_message = db.get_message_by_frame_id(int(id,16))
+        for signal in actual_message.signals:
+            units.append(str(signal.unit))
+        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data))
+        for i in parsed_message:
+            message_label = str(i)
+            labels.append(message_label)
+            values.append(str(parsed_message[i]))
+        message_name = actual_message.name
+        return [message_name,labels,values,units]
+    if (id not in unknown_ids) & (int(id,16) not in dbc_ids):
+        unknown_ids.append(id)
+    return "INVALID_ID"
 
-    if raw_id == "100": return parse_ID_EM_MEASUREMENT(raw_message)
-    if raw_id == "400": return parse_ID_EM_STATUS(raw_message)
-    if raw_id == "90": return parse_ID_IMU_ACCELEROMETER(raw_message)
-    if raw_id == "91": return parse_ID_IMU_GYROSCOPE(raw_message)
-    #i added these below
-    if raw_id == "6B1": return parse_ID_ORIONBMS_MESSAGE1(raw_message)
-    if raw_id == "6B2": return parse_ID_ORIONBMS_MESSAGE2(raw_message)
-    if raw_id == "69": return parse_ID_PRECHARGE(raw_message)
-    if raw_id == "5AA" : return parse_ID_FBHNODE1(raw_message)
-    if raw_id == "5AB" : return parse_ID_FBHNODE2(raw_message)
-
-    # Should not come to here if CAN ID was valid
-    if DEBUG: print("UNFATAL ERROR: Invalid CAN ID: 0x" + raw_id)
+def parse_message_better(id, data, db,dbc_ids,unknown_ids):
+    if int(id,16) in dbc_ids:
+        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data))
+        return parsed_message
+    if (id not in unknown_ids) & (int(id,16) not in dbc_ids):
+        unknown_ids.append(id)
     return "INVALID_ID"
 
 def parse_time(raw_time):
@@ -1055,8 +1100,29 @@ def parse_time(raw_time):
     time = str(datetime.utcfromtimestamp(raw_time).strftime('%Y-%m-%dT%H:%M:%S'))
     time = time + "." + str(ms).zfill(3) + "Z"
     return time
+def parse_used_ids(filename,dbc_for_parsing,dbc_ids,unknown_ids):
+    header_list = ["Time"]
+    infile = open("Raw_Data/" + filename, "r")
+    flag_first_line=True
+    for line in infile.readlines():
+        if flag_first_line:
+            flag_first_line = False
+        else:
+            raw_id = line.split(",")[1]
+            length = line.split(",")[2]
+            raw_message = line.split(",")[3]
+            if length == 0 or raw_message == "\n":
+                continue
+            raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
+            raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
+            current_message = parse_message_better(raw_id,raw_message,dbc_for_parsing,dbc_ids,unknown_ids)
+            if current_message != "INVALID_ID":
+                for i in current_message:
+                    if i not in header_list:
+                        header_list.append(i)
+    return header_list
 
-def parse_file(filename):
+def parse_file(filename,dbc):
     '''
     @brief: Reads raw data file and creates parsed data CSV.
             Loops through lines to write to parsed datafile.
@@ -1065,16 +1131,30 @@ def parse_file(filename):
     @return: N/A
     '''
 
+    # Array to keep track of IDs we can't parse
+
+    unknown_ids = []
+    # Array to keep track of IDs we CAN parse
+    dbc_ids = print_all_the_shit_in_dbc_file(dbc)
+    header_list = parse_used_ids(filename,dbc,dbc_ids,unknown_ids)
+    # Miscellaneous shit lol
+    nextline = [""] * len(header_list)
+    header_string=",".join(header_list)
+
+
     infile = open("Raw_Data/" + filename, "r")
     outfile = open("Parsed_Data/" + filename, "w")
+    outfile2 = open("Better_Parsed_Data/Better" + filename, "w")
 
+    flag_second_line = True
     flag_first_line = True
+    last_time=''
     for line in infile.readlines():
         # On the first line, do not try to parse. Instead, set up the CSV headers.
         if flag_first_line:
             flag_first_line = False
             outfile.write("time,id,message,label,value,unit\n")
-
+            outfile2.write(header_string+"\n")
         # Otherwise attempt to parse the line.
         else:
             raw_time = line.split(",")[0]
@@ -1090,7 +1170,9 @@ def parse_file(filename):
             time = parse_time(raw_time)
             raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
             raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
-            table = parse_message(raw_id, raw_message)
+            # Get actual message, referencing our DBC file and ID lists
+            table = parse_message(raw_id, raw_message,dbc,dbc_ids,unknown_ids)
+
             if table == "INVALID_ID" or table == "UNPARSEABLE":
                 continue
 
@@ -1106,9 +1188,27 @@ def parse_file(filename):
                 unit = table[3][i].strip()
 
                 outfile.write(time + ",0x" + raw_id + "," + message + "," + label + "," + value + "," + unit + "\n")
-
+            current_message = parse_message_better(raw_id,raw_message,dbc,dbc_ids,unknown_ids)
+            if current_message != "INVALID_ID":
+                for i in current_message:
+                    nextline[header_list.index(str(i))]=str(current_message[i])
+            if time == last_time:
+                continue
+            elif flag_second_line==True:
+                flag_second_line = False
+                print("Second Line")
+                continue
+            elif time != last_time:
+                # write our line to file
+                # clear it out and begin putting new values in it
+                last_time = time
+                nextline[header_list.index("Time")]=raw_time
+                outfile2.write(",".join(nextline) + "\n")
+                nextline = [""] * len(header_list)
+    print("These IDs not found in DBC: " +str(unknown_ids))
     infile.close()
     outfile.close()
+    outfile2.close()
     return
 
 def parse_folder():
@@ -1124,15 +1224,24 @@ def parse_folder():
         print("FATAL ERROR: Raw_Data folder does not exist. Please move parser.py or create Raw_Data folder.")
         sys.exit(0)
 
+    # Stop attempting to parse if DBC folder is not there.
+    if not os.path.exists("DBC_Files"):
+        print("FATAL ERROR: DBC Files folder does not exist. Please move parser.py or create Raw_Data folder.")
+        sys.exit(0)
+
     # Creates Parsed_Data folder if not there.
     if not os.path.exists("Parsed_Data"):
         os.makedirs("Parsed_Data")
-
+        # Creates Parsed_Data folder if not there.
+    if not os.path.exists("Better_Parsed_Data"):
+        os.makedirs("Better_Parsed_Data")
+    # Generate the main DBC file object for parsing
+    dbc_file = get_dbc_files()
     # Loops through files and call parse_file on each raw CSV.
     for file in os.listdir("Raw_Data"):
         filename = os.fsdecode(file)
         if filename.endswith(".CSV") or filename.endswith(".csv"):
-            parse_file(filename)
+            parse_file(filename,dbc_file)
             print("Successfully parsed: " + filename)
         else:
             continue
@@ -1336,3 +1445,5 @@ def create_mat():
         print('Saved struct in output.mat file.')
     except:
         print('FATAL ERROR: Failed to create .mat file')
+
+
