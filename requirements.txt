@@ -4,6 +4,7 @@ numpy
 scipy
 pandas
 python-dateutil
+cantools
 
 # telemetry_exe Requirements
 PySimpleGUI
