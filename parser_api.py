@@ -1070,7 +1070,7 @@ def parse_message(id, data, db,dbc_ids,unknown_ids):
         actual_message = db.get_message_by_frame_id(int(id,16))
         for signal in actual_message.signals:
             units.append(str(signal.unit))
-        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data))
+        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data),decode_choices=False)
         for i in parsed_message:
             message_label = str(i)
             labels.append(message_label)
@@ -1083,7 +1083,7 @@ def parse_message(id, data, db,dbc_ids,unknown_ids):
 
 def parse_message_better(id, data, db,dbc_ids,unknown_ids):
     if int(id,16) in dbc_ids:
-        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data))
+        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data),decode_choices=False)
         return parsed_message
     if (id not in unknown_ids) & (int(id,16) not in dbc_ids):
         unknown_ids.append(id)
