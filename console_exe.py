@@ -17,26 +17,46 @@ import binascii
 import struct
 import sys
 import argparse
-
+import serial
+import glob
+from parser_api import *
+from decimal import Decimal
 __file__ = sys.path[0]
-sys.path.insert(1, "../telemetry_parsers")
-from parser_api import parse_message
-sys.path.insert(1, '../telemetry_aws')
-from db import unpack
 
 parser = argparse.ArgumentParser(description="Telemetry console")
 parser.add_argument('--mode', '-m', action='store', default='0', required=False, help="Mode for parser to run in")
-parser.add_argument('--font', '-f', action='store', default='Courier New', required=False, help="Font to use")
-parser.add_argument('--title_size', '-ts', action='store', default='12', required=False, help="Title font")
-parser.add_argument('--body_size', '-bs', action='store', default='8', required=False, help='Body font size')
+parser.add_argument('--font', '-f', action='store', default='Comic Sans', required=False, help="Font to use")
+parser.add_argument('--title_size', '-ts', action='store', default='14', required=False, help="Title font")
+parser.add_argument('--body_size', '-bs', action='store', default='10', required=False, help='Body font size')
 
 args = parser.parse_args()
 
+class ReadLine:
+    def __init__(self, s):
+        self.buf = bytearray()
+        self.s = s
+
+    def fastreadline(self):
+        i = self.buf.find(b"\n")
+        if i >= 0:
+            r = self.buf[:i+1]
+            self.buf = self.buf[i+1:]
+            return r
+        while True:
+            i = max(1, min(2048, self.s.in_waiting))
+            data = self.s.read(i)
+            i = data.find(b"\n")
+            if i >= 0:
+                r = self.buf + data[:i+1]
+                self.buf[0:] = data[i+1:]
+                return r
+            else:
+                self.buf.extend(data)
 
 # Connection type definitions
 class ConnectionType(Enum):
     SERVER = 0
-    ESP32 = 1
+    TEENSY = 1
     TEST_CSV = 2
     UNKNOWN = 3
 
@@ -49,7 +69,7 @@ MQTT_TOPIC  = 'hytech_car/telemetry'
 # @TODO: Make a screen at the beginning to let the user choose the type
 
 CONNECTION = {'0': ConnectionType.SERVER.value,
-              '1': ConnectionType.ESP32.value,
+              '1': ConnectionType.TEENSY.value,
               '2': ConnectionType.TEST_CSV.value,
               '3': ConnectionType.UNKNOWN.value}[args.mode]
 
@@ -59,18 +79,16 @@ DICT = {
         "SHUTDOWN_H_ABOVE_THRESHOLD": " "
     },
     "BATTERY_MANAGEMENT_SYSTEM": {
-        "BMS_VOLTAGE_AVERAGE": " ",
-        "BMS_VOLTAGE_LOW": " ",
-        "BMS_VOLTAGE_HIGH": " ",
-        "BMS_VOLTAGE_TOTAL": " ",
-        "BMS_AVERAGE_TEMPERATURE": " ",
-        "BMS_LOW_TEMPERATURE": " ",
-        "BMS_HIGH_TEMPERATURE": " ",
-        "BMS_CURRENT": " ",
-        "BMS_TOTAL_CHARGE": " ",
-        "BMS_TOTAL_DISCHARGE": " ",
-        "BMS_STATE": " ",
-        "BMS_ERROR_FLAGS": " ",
+        "Pack_Open_Voltage": " ",
+        "Pack_Inst_Voltage": " ",
+        "Pack_Summed_Voltage": " ",
+        "Average_Temperature": " ",
+        "Low_Temperature": " ",
+        "High_Temperature": " ",
+        "Pack_Current": " ",
+        "Pack_DCL": " ",
+        "Pack_CCL": " "
+
     },
     "ENERGY_METER": {
         "VOLTAGE": " ",
@@ -91,36 +109,35 @@ DICT = {
     },
     "RMS_INVERTER" : {
         "OUTPUT_POWER": " ",
-        "RMS_UPTIME": " ",
-        "INVERTER_ENABLE_STATE": " ",
-        "MOTOR_SPEED": " ",
-        "MOTOR_ANGLE": " ",
-        "ELEC_OUTPUT_FREQ": " ",
-        "COMMANDED_TORQUE": " ",
-        "TORQUE_FEEDBACK": " ",
-        "DC_BUS_VOLTAGE": " ",
-        "OUTPUT_VOLTAGE": " ",
-        "PHASE_AB_VOLTAGE": " ",
-        "PHASE_BC_VOLTAGE": " ",
-        "DC_BUS_CURRENT": " ",
-        "PHASE_A_CURRENT": " ",
-        "PHASE_B_CURRENT": " ",
-        "PHASE_C_CURRENT": " ",
-        "MOTOR_TEMPERATURE": " ",
-        "GATE_DRIVER_BOARD_TEMPERATURE": " ",
-        "MODULE_A_TEMPERATURE": " ",
-        "MODULE_B_TEMPERATURE": " ",
-        "MODULE_C_TEMPERATURE": " ",
-        "TORQUE_SHUDDER": " ",
-        "INVERTER_STATE": " ",
-        "VSM_STATE": " ",
-        "INVERTER_ACTIVE_DISCHARGE_STATE": " ",
-        "INVERTER_COMMAND_MODE": " ",
-        "DIRECTION_COMMAND": " ",
-        "POST_FAULT_LO": " ",
-        "POST_FAULT_HI": " ",
-        "RUN_FAULT_LO": " ",
-        "RUN_FAULT_HI": " ",
+        "D3_Power_On_Timer": " ",
+        "Inverter_Enable": " ",
+        "D1_Motor_Angle_Electrical": " ",
+        "D3_Electrical_Output_Frequency": " ",
+        "D1_Commanded_Torque": " ",
+        "D2_Torque_Feedback": " ",
+        "D1_DC_Bus_Voltage": " ",
+        "D2_Output_Voltage": " ",
+        "D3_VAB_Vd_Voltage": " ",
+        "D4_VBC_Vq_Voltage": " ",
+        "D4_DC_Bus_Current": " ",
+        "D1_Phase_A_Current": " ",
+        "D2_Phase_B_Current": " ",
+        "D3_Phase_C_Current": " ",
+        "D3_Motor_Temperature": " ",
+        "D4_Gate_Driver_Board": " ",
+        "D1_Module_A": " ",
+        "D2_Module_B": " ",
+        "D3_Module_C": " ",
+        "D4_Torque_Shudder": " ",
+        "D2_Inverter_State": " ",
+        "D1_VSM_State": " ",
+        "D4_Inverter_Discharge_State": " ",
+        "D5_Inverter_Command_Mode": " ",
+        "D7_Direction_Command": " ",
+        "D1_Post_Fault_Lo": " ",
+        "D2_Post_Fault_Hi": " ",
+        "D3_Run_Fault_Lo": " ",
+        "D4_Run_Fault_Hi": " ",
     },
     "MAIN_ECU": {
         "GLV_BATTERY_VOLTAGE": " ",
@@ -134,29 +151,36 @@ DICT = {
         "INVERTER_POWERED": " ",
         "TORQUE_MODE": " ",
         "MAX_TORQUE": " ",
-        "REQUESTED_TORQUE": " ",
-        "ACCELERATOR_PEDAL_1": " ",
-        "ACCELERATOR_PEDAL_2": " ",
+        "Torque_Command": " ",
+        "APPS1": " ",
+        "APPS2": " ",
         "NO_ACCEL_IMPLAUSIBILITY": " ",
-        "BRAKE_TRANSDUCER_1": " ",
-        "BRAKE_TRANSDUCER_2": " ",
+        "BSE1": " ",
+        "STEERING": " ",
         "BRAKE_PEDAL_ACTIVE": " ",
         "NO_BRAKE_IMPLAUSIBILITY": " ",
         "LAUNCH_CTRL_ACTIVE": " ",
+        #tests from here
+        "SHUTDOWN_STATES": " ",
+        "PEDAL_STATES": " ",
+        "ECU_STATES": " ",
+        "MAX_TORQUE": " ",
+        "TORQUE_MODE": " ",
+        "DISTANCE_TRAVELLED": " ",
+
     },
     "SENSOR_ACQUISITION_BOARD": {
         "COOLING_LOOP_FLUID_TEMP": " ",
         "AMB_AIR_TEMP": " ",
-        "FL_SUSP_LIN_POT": " ",
-        "FR_SUSP_LIN_POT": " ",
-        "BL_SUSP_LIN_POT": " ",
-        "BR_SUSP_LIN_POT": " ",
+        "FL_shockpot": " ",
+        "FR_shockpot": " ",
+        "RL_shockpot": " ",
+        "RR_shockpot": " ",
     },
     "WHEEL_SPEED_SENSORS": {
-        "RPM_BACK_LEFT": " ",
-        "RPM_BACK_RIGHT": " ",
-        "RPM_FRONT_LEFT": " ",
-        "RPM_FRONT_RIGHT": " "
+        "D2_Motor_Speed": " ",
+        "RPM_FL": " ",
+        "RPM_FR": " "
     },
 }
 
@@ -189,13 +213,14 @@ def recursive_lookup(k, d):
 '''
 def handle_inverter_power(name, data, window):
     # Specially handle Inverter output power since it is not a CAN label and needs calculation
-    if name == "DC_BUS_CURRENT" or name == "DC_BUS_VOLTAGE":
-        if name == "DC_BUS_VOLTAGE":
+    if name == "Pack_Current" or name == "D1_DC_Bus_Voltage":
+        if name == "D1_DC_Bus_Voltage":
             global inverter_voltage
-            inverter_voltage = data
+
+            inverter_voltage = int(Decimal(data))
         else:
             global inverter_current
-            inverter_current = data
+            inverter_current = int(Decimal(data))
         
         # Power = voltage * current
         # Apply filtering constant so changes are not so volatile
@@ -204,6 +229,90 @@ def handle_inverter_power(name, data, window):
 
         window.write_event_value("-Update Data-", ["OUTPUT_POWER", "OUTPUT POWER: " + str(inverter_power) + " W"])
 
+def serial_ports():
+    """ Lists serial port names
+
+        :raises EnvironmentError:
+            On unsupported or unknown platforms
+        :returns:
+            A list of the serial ports available on the system
+    """
+    if sys.platform.startswith('win'):
+        ports = ['COM%s' % (i + 1) for i in range(256)]
+    elif sys.platform.startswith('linux') or sys.platform.startswith('cygwin'):
+        # this excludes your current terminal "/dev/tty"
+        ports = glob.glob('/dev/tty[A-Za-z]*')
+    elif sys.platform.startswith('darwin'):
+        ports = glob.glob('/dev/tty.*')
+    else:
+        raise EnvironmentError('Unsupported platform')
+
+    result = []
+    for port in ports:
+        try:
+            s = serial.Serial(port)
+            s.close()
+            result.append(port)
+        except (OSError, serial.SerialException):
+            pass
+    return result
+
+def user_prompt(prompt,options):
+    layoutt = [  [sg.Text(prompt)],     # Part 2 - The Layout
+            [sg.Text(options)],
+            [sg.Input()],
+            [sg.Button('Ok')] ]
+    # Create the window
+    windoww = sg.Window('KS5e Parser', layoutt)      # Part 3 - Window Defintion
+
+    # Display and interact with the Window
+
+    event, values = windoww.read()                   # Part 4 - Event loop or Window.read call
+    # Finish up by removing from the screen
+    windoww.close()      
+    return values[0]
+
+def read_from_teensy_thread(window, comport):
+    db = get_dbc_files()
+    dbc_ids = print_all_the_shit_in_dbc_file(db)
+    unknown_ids=[]
+    ser = serial.Serial()
+    ser.port = comport #Arduino serial port
+    ser.baudrate = 256000
+    ser.timeout = 10 #specify timeout when using readline()
+    ser.open()
+    rl=ReadLine(ser)
+    if ser.is_open==True:
+        print("\nAll right, serial port now open. Configuration:\n")
+        print(ser, "\n") #print serial parameters
+    else:
+        sys.exit("Opening serial failed")
+    window.write_event_value("-Connection Success-", "good job!")
+    while True:
+        while (ser.in_waiting > 0):
+            # print(ser.in_waiting)
+            line=ser.readline()
+            line=line.replace(b'\r\n',b'')
+            raw_id = (line.split(b',')[0]).decode()
+            raw_message = (line.split(b',')[1]).decode()
+            length = 8
+            # raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
+            # raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
+            table = parse_message(raw_id, raw_message,db,dbc_ids,unknown_ids)
+            #print(table)
+            if table != "INVALID_ID" and table != "UNPARSEABLE":
+                for i in range(len(table[1])):
+                    name = table[1][i]
+                    data = table[2][i]
+                    units = table[3][i]
+                    if name == "MCU_STATE":
+                        window.write_event_value("-MCU State Change-", [data.replace("_", " ")])
+                    elif recursive_lookup(name, DICT):
+                        #print("found a thing\n\tname: " + name + "\n\tdata: "+data + "\n\tunits: " + units)
+                        window.write_event_value("-Update Data-", [name, name.replace("_", " ") + ": " + str(data) + " " + units])
+                        handle_inverter_power(name, data, window)
+
+
 '''
 @brief: Thread to read raw CSV line, parse it, and send event to GUI if match 
         Sends event to close GUI upon CSV read completion
@@ -211,27 +320,32 @@ def handle_inverter_power(name, data, window):
 @param[in]: window - the PySimpleGUI window object
 '''
 def read_from_csv_thread(window):
+    db = get_dbc_files()
+    dbc_ids = print_all_the_shit_in_dbc_file(db)
+    unknown_ids=[]
     infile = open("raw_data.csv", "r")
     line_count =  1 # bypass first header line
     raw_data_lines = infile.readlines()
     window.write_event_value("-Test Connection Success-", "good job!")
 
     while line_count < len(raw_data_lines):
+        print("Linecount: "+ str(line_count))
         raw_id = raw_data_lines[line_count].split(",")[1]
         length = raw_data_lines[line_count].split(",")[2]
         raw_message = raw_data_lines[line_count].split(",")[3]
         raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
         raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
-        table = parse_message(raw_id, raw_message)
-        
+        table = parse_message(raw_id, raw_message,db,dbc_ids,unknown_ids)
+        #print(table)
         if table != "INVALID_ID" and table != "UNPARSEABLE":
             for i in range(len(table[1])):
-                name = table[1][i].upper()
+                name = table[1][i]
                 data = table[2][i]
                 units = table[3][i]
                 if name == "MCU_STATE":
                     window.write_event_value("-MCU State Change-", [data.replace("_", " ")])
                 elif recursive_lookup(name, DICT):
+                    #print("found a thing\n\tname: " + name + "\n\tdata: "+data + "\n\tunits: " + units)
                     window.write_event_value("-Update Data-", [name, name.replace("_", " ") + ": " + str(data) + " " + units])
                     handle_inverter_power(name, data, window)
 
@@ -245,64 +359,6 @@ def read_from_csv_thread(window):
         Parses incoming messages and packages them as an event to the GUI if match.
 @param[in]: window - the PySimpleGUI window object
 '''
-def mqtt_connection_thread(window):
-    ##############################
-    # Paho MQTT Callback Functions
-    ##############################
-
-    '''
-    @brief: Callback function to handle MQTT messages. Runs them through the parser if valid and sends update event to GUI.
-    @param[in]: client - unused
-    @param[in]: userdata - unused
-    @param[in]: msg - the raw hexlified MQTT message
-    '''
-    def mqtt_message(client, userdata, msg):
-        frame = msg.payload[msg.payload.find(b',') + 1:-1]
-        frame = binascii.hexlify(frame)
-        data = unpack("".join(chr(c) for c in frame))
-
-        if data != -1:
-            id = format(data[0], 'x').upper()
-            size = data[4]
-            # Catch when leadings zeros got stripped by struct.unpack and account for that
-            subtracts = 0
-            if data[5] == 0x0: # data[5] is first index of message payload
-                subtracts += 2
-            elif data[5] <= 0xF:
-                subtracts += 1   
-            raw = format(struct.unpack(">1Q", data[5:13])[0], 'x')[:size*2 - subtracts].zfill(16)   
-
-            table = parse_message(id, raw)
-            if table != "INVALID_ID" and table != "UNPARSEABLE":
-                for i in range(len(table[1])):
-                    name = table[1][i].upper()
-                    data = table[2][i]
-                    units = table[3][i]
-                    if name == "MCU_STATE":
-                        window.write_event_value("-MCU State Change-", [data.replace("_", " ")])
-                    elif recursive_lookup(name, DICT):
-                        window.write_event_value("-Update Data-", [name, name.replace("_", " ") + ": " + str(data) + " " + units])
-                        handle_inverter_power(name, data, window)
-
-    '''
-    @brief: Callback function for MQTT connection success. Sends an connection succes event to the GUI.
-    @param[in]: client - the MQTT client object
-    @param[in]: userdata - unused
-    @param[in]: flags - unused
-    @param[in]: rc - unused
-    '''
-    def mqtt_connect(client, userdata, flags, rc):
-        window.write_event_value("-Connection Success-", "good job!")
-        client.subscribe(MQTT_TOPIC)
-
-    ################################
-    # Paho MQTT Setup and Connection
-    ################################
-    client = mqtt.Client()
-    client.on_connect = mqtt_connect
-    client.on_message = mqtt_message
-    client.connect(MQTT_SERVER, MQTT_PORT, 60)
-    client.loop_forever()
 
 '''
 @brief: Helper function to get multi-columns rows for detailed messages
@@ -444,20 +500,22 @@ def main():
     column5 = sg.Column(voltages_second_column + [[sg.Text(" ", size=(35,1), pad=(0,0), font=text_font)]] + bms_detailed_temps + temperatures, vertical_alignment='t')
 
     # Finalize layout
-    layout = [[status_header_column1, status_header_column2, status_header_column3, status_header_column4, status_header_column5], [column1, column2, column3, column4, column5]]
+    layout = [[status_header_column1, status_header_column2, status_header_column3, status_header_column4, status_header_column5], [column1, column2, column3]]
 
-    window = sg.Window("HyTech Racing Live Telemetry Console", resizable=True).Layout(layout).Finalize()
-    window.Maximize()
-
+    window = sg.Window("KSU Motorsports Live Telemetry Console", resizable=True).Layout(layout).Finalize()
+    # window.Maximize()
+    CONNECTION = int(user_prompt("Enter Connection Type","SERVER=0, TEENSY=1, TEST_CSV=2"))
     # Choose messaging thread based on connection type
     if CONNECTION == ConnectionType.SERVER.value:
-        thread = threading.Thread(target=mqtt_connection_thread, args=[window], daemon=True)
-    elif CONNECTION == ConnectionType.ESP32.value:
-        sys.exit("ESP32 connection type currently not implemented. Terminating script")
+        sys.exit("Invalid connection source selection. Terminating script")
+    elif CONNECTION == ConnectionType.TEENSY.value:
+        comport = user_prompt("Enter Teensy COM port",serial_ports())
+        thread = threading.Thread(target=read_from_teensy_thread, args=[window,comport], daemon=True)
     elif CONNECTION == ConnectionType.TEST_CSV.value:
         thread = threading.Thread(target=read_from_csv_thread, args=[window], daemon=True)
     else:
         sys.exit("Invalid connection source selection. Terminating script")
+    #thread = threading.Thread(target=read_from_csv_thread, args=[window], daemon=True)
 
     thread.start()
 
