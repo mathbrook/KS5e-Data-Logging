@@ -16,10 +16,33 @@ close all
 % title('roll n heading test')
 % h = zoom;
 % set(h,'Motion','horizontal','Enable','on');
+%% RPM, IQ, and Inverter Fault Flags
+figure
+iq=S.D4_Iq;
+id=S.D3_Id;
+runfaults_lo=S.D3_Run_Fault_Lo;
+rpm=S.D2_Motor_Speed;
+inverter_v = S.D1_DC_Bus_Voltage;
+acc_v = S.Pack_Inst_Voltage;
+hold on
+plot(iq(:,1)/1000,iq(:,2));
+plot(id(:,1)/1000,id(:,2))
+plot(runfaults_lo(:,1)/1000,runfaults_lo(:,2))
+plot(rpm(:,1)/1000,rpm(:,2)/10)
+plot(inverter_v(:,1)/1000,inverter_v(:,2))
+plot(acc_v(:,1)/1000,acc_v(:,2))
+ylim([-100 600]);
+title('Motor Currents, RPM, Inverter Fault Code, Inverter and BMS voltage')
+xlabel('Time (s)')
+h = zoom;
+set(h,'Motion','horizontal','Enable','on');
+legend({'iq','id','faults_lo','rpm','inverter DC bus voltage','BMS battery pack voltage'})
+% everything after this point will not work due to incompatibility with DBC
+% parsing, these functions were designed for the manually written parsing
 %% Torque, Vehicle Speed, Current, mega plot
 figure
 
-uptime=S.rms_uptime;
+uptime=S.D3_Power_On_Timer;
 requested_torque = S.requested_torque;
 commanded_torque = S.commanded_torque;
 busVoltage = S.dc_bus_voltage;

@@ -23,6 +23,8 @@ from datetime import datetime
 import cantools
 import pandas as pd
 import csv
+import tempfile
+import shutil
 
 DEBUG = False # Set True for option error print statements
 
@@ -1122,6 +1124,25 @@ def parse_used_ids(filename,dbc_for_parsing,dbc_ids,unknown_ids):
                         header_list.append(i)
     return header_list
 
+def delete_lines_containing_string(input_file, specified_string):
+    # Create a temporary file to write the filtered content
+    temp_file = tempfile.NamedTemporaryFile(mode='w', delete=False, newline='', encoding='utf-8')
+
+    with open(input_file, 'r', newline='', encoding='utf-8') as infile:
+        reader = csv.reader(infile)
+        writer = csv.writer(temp_file)
+
+        for row in reader:
+            # Check if the specified string is present in the row
+            if specified_string not in ','.join(row):
+                writer.writerow(row)
+
+    # Close the temporary file
+    temp_file.close()
+
+    # Replace the original file with the temporary file
+    shutil.move(temp_file.name, input_file)
+
 def parse_file(filename,dbc):
     '''
     @brief: Reads raw data file and creates parsed data CSV.
@@ -1130,6 +1151,9 @@ def parse_file(filename,dbc):
     @input: The filename of the raw and parsed CSV.
     @return: N/A
     '''
+    # Delete any lines that contain this blank glitchy CAN message of ID 0 and data 0
+    specified_string = ',0,8,0000000000000000'  # Replace with the specified string to be removed
+    delete_lines_containing_string('Raw_Data/'+filename,specified_string)
 
     # Array to keep track of IDs we can't parse
 
