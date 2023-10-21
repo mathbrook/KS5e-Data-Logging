@@ -269,3 +269,4 @@ telemetry_exe/PlottingPlayground.m
 telemetry_parsers/__pycache__/parser_api.cpython-310.pyc
 telemetry_parsers/__pycache__/parser_api.cpython-310.pyc
 *.mat
+*.fig

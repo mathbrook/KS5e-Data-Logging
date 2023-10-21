@@ -24,6 +24,14 @@ runfaults_lo=S.D3_Run_Fault_Lo;
 rpm=S.D2_Motor_Speed;
 inverter_v = S.D1_DC_Bus_Voltage;
 acc_v = S.Pack_Inst_Voltage;
+% get daxis and qaxis current and find magnitude of their vector
+% "By convention, the quadrature axis always will lead the direct axis
+% electrically by 90 deg."
+daxis=id(:,2);
+qaxis=iq(:,2);
+qaxiss = qaxis.^2;
+daxiss=daxis.^2;
+total_motor_current = sqrt(qaxiss+daxiss);
 hold on
 plot(iq(:,1)/1000,iq(:,2));
 plot(id(:,1)/1000,id(:,2))
@@ -31,12 +39,13 @@ plot(runfaults_lo(:,1)/1000,runfaults_lo(:,2))
 plot(rpm(:,1)/1000,rpm(:,2)/10)
 plot(inverter_v(:,1)/1000,inverter_v(:,2))
 plot(acc_v(:,1)/1000,acc_v(:,2))
+plot(iq(:,1)/1000,total_motor_current)
 ylim([-100 600]);
 title('Motor Currents, RPM, Inverter Fault Code, Inverter and BMS voltage')
 xlabel('Time (s)')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
-legend({'iq','id','faults_lo','rpm','inverter DC bus voltage','BMS battery pack voltage'})
+legend({'iq','id','faults_lo','rpm','inverter DC bus voltage','BMS battery pack voltage','total motor current'})
 % everything after this point will not work due to incompatibility with DBC
 % parsing, these functions were designed for the manually written parsing
 %% Torque, Vehicle Speed, Current, mega plot
