@@ -20,6 +20,7 @@ import os
 import sys
 from multipliers import Multipliers
 from datetime import datetime
+from folder_selection_utils import select_folder_and_get_path
 import cantools
 import pandas as pd
 import csv
@@ -1104,7 +1105,7 @@ def parse_time(raw_time):
     return time
 def parse_used_ids(filename,dbc_for_parsing,dbc_ids,unknown_ids):
     header_list = ["Time"]
-    infile = open("Raw_Data/" + filename, "r")
+    infile = open(filename, "r")
     flag_first_line=True
     for line in infile.readlines():
         if flag_first_line:
@@ -1153,7 +1154,7 @@ def parse_file(filename,dbc):
     '''
     # Delete any lines that contain this blank glitchy CAN message of ID 0 and data 0
     specified_string = ',0,8,0000000000000000'  # Replace with the specified string to be removed
-    delete_lines_containing_string('Raw_Data/'+filename,specified_string)
+    delete_lines_containing_string(filename,specified_string)
 
     # Array to keep track of IDs we can't parse
 
@@ -1166,7 +1167,7 @@ def parse_file(filename,dbc):
     header_string=",".join(header_list)
 
 
-    infile = open("Raw_Data/" + filename, "r")
+    infile = open(filename, "r")
     outfile = open("Parsed_Data/" + filename, "w")
     outfile2 = open("Better_Parsed_Data/Better" + filename, "w")
 
@@ -1242,16 +1243,23 @@ def parse_folder():
     @input: N/A
     @return: N/A
     '''
-
-    # Stop attempting to parse if Raw_Data is not there.
-    if not os.path.exists("Raw_Data"):
-        print("FATAL ERROR: Raw_Data folder does not exist. Please move parser.py or create Raw_Data folder.")
-        sys.exit(0)
-
     # Stop attempting to parse if DBC folder is not there.
     if not os.path.exists("DBC_Files"):
         print("FATAL ERROR: DBC Files folder does not exist. Please move parser.py or create Raw_Data folder.")
         sys.exit(0)
+    dbc_file = get_dbc_files()
+    newpath = select_folder_and_get_path()
+    print("Current path is: " + str(newpath))
+    os.chdir(newpath)
+    # Stop attempting to parse if Raw_Data is not there.
+    # if not os.path.exists("Raw_Data"):
+    #     print("FATAL ERROR: Raw_Data folder does not exist. Please move parser.py or create Raw_Data folder.")
+    #     sys.exit(0)
+
+    # # Stop attempting to parse if DBC folder is not there.
+    # if not os.path.exists("DBC_Files"):
+    #     print("FATAL ERROR: DBC Files folder does not exist. Please move parser.py or create Raw_Data folder.")
+    #     sys.exit(0)
 
     # Creates Parsed_Data folder if not there.
     if not os.path.exists("Parsed_Data"):
@@ -1260,9 +1268,9 @@ def parse_folder():
     if not os.path.exists("Better_Parsed_Data"):
         os.makedirs("Better_Parsed_Data")
     # Generate the main DBC file object for parsing
-    dbc_file = get_dbc_files()
+    # dbc_file = get_dbc_files()
     # Loops through files and call parse_file on each raw CSV.
-    for file in os.listdir("Raw_Data"):
+    for file in os.listdir(newpath):
         filename = os.fsdecode(file)
         if filename.endswith(".CSV") or filename.endswith(".csv"):
             parse_file(filename,dbc_file)
