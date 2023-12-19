@@ -11,7 +11,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M172_Torque_And_Timer_Info": {
             "id": 172,
@@ -23,7 +26,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M194_Read_Write_Param_Response": {
             "id": 194,
@@ -35,7 +41,10 @@
             ],
             "comment": "To write a parameter use message 0x0C1 with byte #2 set to 1 (write). \nTo read a parameter use message 0x0C1 with byte #2 to set 0 (read). ",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M193_Read_Write_Param_Command": {
             "id": 193,
@@ -47,7 +56,8 @@
             ],
             "comment": "To write a parameter use message 0x0C1 with byte #2 set to 1 (write). \nTo read a parameter use message 0x0C1 with byte #2 to set 0 (read). ",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": []
         },
         "M192_Command_Message": {
             "id": 192,
@@ -63,7 +73,8 @@
             ],
             "comment": "The command message is used to transmit data to the controller. This message is sent from a user supplied external controller to the PMxxx controller.",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": []
         },
         "M171_Fault_Codes": {
             "id": 171,
@@ -76,7 +87,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M170_Internal_States": {
             "id": 170,
@@ -101,7 +115,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M169_Internal_Voltages": {
             "id": 169,
@@ -114,7 +131,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M168_Flux_ID_IQ_Info": {
             "id": 168,
@@ -127,7 +147,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M167_Voltage_Info": {
             "id": 167,
@@ -140,7 +163,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M166_Current_Info": {
             "id": 166,
@@ -153,7 +179,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M165_Motor_Position_Info": {
             "id": 165,
@@ -166,7 +195,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M164_Digital_Input_Status": {
             "id": 164,
@@ -183,7 +215,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M163_Analog_Input_Voltages": {
             "id": 163,
@@ -198,7 +233,10 @@
             ],
             "comment": "",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M162_Temperature_Set_3": {
             "id": 162,
@@ -211,7 +249,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M161_Temperature_Set_2": {
             "id": 161,
@@ -224,7 +265,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M160_Temperature_Set_1": {
             "id": 160,
@@ -237,7 +281,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M174_Firmware_Info": {
             "id": 174,
@@ -250,7 +297,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M175_Diag_Data": {
             "id": 175,
@@ -264,7 +314,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M187_U2C_Command_Txd": {
             "id": 471,
@@ -275,7 +328,10 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "RMS_PM_Controller"
+            ]
         },
         "M188_U2C_Message_Rxd": {
             "id": 469,
@@ -292,7 +348,8 @@
             ],
             "comment": null,
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": []
         },
         "BMS_Current_Limit": {
             "id": 514,
@@ -303,7 +360,8 @@
             ],
             "comment": "Sent by BMS",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": []
         },
         "MSGID_0X6B1": {
             "id": 1713,
@@ -318,7 +376,10 @@
             ],
             "comment": "This ID Transmits at 104 ms.",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "BMS"
+            ]
         },
         "MSGID_0X6B2": {
             "id": 1714,
@@ -331,104 +392,29 @@
             ],
             "comment": "This ID Transmits at 48 ms.",
             "is_extended_frame": false,
-            "bus_name": null
+            "bus_name": null,
+            "senders": [
+                "BMS"
+            ]
         },
-        "MSGID_0X1806E7F4": {
-            "id": 403105780,
+        "MSGID_0X6B3": {
+            "id": 1715,
             "length": 8,
             "signals": [
-                "Maximum_Pack_Voltage",
-                "Pack_CCL",
-                "Blank26",
-                "Blank27",
-                "Blank28",
-                "Blank29",
-                "Blank30",
-                "Blank31",
-                "Blank32",
-                "DTC_P0A08_Charger_Safety_Relay_Fault",
-                "Blank33",
-                "Blank34",
-                "Blank35"
+                "Pack_SOC",
+                "Blank1",
+                "Blank2",
+                "Blank3",
+                "Blank4",
+                "Blank5",
+                "Blank6"
             ],
-            "comment": "This ID Transmits at 808 ms.",
-            "is_extended_frame": true,
-            "bus_name": null
-        },
-        "MSGID_0X1806E9F4": {
-            "id": 403106292,
-            "length": 8,
-            "signals": [
-                "Maximum_Cell_Voltage",
-                "Pack_CCL",
-                "Blank36",
-                "Blank37",
-                "Blank38",
-                "Blank39",
-                "Blank40",
-                "Blank41",
-                "Blank42",
-                "DTC_P0A08_Charger_Safety_Relay_Fault",
-                "Blank43",
-                "Blank44",
-                "Blank45"
-            ],
-            "comment": "This ID Transmits at 808 ms.",
-            "is_extended_frame": true,
-            "bus_name": null
-        },
-        "MSGID_0X1806E6F4": {
-            "id": 403105524,
-            "length": 8,
-            "signals": [
-                "Adaptive_Amphours",
-                "Pack_Amphours",
-                "Maximum_Cell_Voltage",
-                "Populated_Cells",
-                "Constant_Value4"
-            ],
-            "comment": "This ID Transmits at 1000 ms.",
-            "is_extended_frame": true,
-            "bus_name": null
-        },
-        "MSGID_0X1806E5F4": {
-            "id": 403105268,
-            "length": 8,
-            "signals": [
-                "Maximum_Cell_Voltage",
-                "Pack_CCL",
-                "Blank8",
-                "Blank9",
-                "Blank10",
-                "Blank11",
-                "Blank12",
-                "Blank13",
-                "Blank14",
-                "DTC_P0A08_Charger_Safety_Relay_Fault",
-                "Blank15",
-                "Blank16",
-                "Blank17"
-            ],
-            "comment": "This ID Transmits at 808 ms.",
-            "is_extended_frame": true,
-            "bus_name": null
-        },
-        "MSGID_0X18FF50E5": {
-            "id": 419385573,
-            "length": 8,
-            "signals": [
-                "Blank18",
-                "Blank19",
-                "Blank20",
-                "Blank21",
-                "Blank22",
-                "Blank23",
-                "Blank24",
-                "Blank25"
-            ],
-            "comment": null,
-            "is_extended_frame": true,
-            "bus_name": null
+            "comment": "This ID Transmits at 1008 ms.",
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": [
+                "BMS"
+            ]
         }
     },
     "signals": [
@@ -2212,477 +2198,14 @@
             "is_multiplexer": false
         },
         {
-            "name": "Maximum_Pack_Voltage",
-            "start": 7,
-            "length": 16,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Pack_CCL",
-            "start": 23,
-            "length": 16,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank26",
-            "start": 32,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank27",
-            "start": 33,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank28",
-            "start": 34,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank29",
-            "start": 35,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank30",
-            "start": 36,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank31",
-            "start": 37,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank32",
-            "start": 38,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "DTC_P0A08_Charger_Safety_Relay_Fault",
-            "start": 39,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank33",
-            "start": 47,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank34",
-            "start": 55,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank35",
-            "start": 63,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Maximum_Cell_Voltage",
-            "start": 7,
-            "length": 16,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.0016666666666666668,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Pack_CCL",
-            "start": 23,
-            "length": 16,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank36",
-            "start": 32,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank37",
-            "start": 33,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank38",
-            "start": 34,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank39",
-            "start": 35,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank40",
-            "start": 36,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank41",
-            "start": 37,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank42",
-            "start": 38,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "DTC_P0A08_Charger_Safety_Relay_Fault",
-            "start": 39,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank43",
-            "start": 47,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank44",
-            "start": 55,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank45",
-            "start": 63,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "High_Cell_Voltage",
+            "name": "Pack_SOC",
             "start": 0,
             "length": 16,
             "byte_order": "little_endian",
             "is_signed": false,
             "initial": null,
             "conversion": {
-                "scale": 0.0001,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Low_Cell_Voltage",
-            "start": 16,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.0001,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Minimum_Cell_Voltage",
-            "start": 32,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.0001,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Constant_Value1",
-            "start": 55,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Constant_Value2",
-            "start": 63,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "min": 3,
-            "max": 3,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Maximum_Pack_Voltage",
-            "start": 0,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Pack_CCL",
-            "start": 16,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
+                "scale": 0.5,
                 "offset": 0,
                 "is_float": false
             },
@@ -2692,462 +2215,20 @@
         },
         {
             "name": "Blank1",
-            "start": 32,
-            "length": 1,
-            "byte_order": "little_endian",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
             "is_signed": false,
             "initial": null,
             "conversion": {
                 "is_float": "false"
             },
-            "min": 0,
-            "max": 1,
+            "min": null,
+            "max": null,
             "is_multiplexer": false
         },
         {
             "name": "Blank2",
-            "start": 33,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank3",
-            "start": 34,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank4",
-            "start": 35,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank5",
-            "start": 36,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank6",
-            "start": 37,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank7",
-            "start": 38,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "DTC_P0A08_Charger_Safety_Relay_Fault",
-            "start": 39,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Pack_DCL",
-            "start": 47,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank",
-            "start": 55,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Constant_Value3",
-            "start": 63,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "min": 1,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Maximum_Cell_Voltage",
-            "start": 7,
-            "length": 16,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.0016666666666666668,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Pack_CCL",
-            "start": 23,
-            "length": 16,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank8",
-            "start": 32,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank9",
-            "start": 33,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank10",
-            "start": 34,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank11",
-            "start": 35,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank12",
-            "start": 36,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank13",
-            "start": 37,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank14",
-            "start": 38,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "DTC_P0A08_Charger_Safety_Relay_Fault",
-            "start": 39,
-            "length": 1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": 0,
-            "max": 1,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank15",
-            "start": 47,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.1,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank16",
-            "start": 55,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank17",
-            "start": 63,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Adaptive_Amphours",
-            "start": 0,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 1.666666666666667,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Pack_Amphours",
-            "start": 16,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.010000000000000002,
-                "offset": 0,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Maximum_Cell_Voltage",
-            "start": 32,
-            "length": 16,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "scale": 0.0001,
-                "offset": 6,
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Populated_Cells",
-            "start": 55,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Constant_Value4",
-            "start": 63,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "min": 2,
-            "max": 2,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank18",
-            "start": 7,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank19",
-            "start": 15,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank20",
-            "start": 23,
-            "length": 8,
-            "byte_order": "big_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": "false"
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name": "Blank21",
             "start": 31,
             "length": 8,
             "byte_order": "big_endian",
@@ -3161,7 +2242,7 @@
             "is_multiplexer": false
         },
         {
-            "name": "Blank22",
+            "name": "Blank3",
             "start": 39,
             "length": 8,
             "byte_order": "big_endian",
@@ -3175,7 +2256,7 @@
             "is_multiplexer": false
         },
         {
-            "name": "Blank23",
+            "name": "Blank4",
             "start": 47,
             "length": 8,
             "byte_order": "big_endian",
@@ -3189,7 +2270,7 @@
             "is_multiplexer": false
         },
         {
-            "name": "Blank24",
+            "name": "Blank5",
             "start": 55,
             "length": 8,
             "byte_order": "big_endian",
@@ -3203,7 +2284,7 @@
             "is_multiplexer": false
         },
         {
-            "name": "Blank25",
+            "name": "Blank6",
             "start": 63,
             "length": 8,
             "byte_order": "big_endian",

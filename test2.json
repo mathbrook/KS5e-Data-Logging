@@ -2129,6 +2129,9 @@
             "byte_order": "big_endian",
             "is_signed": false,
             "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
             "min": null,
             "max": null,
             "is_multiplexer": false
