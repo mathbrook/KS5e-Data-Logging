@@ -14,9 +14,17 @@ _If you have any questions or need troubleshooting, feel free to reach out to Ma
     - Really the only thing you need MatLab for is to plot the data after parsing. Otherwise, just having Python is enough
 3. If you have not done so already, clone this GitHub repo or download it as a zip, extract, and save to somewhere safe
 4. Change directory to the repo. All you have to do is `cd KS5e-Data-Logging`
-5. optional step, create a python virtual environment by running these commands: `pip install virtualenv` `virtualenv venv` `.\venv\scripts\activate` (https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one)
-6. Once you are here, download the needed pip libraries by issuing the command `pip install -r requirements.txt`
+5. optional step, create a python virtual environment by running these commands:
+```python
+pip install virtualenv
+python -m virtualenv venv
+.\venv\scripts\activate
+pip install -r requirements.txt
+```
 
+(https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one)
+
+6. Once you are here, download the needed pip libraries by issuing the command `pip install -r requirements.txt`
 
 ## User's Guide
 If you are a user, everything you need to care about is in the `telemetry_exe` folder. Navigate to that directory.

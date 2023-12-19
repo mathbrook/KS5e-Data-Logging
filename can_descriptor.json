@@ -1,0 +1,50 @@
+{
+    "messages":{
+        "message1":{
+            "id": "0x01",
+            "length": "8",
+            "signals":[
+                "signal1","signal2"
+            ],
+            "comment":"this is a test message",
+            "is_extended_frame":"False",
+            "bus_name":"None"
+        }
+    },
+    "signals":[
+        {
+            "name":"signal1",
+            "start": "0",
+            "length": "32",
+            "byte_order":"little_endian",
+            "is_signed":"False",
+            "initial": "0",
+            "scale":"1",
+            "offset":"0",
+            "min":"0",
+            "max": 100,
+            "unit":"volts",
+            "comment":"this is a test signal",
+            "is_multiplexer":"False",
+            "is_float":"False",
+            "decimal":"None"
+        },
+        {
+            "name":"signal2",
+            "start": "32",
+            "length": "32",
+            "byte_order":"little_endian",
+            "is_signed":"False",
+            "initial": "0",
+            "scale":"1",
+            "offset":"0",
+            "min":"0",
+            "max": 100,
+            "unit":"volts",
+            "comment":"this is a test signal",
+            "is_multiplexer":"False",
+            "is_float":"False",
+            "decimal":"None"
+        }
+    ]
+}

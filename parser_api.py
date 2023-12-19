@@ -1031,7 +1031,7 @@ def parse_ID_ACU_TEMP_SENSORS(raw_message):
 ########################################################################
 # Custom Parsing Functions End
 ########################################################################
-def get_dbc_files():
+def get_dbc_files() -> cantools.db.Database:
     # Get all the DBC files for parsing and add them together
     try:
         path_name = 'DBC_Files'
