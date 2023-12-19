@@ -1154,7 +1154,7 @@ def parse_file(filename,dbc):
     '''
     # Delete any lines that contain this blank glitchy CAN message of ID 0 and data 0
     specified_string = ',0,8,0000000000000000'  # Replace with the specified string to be removed
-    delete_lines_containing_string(filename,specified_string)
+    # delete_lines_containing_string(filename,specified_string)
 
     # Array to keep track of IDs we can't parse
 
@@ -1168,7 +1168,7 @@ def parse_file(filename,dbc):
 
 
     infile = open(filename, "r")
-    outfile = open("Parsed_Data/" + filename, "w")
+    outfile = open("Parsed_Data/Parsed" + filename, "w")
     outfile2 = open("Better_Parsed_Data/Better" + filename, "w")
 
     flag_second_line = True
