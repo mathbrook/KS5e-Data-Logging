@@ -106,27 +106,38 @@ def cantools_dbc_to_json(db: cantools.db.Database,outfilename: str):
     with open(outfilename+".json","w") as outfile:
         json.dump(messages_list,outfile,indent=4)
 
-# Make a json file with the existing DBCs
-cantools_dbc_to_json(db = get_dbc_files(),outfilename="test")
-# Parse the json file and generate a new singular DBC
-cantools_json_to_dbc(input_json="test.json",outfilename="ksu_dbc")
-# Turn the DBC file we made into another json and compare with the first
+# Method to test the generation code that it isnt messing things up
+def test_json_gen():
+    # Make a json file with the existing DBCs
+    cantools_dbc_to_json(db = get_dbc_files(),outfilename="test")
 
-mega_dbc=cantools.db.Database()
-with open ('ksu_dbc.dbc', 'r') as newdbc:
-    mega_dbc.add_dbc(newdbc)
+    # Parse the json file and generate a new singular DBC
+    cantools_json_to_dbc(input_json="test.json",outfilename="ksu_dbc")
+
+    # Turn the DBC file we made into another json and compare with the first
+    mega_dbc=cantools.db.Database()
+    with open ('ksu_dbc.dbc', 'r') as newdbc:
+        mega_dbc.add_dbc(newdbc)
+    cantools_dbc_to_json(db=mega_dbc,outfilename="can_descriptor")
+
+    # Compare their differences
+    import difflib
+    with open('can_descriptor.json') as file_1:
+        file_1_text = file_1.readlines()
     
-cantools_dbc_to_json(db=mega_dbc,outfilename="test2")
+    with open('test.json') as file_2:
+        file_2_text = file_2.readlines()
+    
+    # Find and print the diff:
+    for line in difflib.unified_diff(
+            file_1_text, file_2_text, fromfile='file1.txt', tofile='file2.txt', lineterm=''):
+                print(line)
+import subprocess
+def json_gen():
+    cantools_json_to_dbc(input_json="can_descriptor.json",outfilename="ksu_dbc")
+    # subprocess.run(["make -C .\dbcc"])
+    subprocess.run(["make","-C",".\dbcc"])
+    subprocess.run([".\dbcc\dbcc","ksu_dbc.dbc"])
 
-# Compare their differences
-import difflib
-with open('test2.json') as file_1:
-    file_1_text = file_1.readlines()
- 
-with open('test.json') as file_2:
-    file_2_text = file_2.readlines()
- 
-# Find and print the diff:
-for line in difflib.unified_diff(
-        file_1_text, file_2_text, fromfile='file1.txt', tofile='file2.txt', lineterm=''):
-            print(line)
+    # subprocess.run([".\dbcc\dbcc ksu_dbc.dbc"])
+json_gen()

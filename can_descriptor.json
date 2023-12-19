@@ -363,6 +363,1003 @@
             "bus_name": null,
             "senders": []
         },
+        "VCU_PEDAL_READINGS": {
+            "id": 196,
+            "length": 8,
+            "signals": [
+                "APPS1",
+                "APPS2",
+                "BSE1",
+                "STEERING"
+            ],
+            "comment": "VCU analog pedal readings",
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "VCU_WHEELSPEED_READINGS": {
+            "id": 198,
+            "length": 8,
+            "signals": [
+                "RPM_FL",
+                "RPM_FR"
+            ],
+            "comment": "VCU wheel speed sensor readings",
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "DAQ_SHOCKPOTS": {
+            "id": 197,
+            "length": 8,
+            "signals": [
+                "FL_shockpot",
+                "FR_shockpot",
+                "RL_shockpot",
+                "RR_shockpot"
+            ],
+            "comment": "DAQ node shonk pot readings",
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "VCU_STATUS": {
+            "id": 195,
+            "length": 7,
+            "signals": [
+                "SHUTDOWN_STATES",
+                "PEDAL_STATES",
+                "ECU_STATES",
+                "MAX_TORQUE",
+                "TORQUE_MODE",
+                "DISTANCE_TRAVELLED"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp50": {
+            "id": 1570,
+            "length": 8,
+            "signals": [
+                "map_accel",
+                "total_accel",
+                "launch_timer",
+                "launch_retard"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp63": {
+            "id": 1583,
+            "length": 8,
+            "signals": [
+                "generic_pid_duty1",
+                "generic_pid_duty2",
+                "spare63_1",
+                "spare63_2",
+                "spare63_3"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp62": {
+            "id": 1582,
+            "length": 8,
+            "signals": [
+                "gps_west",
+                "gps_altk",
+                "gps_altm",
+                "gps_speed",
+                "gps_course"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp61": {
+            "id": 1581,
+            "length": 8,
+            "signals": [
+                "gps_latdeg",
+                "gps_latmin",
+                "gps_latmmin",
+                "gps_londeg",
+                "gps_lonmin",
+                "gps_lonmmin"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp60": {
+            "id": 1580,
+            "length": 8,
+            "signals": [
+                "launch_timing",
+                "step3_timing",
+                "vsslaunch_retard",
+                "cel_status2"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp59": {
+            "id": 1579,
+            "length": 8,
+            "signals": [
+                "revlim_retard",
+                "als_timing",
+                "ext_advance",
+                "deadtime1"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp58": {
+            "id": 1578,
+            "length": 8,
+            "signals": [
+                "adv1",
+                "adv2",
+                "adv3",
+                "adv4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp57": {
+            "id": 1577,
+            "length": 8,
+            "signals": [
+                "base_advance",
+                "idle_cor_advance",
+                "mat_retard",
+                "flex_advance"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp56": {
+            "id": 1576,
+            "length": 8,
+            "signals": [
+                "tc_retard",
+                "cel_retard",
+                "fc_retard",
+                "als_addfuel"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp55": {
+            "id": 1575,
+            "length": 8,
+            "signals": [
+                "looptime",
+                "fueltemp_cor",
+                "fuelpress_cor",
+                "ltt_cor",
+                "sp1"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp54": {
+            "id": 1574,
+            "length": 8,
+            "signals": [
+                "batt_cur",
+                "cel_status",
+                "fp_duty",
+                "alt_duty",
+                "load_duty",
+                "alt_targv"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp53": {
+            "id": 1573,
+            "length": 8,
+            "signals": [
+                "fuel_press1",
+                "fuel_press2",
+                "fuel_temp1",
+                "fuel_temp2"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp52": {
+            "id": 1572,
+            "length": 8,
+            "signals": [
+                "canin1",
+                "canin2",
+                "canout",
+                "knk_rtd",
+                "fuelflow",
+                "fuelcons"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp51": {
+            "id": 1571,
+            "length": 8,
+            "signals": [
+                "porta",
+                "portb",
+                "porteh",
+                "portk",
+                "portmj",
+                "portp",
+                "portt",
+                "cel_errorcode"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp49": {
+            "id": 1569,
+            "length": 8,
+            "signals": [
+                "knock_cyl9",
+                "knock_cyl10",
+                "knock_cyl11",
+                "knock_cyl12",
+                "knock_cyl13",
+                "knock_cyl14",
+                "knock_cyl15",
+                "knock_cyl16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp48": {
+            "id": 1568,
+            "length": 8,
+            "signals": [
+                "knock_cyl1",
+                "knock_cyl2",
+                "knock_cyl3",
+                "knock_cyl4",
+                "knock_cyl5",
+                "knock_cyl6",
+                "knock_cyl7",
+                "knock_cyl8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp47": {
+            "id": 1567,
+            "length": 8,
+            "signals": [
+                "fuel_pct",
+                "tps_accel",
+                "SS1",
+                "SS2"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp46": {
+            "id": 1566,
+            "length": 8,
+            "signals": [
+                "vvt_duty1",
+                "vvt_duty2",
+                "vvt_duty3",
+                "vvt_duty4",
+                "inj_timing_pri",
+                "inj_timing_sec"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp45": {
+            "id": 1565,
+            "length": 8,
+            "signals": [
+                "vvt_target1",
+                "vvt_target2",
+                "vvt_target3",
+                "vvt_target4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp44": {
+            "id": 1564,
+            "length": 8,
+            "signals": [
+                "vvt_ang1",
+                "vvt_ang2",
+                "vvt_ang3",
+                "vvt_ang4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp43": {
+            "id": 1563,
+            "length": 8,
+            "signals": [
+                "synccnt",
+                "syncreason",
+                "sd_filenum",
+                "sd_error",
+                "sd_phase",
+                "sd_status",
+                "timing_err"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp42": {
+            "id": 1562,
+            "length": 8,
+            "signals": [
+                "VSS1",
+                "VSS2",
+                "VSS3",
+                "VSS4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp39": {
+            "id": 1559,
+            "length": 8,
+            "signals": [
+                "EGOcor5",
+                "EGOcor6",
+                "EGOcor7",
+                "EGOcor8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp41": {
+            "id": 1561,
+            "length": 8,
+            "signals": [
+                "EGOcor13",
+                "EGOcor14",
+                "EGOcor15",
+                "EGOcor16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp40": {
+            "id": 1560,
+            "length": 8,
+            "signals": [
+                "EGOcor9",
+                "EGOcor10",
+                "EGOcor11",
+                "EGOcor12"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp38": {
+            "id": 1558,
+            "length": 8,
+            "signals": [
+                "EGOcor1",
+                "EGOcor2",
+                "EGOcor3",
+                "EGOcor4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp37": {
+            "id": 1557,
+            "length": 8,
+            "signals": [
+                "EGOv13",
+                "EGOv14",
+                "EGOv15",
+                "EGOv16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp36": {
+            "id": 1556,
+            "length": 8,
+            "signals": [
+                "EGOv9",
+                "EGOv10",
+                "EGOv11",
+                "EGOv12"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp35": {
+            "id": 1555,
+            "length": 8,
+            "signals": [
+                "EGOv5",
+                "EGOv6",
+                "EGOv7",
+                "EGOv8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp34": {
+            "id": 1554,
+            "length": 8,
+            "signals": [
+                "EGOv1",
+                "EGOv2",
+                "EGOv3",
+                "EGOv4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp33": {
+            "id": 1553,
+            "length": 8,
+            "signals": [
+                "duty_pwm1",
+                "duty_pwm2",
+                "duty_pwm3",
+                "duty_pwm4",
+                "duty_pwm5",
+                "duty_pwm6",
+                "gear",
+                "status8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp32": {
+            "id": 1552,
+            "length": 8,
+            "signals": [
+                "AFR9",
+                "AFR10",
+                "AFR11",
+                "AFR12",
+                "AFR13",
+                "AFR14",
+                "AFR15",
+                "AFR16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp31": {
+            "id": 1551,
+            "length": 8,
+            "signals": [
+                "AFR1",
+                "AFR2",
+                "AFR3",
+                "AFR4",
+                "AFR5",
+                "AFR6",
+                "AFR7",
+                "AFR8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp30": {
+            "id": 1550,
+            "length": 8,
+            "signals": [
+                "accelx",
+                "accely",
+                "accelz",
+                "stream_level",
+                "water_duty"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp29": {
+            "id": 1549,
+            "length": 8,
+            "signals": [
+                "EAEfcor1",
+                "EAEfcor2",
+                "VSS1dot",
+                "VSS2dot"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp28": {
+            "id": 1548,
+            "length": 8,
+            "signals": [
+                "cl_idle_targ_rpm",
+                "tpsadc",
+                "eaeload",
+                "afrload"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp27": {
+            "id": 1547,
+            "length": 8,
+            "signals": [
+                "canpwmin1",
+                "canpwmin2",
+                "canpwmin3",
+                "canpwmin4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp26": {
+            "id": 1546,
+            "length": 8,
+            "signals": [
+                "nitrous1_duty",
+                "nitrous2_duty",
+                "nitrous_timer_out",
+                "n2o_addfuel",
+                "n2o_retard"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp25": {
+            "id": 1545,
+            "length": 8,
+            "signals": [
+                "egt13",
+                "egt14",
+                "egt15",
+                "egt16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp24": {
+            "id": 1544,
+            "length": 8,
+            "signals": [
+                "egt9",
+                "egt10",
+                "egt11",
+                "egt12"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp23": {
+            "id": 1543,
+            "length": 8,
+            "signals": [
+                "egt5",
+                "egt6",
+                "egt7",
+                "egt8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp22": {
+            "id": 1542,
+            "length": 8,
+            "signals": [
+                "egt1",
+                "egt2",
+                "egt3",
+                "egt4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp21": {
+            "id": 1541,
+            "length": 8,
+            "signals": [
+                "pwseq13",
+                "pwseq14",
+                "pwseq15",
+                "pwseq16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp20": {
+            "id": 1540,
+            "length": 8,
+            "signals": [
+                "pwseq9",
+                "pwseq10",
+                "pwseq11",
+                "pwseq12"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp19": {
+            "id": 1539,
+            "length": 8,
+            "signals": [
+                "pwseq5",
+                "pwseq6",
+                "pwseq7",
+                "pwseq8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp18": {
+            "id": 1538,
+            "length": 8,
+            "signals": [
+                "pwseq1",
+                "pwseq2",
+                "pwseq3",
+                "pwseq4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp17": {
+            "id": 1537,
+            "length": 8,
+            "signals": [
+                "boost_targ_1",
+                "boost_targ_2",
+                "boostduty",
+                "boostduty2",
+                "maf_volts"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp16": {
+            "id": 1536,
+            "length": 8,
+            "signals": [
+                "sensors13",
+                "sensors14",
+                "sensors15",
+                "sensors16"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp15": {
+            "id": 1535,
+            "length": 8,
+            "signals": [
+                "sensors9",
+                "sensors10",
+                "sensors11",
+                "sensors12"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp14": {
+            "id": 1534,
+            "length": 8,
+            "signals": [
+                "sensors5",
+                "sensors6",
+                "sensors7",
+                "sensors8"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp13": {
+            "id": 1533,
+            "length": 8,
+            "signals": [
+                "sensors1",
+                "sensors2",
+                "sensors3",
+                "sensors4"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp12": {
+            "id": 1532,
+            "length": 8,
+            "signals": [
+                "wallfuel1",
+                "wallfuel2"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp11": {
+            "id": 1531,
+            "length": 8,
+            "signals": [
+                "fuelload2",
+                "ignload",
+                "ignload2",
+                "airtemp"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp10": {
+            "id": 1530,
+            "length": 8,
+            "signals": [
+                "status1",
+                "status2",
+                "status3",
+                "status4",
+                "status5",
+                "status6",
+                "status7"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp9": {
+            "id": 1529,
+            "length": 8,
+            "signals": [
+                "egoV1",
+                "egoV2",
+                "dwell",
+                "dwell_trl"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp8": {
+            "id": 1528,
+            "length": 8,
+            "signals": [
+                "MAFload",
+                "fuelload",
+                "fuelcor",
+                "MAF"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp7": {
+            "id": 1527,
+            "length": 8,
+            "signals": [
+                "cold_adv_deg",
+                "TPSdot",
+                "MAPdot",
+                "RPMdot"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp6": {
+            "id": 1526,
+            "length": 8,
+            "signals": [
+                "totalcor",
+                "ve1",
+                "ve2",
+                "iacstep"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp5": {
+            "id": 1525,
+            "length": 8,
+            "signals": [
+                "warmcor",
+                "tpsaccel",
+                "tpsfuelcut",
+                "barocor"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp4": {
+            "id": 1524,
+            "length": 8,
+            "signals": [
+                "knock",
+                "egocor1",
+                "egocor2",
+                "aircor"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp3": {
+            "id": 1523,
+            "length": 8,
+            "signals": [
+                "tps",
+                "batt",
+                "afr1_old",
+                "afr2_old"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp2": {
+            "id": 1522,
+            "length": 8,
+            "signals": [
+                "baro",
+                "map",
+                "mat",
+                "clt"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp1": {
+            "id": 1521,
+            "length": 8,
+            "signals": [
+                "adv_deg",
+                "squirt",
+                "engine",
+                "afrtgt1",
+                "afrtgt2",
+                "wbo2_en1",
+                "wbo2_en2"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
+        "megasquirt_gp0": {
+            "id": 1520,
+            "length": 8,
+            "signals": [
+                "seconds",
+                "pw1",
+                "pw2",
+                "rpm"
+            ],
+            "comment": null,
+            "is_extended_frame": false,
+            "bus_name": null,
+            "senders": []
+        },
         "MSGID_0X6B1": {
             "id": 1713,
             "length": 8,
@@ -2053,6 +3050,4890 @@
             "is_multiplexer": false
         },
         {
+            "name": "APPS1",
+            "start": 0,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001220703125,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0,
+            "max": 12,
+            "is_multiplexer": false
+        },
+        {
+            "name": "APPS2",
+            "start": 16,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001220703125,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0,
+            "max": 12,
+            "is_multiplexer": false
+        },
+        {
+            "name": "BSE1",
+            "start": 32,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001220703125,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0,
+            "max": 12,
+            "is_multiplexer": false
+        },
+        {
+            "name": "STEERING",
+            "start": 48,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001220703125,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0,
+            "max": 12,
+            "is_multiplexer": false
+        },
+        {
+            "name": "RPM_FL",
+            "start": 0,
+            "length": 32,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0,
+            "max": 4294967296,
+            "is_multiplexer": false
+        },
+        {
+            "name": "RPM_FR",
+            "start": 32,
+            "length": 32,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0,
+            "max": 4294967296,
+            "is_multiplexer": false
+        },
+        {
+            "name": "FL_shockpot",
+            "start": 0,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 65535,
+            "is_multiplexer": false
+        },
+        {
+            "name": "FR_shockpot",
+            "start": 16,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 65535,
+            "is_multiplexer": false
+        },
+        {
+            "name": "RL_shockpot",
+            "start": 32,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 65535,
+            "is_multiplexer": false
+        },
+        {
+            "name": "RR_shockpot",
+            "start": 48,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 65535,
+            "is_multiplexer": false
+        },
+        {
+            "name": "SHUTDOWN_STATES",
+            "start": 0,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 255,
+            "is_multiplexer": false
+        },
+        {
+            "name": "PEDAL_STATES",
+            "start": 8,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 255,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ECU_STATES",
+            "start": 16,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 255,
+            "is_multiplexer": false
+        },
+        {
+            "name": "MAX_TORQUE",
+            "start": 24,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 255,
+            "is_multiplexer": false
+        },
+        {
+            "name": "TORQUE_MODE",
+            "start": 32,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 255,
+            "is_multiplexer": false
+        },
+        {
+            "name": "DISTANCE_TRAVELLED",
+            "start": 40,
+            "length": 16,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": 0,
+            "max": 65535,
+            "is_multiplexer": false
+        },
+        {
+            "name": "map_accel",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "total_accel",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "launch_timer",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "launch_retard",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "generic_pid_duty1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "generic_pid_duty2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "spare63_1",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "spare63_2",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "spare63_3",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_west",
+            "start": 0,
+            "length": 1,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_altk",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_altm",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_speed",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_course",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_latdeg",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_latmin",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_latmmin",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_londeg",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_lonmin",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gps_lonmmin",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "launch_timing",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "step3_timing",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vsslaunch_retard",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cel_status2",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "revlim_retard",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "als_timing",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ext_advance",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "deadtime1",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "adv1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "adv2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "adv3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "adv4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "base_advance",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "idle_cor_advance",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "mat_retard",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "flex_advance",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "tc_retard",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cel_retard",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fc_retard",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "als_addfuel",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "looptime",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fueltemp_cor",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuelpress_cor",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ltt_cor",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sp1",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "batt_cur",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cel_status",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fp_duty",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "alt_duty",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "load_duty",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "alt_targv",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuel_press1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuel_press2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuel_temp1",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuel_temp2",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canin1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canin2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canout",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knk_rtd",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuelflow",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuelcons",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "porta",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "portb",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "porteh",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "portk",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "portmj",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "portp",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "portt",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cel_errorcode",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl9",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl10",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl11",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl12",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl13",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl14",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl15",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl16",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl3",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl4",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl5",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl6",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl7",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock_cyl8",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.4,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuel_pct",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "tps_accel",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "SS1",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "SS2",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_duty1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_duty2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_duty3",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_duty4",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.392,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "inj_timing_pri",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "inj_timing_sec",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_target1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_target2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_target3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_target4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_ang1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_ang2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_ang3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "vvt_ang4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "synccnt",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "syncreason",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sd_filenum",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sd_error",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sd_phase",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sd_status",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "timing_err",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "VSS1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "VSS2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "VSS3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "VSS4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor5",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor6",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor7",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor8",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor13",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor14",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor15",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor16",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor9",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor10",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor11",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor12",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOcor4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv13",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv14",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv15",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv16",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv9",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv10",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv11",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv12",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv5",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv6",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv7",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv8",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EGOv4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.00489,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "duty_pwm1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "duty_pwm2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "duty_pwm3",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "duty_pwm4",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "duty_pwm5",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "duty_pwm6",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "gear",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status8",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR9",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR10",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR11",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR12",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR13",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR14",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR15",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR16",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR3",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR4",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR5",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR6",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR7",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "AFR8",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "accelx",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "accely",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "accelz",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "stream_level",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "water_duty",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EAEfcor1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "EAEfcor2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "VSS1dot",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "VSS2dot",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cl_idle_targ_rpm",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "tpsadc",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "eaeload",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "afrload",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canpwmin1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canpwmin2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canpwmin3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "canpwmin4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "nitrous1_duty",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "nitrous2_duty",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "nitrous_timer_out",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "n2o_addfuel",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "n2o_retard",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt13",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt14",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt15",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt16",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt9",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt10",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt11",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt12",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt5",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt6",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt7",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt8",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egt4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq13",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq14",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq15",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq16",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq9",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq10",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq11",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq12",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq5",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq6",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq7",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq8",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pwseq4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "boost_targ_1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "boost_targ_2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "boostduty",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "boostduty2",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "maf_volts",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors13",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors14",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors15",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors16",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors9",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors10",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors11",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors12",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors5",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors6",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors7",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors8",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors3",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "sensors4",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "wallfuel1",
+            "start": 7,
+            "length": 32,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "wallfuel2",
+            "start": 39,
+            "length": 32,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuelload2",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ignload",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ignload2",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "airtemp",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status1",
+            "start": 7,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status2",
+            "start": 15,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status3",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status4",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status5",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status6",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "status7",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egoV1",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egoV2",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "dwell",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "dwell_trl",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "MAFload",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuelload",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "fuelcor",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "MAF",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.01,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cold_adv_deg",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "TPSdot",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "MAPdot",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "RPMdot",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "totalcor",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ve1",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "ve2",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "iacstep",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "warmcor",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "tpsaccel",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "tpsfuelcut",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "barocor",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "knock",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egocor1",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "egocor2",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "aircor",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "tps",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "batt",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "afr1_old",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "afr2_old",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "baro",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "map",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "mat",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "clt",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "adv_deg",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": true,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "squirt",
+            "start": 23,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "engine",
+            "start": 31,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "afrtgt1",
+            "start": 39,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "afrtgt2",
+            "start": 47,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.1,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "wbo2_en1",
+            "start": 55,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "wbo2_en2",
+            "start": 63,
+            "length": 8,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "seconds",
+            "start": 7,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pw1",
+            "start": 23,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "pw2",
+            "start": 39,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.001,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "rpm",
+            "start": 55,
+            "length": 16,
+            "byte_order": "big_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
             "name": "Pack_DCL",
             "start": 0,
             "length": 16,
@@ -2129,6 +8010,9 @@
             "byte_order": "big_endian",
             "is_signed": false,
             "initial": null,
+            "conversion": {
+                "is_float": "false"
+            },
             "min": null,
             "max": null,
             "is_multiplexer": false
