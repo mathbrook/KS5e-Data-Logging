@@ -1,0 +1,34 @@
+name: generate DBC and C code
+
+on:
+  push:
+    branches:
+      - main  # Replace 'main' with your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can change the OS if needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # This action checks out your repository's code
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'  # Replace '3.x' with your Python version
+
+      - name: Run Python script
+        run: json_to_dbc.py  # Replace 'your_script.py' with your script's filename
+
+      - name: Compile code with make
+        run: make  # Run 'make' to compile your code
+
+      # - name: Run executable
+      #   run: ./your_executable  # Replace 'your_executable' with your executable's filename
+
+      - name: Publish artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated-artifacts
+          path: ./  # Replace 'path/to/artifacts' with the directory containing your generated artifacts
