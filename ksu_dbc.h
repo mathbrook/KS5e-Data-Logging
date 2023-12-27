@@ -37,6 +37,18 @@ typedef enum {
 } dbcc_signal_status_e;
 #endif
 
+#define CAN_ID_SEGMENT1_TEMPS1 (26) /* 0x1a */
+#define CAN_ID_SEGMENT1_TEMPS2 (27) /* 0x1b */
+#define CAN_ID_SEGMENT2_TEMPS1 (42) /* 0x2a */
+#define CAN_ID_SEGMENT2_TEMPS2 (43) /* 0x2b */
+#define CAN_ID_SEGMENT3_TEMPS1 (58) /* 0x3a */
+#define CAN_ID_SEGMENT3_TEMPS2 (59) /* 0x3b */
+#define CAN_ID_SEGMENT4_TEMPS1 (74) /* 0x4a */
+#define CAN_ID_SEGMENT4_TEMPS2 (75) /* 0x4b */
+#define CAN_ID_SEGMENT5_TEMPS1 (90) /* 0x5a */
+#define CAN_ID_SEGMENT5_TEMPS2 (91) /* 0x5b */
+#define CAN_ID_SEGMENT6_TEMPS1 (106) /* 0x6a */
+#define CAN_ID_SEGMENT6_TEMPS2 (107) /* 0x6b */
 #define CAN_ID_M160_TEMPERATURE_SET_1 (160) /* 0xa0 */
 #define CAN_ID_M161_TEMPERATURE_SET_2 (161) /* 0xa1 */
 #define CAN_ID_M162_TEMPERATURE_SET_3 (162) /* 0xa2 */
@@ -130,6 +142,150 @@ typedef enum {
 #define CAN_ID_MSGID_0X6B1 (1713) /* 0x6b1 */
 #define CAN_ID_MSGID_0X6B2 (1714) /* 0x6b2 */
 #define CAN_ID_MSGID_0X6B3 (1715) /* 0x6b3 */
+
+/* raw ADC voltage reading of module1 cells 1-6 */
+typedef PREPACK struct {
+	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x01a_segment1_temps1_t;
+
+/* raw ADC voltage reading of module1 cells 6-12 */
+typedef PREPACK struct {
+	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x01b_segment1_temps2_t;
+
+/* raw ADC voltage reading of module2 cells 1-6 */
+typedef PREPACK struct {
+	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x02a_segment2_temps1_t;
+
+/* raw ADC voltage reading of module2 cells 6-12 */
+typedef PREPACK struct {
+	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x02b_segment2_temps2_t;
+
+/* raw ADC voltage reading of module3 cells 1-6 */
+typedef PREPACK struct {
+	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x03a_segment3_temps1_t;
+
+/* raw ADC voltage reading of module3 cells 6-12 */
+typedef PREPACK struct {
+	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x03b_segment3_temps2_t;
+
+/* raw ADC voltage reading of module4 cells 1-6 */
+typedef PREPACK struct {
+	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x04a_segment4_temps1_t;
+
+/* raw ADC voltage reading of module4 cells 6-12 */
+typedef PREPACK struct {
+	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x04b_segment4_temps2_t;
+
+/* raw ADC voltage reading of module5 cells 1-6 */
+typedef PREPACK struct {
+	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x05a_segment5_temps1_t;
+
+/* raw ADC voltage reading of module5 cells 6-12 */
+typedef PREPACK struct {
+	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x05b_segment5_temps2_t;
+
+/* raw ADC voltage reading of module6 cells 1-6 */
+typedef PREPACK struct {
+	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x06a_segment6_temps1_t;
+
+/* raw ADC voltage reading of module6 cells 6-12 */
+typedef PREPACK struct {
+	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+} POSTPACK can_0x06b_segment6_temps2_t;
 
 typedef PREPACK struct {
 	int16_t D2_Module_B; /* scaling 0.1, offset 0.0, units none  */
@@ -865,6 +1021,18 @@ typedef PREPACK struct {
 } POSTPACK can_0x6b3_MSGID_0X6B3_t;
 
 typedef PREPACK struct {
+	dbcc_time_stamp_t can_0x01a_segment1_temps1_time_stamp_rx;
+	dbcc_time_stamp_t can_0x01b_segment1_temps2_time_stamp_rx;
+	dbcc_time_stamp_t can_0x02a_segment2_temps1_time_stamp_rx;
+	dbcc_time_stamp_t can_0x02b_segment2_temps2_time_stamp_rx;
+	dbcc_time_stamp_t can_0x03a_segment3_temps1_time_stamp_rx;
+	dbcc_time_stamp_t can_0x03b_segment3_temps2_time_stamp_rx;
+	dbcc_time_stamp_t can_0x04a_segment4_temps1_time_stamp_rx;
+	dbcc_time_stamp_t can_0x04b_segment4_temps2_time_stamp_rx;
+	dbcc_time_stamp_t can_0x05a_segment5_temps1_time_stamp_rx;
+	dbcc_time_stamp_t can_0x05b_segment5_temps2_time_stamp_rx;
+	dbcc_time_stamp_t can_0x06a_segment6_temps1_time_stamp_rx;
+	dbcc_time_stamp_t can_0x06b_segment6_temps2_time_stamp_rx;
 	dbcc_time_stamp_t can_0x0a0_M160_Temperature_Set_1_time_stamp_rx;
 	dbcc_time_stamp_t can_0x0a1_M161_Temperature_Set_2_time_stamp_rx;
 	dbcc_time_stamp_t can_0x0a2_M162_Temperature_Set_3_time_stamp_rx;
@@ -958,6 +1126,42 @@ typedef PREPACK struct {
 	dbcc_time_stamp_t can_0x6b1_MSGID_0X6B1_time_stamp_rx;
 	dbcc_time_stamp_t can_0x6b2_MSGID_0X6B2_time_stamp_rx;
 	dbcc_time_stamp_t can_0x6b3_MSGID_0X6B3_time_stamp_rx;
+	unsigned can_0x01a_segment1_temps1_status : 2;
+	unsigned can_0x01a_segment1_temps1_tx : 1;
+	unsigned can_0x01a_segment1_temps1_rx : 1;
+	unsigned can_0x01b_segment1_temps2_status : 2;
+	unsigned can_0x01b_segment1_temps2_tx : 1;
+	unsigned can_0x01b_segment1_temps2_rx : 1;
+	unsigned can_0x02a_segment2_temps1_status : 2;
+	unsigned can_0x02a_segment2_temps1_tx : 1;
+	unsigned can_0x02a_segment2_temps1_rx : 1;
+	unsigned can_0x02b_segment2_temps2_status : 2;
+	unsigned can_0x02b_segment2_temps2_tx : 1;
+	unsigned can_0x02b_segment2_temps2_rx : 1;
+	unsigned can_0x03a_segment3_temps1_status : 2;
+	unsigned can_0x03a_segment3_temps1_tx : 1;
+	unsigned can_0x03a_segment3_temps1_rx : 1;
+	unsigned can_0x03b_segment3_temps2_status : 2;
+	unsigned can_0x03b_segment3_temps2_tx : 1;
+	unsigned can_0x03b_segment3_temps2_rx : 1;
+	unsigned can_0x04a_segment4_temps1_status : 2;
+	unsigned can_0x04a_segment4_temps1_tx : 1;
+	unsigned can_0x04a_segment4_temps1_rx : 1;
+	unsigned can_0x04b_segment4_temps2_status : 2;
+	unsigned can_0x04b_segment4_temps2_tx : 1;
+	unsigned can_0x04b_segment4_temps2_rx : 1;
+	unsigned can_0x05a_segment5_temps1_status : 2;
+	unsigned can_0x05a_segment5_temps1_tx : 1;
+	unsigned can_0x05a_segment5_temps1_rx : 1;
+	unsigned can_0x05b_segment5_temps2_status : 2;
+	unsigned can_0x05b_segment5_temps2_tx : 1;
+	unsigned can_0x05b_segment5_temps2_rx : 1;
+	unsigned can_0x06a_segment6_temps1_status : 2;
+	unsigned can_0x06a_segment6_temps1_tx : 1;
+	unsigned can_0x06a_segment6_temps1_rx : 1;
+	unsigned can_0x06b_segment6_temps2_status : 2;
+	unsigned can_0x06b_segment6_temps2_tx : 1;
+	unsigned can_0x06b_segment6_temps2_rx : 1;
 	unsigned can_0x0a0_M160_Temperature_Set_1_status : 2;
 	unsigned can_0x0a0_M160_Temperature_Set_1_tx : 1;
 	unsigned can_0x0a0_M160_Temperature_Set_1_rx : 1;
@@ -1237,6 +1441,18 @@ typedef PREPACK struct {
 	unsigned can_0x6b3_MSGID_0X6B3_status : 2;
 	unsigned can_0x6b3_MSGID_0X6B3_tx : 1;
 	unsigned can_0x6b3_MSGID_0X6B3_rx : 1;
+	can_0x01a_segment1_temps1_t can_0x01a_segment1_temps1;
+	can_0x01b_segment1_temps2_t can_0x01b_segment1_temps2;
+	can_0x02a_segment2_temps1_t can_0x02a_segment2_temps1;
+	can_0x02b_segment2_temps2_t can_0x02b_segment2_temps2;
+	can_0x03a_segment3_temps1_t can_0x03a_segment3_temps1;
+	can_0x03b_segment3_temps2_t can_0x03b_segment3_temps2;
+	can_0x04a_segment4_temps1_t can_0x04a_segment4_temps1;
+	can_0x04b_segment4_temps2_t can_0x04b_segment4_temps2;
+	can_0x05a_segment5_temps1_t can_0x05a_segment5_temps1;
+	can_0x05b_segment5_temps2_t can_0x05b_segment5_temps2;
+	can_0x06a_segment6_temps1_t can_0x06a_segment6_temps1;
+	can_0x06b_segment6_temps2_t can_0x06b_segment6_temps2;
 	can_0x0a0_M160_Temperature_Set_1_t can_0x0a0_M160_Temperature_Set_1;
 	can_0x0a1_M161_Temperature_Set_2_t can_0x0a1_M161_Temperature_Set_2;
 	can_0x0a2_M162_Temperature_Set_3_t can_0x0a2_M162_Temperature_Set_3;
@@ -1335,6 +1551,222 @@ typedef PREPACK struct {
 int unpack_message(can_obj_ksu_dbc_h_t *o, const unsigned long id, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp);
 int pack_message(can_obj_ksu_dbc_h_t *o, const unsigned long id, uint64_t *data);
 int print_message(const can_obj_ksu_dbc_h_t *o, const unsigned long id, FILE *output);
+
+int decode_can_0x01a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x01b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x01b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x01b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x02a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x02b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x03a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x03b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x04a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x04b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x05a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x05b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x06a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+
+
+int decode_can_0x06b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+
 
 int decode_can_0x0a0_D2_Module_B(const can_obj_ksu_dbc_h_t *o, double *out);
 int encode_can_0x0a0_D2_Module_B(can_obj_ksu_dbc_h_t *o, double in);

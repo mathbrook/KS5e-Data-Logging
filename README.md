@@ -53,3 +53,19 @@ _The next steps are optional - only if you want to plot the result_
 
 ## Developer's Guide
 _Way too lazy to do right now, I'll get to it after comp hopefully_
+
+## JSON to DBC GENERATOR
+
+the file ```json_to_db.py``` is a script that will parse the ```can_descriptor.json``` and generate a dbc file, ```ksu_dbc.dbc```
+this dbc file can be used to decode all of the CAN traffic on the KSU motorsports electric vehicle OR combustion vehicle.
+by using a json file as the generator's source, it is easy to add on signals and messages thanks to the human readable format.
+
+**TO ADD A MESSAGE:**
+
+follow an example
+
+**TO ADD A SIGNAL:**
+
+follow an example
+
+(I WILL EXPAND ON THESE SECTIONS SOON :TM:)

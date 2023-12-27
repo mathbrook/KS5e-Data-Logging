@@ -663,6 +663,126 @@ BO_ 1715 MSGID_0X6B3: 8 BMS
  SG_ Blank1 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Pack_SOC : 0|16@1+ (0.5,0) [0|0] "" Vector__XXX
 
+BO_ 26 segment1_temps1: 8 Vector__XXX
+ SG_ maxtemp1to6 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp1to6 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell6temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell5temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell4temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell3temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell2temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell1temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 27 segment1_temps2: 8 Vector__XXX
+ SG_ maxtemp7to12 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp7to12 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell12temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell11temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell10temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell9temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell8temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell7temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 42 segment2_temps1: 8 Vector__XXX
+ SG_ maxtemp1to6 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp1to6 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell6temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell5temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell4temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell3temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell2temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell1temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 43 segment2_temps2: 8 Vector__XXX
+ SG_ maxtemp7to12 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp7to12 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell12temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell11temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell10temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell9temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell8temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell7temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 58 segment3_temps1: 8 Vector__XXX
+ SG_ maxtemp1to6 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp1to6 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell6temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell5temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell4temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell3temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell2temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell1temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 59 segment3_temps2: 8 Vector__XXX
+ SG_ maxtemp7to12 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp7to12 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell12temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell11temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell10temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell9temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell8temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell7temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 74 segment4_temps1: 8 Vector__XXX
+ SG_ maxtemp1to6 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp1to6 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell6temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell5temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell4temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell3temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell2temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell1temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 75 segment4_temps2: 8 Vector__XXX
+ SG_ maxtemp7to12 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp7to12 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell12temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell11temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell10temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell9temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell8temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell7temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 90 segment5_temps1: 8 Vector__XXX
+ SG_ maxtemp1to6 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp1to6 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell6temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell5temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell4temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell3temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell2temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell1temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 91 segment5_temps2: 8 Vector__XXX
+ SG_ maxtemp7to12 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp7to12 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell12temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell11temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell10temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell9temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell8temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell7temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 106 segment6_temps1: 8 Vector__XXX
+ SG_ maxtemp1to6 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp1to6 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell6temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell5temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell4temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell3temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell2temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell1temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
+BO_ 107 segment6_temps2: 8 Vector__XXX
+ SG_ maxtemp7to12 : 56|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ mintemp7to12 : 48|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell12temp : 40|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell11temp : 32|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell10temp : 24|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell9temp : 16|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell8temp : 8|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+ SG_ cell7temp : 0|8@1+ (0.019607,0) [0.0|5.0] "" Vector__XXX
+
 
 
 
@@ -680,6 +800,18 @@ CM_ BO_ 197 "DAQ node shonk pot readings";
 CM_ BO_ 1713 "This ID Transmits at 104 ms.";
 CM_ BO_ 1714 "This ID Transmits at 48 ms.";
 CM_ BO_ 1715 "This ID Transmits at 1008 ms.";
+CM_ BO_ 26 "raw ADC voltage reading of module1 cells 1-6";
+CM_ BO_ 27 "raw ADC voltage reading of module1 cells 6-12";
+CM_ BO_ 42 "raw ADC voltage reading of module2 cells 1-6";
+CM_ BO_ 43 "raw ADC voltage reading of module2 cells 6-12";
+CM_ BO_ 58 "raw ADC voltage reading of module3 cells 1-6";
+CM_ BO_ 59 "raw ADC voltage reading of module3 cells 6-12";
+CM_ BO_ 74 "raw ADC voltage reading of module4 cells 1-6";
+CM_ BO_ 75 "raw ADC voltage reading of module4 cells 6-12";
+CM_ BO_ 90 "raw ADC voltage reading of module5 cells 1-6";
+CM_ BO_ 91 "raw ADC voltage reading of module5 cells 6-12";
+CM_ BO_ 106 "raw ADC voltage reading of module6 cells 1-6";
+CM_ BO_ 107 "raw ADC voltage reading of module6 cells 6-12";
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "SystemSignalLongSymbol" SG_ 469 D1_HV_Input_Current_Sensor_Valid "D1_HV_Input_Current_Sensor_Validity";

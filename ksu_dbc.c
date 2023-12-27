@@ -16,6 +16,3414 @@ static inline int print_helper(int r, int print_return_value) {
 	return ((r >= 0) && (print_return_value >= 0)) ? r + print_return_value : -1;
 }
 
+static int pack_can_0x01a_segment1_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.cell2temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.cell3temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.cell4temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.cell5temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.cell6temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.mintemp1to6)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.maxtemp1to6)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01a_segment1_temps1.cell1temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x01a_segment1_temps1_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x01a_segment1_temps1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x01a_segment1_temps1.cell2temp = x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x01a_segment1_temps1.cell3temp = x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x01a_segment1_temps1.cell4temp = x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x01a_segment1_temps1.cell5temp = x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x01a_segment1_temps1.cell6temp = x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x01a_segment1_temps1.mintemp1to6 = x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x01a_segment1_temps1.maxtemp1to6 = x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x01a_segment1_temps1.cell1temp = x;
+	o->can_0x01a_segment1_temps1_rx = 1;
+	o->can_0x01a_segment1_temps1_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x01a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.cell2temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.cell2temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.cell2temp = in;
+	return 0;
+}
+
+int decode_can_0x01a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.cell3temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.cell3temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.cell3temp = in;
+	return 0;
+}
+
+int decode_can_0x01a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.cell4temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.cell4temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.cell4temp = in;
+	return 0;
+}
+
+int decode_can_0x01a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.cell5temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.cell5temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.cell5temp = in;
+	return 0;
+}
+
+int decode_can_0x01a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.cell6temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.cell6temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.cell6temp = in;
+	return 0;
+}
+
+int decode_can_0x01a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.mintemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.mintemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.mintemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x01a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.maxtemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.maxtemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.maxtemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x01a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01a_segment1_temps1.cell1temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01a_segment1_temps1.cell1temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01a_segment1_temps1.cell1temp = in;
+	return 0;
+}
+
+int print_can_0x01a_segment1_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.cell2temp)));
+	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.cell3temp)));
+	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.cell4temp)));
+	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.cell5temp)));
+	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.cell6temp)));
+	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.mintemp1to6)));
+	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.maxtemp1to6)));
+	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x01a_segment1_temps1.cell1temp)));
+	return r;
+}
+
+static int pack_can_0x01b_segment1_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.cell8temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.cell9temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.cell10temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.cell11temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.cell12temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.mintemp7to12)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.maxtemp7to12)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x01b_segment1_temps2.cell7temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x01b_segment1_temps2_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x01b_segment1_temps2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x01b_segment1_temps2.cell8temp = x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x01b_segment1_temps2.cell9temp = x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x01b_segment1_temps2.cell10temp = x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x01b_segment1_temps2.cell11temp = x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x01b_segment1_temps2.cell12temp = x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x01b_segment1_temps2.mintemp7to12 = x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x01b_segment1_temps2.maxtemp7to12 = x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x01b_segment1_temps2.cell7temp = x;
+	o->can_0x01b_segment1_temps2_rx = 1;
+	o->can_0x01b_segment1_temps2_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x01b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.cell8temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.cell8temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.cell8temp = in;
+	return 0;
+}
+
+int decode_can_0x01b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.cell9temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.cell9temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.cell9temp = in;
+	return 0;
+}
+
+int decode_can_0x01b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.cell10temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.cell10temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.cell10temp = in;
+	return 0;
+}
+
+int decode_can_0x01b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.cell11temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.cell11temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.cell11temp = in;
+	return 0;
+}
+
+int decode_can_0x01b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.cell12temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.cell12temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.cell12temp = in;
+	return 0;
+}
+
+int decode_can_0x01b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.mintemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.mintemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.mintemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x01b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.maxtemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.maxtemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.maxtemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x01b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x01b_segment1_temps2.cell7temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x01b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x01b_segment1_temps2.cell7temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x01b_segment1_temps2.cell7temp = in;
+	return 0;
+}
+
+int print_can_0x01b_segment1_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.cell8temp)));
+	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.cell9temp)));
+	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.cell10temp)));
+	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.cell11temp)));
+	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.cell12temp)));
+	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.mintemp7to12)));
+	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.maxtemp7to12)));
+	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x01b_segment1_temps2.cell7temp)));
+	return r;
+}
+
+static int pack_can_0x02a_segment2_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell2temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell3temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell4temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell5temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell6temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.mintemp1to6)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.maxtemp1to6)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell1temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x02a_segment2_temps1_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x02a_segment2_temps1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x02a_segment2_temps1.cell2temp = x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x02a_segment2_temps1.cell3temp = x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x02a_segment2_temps1.cell4temp = x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x02a_segment2_temps1.cell5temp = x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x02a_segment2_temps1.cell6temp = x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x02a_segment2_temps1.mintemp1to6 = x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x02a_segment2_temps1.maxtemp1to6 = x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x02a_segment2_temps1.cell1temp = x;
+	o->can_0x02a_segment2_temps1_rx = 1;
+	o->can_0x02a_segment2_temps1_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x02a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell2temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.cell2temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.cell2temp = in;
+	return 0;
+}
+
+int decode_can_0x02a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell3temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.cell3temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.cell3temp = in;
+	return 0;
+}
+
+int decode_can_0x02a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell4temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.cell4temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.cell4temp = in;
+	return 0;
+}
+
+int decode_can_0x02a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell5temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.cell5temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.cell5temp = in;
+	return 0;
+}
+
+int decode_can_0x02a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell6temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.cell6temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.cell6temp = in;
+	return 0;
+}
+
+int decode_can_0x02a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.mintemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.mintemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.mintemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x02a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.maxtemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.maxtemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.maxtemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x02a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell1temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02a_segment2_temps1.cell1temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02a_segment2_temps1.cell1temp = in;
+	return 0;
+}
+
+int print_can_0x02a_segment2_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell2temp)));
+	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell3temp)));
+	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell4temp)));
+	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell5temp)));
+	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell6temp)));
+	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.mintemp1to6)));
+	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.maxtemp1to6)));
+	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell1temp)));
+	return r;
+}
+
+static int pack_can_0x02b_segment2_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell8temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell9temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell10temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell11temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell12temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.mintemp7to12)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.maxtemp7to12)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell7temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x02b_segment2_temps2_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x02b_segment2_temps2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x02b_segment2_temps2.cell8temp = x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x02b_segment2_temps2.cell9temp = x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x02b_segment2_temps2.cell10temp = x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x02b_segment2_temps2.cell11temp = x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x02b_segment2_temps2.cell12temp = x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x02b_segment2_temps2.mintemp7to12 = x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x02b_segment2_temps2.maxtemp7to12 = x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x02b_segment2_temps2.cell7temp = x;
+	o->can_0x02b_segment2_temps2_rx = 1;
+	o->can_0x02b_segment2_temps2_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x02b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell8temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.cell8temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.cell8temp = in;
+	return 0;
+}
+
+int decode_can_0x02b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell9temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.cell9temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.cell9temp = in;
+	return 0;
+}
+
+int decode_can_0x02b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell10temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.cell10temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.cell10temp = in;
+	return 0;
+}
+
+int decode_can_0x02b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell11temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.cell11temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.cell11temp = in;
+	return 0;
+}
+
+int decode_can_0x02b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell12temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.cell12temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.cell12temp = in;
+	return 0;
+}
+
+int decode_can_0x02b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.mintemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.mintemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.mintemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x02b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.maxtemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.maxtemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.maxtemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x02b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell7temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x02b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x02b_segment2_temps2.cell7temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x02b_segment2_temps2.cell7temp = in;
+	return 0;
+}
+
+int print_can_0x02b_segment2_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell8temp)));
+	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell9temp)));
+	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell10temp)));
+	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell11temp)));
+	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell12temp)));
+	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.mintemp7to12)));
+	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.maxtemp7to12)));
+	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell7temp)));
+	return r;
+}
+
+static int pack_can_0x03a_segment3_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell2temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell3temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell4temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell5temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell6temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.mintemp1to6)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.maxtemp1to6)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell1temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x03a_segment3_temps1_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x03a_segment3_temps1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x03a_segment3_temps1.cell2temp = x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x03a_segment3_temps1.cell3temp = x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x03a_segment3_temps1.cell4temp = x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x03a_segment3_temps1.cell5temp = x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x03a_segment3_temps1.cell6temp = x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x03a_segment3_temps1.mintemp1to6 = x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x03a_segment3_temps1.maxtemp1to6 = x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x03a_segment3_temps1.cell1temp = x;
+	o->can_0x03a_segment3_temps1_rx = 1;
+	o->can_0x03a_segment3_temps1_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x03a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell2temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.cell2temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.cell2temp = in;
+	return 0;
+}
+
+int decode_can_0x03a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell3temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.cell3temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.cell3temp = in;
+	return 0;
+}
+
+int decode_can_0x03a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell4temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.cell4temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.cell4temp = in;
+	return 0;
+}
+
+int decode_can_0x03a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell5temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.cell5temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.cell5temp = in;
+	return 0;
+}
+
+int decode_can_0x03a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell6temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.cell6temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.cell6temp = in;
+	return 0;
+}
+
+int decode_can_0x03a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.mintemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.mintemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.mintemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x03a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.maxtemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.maxtemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.maxtemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x03a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell1temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03a_segment3_temps1.cell1temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03a_segment3_temps1.cell1temp = in;
+	return 0;
+}
+
+int print_can_0x03a_segment3_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell2temp)));
+	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell3temp)));
+	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell4temp)));
+	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell5temp)));
+	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell6temp)));
+	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.mintemp1to6)));
+	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.maxtemp1to6)));
+	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell1temp)));
+	return r;
+}
+
+static int pack_can_0x03b_segment3_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell8temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell9temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell10temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell11temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell12temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.mintemp7to12)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.maxtemp7to12)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell7temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x03b_segment3_temps2_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x03b_segment3_temps2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x03b_segment3_temps2.cell8temp = x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x03b_segment3_temps2.cell9temp = x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x03b_segment3_temps2.cell10temp = x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x03b_segment3_temps2.cell11temp = x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x03b_segment3_temps2.cell12temp = x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x03b_segment3_temps2.mintemp7to12 = x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x03b_segment3_temps2.maxtemp7to12 = x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x03b_segment3_temps2.cell7temp = x;
+	o->can_0x03b_segment3_temps2_rx = 1;
+	o->can_0x03b_segment3_temps2_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x03b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell8temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.cell8temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.cell8temp = in;
+	return 0;
+}
+
+int decode_can_0x03b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell9temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.cell9temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.cell9temp = in;
+	return 0;
+}
+
+int decode_can_0x03b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell10temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.cell10temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.cell10temp = in;
+	return 0;
+}
+
+int decode_can_0x03b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell11temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.cell11temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.cell11temp = in;
+	return 0;
+}
+
+int decode_can_0x03b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell12temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.cell12temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.cell12temp = in;
+	return 0;
+}
+
+int decode_can_0x03b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.mintemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.mintemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.mintemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x03b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.maxtemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.maxtemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.maxtemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x03b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell7temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x03b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x03b_segment3_temps2.cell7temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x03b_segment3_temps2.cell7temp = in;
+	return 0;
+}
+
+int print_can_0x03b_segment3_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell8temp)));
+	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell9temp)));
+	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell10temp)));
+	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell11temp)));
+	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell12temp)));
+	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.mintemp7to12)));
+	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.maxtemp7to12)));
+	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell7temp)));
+	return r;
+}
+
+static int pack_can_0x04a_segment4_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell2temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell3temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell4temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell5temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell6temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.mintemp1to6)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.maxtemp1to6)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell1temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x04a_segment4_temps1_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x04a_segment4_temps1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x04a_segment4_temps1.cell2temp = x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x04a_segment4_temps1.cell3temp = x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x04a_segment4_temps1.cell4temp = x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x04a_segment4_temps1.cell5temp = x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x04a_segment4_temps1.cell6temp = x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x04a_segment4_temps1.mintemp1to6 = x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x04a_segment4_temps1.maxtemp1to6 = x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x04a_segment4_temps1.cell1temp = x;
+	o->can_0x04a_segment4_temps1_rx = 1;
+	o->can_0x04a_segment4_temps1_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x04a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell2temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.cell2temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.cell2temp = in;
+	return 0;
+}
+
+int decode_can_0x04a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell3temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.cell3temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.cell3temp = in;
+	return 0;
+}
+
+int decode_can_0x04a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell4temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.cell4temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.cell4temp = in;
+	return 0;
+}
+
+int decode_can_0x04a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell5temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.cell5temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.cell5temp = in;
+	return 0;
+}
+
+int decode_can_0x04a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell6temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.cell6temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.cell6temp = in;
+	return 0;
+}
+
+int decode_can_0x04a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.mintemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.mintemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.mintemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x04a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.maxtemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.maxtemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.maxtemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x04a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell1temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04a_segment4_temps1.cell1temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04a_segment4_temps1.cell1temp = in;
+	return 0;
+}
+
+int print_can_0x04a_segment4_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell2temp)));
+	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell3temp)));
+	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell4temp)));
+	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell5temp)));
+	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell6temp)));
+	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.mintemp1to6)));
+	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.maxtemp1to6)));
+	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell1temp)));
+	return r;
+}
+
+static int pack_can_0x04b_segment4_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell8temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell9temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell10temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell11temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell12temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.mintemp7to12)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.maxtemp7to12)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell7temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x04b_segment4_temps2_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x04b_segment4_temps2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x04b_segment4_temps2.cell8temp = x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x04b_segment4_temps2.cell9temp = x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x04b_segment4_temps2.cell10temp = x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x04b_segment4_temps2.cell11temp = x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x04b_segment4_temps2.cell12temp = x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x04b_segment4_temps2.mintemp7to12 = x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x04b_segment4_temps2.maxtemp7to12 = x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x04b_segment4_temps2.cell7temp = x;
+	o->can_0x04b_segment4_temps2_rx = 1;
+	o->can_0x04b_segment4_temps2_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x04b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell8temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.cell8temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.cell8temp = in;
+	return 0;
+}
+
+int decode_can_0x04b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell9temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.cell9temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.cell9temp = in;
+	return 0;
+}
+
+int decode_can_0x04b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell10temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.cell10temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.cell10temp = in;
+	return 0;
+}
+
+int decode_can_0x04b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell11temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.cell11temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.cell11temp = in;
+	return 0;
+}
+
+int decode_can_0x04b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell12temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.cell12temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.cell12temp = in;
+	return 0;
+}
+
+int decode_can_0x04b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.mintemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.mintemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.mintemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x04b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.maxtemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.maxtemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.maxtemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x04b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell7temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x04b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x04b_segment4_temps2.cell7temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x04b_segment4_temps2.cell7temp = in;
+	return 0;
+}
+
+int print_can_0x04b_segment4_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell8temp)));
+	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell9temp)));
+	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell10temp)));
+	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell11temp)));
+	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell12temp)));
+	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.mintemp7to12)));
+	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.maxtemp7to12)));
+	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell7temp)));
+	return r;
+}
+
+static int pack_can_0x05a_segment5_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell2temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell3temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell4temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell5temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell6temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.mintemp1to6)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.maxtemp1to6)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell1temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x05a_segment5_temps1_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x05a_segment5_temps1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x05a_segment5_temps1.cell2temp = x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x05a_segment5_temps1.cell3temp = x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x05a_segment5_temps1.cell4temp = x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x05a_segment5_temps1.cell5temp = x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x05a_segment5_temps1.cell6temp = x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x05a_segment5_temps1.mintemp1to6 = x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x05a_segment5_temps1.maxtemp1to6 = x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x05a_segment5_temps1.cell1temp = x;
+	o->can_0x05a_segment5_temps1_rx = 1;
+	o->can_0x05a_segment5_temps1_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x05a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell2temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.cell2temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.cell2temp = in;
+	return 0;
+}
+
+int decode_can_0x05a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell3temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.cell3temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.cell3temp = in;
+	return 0;
+}
+
+int decode_can_0x05a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell4temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.cell4temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.cell4temp = in;
+	return 0;
+}
+
+int decode_can_0x05a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell5temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.cell5temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.cell5temp = in;
+	return 0;
+}
+
+int decode_can_0x05a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell6temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.cell6temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.cell6temp = in;
+	return 0;
+}
+
+int decode_can_0x05a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.mintemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.mintemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.mintemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x05a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.maxtemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.maxtemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.maxtemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x05a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell1temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05a_segment5_temps1.cell1temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05a_segment5_temps1.cell1temp = in;
+	return 0;
+}
+
+int print_can_0x05a_segment5_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell2temp)));
+	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell3temp)));
+	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell4temp)));
+	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell5temp)));
+	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell6temp)));
+	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.mintemp1to6)));
+	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.maxtemp1to6)));
+	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell1temp)));
+	return r;
+}
+
+static int pack_can_0x05b_segment5_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell8temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell9temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell10temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell11temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell12temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.mintemp7to12)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.maxtemp7to12)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell7temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x05b_segment5_temps2_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x05b_segment5_temps2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x05b_segment5_temps2.cell8temp = x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x05b_segment5_temps2.cell9temp = x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x05b_segment5_temps2.cell10temp = x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x05b_segment5_temps2.cell11temp = x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x05b_segment5_temps2.cell12temp = x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x05b_segment5_temps2.mintemp7to12 = x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x05b_segment5_temps2.maxtemp7to12 = x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x05b_segment5_temps2.cell7temp = x;
+	o->can_0x05b_segment5_temps2_rx = 1;
+	o->can_0x05b_segment5_temps2_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x05b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell8temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.cell8temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.cell8temp = in;
+	return 0;
+}
+
+int decode_can_0x05b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell9temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.cell9temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.cell9temp = in;
+	return 0;
+}
+
+int decode_can_0x05b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell10temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.cell10temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.cell10temp = in;
+	return 0;
+}
+
+int decode_can_0x05b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell11temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.cell11temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.cell11temp = in;
+	return 0;
+}
+
+int decode_can_0x05b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell12temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.cell12temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.cell12temp = in;
+	return 0;
+}
+
+int decode_can_0x05b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.mintemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.mintemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.mintemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x05b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.maxtemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.maxtemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.maxtemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x05b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell7temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x05b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x05b_segment5_temps2.cell7temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x05b_segment5_temps2.cell7temp = in;
+	return 0;
+}
+
+int print_can_0x05b_segment5_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell8temp)));
+	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell9temp)));
+	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell10temp)));
+	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell11temp)));
+	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell12temp)));
+	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.mintemp7to12)));
+	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.maxtemp7to12)));
+	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell7temp)));
+	return r;
+}
+
+static int pack_can_0x06a_segment6_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell2temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell3temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell4temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell5temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell6temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.mintemp1to6)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.maxtemp1to6)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell1temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x06a_segment6_temps1_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x06a_segment6_temps1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x06a_segment6_temps1.cell2temp = x;
+	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x06a_segment6_temps1.cell3temp = x;
+	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x06a_segment6_temps1.cell4temp = x;
+	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x06a_segment6_temps1.cell5temp = x;
+	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x06a_segment6_temps1.cell6temp = x;
+	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x06a_segment6_temps1.mintemp1to6 = x;
+	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x06a_segment6_temps1.maxtemp1to6 = x;
+	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x06a_segment6_temps1.cell1temp = x;
+	o->can_0x06a_segment6_temps1_rx = 1;
+	o->can_0x06a_segment6_temps1_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x06a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell2temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.cell2temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.cell2temp = in;
+	return 0;
+}
+
+int decode_can_0x06a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell3temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.cell3temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.cell3temp = in;
+	return 0;
+}
+
+int decode_can_0x06a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell4temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.cell4temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.cell4temp = in;
+	return 0;
+}
+
+int decode_can_0x06a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell5temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.cell5temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.cell5temp = in;
+	return 0;
+}
+
+int decode_can_0x06a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell6temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.cell6temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.cell6temp = in;
+	return 0;
+}
+
+int decode_can_0x06a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.mintemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.mintemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.mintemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x06a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.maxtemp1to6);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.maxtemp1to6 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.maxtemp1to6 = in;
+	return 0;
+}
+
+int decode_can_0x06a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell1temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06a_segment6_temps1.cell1temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06a_segment6_temps1.cell1temp = in;
+	return 0;
+}
+
+int print_can_0x06a_segment6_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell2temp)));
+	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell3temp)));
+	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell4temp)));
+	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell5temp)));
+	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell6temp)));
+	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.mintemp1to6)));
+	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.maxtemp1to6)));
+	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell1temp)));
+	return r;
+}
+
+static int pack_can_0x06b_segment6_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell8temp)) & 0xff;
+	x <<= 8; 
+	i |= x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell9temp)) & 0xff;
+	x <<= 16; 
+	i |= x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell10temp)) & 0xff;
+	x <<= 24; 
+	i |= x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell11temp)) & 0xff;
+	x <<= 32; 
+	i |= x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell12temp)) & 0xff;
+	x <<= 40; 
+	i |= x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.mintemp7to12)) & 0xff;
+	x <<= 48; 
+	i |= x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.maxtemp7to12)) & 0xff;
+	x <<= 56; 
+	i |= x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell7temp)) & 0xff;
+	i |= x;
+	*data = (i);
+	o->can_0x06b_segment6_temps2_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x06b_segment6_temps2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 8) & 0xff;
+	o->can_0x06b_segment6_temps2.cell8temp = x;
+	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 16) & 0xff;
+	o->can_0x06b_segment6_temps2.cell9temp = x;
+	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 24) & 0xff;
+	o->can_0x06b_segment6_temps2.cell10temp = x;
+	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 32) & 0xff;
+	o->can_0x06b_segment6_temps2.cell11temp = x;
+	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 40) & 0xff;
+	o->can_0x06b_segment6_temps2.cell12temp = x;
+	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 48) & 0xff;
+	o->can_0x06b_segment6_temps2.mintemp7to12 = x;
+	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = (i >> 56) & 0xff;
+	o->can_0x06b_segment6_temps2.maxtemp7to12 = x;
+	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = i & 0xff;
+	o->can_0x06b_segment6_temps2.cell7temp = x;
+	o->can_0x06b_segment6_temps2_rx = 1;
+	o->can_0x06b_segment6_temps2_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x06b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell8temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.cell8temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.cell8temp = in;
+	return 0;
+}
+
+int decode_can_0x06b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell9temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.cell9temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.cell9temp = in;
+	return 0;
+}
+
+int decode_can_0x06b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell10temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.cell10temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.cell10temp = in;
+	return 0;
+}
+
+int decode_can_0x06b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell11temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.cell11temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.cell11temp = in;
+	return 0;
+}
+
+int decode_can_0x06b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell12temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.cell12temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.cell12temp = in;
+	return 0;
+}
+
+int decode_can_0x06b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.mintemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.mintemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.mintemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x06b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.maxtemp7to12);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.maxtemp7to12 = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.maxtemp7to12 = in;
+	return 0;
+}
+
+int decode_can_0x06b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+	assert(o);
+	assert(out);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell7temp);
+	rval *= 0.019607;
+	if (rval <= 5) {
+		*out = rval;
+		return 0;
+	} else {
+		*out = (double)0;
+		return -1;
+	}
+}
+
+int encode_can_0x06b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+	assert(o);
+	o->can_0x06b_segment6_temps2.cell7temp = 0;
+	if (in > 5)
+		return -1;
+	in *= 51.0022;
+	o->can_0x06b_segment6_temps2.cell7temp = in;
+	return 0;
+}
+
+int print_can_0x06b_segment6_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell8temp)));
+	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell9temp)));
+	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell10temp)));
+	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell11temp)));
+	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell12temp)));
+	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.mintemp7to12)));
+	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.maxtemp7to12)));
+	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell7temp)));
+	return r;
+}
+
 static int pack_can_0x0a0_M160_Temperature_Set_1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
 	assert(o);
 	assert(data);
@@ -13387,6 +16795,18 @@ int unpack_message(can_obj_ksu_dbc_h_t *o, const unsigned long id, uint64_t data
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	assert(dlc <= 8);         /* Maximum of 8 bytes in a CAN packet */
 	switch (id) {
+	case 0x01a: return unpack_can_0x01a_segment1_temps1(o, data, dlc, time_stamp);
+	case 0x01b: return unpack_can_0x01b_segment1_temps2(o, data, dlc, time_stamp);
+	case 0x02a: return unpack_can_0x02a_segment2_temps1(o, data, dlc, time_stamp);
+	case 0x02b: return unpack_can_0x02b_segment2_temps2(o, data, dlc, time_stamp);
+	case 0x03a: return unpack_can_0x03a_segment3_temps1(o, data, dlc, time_stamp);
+	case 0x03b: return unpack_can_0x03b_segment3_temps2(o, data, dlc, time_stamp);
+	case 0x04a: return unpack_can_0x04a_segment4_temps1(o, data, dlc, time_stamp);
+	case 0x04b: return unpack_can_0x04b_segment4_temps2(o, data, dlc, time_stamp);
+	case 0x05a: return unpack_can_0x05a_segment5_temps1(o, data, dlc, time_stamp);
+	case 0x05b: return unpack_can_0x05b_segment5_temps2(o, data, dlc, time_stamp);
+	case 0x06a: return unpack_can_0x06a_segment6_temps1(o, data, dlc, time_stamp);
+	case 0x06b: return unpack_can_0x06b_segment6_temps2(o, data, dlc, time_stamp);
 	case 0x0a0: return unpack_can_0x0a0_M160_Temperature_Set_1(o, data, dlc, time_stamp);
 	case 0x0a1: return unpack_can_0x0a1_M161_Temperature_Set_2(o, data, dlc, time_stamp);
 	case 0x0a2: return unpack_can_0x0a2_M162_Temperature_Set_3(o, data, dlc, time_stamp);
@@ -13489,6 +16909,18 @@ int pack_message(can_obj_ksu_dbc_h_t *o, const unsigned long id, uint64_t *data)
 	assert(o);
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	switch (id) {
+	case 0x01a: return pack_can_0x01a_segment1_temps1(o, data);
+	case 0x01b: return pack_can_0x01b_segment1_temps2(o, data);
+	case 0x02a: return pack_can_0x02a_segment2_temps1(o, data);
+	case 0x02b: return pack_can_0x02b_segment2_temps2(o, data);
+	case 0x03a: return pack_can_0x03a_segment3_temps1(o, data);
+	case 0x03b: return pack_can_0x03b_segment3_temps2(o, data);
+	case 0x04a: return pack_can_0x04a_segment4_temps1(o, data);
+	case 0x04b: return pack_can_0x04b_segment4_temps2(o, data);
+	case 0x05a: return pack_can_0x05a_segment5_temps1(o, data);
+	case 0x05b: return pack_can_0x05b_segment5_temps2(o, data);
+	case 0x06a: return pack_can_0x06a_segment6_temps1(o, data);
+	case 0x06b: return pack_can_0x06b_segment6_temps2(o, data);
 	case 0x0a0: return pack_can_0x0a0_M160_Temperature_Set_1(o, data);
 	case 0x0a1: return pack_can_0x0a1_M161_Temperature_Set_2(o, data);
 	case 0x0a2: return pack_can_0x0a2_M162_Temperature_Set_3(o, data);
@@ -13592,6 +17024,18 @@ int print_message(const can_obj_ksu_dbc_h_t *o, const unsigned long id, FILE *ou
 	assert(id < (1ul << 29)); /* 29-bit CAN ID is largest possible */
 	assert(output);
 	switch (id) {
+	case 0x01a: return print_can_0x01a_segment1_temps1(o, output);
+	case 0x01b: return print_can_0x01b_segment1_temps2(o, output);
+	case 0x02a: return print_can_0x02a_segment2_temps1(o, output);
+	case 0x02b: return print_can_0x02b_segment2_temps2(o, output);
+	case 0x03a: return print_can_0x03a_segment3_temps1(o, output);
+	case 0x03b: return print_can_0x03b_segment3_temps2(o, output);
+	case 0x04a: return print_can_0x04a_segment4_temps1(o, output);
+	case 0x04b: return print_can_0x04b_segment4_temps2(o, output);
+	case 0x05a: return print_can_0x05a_segment5_temps1(o, output);
+	case 0x05b: return print_can_0x05b_segment5_temps2(o, output);
+	case 0x06a: return print_can_0x06a_segment6_temps1(o, output);
+	case 0x06b: return print_can_0x06b_segment6_temps2(o, output);
 	case 0x0a0: return print_can_0x0a0_M160_Temperature_Set_1(o, output);
 	case 0x0a1: return print_can_0x0a1_M161_Temperature_Set_2(o, output);
 	case 0x0a2: return print_can_0x0a2_M162_Temperature_Set_3(o, output);

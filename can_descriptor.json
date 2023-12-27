@@ -1412,6 +1412,222 @@
             "senders": [
                 "BMS"
             ]
+        },
+        "segment1_temps1":{
+            "id":26,
+            "length":8,
+            "signals": [
+                "cell1temp",
+                "cell2temp",
+                "cell3temp",
+                "cell4temp",
+                "cell5temp",
+                "cell6temp",
+                "mintemp1to6",
+                "maxtemp1to6"
+            ],
+            "comment":"raw ADC voltage reading of module1 cells 1-6",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment1_temps2":{
+            "id":27,
+            "length":8,
+            "signals": [
+                "cell7temp",
+                "cell8temp",
+                "cell9temp",
+                "cell10temp",
+                "cell11temp",
+                "cell12temp",
+                "mintemp7to12",
+                "maxtemp7to12"
+            ],
+            "comment":"raw ADC voltage reading of module1 cells 6-12",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment2_temps1":{
+            "id":42,
+            "length":8,
+            "signals": [
+                "cell1temp",
+                "cell2temp",
+                "cell3temp",
+                "cell4temp",
+                "cell5temp",
+                "cell6temp",
+                "mintemp1to6",
+                "maxtemp1to6"
+            ],
+            "comment":"raw ADC voltage reading of module2 cells 1-6",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment2_temps2":{
+            "id":43,
+            "length":8,
+            "signals": [
+                "cell7temp",
+                "cell8temp",
+                "cell9temp",
+                "cell10temp",
+                "cell11temp",
+                "cell12temp",
+                "mintemp7to12",
+                "maxtemp7to12"
+            ],
+            "comment":"raw ADC voltage reading of module2 cells 6-12",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment3_temps1":{
+            "id":58,
+            "length":8,
+            "signals": [
+                "cell1temp",
+                "cell2temp",
+                "cell3temp",
+                "cell4temp",
+                "cell5temp",
+                "cell6temp",
+                "mintemp1to6",
+                "maxtemp1to6"
+            ],
+            "comment":"raw ADC voltage reading of module3 cells 1-6",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment3_temps2":{
+            "id":59,
+            "length":8,
+            "signals": [
+                "cell7temp",
+                "cell8temp",
+                "cell9temp",
+                "cell10temp",
+                "cell11temp",
+                "cell12temp",
+                "mintemp7to12",
+                "maxtemp7to12"
+            ],
+            "comment":"raw ADC voltage reading of module3 cells 6-12",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment4_temps1":{
+            "id":74,
+            "length":8,
+            "signals": [
+                "cell1temp",
+                "cell2temp",
+                "cell3temp",
+                "cell4temp",
+                "cell5temp",
+                "cell6temp",
+                "mintemp1to6",
+                "maxtemp1to6"
+            ],
+            "comment":"raw ADC voltage reading of module4 cells 1-6",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment4_temps2":{
+            "id":75,
+            "length":8,
+            "signals": [
+                "cell7temp",
+                "cell8temp",
+                "cell9temp",
+                "cell10temp",
+                "cell11temp",
+                "cell12temp",
+                "mintemp7to12",
+                "maxtemp7to12"
+            ],
+            "comment":"raw ADC voltage reading of module4 cells 6-12",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment5_temps1":{
+            "id":90,
+            "length":8,
+            "signals": [
+                "cell1temp",
+                "cell2temp",
+                "cell3temp",
+                "cell4temp",
+                "cell5temp",
+                "cell6temp",
+                "mintemp1to6",
+                "maxtemp1to6"
+            ],
+            "comment":"raw ADC voltage reading of module5 cells 1-6",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment5_temps2":{
+            "id":91,
+            "length":8,
+            "signals": [
+                "cell7temp",
+                "cell8temp",
+                "cell9temp",
+                "cell10temp",
+                "cell11temp",
+                "cell12temp",
+                "mintemp7to12",
+                "maxtemp7to12"
+            ],
+            "comment":"raw ADC voltage reading of module5 cells 6-12",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment6_temps1":{
+            "id":106,
+            "length":8,
+            "signals": [
+                "cell1temp",
+                "cell2temp",
+                "cell3temp",
+                "cell4temp",
+                "cell5temp",
+                "cell6temp",
+                "mintemp1to6",
+                "maxtemp1to6"
+            ],
+            "comment":"raw ADC voltage reading of module6 cells 1-6",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
+        },
+        "segment6_temps2":{
+            "id":107,
+            "length":8,
+            "signals": [
+                "cell7temp",
+                "cell8temp",
+                "cell9temp",
+                "cell10temp",
+                "cell11temp",
+                "cell12temp",
+                "mintemp7to12",
+                "maxtemp7to12"
+            ],
+            "comment":"raw ADC voltage reading of module6 cells 6-12",
+            "is_extended_frame": false,
+            "bus_name": "bms",
+            "senders":[]
         }
     },
     "signals": [
@@ -8179,6 +8395,262 @@
             },
             "min": null,
             "max": null,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell1temp",
+            "start": 0,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell2temp",
+            "start": 8,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell3temp",
+            "start": 16,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell4temp",
+            "start": 24,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell5temp",
+            "start": 32,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell6temp",
+            "start": 40,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "mintemp1to6",
+            "start": 48,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "maxtemp1to6",
+            "start": 56,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell7temp",
+            "start": 0,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell8temp",
+            "start": 8,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell9temp",
+            "start": 16,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell10temp",
+            "start": 24,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell11temp",
+            "start": 32,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "cell12temp",
+            "start": 40,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "mintemp7to12",
+            "start": 48,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
+            "is_multiplexer": false
+        },
+        {
+            "name": "maxtemp7to12",
+            "start": 56,
+            "length": 8,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "scale": 0.019607,
+                "offset": 0,
+                "is_float": false
+            },
+            "min": 0.0,
+            "max": 5.0,
             "is_multiplexer": false
         }
     ]
