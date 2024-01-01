@@ -140,4 +140,5 @@ def json_gen():
     subprocess.run([".\dbcc\dbcc","ksu_dbc.dbc"])
 
     # subprocess.run([".\dbcc\dbcc ksu_dbc.dbc"])
-json_gen()
+if __name__ == "__main__":
+    json_gen()
