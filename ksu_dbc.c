@@ -589,36 +589,36 @@ static int pack_can_0x02a_segment2_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell2temp)) & 0xff;
+	/* cell14temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell14temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell3temp)) & 0xff;
+	/* cell15temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell15temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell4temp)) & 0xff;
+	/* cell16temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell16temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell5temp)) & 0xff;
+	/* cell17temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell17temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell6temp)) & 0xff;
+	/* cell18temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell18temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.mintemp1to6)) & 0xff;
+	/* mintemp13to18: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.mintemp13to18)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.maxtemp1to6)) & 0xff;
+	/* maxtemp13to18: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.maxtemp13to18)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell1temp)) & 0xff;
+	/* cell13temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02a_segment2_temps1.cell13temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x02a_segment2_temps1_tx = 1;
@@ -632,39 +632,39 @@ static int unpack_can_0x02a_segment2_temps1(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell14temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x02a_segment2_temps1.cell2temp = x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.cell14temp = x;
+	/* cell15temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x02a_segment2_temps1.cell3temp = x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.cell15temp = x;
+	/* cell16temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x02a_segment2_temps1.cell4temp = x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.cell16temp = x;
+	/* cell17temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x02a_segment2_temps1.cell5temp = x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.cell17temp = x;
+	/* cell18temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x02a_segment2_temps1.cell6temp = x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.cell18temp = x;
+	/* mintemp13to18: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x02a_segment2_temps1.mintemp1to6 = x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.mintemp13to18 = x;
+	/* maxtemp13to18: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x02a_segment2_temps1.maxtemp1to6 = x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02a_segment2_temps1.maxtemp13to18 = x;
+	/* cell13temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x02a_segment2_temps1.cell1temp = x;
+	o->can_0x02a_segment2_temps1.cell13temp = x;
 	o->can_0x02a_segment2_temps1_rx = 1;
 	o->can_0x02a_segment2_temps1_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x02a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_cell14temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.cell2temp);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell14temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -675,20 +675,20 @@ int decode_can_0x02a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_cell14temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.cell2temp = 0;
+	o->can_0x02a_segment2_temps1.cell14temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.cell2temp = in;
+	o->can_0x02a_segment2_temps1.cell14temp = in;
 	return 0;
 }
 
-int decode_can_0x02a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_cell15temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.cell3temp);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell15temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -699,20 +699,20 @@ int decode_can_0x02a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_cell15temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.cell3temp = 0;
+	o->can_0x02a_segment2_temps1.cell15temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.cell3temp = in;
+	o->can_0x02a_segment2_temps1.cell15temp = in;
 	return 0;
 }
 
-int decode_can_0x02a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_cell16temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.cell4temp);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell16temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -723,20 +723,20 @@ int decode_can_0x02a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_cell16temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.cell4temp = 0;
+	o->can_0x02a_segment2_temps1.cell16temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.cell4temp = in;
+	o->can_0x02a_segment2_temps1.cell16temp = in;
 	return 0;
 }
 
-int decode_can_0x02a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_cell17temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.cell5temp);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell17temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -747,20 +747,20 @@ int decode_can_0x02a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_cell17temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.cell5temp = 0;
+	o->can_0x02a_segment2_temps1.cell17temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.cell5temp = in;
+	o->can_0x02a_segment2_temps1.cell17temp = in;
 	return 0;
 }
 
-int decode_can_0x02a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_cell18temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.cell6temp);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell18temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -771,20 +771,20 @@ int decode_can_0x02a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_cell18temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.cell6temp = 0;
+	o->can_0x02a_segment2_temps1.cell18temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.cell6temp = in;
+	o->can_0x02a_segment2_temps1.cell18temp = in;
 	return 0;
 }
 
-int decode_can_0x02a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_mintemp13to18(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.mintemp1to6);
+	double rval = (double)(o->can_0x02a_segment2_temps1.mintemp13to18);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -795,20 +795,20 @@ int decode_can_0x02a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_mintemp13to18(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.mintemp1to6 = 0;
+	o->can_0x02a_segment2_temps1.mintemp13to18 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.mintemp1to6 = in;
+	o->can_0x02a_segment2_temps1.mintemp13to18 = in;
 	return 0;
 }
 
-int decode_can_0x02a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_maxtemp13to18(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.maxtemp1to6);
+	double rval = (double)(o->can_0x02a_segment2_temps1.maxtemp13to18);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -819,20 +819,20 @@ int decode_can_0x02a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_maxtemp13to18(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.maxtemp1to6 = 0;
+	o->can_0x02a_segment2_temps1.maxtemp13to18 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.maxtemp1to6 = in;
+	o->can_0x02a_segment2_temps1.maxtemp13to18 = in;
 	return 0;
 }
 
-int decode_can_0x02a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02a_cell13temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02a_segment2_temps1.cell1temp);
+	double rval = (double)(o->can_0x02a_segment2_temps1.cell13temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -843,13 +843,13 @@ int decode_can_0x02a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02a_cell13temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02a_segment2_temps1.cell1temp = 0;
+	o->can_0x02a_segment2_temps1.cell13temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02a_segment2_temps1.cell1temp = in;
+	o->can_0x02a_segment2_temps1.cell13temp = in;
 	return 0;
 }
 
@@ -857,14 +857,14 @@ int print_can_0x02a_segment2_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell2temp)));
-	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell3temp)));
-	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell4temp)));
-	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell5temp)));
-	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell6temp)));
-	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.mintemp1to6)));
-	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.maxtemp1to6)));
-	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell1temp)));
+	r = print_helper(r, fprintf(output, "cell14temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell14temp)));
+	r = print_helper(r, fprintf(output, "cell15temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell15temp)));
+	r = print_helper(r, fprintf(output, "cell16temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell16temp)));
+	r = print_helper(r, fprintf(output, "cell17temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell17temp)));
+	r = print_helper(r, fprintf(output, "cell18temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell18temp)));
+	r = print_helper(r, fprintf(output, "mintemp13to18 = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.mintemp13to18)));
+	r = print_helper(r, fprintf(output, "maxtemp13to18 = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.maxtemp13to18)));
+	r = print_helper(r, fprintf(output, "cell13temp = (wire: %.0f)\n", (double)(o->can_0x02a_segment2_temps1.cell13temp)));
 	return r;
 }
 
@@ -873,36 +873,36 @@ static int pack_can_0x02b_segment2_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell8temp)) & 0xff;
+	/* cell20temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell20temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell9temp)) & 0xff;
+	/* cell21temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell21temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell10temp)) & 0xff;
+	/* cell22temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell22temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell11temp)) & 0xff;
+	/* cell23temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell23temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell12temp)) & 0xff;
+	/* cell24temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell24temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.mintemp7to12)) & 0xff;
+	/* mintemp19to24: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.mintemp19to24)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.maxtemp7to12)) & 0xff;
+	/* maxtemp19to24: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.maxtemp19to24)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell7temp)) & 0xff;
+	/* cell19temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x02b_segment2_temps2.cell19temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x02b_segment2_temps2_tx = 1;
@@ -916,39 +916,39 @@ static int unpack_can_0x02b_segment2_temps2(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell20temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x02b_segment2_temps2.cell8temp = x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.cell20temp = x;
+	/* cell21temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x02b_segment2_temps2.cell9temp = x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.cell21temp = x;
+	/* cell22temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x02b_segment2_temps2.cell10temp = x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.cell22temp = x;
+	/* cell23temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x02b_segment2_temps2.cell11temp = x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.cell23temp = x;
+	/* cell24temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x02b_segment2_temps2.cell12temp = x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.cell24temp = x;
+	/* mintemp19to24: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x02b_segment2_temps2.mintemp7to12 = x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.mintemp19to24 = x;
+	/* maxtemp19to24: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x02b_segment2_temps2.maxtemp7to12 = x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x02b_segment2_temps2.maxtemp19to24 = x;
+	/* cell19temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x02b_segment2_temps2.cell7temp = x;
+	o->can_0x02b_segment2_temps2.cell19temp = x;
 	o->can_0x02b_segment2_temps2_rx = 1;
 	o->can_0x02b_segment2_temps2_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x02b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_cell20temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.cell8temp);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell20temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -959,20 +959,20 @@ int decode_can_0x02b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_cell20temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.cell8temp = 0;
+	o->can_0x02b_segment2_temps2.cell20temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.cell8temp = in;
+	o->can_0x02b_segment2_temps2.cell20temp = in;
 	return 0;
 }
 
-int decode_can_0x02b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_cell21temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.cell9temp);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell21temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -983,20 +983,20 @@ int decode_can_0x02b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_cell21temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.cell9temp = 0;
+	o->can_0x02b_segment2_temps2.cell21temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.cell9temp = in;
+	o->can_0x02b_segment2_temps2.cell21temp = in;
 	return 0;
 }
 
-int decode_can_0x02b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_cell22temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.cell10temp);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell22temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1007,20 +1007,20 @@ int decode_can_0x02b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_cell22temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.cell10temp = 0;
+	o->can_0x02b_segment2_temps2.cell22temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.cell10temp = in;
+	o->can_0x02b_segment2_temps2.cell22temp = in;
 	return 0;
 }
 
-int decode_can_0x02b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_cell23temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.cell11temp);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell23temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1031,20 +1031,20 @@ int decode_can_0x02b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_cell23temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.cell11temp = 0;
+	o->can_0x02b_segment2_temps2.cell23temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.cell11temp = in;
+	o->can_0x02b_segment2_temps2.cell23temp = in;
 	return 0;
 }
 
-int decode_can_0x02b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_cell24temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.cell12temp);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell24temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1055,20 +1055,20 @@ int decode_can_0x02b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_cell24temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.cell12temp = 0;
+	o->can_0x02b_segment2_temps2.cell24temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.cell12temp = in;
+	o->can_0x02b_segment2_temps2.cell24temp = in;
 	return 0;
 }
 
-int decode_can_0x02b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_mintemp19to24(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.mintemp7to12);
+	double rval = (double)(o->can_0x02b_segment2_temps2.mintemp19to24);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1079,20 +1079,20 @@ int decode_can_0x02b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_mintemp19to24(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.mintemp7to12 = 0;
+	o->can_0x02b_segment2_temps2.mintemp19to24 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.mintemp7to12 = in;
+	o->can_0x02b_segment2_temps2.mintemp19to24 = in;
 	return 0;
 }
 
-int decode_can_0x02b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_maxtemp19to24(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.maxtemp7to12);
+	double rval = (double)(o->can_0x02b_segment2_temps2.maxtemp19to24);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1103,20 +1103,20 @@ int decode_can_0x02b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_maxtemp19to24(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.maxtemp7to12 = 0;
+	o->can_0x02b_segment2_temps2.maxtemp19to24 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.maxtemp7to12 = in;
+	o->can_0x02b_segment2_temps2.maxtemp19to24 = in;
 	return 0;
 }
 
-int decode_can_0x02b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x02b_cell19temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x02b_segment2_temps2.cell7temp);
+	double rval = (double)(o->can_0x02b_segment2_temps2.cell19temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1127,13 +1127,13 @@ int decode_can_0x02b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x02b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x02b_cell19temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x02b_segment2_temps2.cell7temp = 0;
+	o->can_0x02b_segment2_temps2.cell19temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x02b_segment2_temps2.cell7temp = in;
+	o->can_0x02b_segment2_temps2.cell19temp = in;
 	return 0;
 }
 
@@ -1141,14 +1141,14 @@ int print_can_0x02b_segment2_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell8temp)));
-	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell9temp)));
-	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell10temp)));
-	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell11temp)));
-	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell12temp)));
-	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.mintemp7to12)));
-	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.maxtemp7to12)));
-	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell7temp)));
+	r = print_helper(r, fprintf(output, "cell20temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell20temp)));
+	r = print_helper(r, fprintf(output, "cell21temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell21temp)));
+	r = print_helper(r, fprintf(output, "cell22temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell22temp)));
+	r = print_helper(r, fprintf(output, "cell23temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell23temp)));
+	r = print_helper(r, fprintf(output, "cell24temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell24temp)));
+	r = print_helper(r, fprintf(output, "mintemp19to24 = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.mintemp19to24)));
+	r = print_helper(r, fprintf(output, "maxtemp19to24 = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.maxtemp19to24)));
+	r = print_helper(r, fprintf(output, "cell19temp = (wire: %.0f)\n", (double)(o->can_0x02b_segment2_temps2.cell19temp)));
 	return r;
 }
 
@@ -1157,36 +1157,36 @@ static int pack_can_0x03a_segment3_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell2temp)) & 0xff;
+	/* cell26temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell26temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell3temp)) & 0xff;
+	/* cell27temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell27temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell4temp)) & 0xff;
+	/* cell28temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell28temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell5temp)) & 0xff;
+	/* cell29temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell29temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell6temp)) & 0xff;
+	/* cell30temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell30temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.mintemp1to6)) & 0xff;
+	/* mintemp25to30: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.mintemp25to30)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.maxtemp1to6)) & 0xff;
+	/* maxtemp25to30: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.maxtemp25to30)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell1temp)) & 0xff;
+	/* cell25temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03a_segment3_temps1.cell25temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x03a_segment3_temps1_tx = 1;
@@ -1200,39 +1200,39 @@ static int unpack_can_0x03a_segment3_temps1(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell26temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x03a_segment3_temps1.cell2temp = x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.cell26temp = x;
+	/* cell27temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x03a_segment3_temps1.cell3temp = x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.cell27temp = x;
+	/* cell28temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x03a_segment3_temps1.cell4temp = x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.cell28temp = x;
+	/* cell29temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x03a_segment3_temps1.cell5temp = x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.cell29temp = x;
+	/* cell30temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x03a_segment3_temps1.cell6temp = x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.cell30temp = x;
+	/* mintemp25to30: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x03a_segment3_temps1.mintemp1to6 = x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.mintemp25to30 = x;
+	/* maxtemp25to30: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x03a_segment3_temps1.maxtemp1to6 = x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03a_segment3_temps1.maxtemp25to30 = x;
+	/* cell25temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x03a_segment3_temps1.cell1temp = x;
+	o->can_0x03a_segment3_temps1.cell25temp = x;
 	o->can_0x03a_segment3_temps1_rx = 1;
 	o->can_0x03a_segment3_temps1_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x03a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_cell26temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.cell2temp);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell26temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1243,20 +1243,20 @@ int decode_can_0x03a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_cell26temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.cell2temp = 0;
+	o->can_0x03a_segment3_temps1.cell26temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.cell2temp = in;
+	o->can_0x03a_segment3_temps1.cell26temp = in;
 	return 0;
 }
 
-int decode_can_0x03a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_cell27temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.cell3temp);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell27temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1267,20 +1267,20 @@ int decode_can_0x03a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_cell27temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.cell3temp = 0;
+	o->can_0x03a_segment3_temps1.cell27temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.cell3temp = in;
+	o->can_0x03a_segment3_temps1.cell27temp = in;
 	return 0;
 }
 
-int decode_can_0x03a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_cell28temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.cell4temp);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell28temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1291,20 +1291,20 @@ int decode_can_0x03a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_cell28temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.cell4temp = 0;
+	o->can_0x03a_segment3_temps1.cell28temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.cell4temp = in;
+	o->can_0x03a_segment3_temps1.cell28temp = in;
 	return 0;
 }
 
-int decode_can_0x03a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_cell29temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.cell5temp);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell29temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1315,20 +1315,20 @@ int decode_can_0x03a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_cell29temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.cell5temp = 0;
+	o->can_0x03a_segment3_temps1.cell29temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.cell5temp = in;
+	o->can_0x03a_segment3_temps1.cell29temp = in;
 	return 0;
 }
 
-int decode_can_0x03a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_cell30temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.cell6temp);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell30temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1339,20 +1339,20 @@ int decode_can_0x03a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_cell30temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.cell6temp = 0;
+	o->can_0x03a_segment3_temps1.cell30temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.cell6temp = in;
+	o->can_0x03a_segment3_temps1.cell30temp = in;
 	return 0;
 }
 
-int decode_can_0x03a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_mintemp25to30(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.mintemp1to6);
+	double rval = (double)(o->can_0x03a_segment3_temps1.mintemp25to30);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1363,20 +1363,20 @@ int decode_can_0x03a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_mintemp25to30(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.mintemp1to6 = 0;
+	o->can_0x03a_segment3_temps1.mintemp25to30 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.mintemp1to6 = in;
+	o->can_0x03a_segment3_temps1.mintemp25to30 = in;
 	return 0;
 }
 
-int decode_can_0x03a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_maxtemp25to30(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.maxtemp1to6);
+	double rval = (double)(o->can_0x03a_segment3_temps1.maxtemp25to30);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1387,20 +1387,20 @@ int decode_can_0x03a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_maxtemp25to30(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.maxtemp1to6 = 0;
+	o->can_0x03a_segment3_temps1.maxtemp25to30 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.maxtemp1to6 = in;
+	o->can_0x03a_segment3_temps1.maxtemp25to30 = in;
 	return 0;
 }
 
-int decode_can_0x03a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03a_cell25temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03a_segment3_temps1.cell1temp);
+	double rval = (double)(o->can_0x03a_segment3_temps1.cell25temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1411,13 +1411,13 @@ int decode_can_0x03a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03a_cell25temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03a_segment3_temps1.cell1temp = 0;
+	o->can_0x03a_segment3_temps1.cell25temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03a_segment3_temps1.cell1temp = in;
+	o->can_0x03a_segment3_temps1.cell25temp = in;
 	return 0;
 }
 
@@ -1425,14 +1425,14 @@ int print_can_0x03a_segment3_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell2temp)));
-	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell3temp)));
-	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell4temp)));
-	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell5temp)));
-	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell6temp)));
-	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.mintemp1to6)));
-	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.maxtemp1to6)));
-	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell1temp)));
+	r = print_helper(r, fprintf(output, "cell26temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell26temp)));
+	r = print_helper(r, fprintf(output, "cell27temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell27temp)));
+	r = print_helper(r, fprintf(output, "cell28temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell28temp)));
+	r = print_helper(r, fprintf(output, "cell29temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell29temp)));
+	r = print_helper(r, fprintf(output, "cell30temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell30temp)));
+	r = print_helper(r, fprintf(output, "mintemp25to30 = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.mintemp25to30)));
+	r = print_helper(r, fprintf(output, "maxtemp25to30 = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.maxtemp25to30)));
+	r = print_helper(r, fprintf(output, "cell25temp = (wire: %.0f)\n", (double)(o->can_0x03a_segment3_temps1.cell25temp)));
 	return r;
 }
 
@@ -1441,36 +1441,36 @@ static int pack_can_0x03b_segment3_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell8temp)) & 0xff;
+	/* cell32temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell32temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell9temp)) & 0xff;
+	/* cell33temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell33temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell10temp)) & 0xff;
+	/* cell34temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell34temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell11temp)) & 0xff;
+	/* cell35temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell35temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell12temp)) & 0xff;
+	/* cell36temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell36temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.mintemp7to12)) & 0xff;
+	/* mintemp31to36: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.mintemp31to36)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.maxtemp7to12)) & 0xff;
+	/* maxtemp31to36: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.maxtemp31to36)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell7temp)) & 0xff;
+	/* cell31temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x03b_segment3_temps2.cell31temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x03b_segment3_temps2_tx = 1;
@@ -1484,39 +1484,39 @@ static int unpack_can_0x03b_segment3_temps2(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell32temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x03b_segment3_temps2.cell8temp = x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.cell32temp = x;
+	/* cell33temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x03b_segment3_temps2.cell9temp = x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.cell33temp = x;
+	/* cell34temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x03b_segment3_temps2.cell10temp = x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.cell34temp = x;
+	/* cell35temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x03b_segment3_temps2.cell11temp = x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.cell35temp = x;
+	/* cell36temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x03b_segment3_temps2.cell12temp = x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.cell36temp = x;
+	/* mintemp31to36: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x03b_segment3_temps2.mintemp7to12 = x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.mintemp31to36 = x;
+	/* maxtemp31to36: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x03b_segment3_temps2.maxtemp7to12 = x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x03b_segment3_temps2.maxtemp31to36 = x;
+	/* cell31temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x03b_segment3_temps2.cell7temp = x;
+	o->can_0x03b_segment3_temps2.cell31temp = x;
 	o->can_0x03b_segment3_temps2_rx = 1;
 	o->can_0x03b_segment3_temps2_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x03b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_cell32temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.cell8temp);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell32temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1527,20 +1527,20 @@ int decode_can_0x03b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_cell32temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.cell8temp = 0;
+	o->can_0x03b_segment3_temps2.cell32temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.cell8temp = in;
+	o->can_0x03b_segment3_temps2.cell32temp = in;
 	return 0;
 }
 
-int decode_can_0x03b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_cell33temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.cell9temp);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell33temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1551,20 +1551,20 @@ int decode_can_0x03b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_cell33temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.cell9temp = 0;
+	o->can_0x03b_segment3_temps2.cell33temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.cell9temp = in;
+	o->can_0x03b_segment3_temps2.cell33temp = in;
 	return 0;
 }
 
-int decode_can_0x03b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_cell34temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.cell10temp);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell34temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1575,20 +1575,20 @@ int decode_can_0x03b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_cell34temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.cell10temp = 0;
+	o->can_0x03b_segment3_temps2.cell34temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.cell10temp = in;
+	o->can_0x03b_segment3_temps2.cell34temp = in;
 	return 0;
 }
 
-int decode_can_0x03b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_cell35temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.cell11temp);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell35temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1599,20 +1599,20 @@ int decode_can_0x03b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_cell35temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.cell11temp = 0;
+	o->can_0x03b_segment3_temps2.cell35temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.cell11temp = in;
+	o->can_0x03b_segment3_temps2.cell35temp = in;
 	return 0;
 }
 
-int decode_can_0x03b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_cell36temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.cell12temp);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell36temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1623,20 +1623,20 @@ int decode_can_0x03b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_cell36temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.cell12temp = 0;
+	o->can_0x03b_segment3_temps2.cell36temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.cell12temp = in;
+	o->can_0x03b_segment3_temps2.cell36temp = in;
 	return 0;
 }
 
-int decode_can_0x03b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_mintemp31to36(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.mintemp7to12);
+	double rval = (double)(o->can_0x03b_segment3_temps2.mintemp31to36);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1647,20 +1647,20 @@ int decode_can_0x03b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_mintemp31to36(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.mintemp7to12 = 0;
+	o->can_0x03b_segment3_temps2.mintemp31to36 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.mintemp7to12 = in;
+	o->can_0x03b_segment3_temps2.mintemp31to36 = in;
 	return 0;
 }
 
-int decode_can_0x03b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_maxtemp31to36(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.maxtemp7to12);
+	double rval = (double)(o->can_0x03b_segment3_temps2.maxtemp31to36);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1671,20 +1671,20 @@ int decode_can_0x03b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_maxtemp31to36(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.maxtemp7to12 = 0;
+	o->can_0x03b_segment3_temps2.maxtemp31to36 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.maxtemp7to12 = in;
+	o->can_0x03b_segment3_temps2.maxtemp31to36 = in;
 	return 0;
 }
 
-int decode_can_0x03b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x03b_cell31temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x03b_segment3_temps2.cell7temp);
+	double rval = (double)(o->can_0x03b_segment3_temps2.cell31temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1695,13 +1695,13 @@ int decode_can_0x03b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x03b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x03b_cell31temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x03b_segment3_temps2.cell7temp = 0;
+	o->can_0x03b_segment3_temps2.cell31temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x03b_segment3_temps2.cell7temp = in;
+	o->can_0x03b_segment3_temps2.cell31temp = in;
 	return 0;
 }
 
@@ -1709,14 +1709,14 @@ int print_can_0x03b_segment3_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell8temp)));
-	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell9temp)));
-	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell10temp)));
-	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell11temp)));
-	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell12temp)));
-	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.mintemp7to12)));
-	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.maxtemp7to12)));
-	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell7temp)));
+	r = print_helper(r, fprintf(output, "cell32temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell32temp)));
+	r = print_helper(r, fprintf(output, "cell33temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell33temp)));
+	r = print_helper(r, fprintf(output, "cell34temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell34temp)));
+	r = print_helper(r, fprintf(output, "cell35temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell35temp)));
+	r = print_helper(r, fprintf(output, "cell36temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell36temp)));
+	r = print_helper(r, fprintf(output, "mintemp31to36 = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.mintemp31to36)));
+	r = print_helper(r, fprintf(output, "maxtemp31to36 = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.maxtemp31to36)));
+	r = print_helper(r, fprintf(output, "cell31temp = (wire: %.0f)\n", (double)(o->can_0x03b_segment3_temps2.cell31temp)));
 	return r;
 }
 
@@ -1725,36 +1725,36 @@ static int pack_can_0x04a_segment4_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell2temp)) & 0xff;
+	/* cell38temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell38temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell3temp)) & 0xff;
+	/* cell39temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell39temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell4temp)) & 0xff;
+	/* cell40temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell40temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell5temp)) & 0xff;
+	/* cell41temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell41temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell6temp)) & 0xff;
+	/* cell42temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell42temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.mintemp1to6)) & 0xff;
+	/* mintemp37to42: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.mintemp37to42)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.maxtemp1to6)) & 0xff;
+	/* maxtemp37to42: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.maxtemp37to42)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell1temp)) & 0xff;
+	/* cell37temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04a_segment4_temps1.cell37temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x04a_segment4_temps1_tx = 1;
@@ -1768,39 +1768,39 @@ static int unpack_can_0x04a_segment4_temps1(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell38temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x04a_segment4_temps1.cell2temp = x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.cell38temp = x;
+	/* cell39temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x04a_segment4_temps1.cell3temp = x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.cell39temp = x;
+	/* cell40temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x04a_segment4_temps1.cell4temp = x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.cell40temp = x;
+	/* cell41temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x04a_segment4_temps1.cell5temp = x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.cell41temp = x;
+	/* cell42temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x04a_segment4_temps1.cell6temp = x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.cell42temp = x;
+	/* mintemp37to42: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x04a_segment4_temps1.mintemp1to6 = x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.mintemp37to42 = x;
+	/* maxtemp37to42: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x04a_segment4_temps1.maxtemp1to6 = x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04a_segment4_temps1.maxtemp37to42 = x;
+	/* cell37temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x04a_segment4_temps1.cell1temp = x;
+	o->can_0x04a_segment4_temps1.cell37temp = x;
 	o->can_0x04a_segment4_temps1_rx = 1;
 	o->can_0x04a_segment4_temps1_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x04a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_cell38temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.cell2temp);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell38temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1811,20 +1811,20 @@ int decode_can_0x04a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_cell38temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.cell2temp = 0;
+	o->can_0x04a_segment4_temps1.cell38temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.cell2temp = in;
+	o->can_0x04a_segment4_temps1.cell38temp = in;
 	return 0;
 }
 
-int decode_can_0x04a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_cell39temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.cell3temp);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell39temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1835,20 +1835,20 @@ int decode_can_0x04a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_cell39temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.cell3temp = 0;
+	o->can_0x04a_segment4_temps1.cell39temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.cell3temp = in;
+	o->can_0x04a_segment4_temps1.cell39temp = in;
 	return 0;
 }
 
-int decode_can_0x04a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_cell40temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.cell4temp);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell40temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1859,20 +1859,20 @@ int decode_can_0x04a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_cell40temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.cell4temp = 0;
+	o->can_0x04a_segment4_temps1.cell40temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.cell4temp = in;
+	o->can_0x04a_segment4_temps1.cell40temp = in;
 	return 0;
 }
 
-int decode_can_0x04a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_cell41temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.cell5temp);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell41temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1883,20 +1883,20 @@ int decode_can_0x04a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_cell41temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.cell5temp = 0;
+	o->can_0x04a_segment4_temps1.cell41temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.cell5temp = in;
+	o->can_0x04a_segment4_temps1.cell41temp = in;
 	return 0;
 }
 
-int decode_can_0x04a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_cell42temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.cell6temp);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell42temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1907,20 +1907,20 @@ int decode_can_0x04a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_cell42temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.cell6temp = 0;
+	o->can_0x04a_segment4_temps1.cell42temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.cell6temp = in;
+	o->can_0x04a_segment4_temps1.cell42temp = in;
 	return 0;
 }
 
-int decode_can_0x04a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_mintemp37to42(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.mintemp1to6);
+	double rval = (double)(o->can_0x04a_segment4_temps1.mintemp37to42);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1931,20 +1931,20 @@ int decode_can_0x04a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_mintemp37to42(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.mintemp1to6 = 0;
+	o->can_0x04a_segment4_temps1.mintemp37to42 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.mintemp1to6 = in;
+	o->can_0x04a_segment4_temps1.mintemp37to42 = in;
 	return 0;
 }
 
-int decode_can_0x04a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_maxtemp37to42(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.maxtemp1to6);
+	double rval = (double)(o->can_0x04a_segment4_temps1.maxtemp37to42);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1955,20 +1955,20 @@ int decode_can_0x04a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_maxtemp37to42(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.maxtemp1to6 = 0;
+	o->can_0x04a_segment4_temps1.maxtemp37to42 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.maxtemp1to6 = in;
+	o->can_0x04a_segment4_temps1.maxtemp37to42 = in;
 	return 0;
 }
 
-int decode_can_0x04a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04a_cell37temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04a_segment4_temps1.cell1temp);
+	double rval = (double)(o->can_0x04a_segment4_temps1.cell37temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -1979,13 +1979,13 @@ int decode_can_0x04a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04a_cell37temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04a_segment4_temps1.cell1temp = 0;
+	o->can_0x04a_segment4_temps1.cell37temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04a_segment4_temps1.cell1temp = in;
+	o->can_0x04a_segment4_temps1.cell37temp = in;
 	return 0;
 }
 
@@ -1993,14 +1993,14 @@ int print_can_0x04a_segment4_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell2temp)));
-	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell3temp)));
-	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell4temp)));
-	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell5temp)));
-	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell6temp)));
-	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.mintemp1to6)));
-	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.maxtemp1to6)));
-	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell1temp)));
+	r = print_helper(r, fprintf(output, "cell38temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell38temp)));
+	r = print_helper(r, fprintf(output, "cell39temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell39temp)));
+	r = print_helper(r, fprintf(output, "cell40temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell40temp)));
+	r = print_helper(r, fprintf(output, "cell41temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell41temp)));
+	r = print_helper(r, fprintf(output, "cell42temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell42temp)));
+	r = print_helper(r, fprintf(output, "mintemp37to42 = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.mintemp37to42)));
+	r = print_helper(r, fprintf(output, "maxtemp37to42 = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.maxtemp37to42)));
+	r = print_helper(r, fprintf(output, "cell37temp = (wire: %.0f)\n", (double)(o->can_0x04a_segment4_temps1.cell37temp)));
 	return r;
 }
 
@@ -2009,36 +2009,36 @@ static int pack_can_0x04b_segment4_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell8temp)) & 0xff;
+	/* cell44temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell44temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell9temp)) & 0xff;
+	/* cell45temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell45temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell10temp)) & 0xff;
+	/* cell46temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell46temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell11temp)) & 0xff;
+	/* cell47temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell47temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell12temp)) & 0xff;
+	/* cell48temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell48temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.mintemp7to12)) & 0xff;
+	/* mintemp43to48: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.mintemp43to48)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.maxtemp7to12)) & 0xff;
+	/* maxtemp43to48: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.maxtemp43to48)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell7temp)) & 0xff;
+	/* cell43temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x04b_segment4_temps2.cell43temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x04b_segment4_temps2_tx = 1;
@@ -2052,39 +2052,39 @@ static int unpack_can_0x04b_segment4_temps2(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell44temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x04b_segment4_temps2.cell8temp = x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.cell44temp = x;
+	/* cell45temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x04b_segment4_temps2.cell9temp = x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.cell45temp = x;
+	/* cell46temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x04b_segment4_temps2.cell10temp = x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.cell46temp = x;
+	/* cell47temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x04b_segment4_temps2.cell11temp = x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.cell47temp = x;
+	/* cell48temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x04b_segment4_temps2.cell12temp = x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.cell48temp = x;
+	/* mintemp43to48: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x04b_segment4_temps2.mintemp7to12 = x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.mintemp43to48 = x;
+	/* maxtemp43to48: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x04b_segment4_temps2.maxtemp7to12 = x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x04b_segment4_temps2.maxtemp43to48 = x;
+	/* cell43temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x04b_segment4_temps2.cell7temp = x;
+	o->can_0x04b_segment4_temps2.cell43temp = x;
 	o->can_0x04b_segment4_temps2_rx = 1;
 	o->can_0x04b_segment4_temps2_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x04b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_cell44temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.cell8temp);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell44temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2095,20 +2095,20 @@ int decode_can_0x04b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_cell44temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.cell8temp = 0;
+	o->can_0x04b_segment4_temps2.cell44temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.cell8temp = in;
+	o->can_0x04b_segment4_temps2.cell44temp = in;
 	return 0;
 }
 
-int decode_can_0x04b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_cell45temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.cell9temp);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell45temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2119,20 +2119,20 @@ int decode_can_0x04b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_cell45temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.cell9temp = 0;
+	o->can_0x04b_segment4_temps2.cell45temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.cell9temp = in;
+	o->can_0x04b_segment4_temps2.cell45temp = in;
 	return 0;
 }
 
-int decode_can_0x04b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_cell46temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.cell10temp);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell46temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2143,20 +2143,20 @@ int decode_can_0x04b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_cell46temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.cell10temp = 0;
+	o->can_0x04b_segment4_temps2.cell46temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.cell10temp = in;
+	o->can_0x04b_segment4_temps2.cell46temp = in;
 	return 0;
 }
 
-int decode_can_0x04b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_cell47temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.cell11temp);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell47temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2167,20 +2167,20 @@ int decode_can_0x04b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_cell47temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.cell11temp = 0;
+	o->can_0x04b_segment4_temps2.cell47temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.cell11temp = in;
+	o->can_0x04b_segment4_temps2.cell47temp = in;
 	return 0;
 }
 
-int decode_can_0x04b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_cell48temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.cell12temp);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell48temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2191,20 +2191,20 @@ int decode_can_0x04b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_cell48temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.cell12temp = 0;
+	o->can_0x04b_segment4_temps2.cell48temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.cell12temp = in;
+	o->can_0x04b_segment4_temps2.cell48temp = in;
 	return 0;
 }
 
-int decode_can_0x04b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_mintemp43to48(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.mintemp7to12);
+	double rval = (double)(o->can_0x04b_segment4_temps2.mintemp43to48);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2215,20 +2215,20 @@ int decode_can_0x04b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_mintemp43to48(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.mintemp7to12 = 0;
+	o->can_0x04b_segment4_temps2.mintemp43to48 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.mintemp7to12 = in;
+	o->can_0x04b_segment4_temps2.mintemp43to48 = in;
 	return 0;
 }
 
-int decode_can_0x04b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_maxtemp43to48(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.maxtemp7to12);
+	double rval = (double)(o->can_0x04b_segment4_temps2.maxtemp43to48);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2239,20 +2239,20 @@ int decode_can_0x04b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_maxtemp43to48(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.maxtemp7to12 = 0;
+	o->can_0x04b_segment4_temps2.maxtemp43to48 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.maxtemp7to12 = in;
+	o->can_0x04b_segment4_temps2.maxtemp43to48 = in;
 	return 0;
 }
 
-int decode_can_0x04b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x04b_cell43temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x04b_segment4_temps2.cell7temp);
+	double rval = (double)(o->can_0x04b_segment4_temps2.cell43temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2263,13 +2263,13 @@ int decode_can_0x04b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x04b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x04b_cell43temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x04b_segment4_temps2.cell7temp = 0;
+	o->can_0x04b_segment4_temps2.cell43temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x04b_segment4_temps2.cell7temp = in;
+	o->can_0x04b_segment4_temps2.cell43temp = in;
 	return 0;
 }
 
@@ -2277,14 +2277,14 @@ int print_can_0x04b_segment4_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell8temp)));
-	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell9temp)));
-	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell10temp)));
-	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell11temp)));
-	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell12temp)));
-	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.mintemp7to12)));
-	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.maxtemp7to12)));
-	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell7temp)));
+	r = print_helper(r, fprintf(output, "cell44temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell44temp)));
+	r = print_helper(r, fprintf(output, "cell45temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell45temp)));
+	r = print_helper(r, fprintf(output, "cell46temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell46temp)));
+	r = print_helper(r, fprintf(output, "cell47temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell47temp)));
+	r = print_helper(r, fprintf(output, "cell48temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell48temp)));
+	r = print_helper(r, fprintf(output, "mintemp43to48 = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.mintemp43to48)));
+	r = print_helper(r, fprintf(output, "maxtemp43to48 = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.maxtemp43to48)));
+	r = print_helper(r, fprintf(output, "cell43temp = (wire: %.0f)\n", (double)(o->can_0x04b_segment4_temps2.cell43temp)));
 	return r;
 }
 
@@ -2293,36 +2293,36 @@ static int pack_can_0x05a_segment5_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell2temp)) & 0xff;
+	/* cell50temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell50temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell3temp)) & 0xff;
+	/* cell51temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell51temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell4temp)) & 0xff;
+	/* cell52temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell52temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell5temp)) & 0xff;
+	/* cell53temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell53temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell6temp)) & 0xff;
+	/* cell54temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell54temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.mintemp1to6)) & 0xff;
+	/* mintemp49to54: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.mintemp49to54)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.maxtemp1to6)) & 0xff;
+	/* maxtemp49to54: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.maxtemp49to54)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell1temp)) & 0xff;
+	/* cell49temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05a_segment5_temps1.cell49temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x05a_segment5_temps1_tx = 1;
@@ -2336,39 +2336,39 @@ static int unpack_can_0x05a_segment5_temps1(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell50temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x05a_segment5_temps1.cell2temp = x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.cell50temp = x;
+	/* cell51temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x05a_segment5_temps1.cell3temp = x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.cell51temp = x;
+	/* cell52temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x05a_segment5_temps1.cell4temp = x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.cell52temp = x;
+	/* cell53temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x05a_segment5_temps1.cell5temp = x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.cell53temp = x;
+	/* cell54temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x05a_segment5_temps1.cell6temp = x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.cell54temp = x;
+	/* mintemp49to54: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x05a_segment5_temps1.mintemp1to6 = x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.mintemp49to54 = x;
+	/* maxtemp49to54: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x05a_segment5_temps1.maxtemp1to6 = x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05a_segment5_temps1.maxtemp49to54 = x;
+	/* cell49temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x05a_segment5_temps1.cell1temp = x;
+	o->can_0x05a_segment5_temps1.cell49temp = x;
 	o->can_0x05a_segment5_temps1_rx = 1;
 	o->can_0x05a_segment5_temps1_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x05a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_cell50temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.cell2temp);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell50temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2379,20 +2379,20 @@ int decode_can_0x05a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_cell50temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.cell2temp = 0;
+	o->can_0x05a_segment5_temps1.cell50temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.cell2temp = in;
+	o->can_0x05a_segment5_temps1.cell50temp = in;
 	return 0;
 }
 
-int decode_can_0x05a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_cell51temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.cell3temp);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell51temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2403,20 +2403,20 @@ int decode_can_0x05a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_cell51temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.cell3temp = 0;
+	o->can_0x05a_segment5_temps1.cell51temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.cell3temp = in;
+	o->can_0x05a_segment5_temps1.cell51temp = in;
 	return 0;
 }
 
-int decode_can_0x05a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_cell52temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.cell4temp);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell52temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2427,20 +2427,20 @@ int decode_can_0x05a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_cell52temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.cell4temp = 0;
+	o->can_0x05a_segment5_temps1.cell52temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.cell4temp = in;
+	o->can_0x05a_segment5_temps1.cell52temp = in;
 	return 0;
 }
 
-int decode_can_0x05a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_cell53temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.cell5temp);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell53temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2451,20 +2451,20 @@ int decode_can_0x05a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_cell53temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.cell5temp = 0;
+	o->can_0x05a_segment5_temps1.cell53temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.cell5temp = in;
+	o->can_0x05a_segment5_temps1.cell53temp = in;
 	return 0;
 }
 
-int decode_can_0x05a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_cell54temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.cell6temp);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell54temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2475,20 +2475,20 @@ int decode_can_0x05a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_cell54temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.cell6temp = 0;
+	o->can_0x05a_segment5_temps1.cell54temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.cell6temp = in;
+	o->can_0x05a_segment5_temps1.cell54temp = in;
 	return 0;
 }
 
-int decode_can_0x05a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_mintemp49to54(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.mintemp1to6);
+	double rval = (double)(o->can_0x05a_segment5_temps1.mintemp49to54);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2499,20 +2499,20 @@ int decode_can_0x05a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_mintemp49to54(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.mintemp1to6 = 0;
+	o->can_0x05a_segment5_temps1.mintemp49to54 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.mintemp1to6 = in;
+	o->can_0x05a_segment5_temps1.mintemp49to54 = in;
 	return 0;
 }
 
-int decode_can_0x05a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_maxtemp49to54(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.maxtemp1to6);
+	double rval = (double)(o->can_0x05a_segment5_temps1.maxtemp49to54);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2523,20 +2523,20 @@ int decode_can_0x05a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_maxtemp49to54(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.maxtemp1to6 = 0;
+	o->can_0x05a_segment5_temps1.maxtemp49to54 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.maxtemp1to6 = in;
+	o->can_0x05a_segment5_temps1.maxtemp49to54 = in;
 	return 0;
 }
 
-int decode_can_0x05a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05a_cell49temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05a_segment5_temps1.cell1temp);
+	double rval = (double)(o->can_0x05a_segment5_temps1.cell49temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2547,13 +2547,13 @@ int decode_can_0x05a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05a_cell49temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05a_segment5_temps1.cell1temp = 0;
+	o->can_0x05a_segment5_temps1.cell49temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05a_segment5_temps1.cell1temp = in;
+	o->can_0x05a_segment5_temps1.cell49temp = in;
 	return 0;
 }
 
@@ -2561,14 +2561,14 @@ int print_can_0x05a_segment5_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell2temp)));
-	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell3temp)));
-	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell4temp)));
-	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell5temp)));
-	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell6temp)));
-	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.mintemp1to6)));
-	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.maxtemp1to6)));
-	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell1temp)));
+	r = print_helper(r, fprintf(output, "cell50temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell50temp)));
+	r = print_helper(r, fprintf(output, "cell51temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell51temp)));
+	r = print_helper(r, fprintf(output, "cell52temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell52temp)));
+	r = print_helper(r, fprintf(output, "cell53temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell53temp)));
+	r = print_helper(r, fprintf(output, "cell54temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell54temp)));
+	r = print_helper(r, fprintf(output, "mintemp49to54 = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.mintemp49to54)));
+	r = print_helper(r, fprintf(output, "maxtemp49to54 = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.maxtemp49to54)));
+	r = print_helper(r, fprintf(output, "cell49temp = (wire: %.0f)\n", (double)(o->can_0x05a_segment5_temps1.cell49temp)));
 	return r;
 }
 
@@ -2577,36 +2577,36 @@ static int pack_can_0x05b_segment5_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell8temp)) & 0xff;
+	/* cell56temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell56temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell9temp)) & 0xff;
+	/* cell57temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell57temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell10temp)) & 0xff;
+	/* cell58temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell58temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell11temp)) & 0xff;
+	/* cell59temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell59temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell12temp)) & 0xff;
+	/* cell60temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell60temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.mintemp7to12)) & 0xff;
+	/* mintemp55to60: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.mintemp55to60)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.maxtemp7to12)) & 0xff;
+	/* maxtemp55to60: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.maxtemp55to60)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell7temp)) & 0xff;
+	/* cell55temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x05b_segment5_temps2.cell55temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x05b_segment5_temps2_tx = 1;
@@ -2620,39 +2620,39 @@ static int unpack_can_0x05b_segment5_temps2(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell56temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x05b_segment5_temps2.cell8temp = x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.cell56temp = x;
+	/* cell57temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x05b_segment5_temps2.cell9temp = x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.cell57temp = x;
+	/* cell58temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x05b_segment5_temps2.cell10temp = x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.cell58temp = x;
+	/* cell59temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x05b_segment5_temps2.cell11temp = x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.cell59temp = x;
+	/* cell60temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x05b_segment5_temps2.cell12temp = x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.cell60temp = x;
+	/* mintemp55to60: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x05b_segment5_temps2.mintemp7to12 = x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.mintemp55to60 = x;
+	/* maxtemp55to60: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x05b_segment5_temps2.maxtemp7to12 = x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x05b_segment5_temps2.maxtemp55to60 = x;
+	/* cell55temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x05b_segment5_temps2.cell7temp = x;
+	o->can_0x05b_segment5_temps2.cell55temp = x;
 	o->can_0x05b_segment5_temps2_rx = 1;
 	o->can_0x05b_segment5_temps2_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x05b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_cell56temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.cell8temp);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell56temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2663,20 +2663,20 @@ int decode_can_0x05b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_cell56temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.cell8temp = 0;
+	o->can_0x05b_segment5_temps2.cell56temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.cell8temp = in;
+	o->can_0x05b_segment5_temps2.cell56temp = in;
 	return 0;
 }
 
-int decode_can_0x05b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_cell57temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.cell9temp);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell57temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2687,20 +2687,20 @@ int decode_can_0x05b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_cell57temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.cell9temp = 0;
+	o->can_0x05b_segment5_temps2.cell57temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.cell9temp = in;
+	o->can_0x05b_segment5_temps2.cell57temp = in;
 	return 0;
 }
 
-int decode_can_0x05b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_cell58temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.cell10temp);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell58temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2711,20 +2711,20 @@ int decode_can_0x05b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_cell58temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.cell10temp = 0;
+	o->can_0x05b_segment5_temps2.cell58temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.cell10temp = in;
+	o->can_0x05b_segment5_temps2.cell58temp = in;
 	return 0;
 }
 
-int decode_can_0x05b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_cell59temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.cell11temp);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell59temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2735,20 +2735,20 @@ int decode_can_0x05b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_cell59temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.cell11temp = 0;
+	o->can_0x05b_segment5_temps2.cell59temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.cell11temp = in;
+	o->can_0x05b_segment5_temps2.cell59temp = in;
 	return 0;
 }
 
-int decode_can_0x05b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_cell60temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.cell12temp);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell60temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2759,20 +2759,20 @@ int decode_can_0x05b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_cell60temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.cell12temp = 0;
+	o->can_0x05b_segment5_temps2.cell60temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.cell12temp = in;
+	o->can_0x05b_segment5_temps2.cell60temp = in;
 	return 0;
 }
 
-int decode_can_0x05b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_mintemp55to60(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.mintemp7to12);
+	double rval = (double)(o->can_0x05b_segment5_temps2.mintemp55to60);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2783,20 +2783,20 @@ int decode_can_0x05b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_mintemp55to60(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.mintemp7to12 = 0;
+	o->can_0x05b_segment5_temps2.mintemp55to60 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.mintemp7to12 = in;
+	o->can_0x05b_segment5_temps2.mintemp55to60 = in;
 	return 0;
 }
 
-int decode_can_0x05b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_maxtemp55to60(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.maxtemp7to12);
+	double rval = (double)(o->can_0x05b_segment5_temps2.maxtemp55to60);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2807,20 +2807,20 @@ int decode_can_0x05b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_maxtemp55to60(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.maxtemp7to12 = 0;
+	o->can_0x05b_segment5_temps2.maxtemp55to60 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.maxtemp7to12 = in;
+	o->can_0x05b_segment5_temps2.maxtemp55to60 = in;
 	return 0;
 }
 
-int decode_can_0x05b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x05b_cell55temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x05b_segment5_temps2.cell7temp);
+	double rval = (double)(o->can_0x05b_segment5_temps2.cell55temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2831,13 +2831,13 @@ int decode_can_0x05b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x05b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x05b_cell55temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x05b_segment5_temps2.cell7temp = 0;
+	o->can_0x05b_segment5_temps2.cell55temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x05b_segment5_temps2.cell7temp = in;
+	o->can_0x05b_segment5_temps2.cell55temp = in;
 	return 0;
 }
 
@@ -2845,14 +2845,14 @@ int print_can_0x05b_segment5_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell8temp)));
-	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell9temp)));
-	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell10temp)));
-	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell11temp)));
-	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell12temp)));
-	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.mintemp7to12)));
-	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.maxtemp7to12)));
-	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell7temp)));
+	r = print_helper(r, fprintf(output, "cell56temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell56temp)));
+	r = print_helper(r, fprintf(output, "cell57temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell57temp)));
+	r = print_helper(r, fprintf(output, "cell58temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell58temp)));
+	r = print_helper(r, fprintf(output, "cell59temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell59temp)));
+	r = print_helper(r, fprintf(output, "cell60temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell60temp)));
+	r = print_helper(r, fprintf(output, "mintemp55to60 = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.mintemp55to60)));
+	r = print_helper(r, fprintf(output, "maxtemp55to60 = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.maxtemp55to60)));
+	r = print_helper(r, fprintf(output, "cell55temp = (wire: %.0f)\n", (double)(o->can_0x05b_segment5_temps2.cell55temp)));
 	return r;
 }
 
@@ -2861,36 +2861,36 @@ static int pack_can_0x06a_segment6_temps1(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell2temp)) & 0xff;
+	/* cell62temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell62temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell3temp)) & 0xff;
+	/* cell63temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell63temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell4temp)) & 0xff;
+	/* cell64temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell64temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell5temp)) & 0xff;
+	/* cell65temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell65temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell6temp)) & 0xff;
+	/* cell66temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell66temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.mintemp1to6)) & 0xff;
+	/* mintemp61to66: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.mintemp61to66)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.maxtemp1to6)) & 0xff;
+	/* maxtemp61to66: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.maxtemp61to66)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell1temp)) & 0xff;
+	/* cell61temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06a_segment6_temps1.cell61temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x06a_segment6_temps1_tx = 1;
@@ -2904,39 +2904,39 @@ static int unpack_can_0x06a_segment6_temps1(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell2temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell62temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x06a_segment6_temps1.cell2temp = x;
-	/* cell3temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.cell62temp = x;
+	/* cell63temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x06a_segment6_temps1.cell3temp = x;
-	/* cell4temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.cell63temp = x;
+	/* cell64temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x06a_segment6_temps1.cell4temp = x;
-	/* cell5temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.cell64temp = x;
+	/* cell65temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x06a_segment6_temps1.cell5temp = x;
-	/* cell6temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.cell65temp = x;
+	/* cell66temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x06a_segment6_temps1.cell6temp = x;
-	/* mintemp1to6: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.cell66temp = x;
+	/* mintemp61to66: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x06a_segment6_temps1.mintemp1to6 = x;
-	/* maxtemp1to6: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.mintemp61to66 = x;
+	/* maxtemp61to66: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x06a_segment6_temps1.maxtemp1to6 = x;
-	/* cell1temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06a_segment6_temps1.maxtemp61to66 = x;
+	/* cell61temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x06a_segment6_temps1.cell1temp = x;
+	o->can_0x06a_segment6_temps1.cell61temp = x;
 	o->can_0x06a_segment6_temps1_rx = 1;
 	o->can_0x06a_segment6_temps1_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x06a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_cell62temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.cell2temp);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell62temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2947,20 +2947,20 @@ int decode_can_0x06a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_cell2temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_cell62temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.cell2temp = 0;
+	o->can_0x06a_segment6_temps1.cell62temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.cell2temp = in;
+	o->can_0x06a_segment6_temps1.cell62temp = in;
 	return 0;
 }
 
-int decode_can_0x06a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_cell63temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.cell3temp);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell63temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2971,20 +2971,20 @@ int decode_can_0x06a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_cell3temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_cell63temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.cell3temp = 0;
+	o->can_0x06a_segment6_temps1.cell63temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.cell3temp = in;
+	o->can_0x06a_segment6_temps1.cell63temp = in;
 	return 0;
 }
 
-int decode_can_0x06a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_cell64temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.cell4temp);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell64temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -2995,20 +2995,20 @@ int decode_can_0x06a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_cell4temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_cell64temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.cell4temp = 0;
+	o->can_0x06a_segment6_temps1.cell64temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.cell4temp = in;
+	o->can_0x06a_segment6_temps1.cell64temp = in;
 	return 0;
 }
 
-int decode_can_0x06a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_cell65temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.cell5temp);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell65temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3019,20 +3019,20 @@ int decode_can_0x06a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_cell5temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_cell65temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.cell5temp = 0;
+	o->can_0x06a_segment6_temps1.cell65temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.cell5temp = in;
+	o->can_0x06a_segment6_temps1.cell65temp = in;
 	return 0;
 }
 
-int decode_can_0x06a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_cell66temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.cell6temp);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell66temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3043,20 +3043,20 @@ int decode_can_0x06a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_cell6temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_cell66temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.cell6temp = 0;
+	o->can_0x06a_segment6_temps1.cell66temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.cell6temp = in;
+	o->can_0x06a_segment6_temps1.cell66temp = in;
 	return 0;
 }
 
-int decode_can_0x06a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_mintemp61to66(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.mintemp1to6);
+	double rval = (double)(o->can_0x06a_segment6_temps1.mintemp61to66);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3067,20 +3067,20 @@ int decode_can_0x06a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_mintemp61to66(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.mintemp1to6 = 0;
+	o->can_0x06a_segment6_temps1.mintemp61to66 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.mintemp1to6 = in;
+	o->can_0x06a_segment6_temps1.mintemp61to66 = in;
 	return 0;
 }
 
-int decode_can_0x06a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_maxtemp61to66(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.maxtemp1to6);
+	double rval = (double)(o->can_0x06a_segment6_temps1.maxtemp61to66);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3091,20 +3091,20 @@ int decode_can_0x06a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_maxtemp61to66(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.maxtemp1to6 = 0;
+	o->can_0x06a_segment6_temps1.maxtemp61to66 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.maxtemp1to6 = in;
+	o->can_0x06a_segment6_temps1.maxtemp61to66 = in;
 	return 0;
 }
 
-int decode_can_0x06a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06a_cell61temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06a_segment6_temps1.cell1temp);
+	double rval = (double)(o->can_0x06a_segment6_temps1.cell61temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3115,13 +3115,13 @@ int decode_can_0x06a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06a_cell1temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06a_cell61temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06a_segment6_temps1.cell1temp = 0;
+	o->can_0x06a_segment6_temps1.cell61temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06a_segment6_temps1.cell1temp = in;
+	o->can_0x06a_segment6_temps1.cell61temp = in;
 	return 0;
 }
 
@@ -3129,14 +3129,14 @@ int print_can_0x06a_segment6_temps1(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell2temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell2temp)));
-	r = print_helper(r, fprintf(output, "cell3temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell3temp)));
-	r = print_helper(r, fprintf(output, "cell4temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell4temp)));
-	r = print_helper(r, fprintf(output, "cell5temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell5temp)));
-	r = print_helper(r, fprintf(output, "cell6temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell6temp)));
-	r = print_helper(r, fprintf(output, "mintemp1to6 = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.mintemp1to6)));
-	r = print_helper(r, fprintf(output, "maxtemp1to6 = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.maxtemp1to6)));
-	r = print_helper(r, fprintf(output, "cell1temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell1temp)));
+	r = print_helper(r, fprintf(output, "cell62temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell62temp)));
+	r = print_helper(r, fprintf(output, "cell63temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell63temp)));
+	r = print_helper(r, fprintf(output, "cell64temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell64temp)));
+	r = print_helper(r, fprintf(output, "cell65temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell65temp)));
+	r = print_helper(r, fprintf(output, "cell66temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell66temp)));
+	r = print_helper(r, fprintf(output, "mintemp61to66 = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.mintemp61to66)));
+	r = print_helper(r, fprintf(output, "maxtemp61to66 = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.maxtemp61to66)));
+	r = print_helper(r, fprintf(output, "cell61temp = (wire: %.0f)\n", (double)(o->can_0x06a_segment6_temps1.cell61temp)));
 	return r;
 }
 
@@ -3145,36 +3145,36 @@ static int pack_can_0x06b_segment6_temps2(can_obj_ksu_dbc_h_t *o, uint64_t *data
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell8temp)) & 0xff;
+	/* cell68temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell68temp)) & 0xff;
 	x <<= 8; 
 	i |= x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell9temp)) & 0xff;
+	/* cell69temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell69temp)) & 0xff;
 	x <<= 16; 
 	i |= x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell10temp)) & 0xff;
+	/* cell70temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell70temp)) & 0xff;
 	x <<= 24; 
 	i |= x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell11temp)) & 0xff;
+	/* cell71temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell71temp)) & 0xff;
 	x <<= 32; 
 	i |= x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell12temp)) & 0xff;
+	/* cell72temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell72temp)) & 0xff;
 	x <<= 40; 
 	i |= x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.mintemp7to12)) & 0xff;
+	/* mintemp67to72: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.mintemp67to72)) & 0xff;
 	x <<= 48; 
 	i |= x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.maxtemp7to12)) & 0xff;
+	/* maxtemp67to72: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.maxtemp67to72)) & 0xff;
 	x <<= 56; 
 	i |= x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
-	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell7temp)) & 0xff;
+	/* cell67temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	x = ((uint8_t)(o->can_0x06b_segment6_temps2.cell67temp)) & 0xff;
 	i |= x;
 	*data = (i);
 	o->can_0x06b_segment6_temps2_tx = 1;
@@ -3188,39 +3188,39 @@ static int unpack_can_0x06b_segment6_temps2(can_obj_ksu_dbc_h_t *o, uint64_t dat
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* cell8temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
+	/* cell68temp: start-bit 8, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 8) & 0xff;
-	o->can_0x06b_segment6_temps2.cell8temp = x;
-	/* cell9temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.cell68temp = x;
+	/* cell69temp: start-bit 16, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 16) & 0xff;
-	o->can_0x06b_segment6_temps2.cell9temp = x;
-	/* cell10temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.cell69temp = x;
+	/* cell70temp: start-bit 24, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 24) & 0xff;
-	o->can_0x06b_segment6_temps2.cell10temp = x;
-	/* cell11temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.cell70temp = x;
+	/* cell71temp: start-bit 32, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 32) & 0xff;
-	o->can_0x06b_segment6_temps2.cell11temp = x;
-	/* cell12temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.cell71temp = x;
+	/* cell72temp: start-bit 40, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 40) & 0xff;
-	o->can_0x06b_segment6_temps2.cell12temp = x;
-	/* mintemp7to12: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.cell72temp = x;
+	/* mintemp67to72: start-bit 48, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 48) & 0xff;
-	o->can_0x06b_segment6_temps2.mintemp7to12 = x;
-	/* maxtemp7to12: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.mintemp67to72 = x;
+	/* maxtemp67to72: start-bit 56, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = (i >> 56) & 0xff;
-	o->can_0x06b_segment6_temps2.maxtemp7to12 = x;
-	/* cell7temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
+	o->can_0x06b_segment6_temps2.maxtemp67to72 = x;
+	/* cell67temp: start-bit 0, length 8, endianess intel, scaling 0.019607, offset 0 */
 	x = i & 0xff;
-	o->can_0x06b_segment6_temps2.cell7temp = x;
+	o->can_0x06b_segment6_temps2.cell67temp = x;
 	o->can_0x06b_segment6_temps2_rx = 1;
 	o->can_0x06b_segment6_temps2_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x06b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_cell68temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.cell8temp);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell68temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3231,20 +3231,20 @@ int decode_can_0x06b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_cell8temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_cell68temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.cell8temp = 0;
+	o->can_0x06b_segment6_temps2.cell68temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.cell8temp = in;
+	o->can_0x06b_segment6_temps2.cell68temp = in;
 	return 0;
 }
 
-int decode_can_0x06b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_cell69temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.cell9temp);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell69temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3255,20 +3255,20 @@ int decode_can_0x06b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_cell9temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_cell69temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.cell9temp = 0;
+	o->can_0x06b_segment6_temps2.cell69temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.cell9temp = in;
+	o->can_0x06b_segment6_temps2.cell69temp = in;
 	return 0;
 }
 
-int decode_can_0x06b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_cell70temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.cell10temp);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell70temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3279,20 +3279,20 @@ int decode_can_0x06b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_cell10temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_cell70temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.cell10temp = 0;
+	o->can_0x06b_segment6_temps2.cell70temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.cell10temp = in;
+	o->can_0x06b_segment6_temps2.cell70temp = in;
 	return 0;
 }
 
-int decode_can_0x06b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_cell71temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.cell11temp);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell71temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3303,20 +3303,20 @@ int decode_can_0x06b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_cell11temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_cell71temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.cell11temp = 0;
+	o->can_0x06b_segment6_temps2.cell71temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.cell11temp = in;
+	o->can_0x06b_segment6_temps2.cell71temp = in;
 	return 0;
 }
 
-int decode_can_0x06b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_cell72temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.cell12temp);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell72temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3327,20 +3327,20 @@ int decode_can_0x06b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_cell12temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_cell72temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.cell12temp = 0;
+	o->can_0x06b_segment6_temps2.cell72temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.cell12temp = in;
+	o->can_0x06b_segment6_temps2.cell72temp = in;
 	return 0;
 }
 
-int decode_can_0x06b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_mintemp67to72(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.mintemp7to12);
+	double rval = (double)(o->can_0x06b_segment6_temps2.mintemp67to72);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3351,20 +3351,20 @@ int decode_can_0x06b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_mintemp67to72(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.mintemp7to12 = 0;
+	o->can_0x06b_segment6_temps2.mintemp67to72 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.mintemp7to12 = in;
+	o->can_0x06b_segment6_temps2.mintemp67to72 = in;
 	return 0;
 }
 
-int decode_can_0x06b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_maxtemp67to72(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.maxtemp7to12);
+	double rval = (double)(o->can_0x06b_segment6_temps2.maxtemp67to72);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3375,20 +3375,20 @@ int decode_can_0x06b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_maxtemp67to72(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.maxtemp7to12 = 0;
+	o->can_0x06b_segment6_temps2.maxtemp67to72 = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.maxtemp7to12 = in;
+	o->can_0x06b_segment6_temps2.maxtemp67to72 = in;
 	return 0;
 }
 
-int decode_can_0x06b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
+int decode_can_0x06b_cell67temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	assert(o);
 	assert(out);
-	double rval = (double)(o->can_0x06b_segment6_temps2.cell7temp);
+	double rval = (double)(o->can_0x06b_segment6_temps2.cell67temp);
 	rval *= 0.019607;
 	if (rval <= 5) {
 		*out = rval;
@@ -3399,13 +3399,13 @@ int decode_can_0x06b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out) {
 	}
 }
 
-int encode_can_0x06b_cell7temp(can_obj_ksu_dbc_h_t *o, double in) {
+int encode_can_0x06b_cell67temp(can_obj_ksu_dbc_h_t *o, double in) {
 	assert(o);
-	o->can_0x06b_segment6_temps2.cell7temp = 0;
+	o->can_0x06b_segment6_temps2.cell67temp = 0;
 	if (in > 5)
 		return -1;
 	in *= 51.0022;
-	o->can_0x06b_segment6_temps2.cell7temp = in;
+	o->can_0x06b_segment6_temps2.cell67temp = in;
 	return 0;
 }
 
@@ -3413,14 +3413,14 @@ int print_can_0x06b_segment6_temps2(const can_obj_ksu_dbc_h_t *o, FILE *output) 
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "cell8temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell8temp)));
-	r = print_helper(r, fprintf(output, "cell9temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell9temp)));
-	r = print_helper(r, fprintf(output, "cell10temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell10temp)));
-	r = print_helper(r, fprintf(output, "cell11temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell11temp)));
-	r = print_helper(r, fprintf(output, "cell12temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell12temp)));
-	r = print_helper(r, fprintf(output, "mintemp7to12 = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.mintemp7to12)));
-	r = print_helper(r, fprintf(output, "maxtemp7to12 = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.maxtemp7to12)));
-	r = print_helper(r, fprintf(output, "cell7temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell7temp)));
+	r = print_helper(r, fprintf(output, "cell68temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell68temp)));
+	r = print_helper(r, fprintf(output, "cell69temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell69temp)));
+	r = print_helper(r, fprintf(output, "cell70temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell70temp)));
+	r = print_helper(r, fprintf(output, "cell71temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell71temp)));
+	r = print_helper(r, fprintf(output, "cell72temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell72temp)));
+	r = print_helper(r, fprintf(output, "mintemp67to72 = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.mintemp67to72)));
+	r = print_helper(r, fprintf(output, "maxtemp67to72 = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.maxtemp67to72)));
+	r = print_helper(r, fprintf(output, "cell67temp = (wire: %.0f)\n", (double)(o->can_0x06b_segment6_temps2.cell67temp)));
 	return r;
 }
 
@@ -7106,6 +7106,217 @@ int print_can_0x0c6_VCU_WHEELSPEED_READINGS(const can_obj_ksu_dbc_h_t *o, FILE *
 	return r;
 }
 
+static int pack_can_0x0c8_vcu_firmware_version(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* fw_version: start-bit 0, length 32, endianess intel, scaling 1, offset 0 */
+	x = ((uint32_t)(o->can_0x0c8_vcu_firmware_version.fw_version)) & 0xffffffff;
+	i |= x;
+	*data = (i);
+	o->can_0x0c8_vcu_firmware_version_tx = 1;
+	return 4;
+}
+
+static int unpack_can_0x0c8_vcu_firmware_version(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 4)
+		return -1;
+	/* fw_version: start-bit 0, length 32, endianess intel, scaling 1, offset 0 */
+	x = i & 0xffffffff;
+	o->can_0x0c8_vcu_firmware_version.fw_version = x;
+	o->can_0x0c8_vcu_firmware_version_rx = 1;
+	o->can_0x0c8_vcu_firmware_version_time_stamp_rx = time_stamp;
+	return 4;
+}
+
+int decode_can_0x0c8_fw_version(const can_obj_ksu_dbc_h_t *o, uint32_t *out) {
+	assert(o);
+	assert(out);
+	uint32_t rval = (uint32_t)(o->can_0x0c8_vcu_firmware_version.fw_version);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0c8_fw_version(can_obj_ksu_dbc_h_t *o, uint32_t in) {
+	assert(o);
+	o->can_0x0c8_vcu_firmware_version.fw_version = in;
+	return 0;
+}
+
+int print_can_0x0c8_vcu_firmware_version(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "fw_version = (wire: %.0f)\n", (double)(o->can_0x0c8_vcu_firmware_version.fw_version)));
+	return r;
+}
+
+static int pack_can_0x0eb_dash_buttons(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
+	assert(o);
+	assert(data);
+	register uint64_t x;
+	register uint64_t i = 0;
+	/* dash_button5status: start-bit 3, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button5status)) & 0x1;
+	x <<= 3; 
+	i |= x;
+	/* dash_button4status: start-bit 4, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button4status)) & 0x1;
+	x <<= 4; 
+	i |= x;
+	/* dash_button3status: start-bit 5, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button3status)) & 0x1;
+	x <<= 5; 
+	i |= x;
+	/* dash_button2status: start-bit 6, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button2status)) & 0x1;
+	x <<= 6; 
+	i |= x;
+	/* dash_button1status: start-bit 7, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button1status)) & 0x1;
+	x <<= 7; 
+	i |= x;
+	/* dash_button6status: start-bit 2, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button6status)) & 0x1;
+	x <<= 2; 
+	i |= x;
+	*data = (i);
+	o->can_0x0eb_dash_buttons_tx = 1;
+	return 8;
+}
+
+static int unpack_can_0x0eb_dash_buttons(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
+	assert(o);
+	assert(dlc <= 8);
+	register uint64_t x;
+	register uint64_t i = (data);
+	if (dlc < 8)
+		return -1;
+	/* dash_button5status: start-bit 3, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 3) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button5status = x;
+	/* dash_button4status: start-bit 4, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 4) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button4status = x;
+	/* dash_button3status: start-bit 5, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 5) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button3status = x;
+	/* dash_button2status: start-bit 6, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 6) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button2status = x;
+	/* dash_button1status: start-bit 7, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 7) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button1status = x;
+	/* dash_button6status: start-bit 2, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 2) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button6status = x;
+	o->can_0x0eb_dash_buttons_rx = 1;
+	o->can_0x0eb_dash_buttons_time_stamp_rx = time_stamp;
+	return 8;
+}
+
+int decode_can_0x0eb_dash_button5status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button5status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button5status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button5status = in;
+	return 0;
+}
+
+int decode_can_0x0eb_dash_button4status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button4status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button4status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button4status = in;
+	return 0;
+}
+
+int decode_can_0x0eb_dash_button3status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button3status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button3status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button3status = in;
+	return 0;
+}
+
+int decode_can_0x0eb_dash_button2status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button2status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button2status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button2status = in;
+	return 0;
+}
+
+int decode_can_0x0eb_dash_button1status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button1status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button1status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button1status = in;
+	return 0;
+}
+
+int decode_can_0x0eb_dash_button6status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button6status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button6status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button6status = in;
+	return 0;
+}
+
+int print_can_0x0eb_dash_buttons(const can_obj_ksu_dbc_h_t *o, FILE *output) {
+	assert(o);
+	assert(output);
+	int r = 0;
+	r = print_helper(r, fprintf(output, "dash_button5status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button5status)));
+	r = print_helper(r, fprintf(output, "dash_button4status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button4status)));
+	r = print_helper(r, fprintf(output, "dash_button3status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button3status)));
+	r = print_helper(r, fprintf(output, "dash_button2status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button2status)));
+	r = print_helper(r, fprintf(output, "dash_button1status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button1status)));
+	r = print_helper(r, fprintf(output, "dash_button6status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button6status)));
+	return r;
+}
+
 static int pack_can_0x1d5_M188_U2C_Message_Rxd(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
 	assert(o);
 	assert(data);
@@ -7468,8855 +7679,6 @@ int print_can_0x202_BMS_Current_Limit(const can_obj_ksu_dbc_h_t *o, FILE *output
 	int r = 0;
 	r = print_helper(r, fprintf(output, "D2_Max_Charge_Current = (wire: %.0f)\n", (double)(o->can_0x202_BMS_Current_Limit.D2_Max_Charge_Current)));
 	r = print_helper(r, fprintf(output, "D1_Max_Discharge_Current = (wire: %.0f)\n", (double)(o->can_0x202_BMS_Current_Limit.D1_Max_Discharge_Current)));
-	return r;
-}
-
-static int pack_can_0x5f0_megasquirt_gp0(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* pw1: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x5f0_megasquirt_gp0.pw1)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* pw2: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x5f0_megasquirt_gp0.pw2)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* rpm: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f0_megasquirt_gp0.rpm)) & 0xffff;
-	m |= x;
-	/* seconds: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f0_megasquirt_gp0.seconds)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f0_megasquirt_gp0_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f0_megasquirt_gp0(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* pw1: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f0_megasquirt_gp0.pw1 = x;
-	/* pw2: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f0_megasquirt_gp0.pw2 = x;
-	/* rpm: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f0_megasquirt_gp0.rpm = x;
-	/* seconds: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f0_megasquirt_gp0.seconds = x;
-	o->can_0x5f0_megasquirt_gp0_rx = 1;
-	o->can_0x5f0_megasquirt_gp0_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f0_pw1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f0_megasquirt_gp0.pw1);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f0_pw1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x5f0_megasquirt_gp0.pw1 = in;
-	return 0;
-}
-
-int decode_can_0x5f0_pw2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f0_megasquirt_gp0.pw2);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f0_pw2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x5f0_megasquirt_gp0.pw2 = in;
-	return 0;
-}
-
-int decode_can_0x5f0_rpm(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x5f0_megasquirt_gp0.rpm);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f0_rpm(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x5f0_megasquirt_gp0.rpm = in;
-	return 0;
-}
-
-int decode_can_0x5f0_seconds(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x5f0_megasquirt_gp0.seconds);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f0_seconds(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x5f0_megasquirt_gp0.seconds = in;
-	return 0;
-}
-
-int print_can_0x5f0_megasquirt_gp0(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "pw1 = (wire: %.0f)\n", (double)(o->can_0x5f0_megasquirt_gp0.pw1)));
-	r = print_helper(r, fprintf(output, "pw2 = (wire: %.0f)\n", (double)(o->can_0x5f0_megasquirt_gp0.pw2)));
-	r = print_helper(r, fprintf(output, "rpm = (wire: %.0f)\n", (double)(o->can_0x5f0_megasquirt_gp0.rpm)));
-	r = print_helper(r, fprintf(output, "seconds = (wire: %.0f)\n", (double)(o->can_0x5f0_megasquirt_gp0.seconds)));
-	return r;
-}
-
-static int pack_can_0x5f1_megasquirt_gp1(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* adv_deg: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f1_megasquirt_gp1.adv_deg)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	/* engine: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5f1_megasquirt_gp1.engine)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* afrtgt1: start-bit 39, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x5f1_megasquirt_gp1.afrtgt1)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* afrtgt2: start-bit 47, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x5f1_megasquirt_gp1.afrtgt2)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* wbo2_en1: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5f1_megasquirt_gp1.wbo2_en1)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* wbo2_en2: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5f1_megasquirt_gp1.wbo2_en2)) & 0xff;
-	m |= x;
-	/* squirt: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5f1_megasquirt_gp1.squirt)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f1_megasquirt_gp1_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f1_megasquirt_gp1(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* adv_deg: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f1_megasquirt_gp1.adv_deg = x;
-	/* engine: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x5f1_megasquirt_gp1.engine = x;
-	/* afrtgt1: start-bit 39, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x5f1_megasquirt_gp1.afrtgt1 = x;
-	/* afrtgt2: start-bit 47, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x5f1_megasquirt_gp1.afrtgt2 = x;
-	/* wbo2_en1: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x5f1_megasquirt_gp1.wbo2_en1 = x;
-	/* wbo2_en2: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x5f1_megasquirt_gp1.wbo2_en2 = x;
-	/* squirt: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x5f1_megasquirt_gp1.squirt = x;
-	o->can_0x5f1_megasquirt_gp1_rx = 1;
-	o->can_0x5f1_megasquirt_gp1_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f1_adv_deg(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f1_megasquirt_gp1.adv_deg);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_adv_deg(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f1_megasquirt_gp1.adv_deg = in;
-	return 0;
-}
-
-int decode_can_0x5f1_engine(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5f1_megasquirt_gp1.engine);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_engine(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5f1_megasquirt_gp1.engine = in;
-	return 0;
-}
-
-int decode_can_0x5f1_afrtgt1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f1_megasquirt_gp1.afrtgt1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_afrtgt1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f1_megasquirt_gp1.afrtgt1 = in;
-	return 0;
-}
-
-int decode_can_0x5f1_afrtgt2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f1_megasquirt_gp1.afrtgt2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_afrtgt2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f1_megasquirt_gp1.afrtgt2 = in;
-	return 0;
-}
-
-int decode_can_0x5f1_wbo2_en1(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5f1_megasquirt_gp1.wbo2_en1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_wbo2_en1(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5f1_megasquirt_gp1.wbo2_en1 = in;
-	return 0;
-}
-
-int decode_can_0x5f1_wbo2_en2(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5f1_megasquirt_gp1.wbo2_en2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_wbo2_en2(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5f1_megasquirt_gp1.wbo2_en2 = in;
-	return 0;
-}
-
-int decode_can_0x5f1_squirt(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5f1_megasquirt_gp1.squirt);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f1_squirt(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5f1_megasquirt_gp1.squirt = in;
-	return 0;
-}
-
-int print_can_0x5f1_megasquirt_gp1(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "adv_deg = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.adv_deg)));
-	r = print_helper(r, fprintf(output, "engine = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.engine)));
-	r = print_helper(r, fprintf(output, "afrtgt1 = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.afrtgt1)));
-	r = print_helper(r, fprintf(output, "afrtgt2 = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.afrtgt2)));
-	r = print_helper(r, fprintf(output, "wbo2_en1 = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.wbo2_en1)));
-	r = print_helper(r, fprintf(output, "wbo2_en2 = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.wbo2_en2)));
-	r = print_helper(r, fprintf(output, "squirt = (wire: %.0f)\n", (double)(o->can_0x5f1_megasquirt_gp1.squirt)));
-	return r;
-}
-
-static int pack_can_0x5f2_megasquirt_gp2(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* map: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f2_megasquirt_gp2.map)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* mat: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f2_megasquirt_gp2.mat)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* clt: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f2_megasquirt_gp2.clt)) & 0xffff;
-	m |= x;
-	/* baro: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f2_megasquirt_gp2.baro)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f2_megasquirt_gp2_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f2_megasquirt_gp2(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* map: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f2_megasquirt_gp2.map = x;
-	/* mat: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f2_megasquirt_gp2.mat = x;
-	/* clt: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f2_megasquirt_gp2.clt = x;
-	/* baro: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f2_megasquirt_gp2.baro = x;
-	o->can_0x5f2_megasquirt_gp2_rx = 1;
-	o->can_0x5f2_megasquirt_gp2_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f2_map(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f2_megasquirt_gp2.map);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f2_map(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f2_megasquirt_gp2.map = in;
-	return 0;
-}
-
-int decode_can_0x5f2_mat(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f2_megasquirt_gp2.mat);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f2_mat(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f2_megasquirt_gp2.mat = in;
-	return 0;
-}
-
-int decode_can_0x5f2_clt(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f2_megasquirt_gp2.clt);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f2_clt(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f2_megasquirt_gp2.clt = in;
-	return 0;
-}
-
-int decode_can_0x5f2_baro(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f2_megasquirt_gp2.baro);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f2_baro(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f2_megasquirt_gp2.baro = in;
-	return 0;
-}
-
-int print_can_0x5f2_megasquirt_gp2(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "map = (wire: %.0f)\n", (double)(o->can_0x5f2_megasquirt_gp2.map)));
-	r = print_helper(r, fprintf(output, "mat = (wire: %.0f)\n", (double)(o->can_0x5f2_megasquirt_gp2.mat)));
-	r = print_helper(r, fprintf(output, "clt = (wire: %.0f)\n", (double)(o->can_0x5f2_megasquirt_gp2.clt)));
-	r = print_helper(r, fprintf(output, "baro = (wire: %.0f)\n", (double)(o->can_0x5f2_megasquirt_gp2.baro)));
-	return r;
-}
-
-static int pack_can_0x5f3_megasquirt_gp3(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* batt: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f3_megasquirt_gp3.batt)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* afr1_old: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f3_megasquirt_gp3.afr1_old)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* afr2_old: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f3_megasquirt_gp3.afr2_old)) & 0xffff;
-	m |= x;
-	/* tps: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f3_megasquirt_gp3.tps)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f3_megasquirt_gp3_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f3_megasquirt_gp3(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* batt: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f3_megasquirt_gp3.batt = x;
-	/* afr1_old: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f3_megasquirt_gp3.afr1_old = x;
-	/* afr2_old: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f3_megasquirt_gp3.afr2_old = x;
-	/* tps: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f3_megasquirt_gp3.tps = x;
-	o->can_0x5f3_megasquirt_gp3_rx = 1;
-	o->can_0x5f3_megasquirt_gp3_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f3_batt(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f3_megasquirt_gp3.batt);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f3_batt(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f3_megasquirt_gp3.batt = in;
-	return 0;
-}
-
-int decode_can_0x5f3_afr1_old(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f3_megasquirt_gp3.afr1_old);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f3_afr1_old(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f3_megasquirt_gp3.afr1_old = in;
-	return 0;
-}
-
-int decode_can_0x5f3_afr2_old(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f3_megasquirt_gp3.afr2_old);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f3_afr2_old(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f3_megasquirt_gp3.afr2_old = in;
-	return 0;
-}
-
-int decode_can_0x5f3_tps(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f3_megasquirt_gp3.tps);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f3_tps(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f3_megasquirt_gp3.tps = in;
-	return 0;
-}
-
-int print_can_0x5f3_megasquirt_gp3(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "batt = (wire: %.0f)\n", (double)(o->can_0x5f3_megasquirt_gp3.batt)));
-	r = print_helper(r, fprintf(output, "afr1_old = (wire: %.0f)\n", (double)(o->can_0x5f3_megasquirt_gp3.afr1_old)));
-	r = print_helper(r, fprintf(output, "afr2_old = (wire: %.0f)\n", (double)(o->can_0x5f3_megasquirt_gp3.afr2_old)));
-	r = print_helper(r, fprintf(output, "tps = (wire: %.0f)\n", (double)(o->can_0x5f3_megasquirt_gp3.tps)));
-	return r;
-}
-
-static int pack_can_0x5f4_megasquirt_gp4(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* egocor1: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f4_megasquirt_gp4.egocor1)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* egocor2: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f4_megasquirt_gp4.egocor2)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* aircor: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f4_megasquirt_gp4.aircor)) & 0xffff;
-	m |= x;
-	/* knock: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f4_megasquirt_gp4.knock)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f4_megasquirt_gp4_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f4_megasquirt_gp4(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* egocor1: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f4_megasquirt_gp4.egocor1 = x;
-	/* egocor2: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f4_megasquirt_gp4.egocor2 = x;
-	/* aircor: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f4_megasquirt_gp4.aircor = x;
-	/* knock: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f4_megasquirt_gp4.knock = x;
-	o->can_0x5f4_megasquirt_gp4_rx = 1;
-	o->can_0x5f4_megasquirt_gp4_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f4_egocor1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f4_megasquirt_gp4.egocor1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f4_egocor1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f4_megasquirt_gp4.egocor1 = in;
-	return 0;
-}
-
-int decode_can_0x5f4_egocor2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f4_megasquirt_gp4.egocor2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f4_egocor2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f4_megasquirt_gp4.egocor2 = in;
-	return 0;
-}
-
-int decode_can_0x5f4_aircor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f4_megasquirt_gp4.aircor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f4_aircor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f4_megasquirt_gp4.aircor = in;
-	return 0;
-}
-
-int decode_can_0x5f4_knock(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f4_megasquirt_gp4.knock);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f4_knock(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f4_megasquirt_gp4.knock = in;
-	return 0;
-}
-
-int print_can_0x5f4_megasquirt_gp4(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "egocor1 = (wire: %.0f)\n", (double)(o->can_0x5f4_megasquirt_gp4.egocor1)));
-	r = print_helper(r, fprintf(output, "egocor2 = (wire: %.0f)\n", (double)(o->can_0x5f4_megasquirt_gp4.egocor2)));
-	r = print_helper(r, fprintf(output, "aircor = (wire: %.0f)\n", (double)(o->can_0x5f4_megasquirt_gp4.aircor)));
-	r = print_helper(r, fprintf(output, "knock = (wire: %.0f)\n", (double)(o->can_0x5f4_megasquirt_gp4.knock)));
-	return r;
-}
-
-static int pack_can_0x5f5_megasquirt_gp5(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* tpsaccel: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f5_megasquirt_gp5.tpsaccel)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* tpsfuelcut: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f5_megasquirt_gp5.tpsfuelcut)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* barocor: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f5_megasquirt_gp5.barocor)) & 0xffff;
-	m |= x;
-	/* warmcor: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f5_megasquirt_gp5.warmcor)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f5_megasquirt_gp5_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f5_megasquirt_gp5(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* tpsaccel: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f5_megasquirt_gp5.tpsaccel = x;
-	/* tpsfuelcut: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f5_megasquirt_gp5.tpsfuelcut = x;
-	/* barocor: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f5_megasquirt_gp5.barocor = x;
-	/* warmcor: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f5_megasquirt_gp5.warmcor = x;
-	o->can_0x5f5_megasquirt_gp5_rx = 1;
-	o->can_0x5f5_megasquirt_gp5_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f5_tpsaccel(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f5_megasquirt_gp5.tpsaccel);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f5_tpsaccel(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f5_megasquirt_gp5.tpsaccel = in;
-	return 0;
-}
-
-int decode_can_0x5f5_tpsfuelcut(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f5_megasquirt_gp5.tpsfuelcut);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f5_tpsfuelcut(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f5_megasquirt_gp5.tpsfuelcut = in;
-	return 0;
-}
-
-int decode_can_0x5f5_barocor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f5_megasquirt_gp5.barocor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f5_barocor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f5_megasquirt_gp5.barocor = in;
-	return 0;
-}
-
-int decode_can_0x5f5_warmcor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f5_megasquirt_gp5.warmcor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f5_warmcor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f5_megasquirt_gp5.warmcor = in;
-	return 0;
-}
-
-int print_can_0x5f5_megasquirt_gp5(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "tpsaccel = (wire: %.0f)\n", (double)(o->can_0x5f5_megasquirt_gp5.tpsaccel)));
-	r = print_helper(r, fprintf(output, "tpsfuelcut = (wire: %.0f)\n", (double)(o->can_0x5f5_megasquirt_gp5.tpsfuelcut)));
-	r = print_helper(r, fprintf(output, "barocor = (wire: %.0f)\n", (double)(o->can_0x5f5_megasquirt_gp5.barocor)));
-	r = print_helper(r, fprintf(output, "warmcor = (wire: %.0f)\n", (double)(o->can_0x5f5_megasquirt_gp5.warmcor)));
-	return r;
-}
-
-static int pack_can_0x5f6_megasquirt_gp6(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* ve1: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f6_megasquirt_gp6.ve1)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* ve2: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f6_megasquirt_gp6.ve2)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* iacstep: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f6_megasquirt_gp6.iacstep)) & 0xffff;
-	m |= x;
-	/* totalcor: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f6_megasquirt_gp6.totalcor)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f6_megasquirt_gp6_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f6_megasquirt_gp6(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* ve1: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f6_megasquirt_gp6.ve1 = x;
-	/* ve2: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f6_megasquirt_gp6.ve2 = x;
-	/* iacstep: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f6_megasquirt_gp6.iacstep = x;
-	/* totalcor: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f6_megasquirt_gp6.totalcor = x;
-	o->can_0x5f6_megasquirt_gp6_rx = 1;
-	o->can_0x5f6_megasquirt_gp6_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f6_ve1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f6_megasquirt_gp6.ve1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f6_ve1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f6_megasquirt_gp6.ve1 = in;
-	return 0;
-}
-
-int decode_can_0x5f6_ve2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f6_megasquirt_gp6.ve2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f6_ve2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f6_megasquirt_gp6.ve2 = in;
-	return 0;
-}
-
-int decode_can_0x5f6_iacstep(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x5f6_megasquirt_gp6.iacstep);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f6_iacstep(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x5f6_megasquirt_gp6.iacstep = in;
-	return 0;
-}
-
-int decode_can_0x5f6_totalcor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f6_megasquirt_gp6.totalcor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f6_totalcor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f6_megasquirt_gp6.totalcor = in;
-	return 0;
-}
-
-int print_can_0x5f6_megasquirt_gp6(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "ve1 = (wire: %.0f)\n", (double)(o->can_0x5f6_megasquirt_gp6.ve1)));
-	r = print_helper(r, fprintf(output, "ve2 = (wire: %.0f)\n", (double)(o->can_0x5f6_megasquirt_gp6.ve2)));
-	r = print_helper(r, fprintf(output, "iacstep = (wire: %.0f)\n", (double)(o->can_0x5f6_megasquirt_gp6.iacstep)));
-	r = print_helper(r, fprintf(output, "totalcor = (wire: %.0f)\n", (double)(o->can_0x5f6_megasquirt_gp6.totalcor)));
-	return r;
-}
-
-static int pack_can_0x5f7_megasquirt_gp7(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* TPSdot: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f7_megasquirt_gp7.TPSdot)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* MAPdot: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f7_megasquirt_gp7.MAPdot)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* RPMdot: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f7_megasquirt_gp7.RPMdot)) & 0xffff;
-	m |= x;
-	/* cold_adv_deg: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f7_megasquirt_gp7.cold_adv_deg)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f7_megasquirt_gp7_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f7_megasquirt_gp7(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* TPSdot: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f7_megasquirt_gp7.TPSdot = x;
-	/* MAPdot: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f7_megasquirt_gp7.MAPdot = x;
-	/* RPMdot: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f7_megasquirt_gp7.RPMdot = x;
-	/* cold_adv_deg: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f7_megasquirt_gp7.cold_adv_deg = x;
-	o->can_0x5f7_megasquirt_gp7_rx = 1;
-	o->can_0x5f7_megasquirt_gp7_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f7_TPSdot(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f7_megasquirt_gp7.TPSdot);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f7_TPSdot(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f7_megasquirt_gp7.TPSdot = in;
-	return 0;
-}
-
-int decode_can_0x5f7_MAPdot(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x5f7_megasquirt_gp7.MAPdot);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f7_MAPdot(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x5f7_megasquirt_gp7.MAPdot = in;
-	return 0;
-}
-
-int decode_can_0x5f7_RPMdot(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x5f7_megasquirt_gp7.RPMdot);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f7_RPMdot(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x5f7_megasquirt_gp7.RPMdot = in;
-	return 0;
-}
-
-int decode_can_0x5f7_cold_adv_deg(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f7_megasquirt_gp7.cold_adv_deg);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f7_cold_adv_deg(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f7_megasquirt_gp7.cold_adv_deg = in;
-	return 0;
-}
-
-int print_can_0x5f7_megasquirt_gp7(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "TPSdot = (wire: %.0f)\n", (double)(o->can_0x5f7_megasquirt_gp7.TPSdot)));
-	r = print_helper(r, fprintf(output, "MAPdot = (wire: %.0f)\n", (double)(o->can_0x5f7_megasquirt_gp7.MAPdot)));
-	r = print_helper(r, fprintf(output, "RPMdot = (wire: %.0f)\n", (double)(o->can_0x5f7_megasquirt_gp7.RPMdot)));
-	r = print_helper(r, fprintf(output, "cold_adv_deg = (wire: %.0f)\n", (double)(o->can_0x5f7_megasquirt_gp7.cold_adv_deg)));
-	return r;
-}
-
-static int pack_can_0x5f8_megasquirt_gp8(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* fuelload: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f8_megasquirt_gp8.fuelload)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* fuelcor: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f8_megasquirt_gp8.fuelcor)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* MAF: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5f8_megasquirt_gp8.MAF)) & 0xffff;
-	m |= x;
-	/* MAFload: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f8_megasquirt_gp8.MAFload)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f8_megasquirt_gp8_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f8_megasquirt_gp8(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* fuelload: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f8_megasquirt_gp8.fuelload = x;
-	/* fuelcor: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f8_megasquirt_gp8.fuelcor = x;
-	/* MAF: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f8_megasquirt_gp8.MAF = x;
-	/* MAFload: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f8_megasquirt_gp8.MAFload = x;
-	o->can_0x5f8_megasquirt_gp8_rx = 1;
-	o->can_0x5f8_megasquirt_gp8_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f8_fuelload(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f8_megasquirt_gp8.fuelload);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f8_fuelload(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f8_megasquirt_gp8.fuelload = in;
-	return 0;
-}
-
-int decode_can_0x5f8_fuelcor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f8_megasquirt_gp8.fuelcor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f8_fuelcor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f8_megasquirt_gp8.fuelcor = in;
-	return 0;
-}
-
-int decode_can_0x5f8_MAF(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f8_megasquirt_gp8.MAF);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f8_MAF(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5f8_megasquirt_gp8.MAF = in;
-	return 0;
-}
-
-int decode_can_0x5f8_MAFload(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f8_megasquirt_gp8.MAFload);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f8_MAFload(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f8_megasquirt_gp8.MAFload = in;
-	return 0;
-}
-
-int print_can_0x5f8_megasquirt_gp8(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "fuelload = (wire: %.0f)\n", (double)(o->can_0x5f8_megasquirt_gp8.fuelload)));
-	r = print_helper(r, fprintf(output, "fuelcor = (wire: %.0f)\n", (double)(o->can_0x5f8_megasquirt_gp8.fuelcor)));
-	r = print_helper(r, fprintf(output, "MAF = (wire: %.0f)\n", (double)(o->can_0x5f8_megasquirt_gp8.MAF)));
-	r = print_helper(r, fprintf(output, "MAFload = (wire: %.0f)\n", (double)(o->can_0x5f8_megasquirt_gp8.MAFload)));
-	return r;
-}
-
-static int pack_can_0x5f9_megasquirt_gp9(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* egoV2: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5f9_megasquirt_gp9.egoV2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* dwell: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f9_megasquirt_gp9.dwell)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* dwell_trl: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5f9_megasquirt_gp9.dwell_trl)) & 0xffff;
-	m |= x;
-	/* egoV1: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5f9_megasquirt_gp9.egoV1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5f9_megasquirt_gp9_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5f9_megasquirt_gp9(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* egoV2: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5f9_megasquirt_gp9.egoV2 = x;
-	/* dwell: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5f9_megasquirt_gp9.dwell = x;
-	/* dwell_trl: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5f9_megasquirt_gp9.dwell_trl = x;
-	/* egoV1: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5f9_megasquirt_gp9.egoV1 = x;
-	o->can_0x5f9_megasquirt_gp9_rx = 1;
-	o->can_0x5f9_megasquirt_gp9_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5f9_egoV2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f9_megasquirt_gp9.egoV2);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f9_egoV2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5f9_megasquirt_gp9.egoV2 = in;
-	return 0;
-}
-
-int decode_can_0x5f9_dwell(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f9_megasquirt_gp9.dwell);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f9_dwell(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f9_megasquirt_gp9.dwell = in;
-	return 0;
-}
-
-int decode_can_0x5f9_dwell_trl(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f9_megasquirt_gp9.dwell_trl);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f9_dwell_trl(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5f9_megasquirt_gp9.dwell_trl = in;
-	return 0;
-}
-
-int decode_can_0x5f9_egoV1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5f9_megasquirt_gp9.egoV1);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5f9_egoV1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5f9_megasquirt_gp9.egoV1 = in;
-	return 0;
-}
-
-int print_can_0x5f9_megasquirt_gp9(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "egoV2 = (wire: %.0f)\n", (double)(o->can_0x5f9_megasquirt_gp9.egoV2)));
-	r = print_helper(r, fprintf(output, "dwell = (wire: %.0f)\n", (double)(o->can_0x5f9_megasquirt_gp9.dwell)));
-	r = print_helper(r, fprintf(output, "dwell_trl = (wire: %.0f)\n", (double)(o->can_0x5f9_megasquirt_gp9.dwell_trl)));
-	r = print_helper(r, fprintf(output, "egoV1 = (wire: %.0f)\n", (double)(o->can_0x5f9_megasquirt_gp9.egoV1)));
-	return r;
-}
-
-static int pack_can_0x5fa_megasquirt_gp10(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* status5: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x5fa_megasquirt_gp10.status5)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* status3: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5fa_megasquirt_gp10.status3)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* status4: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5fa_megasquirt_gp10.status4)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* status2: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5fa_megasquirt_gp10.status2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* status6: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5fa_megasquirt_gp10.status6)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* status7: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5fa_megasquirt_gp10.status7)) & 0xff;
-	m |= x;
-	/* status1: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x5fa_megasquirt_gp10.status1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5fa_megasquirt_gp10_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5fa_megasquirt_gp10(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* status5: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5fa_megasquirt_gp10.status5 = x;
-	/* status3: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x5fa_megasquirt_gp10.status3 = x;
-	/* status4: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x5fa_megasquirt_gp10.status4 = x;
-	/* status2: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x5fa_megasquirt_gp10.status2 = x;
-	/* status6: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x5fa_megasquirt_gp10.status6 = x;
-	/* status7: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x5fa_megasquirt_gp10.status7 = x;
-	/* status1: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x5fa_megasquirt_gp10.status1 = x;
-	o->can_0x5fa_megasquirt_gp10_rx = 1;
-	o->can_0x5fa_megasquirt_gp10_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5fa_status5(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x5fa_megasquirt_gp10.status5);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status5(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status5 = in;
-	return 0;
-}
-
-int decode_can_0x5fa_status3(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5fa_megasquirt_gp10.status3);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status3(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status3 = in;
-	return 0;
-}
-
-int decode_can_0x5fa_status4(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5fa_megasquirt_gp10.status4);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status4(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status4 = in;
-	return 0;
-}
-
-int decode_can_0x5fa_status2(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5fa_megasquirt_gp10.status2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status2(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status2 = in;
-	return 0;
-}
-
-int decode_can_0x5fa_status6(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5fa_megasquirt_gp10.status6);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status6(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status6 = in;
-	return 0;
-}
-
-int decode_can_0x5fa_status7(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5fa_megasquirt_gp10.status7);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status7(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status7 = in;
-	return 0;
-}
-
-int decode_can_0x5fa_status1(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x5fa_megasquirt_gp10.status1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fa_status1(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x5fa_megasquirt_gp10.status1 = in;
-	return 0;
-}
-
-int print_can_0x5fa_megasquirt_gp10(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "status5 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status5)));
-	r = print_helper(r, fprintf(output, "status3 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status3)));
-	r = print_helper(r, fprintf(output, "status4 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status4)));
-	r = print_helper(r, fprintf(output, "status2 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status2)));
-	r = print_helper(r, fprintf(output, "status6 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status6)));
-	r = print_helper(r, fprintf(output, "status7 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status7)));
-	r = print_helper(r, fprintf(output, "status1 = (wire: %.0f)\n", (double)(o->can_0x5fa_megasquirt_gp10.status1)));
-	return r;
-}
-
-static int pack_can_0x5fb_megasquirt_gp11(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* ignload: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5fb_megasquirt_gp11.ignload)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* ignload2: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5fb_megasquirt_gp11.ignload2)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* airtemp: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5fb_megasquirt_gp11.airtemp)) & 0xffff;
-	m |= x;
-	/* fuelload2: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x5fb_megasquirt_gp11.fuelload2)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5fb_megasquirt_gp11_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5fb_megasquirt_gp11(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* ignload: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5fb_megasquirt_gp11.ignload = x;
-	/* ignload2: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5fb_megasquirt_gp11.ignload2 = x;
-	/* airtemp: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5fb_megasquirt_gp11.airtemp = x;
-	/* fuelload2: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5fb_megasquirt_gp11.fuelload2 = x;
-	o->can_0x5fb_megasquirt_gp11_rx = 1;
-	o->can_0x5fb_megasquirt_gp11_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5fb_ignload(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fb_megasquirt_gp11.ignload);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fb_ignload(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5fb_megasquirt_gp11.ignload = in;
-	return 0;
-}
-
-int decode_can_0x5fb_ignload2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fb_megasquirt_gp11.ignload2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fb_ignload2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5fb_megasquirt_gp11.ignload2 = in;
-	return 0;
-}
-
-int decode_can_0x5fb_airtemp(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fb_megasquirt_gp11.airtemp);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fb_airtemp(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5fb_megasquirt_gp11.airtemp = in;
-	return 0;
-}
-
-int decode_can_0x5fb_fuelload2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fb_megasquirt_gp11.fuelload2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fb_fuelload2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x5fb_megasquirt_gp11.fuelload2 = in;
-	return 0;
-}
-
-int print_can_0x5fb_megasquirt_gp11(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "ignload = (wire: %.0f)\n", (double)(o->can_0x5fb_megasquirt_gp11.ignload)));
-	r = print_helper(r, fprintf(output, "ignload2 = (wire: %.0f)\n", (double)(o->can_0x5fb_megasquirt_gp11.ignload2)));
-	r = print_helper(r, fprintf(output, "airtemp = (wire: %.0f)\n", (double)(o->can_0x5fb_megasquirt_gp11.airtemp)));
-	r = print_helper(r, fprintf(output, "fuelload2 = (wire: %.0f)\n", (double)(o->can_0x5fb_megasquirt_gp11.fuelload2)));
-	return r;
-}
-
-static int pack_can_0x5fc_megasquirt_gp12(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* wallfuel2: start-bit 39, length 32, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint32_t)(o->can_0x5fc_megasquirt_gp12.wallfuel2)) & 0xffffffff;
-	m |= x;
-	/* wallfuel1: start-bit 7, length 32, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint32_t)(o->can_0x5fc_megasquirt_gp12.wallfuel1)) & 0xffffffff;
-	x <<= 32; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5fc_megasquirt_gp12_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5fc_megasquirt_gp12(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* wallfuel2: start-bit 39, length 32, endianess motorola, scaling 0.01, offset 0 */
-	x = m & 0xffffffff;
-	o->can_0x5fc_megasquirt_gp12.wallfuel2 = x;
-	/* wallfuel1: start-bit 7, length 32, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 32) & 0xffffffff;
-	o->can_0x5fc_megasquirt_gp12.wallfuel1 = x;
-	o->can_0x5fc_megasquirt_gp12_rx = 1;
-	o->can_0x5fc_megasquirt_gp12_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5fc_wallfuel2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fc_megasquirt_gp12.wallfuel2);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fc_wallfuel2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fc_megasquirt_gp12.wallfuel2 = in;
-	return 0;
-}
-
-int decode_can_0x5fc_wallfuel1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fc_megasquirt_gp12.wallfuel1);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fc_wallfuel1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fc_megasquirt_gp12.wallfuel1 = in;
-	return 0;
-}
-
-int print_can_0x5fc_megasquirt_gp12(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "wallfuel2 = (wire: %.0f)\n", (double)(o->can_0x5fc_megasquirt_gp12.wallfuel2)));
-	r = print_helper(r, fprintf(output, "wallfuel1 = (wire: %.0f)\n", (double)(o->can_0x5fc_megasquirt_gp12.wallfuel1)));
-	return r;
-}
-
-static int pack_can_0x5fd_megasquirt_gp13(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* sensors2: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fd_megasquirt_gp13.sensors2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* sensors3: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fd_megasquirt_gp13.sensors3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* sensors4: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fd_megasquirt_gp13.sensors4)) & 0xffff;
-	m |= x;
-	/* sensors1: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fd_megasquirt_gp13.sensors1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5fd_megasquirt_gp13_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5fd_megasquirt_gp13(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* sensors2: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5fd_megasquirt_gp13.sensors2 = x;
-	/* sensors3: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5fd_megasquirt_gp13.sensors3 = x;
-	/* sensors4: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5fd_megasquirt_gp13.sensors4 = x;
-	/* sensors1: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5fd_megasquirt_gp13.sensors1 = x;
-	o->can_0x5fd_megasquirt_gp13_rx = 1;
-	o->can_0x5fd_megasquirt_gp13_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5fd_sensors2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fd_megasquirt_gp13.sensors2);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fd_sensors2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fd_megasquirt_gp13.sensors2 = in;
-	return 0;
-}
-
-int decode_can_0x5fd_sensors3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fd_megasquirt_gp13.sensors3);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fd_sensors3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fd_megasquirt_gp13.sensors3 = in;
-	return 0;
-}
-
-int decode_can_0x5fd_sensors4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fd_megasquirt_gp13.sensors4);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fd_sensors4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fd_megasquirt_gp13.sensors4 = in;
-	return 0;
-}
-
-int decode_can_0x5fd_sensors1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fd_megasquirt_gp13.sensors1);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fd_sensors1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fd_megasquirt_gp13.sensors1 = in;
-	return 0;
-}
-
-int print_can_0x5fd_megasquirt_gp13(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "sensors2 = (wire: %.0f)\n", (double)(o->can_0x5fd_megasquirt_gp13.sensors2)));
-	r = print_helper(r, fprintf(output, "sensors3 = (wire: %.0f)\n", (double)(o->can_0x5fd_megasquirt_gp13.sensors3)));
-	r = print_helper(r, fprintf(output, "sensors4 = (wire: %.0f)\n", (double)(o->can_0x5fd_megasquirt_gp13.sensors4)));
-	r = print_helper(r, fprintf(output, "sensors1 = (wire: %.0f)\n", (double)(o->can_0x5fd_megasquirt_gp13.sensors1)));
-	return r;
-}
-
-static int pack_can_0x5fe_megasquirt_gp14(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* sensors6: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fe_megasquirt_gp14.sensors6)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* sensors7: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fe_megasquirt_gp14.sensors7)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* sensors8: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fe_megasquirt_gp14.sensors8)) & 0xffff;
-	m |= x;
-	/* sensors5: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5fe_megasquirt_gp14.sensors5)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5fe_megasquirt_gp14_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5fe_megasquirt_gp14(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* sensors6: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5fe_megasquirt_gp14.sensors6 = x;
-	/* sensors7: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5fe_megasquirt_gp14.sensors7 = x;
-	/* sensors8: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5fe_megasquirt_gp14.sensors8 = x;
-	/* sensors5: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5fe_megasquirt_gp14.sensors5 = x;
-	o->can_0x5fe_megasquirt_gp14_rx = 1;
-	o->can_0x5fe_megasquirt_gp14_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5fe_sensors6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fe_megasquirt_gp14.sensors6);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fe_sensors6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fe_megasquirt_gp14.sensors6 = in;
-	return 0;
-}
-
-int decode_can_0x5fe_sensors7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fe_megasquirt_gp14.sensors7);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fe_sensors7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fe_megasquirt_gp14.sensors7 = in;
-	return 0;
-}
-
-int decode_can_0x5fe_sensors8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fe_megasquirt_gp14.sensors8);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fe_sensors8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fe_megasquirt_gp14.sensors8 = in;
-	return 0;
-}
-
-int decode_can_0x5fe_sensors5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5fe_megasquirt_gp14.sensors5);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5fe_sensors5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5fe_megasquirt_gp14.sensors5 = in;
-	return 0;
-}
-
-int print_can_0x5fe_megasquirt_gp14(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "sensors6 = (wire: %.0f)\n", (double)(o->can_0x5fe_megasquirt_gp14.sensors6)));
-	r = print_helper(r, fprintf(output, "sensors7 = (wire: %.0f)\n", (double)(o->can_0x5fe_megasquirt_gp14.sensors7)));
-	r = print_helper(r, fprintf(output, "sensors8 = (wire: %.0f)\n", (double)(o->can_0x5fe_megasquirt_gp14.sensors8)));
-	r = print_helper(r, fprintf(output, "sensors5 = (wire: %.0f)\n", (double)(o->can_0x5fe_megasquirt_gp14.sensors5)));
-	return r;
-}
-
-static int pack_can_0x5ff_megasquirt_gp15(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* sensors10: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5ff_megasquirt_gp15.sensors10)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* sensors11: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5ff_megasquirt_gp15.sensors11)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* sensors12: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5ff_megasquirt_gp15.sensors12)) & 0xffff;
-	m |= x;
-	/* sensors9: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x5ff_megasquirt_gp15.sensors9)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x5ff_megasquirt_gp15_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x5ff_megasquirt_gp15(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* sensors10: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x5ff_megasquirt_gp15.sensors10 = x;
-	/* sensors11: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x5ff_megasquirt_gp15.sensors11 = x;
-	/* sensors12: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = m & 0xffff;
-	o->can_0x5ff_megasquirt_gp15.sensors12 = x;
-	/* sensors9: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x5ff_megasquirt_gp15.sensors9 = x;
-	o->can_0x5ff_megasquirt_gp15_rx = 1;
-	o->can_0x5ff_megasquirt_gp15_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x5ff_sensors10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5ff_megasquirt_gp15.sensors10);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5ff_sensors10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5ff_megasquirt_gp15.sensors10 = in;
-	return 0;
-}
-
-int decode_can_0x5ff_sensors11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5ff_megasquirt_gp15.sensors11);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5ff_sensors11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5ff_megasquirt_gp15.sensors11 = in;
-	return 0;
-}
-
-int decode_can_0x5ff_sensors12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5ff_megasquirt_gp15.sensors12);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5ff_sensors12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5ff_megasquirt_gp15.sensors12 = in;
-	return 0;
-}
-
-int decode_can_0x5ff_sensors9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x5ff_megasquirt_gp15.sensors9);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x5ff_sensors9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x5ff_megasquirt_gp15.sensors9 = in;
-	return 0;
-}
-
-int print_can_0x5ff_megasquirt_gp15(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "sensors10 = (wire: %.0f)\n", (double)(o->can_0x5ff_megasquirt_gp15.sensors10)));
-	r = print_helper(r, fprintf(output, "sensors11 = (wire: %.0f)\n", (double)(o->can_0x5ff_megasquirt_gp15.sensors11)));
-	r = print_helper(r, fprintf(output, "sensors12 = (wire: %.0f)\n", (double)(o->can_0x5ff_megasquirt_gp15.sensors12)));
-	r = print_helper(r, fprintf(output, "sensors9 = (wire: %.0f)\n", (double)(o->can_0x5ff_megasquirt_gp15.sensors9)));
-	return r;
-}
-
-static int pack_can_0x600_megasquirt_gp16(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* sensors14: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x600_megasquirt_gp16.sensors14)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* sensors15: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x600_megasquirt_gp16.sensors15)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* sensors16: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x600_megasquirt_gp16.sensors16)) & 0xffff;
-	m |= x;
-	/* sensors13: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = ((uint16_t)(o->can_0x600_megasquirt_gp16.sensors13)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x600_megasquirt_gp16_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x600_megasquirt_gp16(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* sensors14: start-bit 23, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x600_megasquirt_gp16.sensors14 = x;
-	/* sensors15: start-bit 39, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x600_megasquirt_gp16.sensors15 = x;
-	/* sensors16: start-bit 55, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = m & 0xffff;
-	o->can_0x600_megasquirt_gp16.sensors16 = x;
-	/* sensors13: start-bit 7, length 16, endianess motorola, scaling 0.01, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x600_megasquirt_gp16.sensors13 = x;
-	o->can_0x600_megasquirt_gp16_rx = 1;
-	o->can_0x600_megasquirt_gp16_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x600_sensors14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x600_megasquirt_gp16.sensors14);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x600_sensors14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x600_megasquirt_gp16.sensors14 = in;
-	return 0;
-}
-
-int decode_can_0x600_sensors15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x600_megasquirt_gp16.sensors15);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x600_sensors15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x600_megasquirt_gp16.sensors15 = in;
-	return 0;
-}
-
-int decode_can_0x600_sensors16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x600_megasquirt_gp16.sensors16);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x600_sensors16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x600_megasquirt_gp16.sensors16 = in;
-	return 0;
-}
-
-int decode_can_0x600_sensors13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x600_megasquirt_gp16.sensors13);
-	rval *= 0.01;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x600_sensors13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 100;
-	o->can_0x600_megasquirt_gp16.sensors13 = in;
-	return 0;
-}
-
-int print_can_0x600_megasquirt_gp16(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "sensors14 = (wire: %.0f)\n", (double)(o->can_0x600_megasquirt_gp16.sensors14)));
-	r = print_helper(r, fprintf(output, "sensors15 = (wire: %.0f)\n", (double)(o->can_0x600_megasquirt_gp16.sensors15)));
-	r = print_helper(r, fprintf(output, "sensors16 = (wire: %.0f)\n", (double)(o->can_0x600_megasquirt_gp16.sensors16)));
-	r = print_helper(r, fprintf(output, "sensors13 = (wire: %.0f)\n", (double)(o->can_0x600_megasquirt_gp16.sensors13)));
-	return r;
-}
-
-static int pack_can_0x601_megasquirt_gp17(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* boost_targ_2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x601_megasquirt_gp17.boost_targ_2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* maf_volts: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x601_megasquirt_gp17.maf_volts)) & 0xffff;
-	m |= x;
-	/* boost_targ_1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x601_megasquirt_gp17.boost_targ_1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	/* boostduty2: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x601_megasquirt_gp17.boostduty2)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* boostduty: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x601_megasquirt_gp17.boostduty)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x601_megasquirt_gp17_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x601_megasquirt_gp17(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* boost_targ_2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x601_megasquirt_gp17.boost_targ_2 = x;
-	/* maf_volts: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x601_megasquirt_gp17.maf_volts = x;
-	/* boost_targ_1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x601_megasquirt_gp17.boost_targ_1 = x;
-	/* boostduty2: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x601_megasquirt_gp17.boostduty2 = x;
-	/* boostduty: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x601_megasquirt_gp17.boostduty = x;
-	o->can_0x601_megasquirt_gp17_rx = 1;
-	o->can_0x601_megasquirt_gp17_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x601_boost_targ_2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x601_megasquirt_gp17.boost_targ_2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x601_boost_targ_2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x601_megasquirt_gp17.boost_targ_2 = in;
-	return 0;
-}
-
-int decode_can_0x601_maf_volts(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x601_megasquirt_gp17.maf_volts);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x601_maf_volts(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x601_megasquirt_gp17.maf_volts = in;
-	return 0;
-}
-
-int decode_can_0x601_boost_targ_1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x601_megasquirt_gp17.boost_targ_1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x601_boost_targ_1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x601_megasquirt_gp17.boost_targ_1 = in;
-	return 0;
-}
-
-int decode_can_0x601_boostduty2(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x601_megasquirt_gp17.boostduty2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x601_boostduty2(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x601_megasquirt_gp17.boostduty2 = in;
-	return 0;
-}
-
-int decode_can_0x601_boostduty(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x601_megasquirt_gp17.boostduty);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x601_boostduty(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x601_megasquirt_gp17.boostduty = in;
-	return 0;
-}
-
-int print_can_0x601_megasquirt_gp17(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "boost_targ_2 = (wire: %.0f)\n", (double)(o->can_0x601_megasquirt_gp17.boost_targ_2)));
-	r = print_helper(r, fprintf(output, "maf_volts = (wire: %.0f)\n", (double)(o->can_0x601_megasquirt_gp17.maf_volts)));
-	r = print_helper(r, fprintf(output, "boost_targ_1 = (wire: %.0f)\n", (double)(o->can_0x601_megasquirt_gp17.boost_targ_1)));
-	r = print_helper(r, fprintf(output, "boostduty2 = (wire: %.0f)\n", (double)(o->can_0x601_megasquirt_gp17.boostduty2)));
-	r = print_helper(r, fprintf(output, "boostduty = (wire: %.0f)\n", (double)(o->can_0x601_megasquirt_gp17.boostduty)));
-	return r;
-}
-
-static int pack_can_0x602_megasquirt_gp18(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* pwseq2: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x602_megasquirt_gp18.pwseq2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* pwseq3: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x602_megasquirt_gp18.pwseq3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* pwseq4: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x602_megasquirt_gp18.pwseq4)) & 0xffff;
-	m |= x;
-	/* pwseq1: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x602_megasquirt_gp18.pwseq1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x602_megasquirt_gp18_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x602_megasquirt_gp18(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* pwseq2: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x602_megasquirt_gp18.pwseq2 = x;
-	/* pwseq3: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x602_megasquirt_gp18.pwseq3 = x;
-	/* pwseq4: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x602_megasquirt_gp18.pwseq4 = x;
-	/* pwseq1: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x602_megasquirt_gp18.pwseq1 = x;
-	o->can_0x602_megasquirt_gp18_rx = 1;
-	o->can_0x602_megasquirt_gp18_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x602_pwseq2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x602_megasquirt_gp18.pwseq2);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x602_pwseq2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x602_megasquirt_gp18.pwseq2 = in;
-	return 0;
-}
-
-int decode_can_0x602_pwseq3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x602_megasquirt_gp18.pwseq3);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x602_pwseq3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x602_megasquirt_gp18.pwseq3 = in;
-	return 0;
-}
-
-int decode_can_0x602_pwseq4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x602_megasquirt_gp18.pwseq4);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x602_pwseq4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x602_megasquirt_gp18.pwseq4 = in;
-	return 0;
-}
-
-int decode_can_0x602_pwseq1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x602_megasquirt_gp18.pwseq1);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x602_pwseq1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x602_megasquirt_gp18.pwseq1 = in;
-	return 0;
-}
-
-int print_can_0x602_megasquirt_gp18(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "pwseq2 = (wire: %.0f)\n", (double)(o->can_0x602_megasquirt_gp18.pwseq2)));
-	r = print_helper(r, fprintf(output, "pwseq3 = (wire: %.0f)\n", (double)(o->can_0x602_megasquirt_gp18.pwseq3)));
-	r = print_helper(r, fprintf(output, "pwseq4 = (wire: %.0f)\n", (double)(o->can_0x602_megasquirt_gp18.pwseq4)));
-	r = print_helper(r, fprintf(output, "pwseq1 = (wire: %.0f)\n", (double)(o->can_0x602_megasquirt_gp18.pwseq1)));
-	return r;
-}
-
-static int pack_can_0x603_megasquirt_gp19(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* pwseq6: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x603_megasquirt_gp19.pwseq6)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* pwseq7: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x603_megasquirt_gp19.pwseq7)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* pwseq8: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x603_megasquirt_gp19.pwseq8)) & 0xffff;
-	m |= x;
-	/* pwseq5: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x603_megasquirt_gp19.pwseq5)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x603_megasquirt_gp19_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x603_megasquirt_gp19(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* pwseq6: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x603_megasquirt_gp19.pwseq6 = x;
-	/* pwseq7: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x603_megasquirt_gp19.pwseq7 = x;
-	/* pwseq8: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x603_megasquirt_gp19.pwseq8 = x;
-	/* pwseq5: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x603_megasquirt_gp19.pwseq5 = x;
-	o->can_0x603_megasquirt_gp19_rx = 1;
-	o->can_0x603_megasquirt_gp19_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x603_pwseq6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x603_megasquirt_gp19.pwseq6);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x603_pwseq6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x603_megasquirt_gp19.pwseq6 = in;
-	return 0;
-}
-
-int decode_can_0x603_pwseq7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x603_megasquirt_gp19.pwseq7);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x603_pwseq7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x603_megasquirt_gp19.pwseq7 = in;
-	return 0;
-}
-
-int decode_can_0x603_pwseq8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x603_megasquirt_gp19.pwseq8);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x603_pwseq8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x603_megasquirt_gp19.pwseq8 = in;
-	return 0;
-}
-
-int decode_can_0x603_pwseq5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x603_megasquirt_gp19.pwseq5);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x603_pwseq5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x603_megasquirt_gp19.pwseq5 = in;
-	return 0;
-}
-
-int print_can_0x603_megasquirt_gp19(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "pwseq6 = (wire: %.0f)\n", (double)(o->can_0x603_megasquirt_gp19.pwseq6)));
-	r = print_helper(r, fprintf(output, "pwseq7 = (wire: %.0f)\n", (double)(o->can_0x603_megasquirt_gp19.pwseq7)));
-	r = print_helper(r, fprintf(output, "pwseq8 = (wire: %.0f)\n", (double)(o->can_0x603_megasquirt_gp19.pwseq8)));
-	r = print_helper(r, fprintf(output, "pwseq5 = (wire: %.0f)\n", (double)(o->can_0x603_megasquirt_gp19.pwseq5)));
-	return r;
-}
-
-static int pack_can_0x604_megasquirt_gp20(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* pwseq10: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x604_megasquirt_gp20.pwseq10)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* pwseq11: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x604_megasquirt_gp20.pwseq11)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* pwseq12: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x604_megasquirt_gp20.pwseq12)) & 0xffff;
-	m |= x;
-	/* pwseq9: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x604_megasquirt_gp20.pwseq9)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x604_megasquirt_gp20_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x604_megasquirt_gp20(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* pwseq10: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x604_megasquirt_gp20.pwseq10 = x;
-	/* pwseq11: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x604_megasquirt_gp20.pwseq11 = x;
-	/* pwseq12: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x604_megasquirt_gp20.pwseq12 = x;
-	/* pwseq9: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x604_megasquirt_gp20.pwseq9 = x;
-	o->can_0x604_megasquirt_gp20_rx = 1;
-	o->can_0x604_megasquirt_gp20_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x604_pwseq10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x604_megasquirt_gp20.pwseq10);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x604_pwseq10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x604_megasquirt_gp20.pwseq10 = in;
-	return 0;
-}
-
-int decode_can_0x604_pwseq11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x604_megasquirt_gp20.pwseq11);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x604_pwseq11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x604_megasquirt_gp20.pwseq11 = in;
-	return 0;
-}
-
-int decode_can_0x604_pwseq12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x604_megasquirt_gp20.pwseq12);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x604_pwseq12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x604_megasquirt_gp20.pwseq12 = in;
-	return 0;
-}
-
-int decode_can_0x604_pwseq9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x604_megasquirt_gp20.pwseq9);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x604_pwseq9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x604_megasquirt_gp20.pwseq9 = in;
-	return 0;
-}
-
-int print_can_0x604_megasquirt_gp20(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "pwseq10 = (wire: %.0f)\n", (double)(o->can_0x604_megasquirt_gp20.pwseq10)));
-	r = print_helper(r, fprintf(output, "pwseq11 = (wire: %.0f)\n", (double)(o->can_0x604_megasquirt_gp20.pwseq11)));
-	r = print_helper(r, fprintf(output, "pwseq12 = (wire: %.0f)\n", (double)(o->can_0x604_megasquirt_gp20.pwseq12)));
-	r = print_helper(r, fprintf(output, "pwseq9 = (wire: %.0f)\n", (double)(o->can_0x604_megasquirt_gp20.pwseq9)));
-	return r;
-}
-
-static int pack_can_0x605_megasquirt_gp21(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* pwseq14: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x605_megasquirt_gp21.pwseq14)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* pwseq15: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x605_megasquirt_gp21.pwseq15)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* pwseq16: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x605_megasquirt_gp21.pwseq16)) & 0xffff;
-	m |= x;
-	/* pwseq13: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x605_megasquirt_gp21.pwseq13)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x605_megasquirt_gp21_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x605_megasquirt_gp21(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* pwseq14: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x605_megasquirt_gp21.pwseq14 = x;
-	/* pwseq15: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x605_megasquirt_gp21.pwseq15 = x;
-	/* pwseq16: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x605_megasquirt_gp21.pwseq16 = x;
-	/* pwseq13: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x605_megasquirt_gp21.pwseq13 = x;
-	o->can_0x605_megasquirt_gp21_rx = 1;
-	o->can_0x605_megasquirt_gp21_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x605_pwseq14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x605_megasquirt_gp21.pwseq14);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x605_pwseq14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x605_megasquirt_gp21.pwseq14 = in;
-	return 0;
-}
-
-int decode_can_0x605_pwseq15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x605_megasquirt_gp21.pwseq15);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x605_pwseq15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x605_megasquirt_gp21.pwseq15 = in;
-	return 0;
-}
-
-int decode_can_0x605_pwseq16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x605_megasquirt_gp21.pwseq16);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x605_pwseq16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x605_megasquirt_gp21.pwseq16 = in;
-	return 0;
-}
-
-int decode_can_0x605_pwseq13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x605_megasquirt_gp21.pwseq13);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x605_pwseq13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x605_megasquirt_gp21.pwseq13 = in;
-	return 0;
-}
-
-int print_can_0x605_megasquirt_gp21(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "pwseq14 = (wire: %.0f)\n", (double)(o->can_0x605_megasquirt_gp21.pwseq14)));
-	r = print_helper(r, fprintf(output, "pwseq15 = (wire: %.0f)\n", (double)(o->can_0x605_megasquirt_gp21.pwseq15)));
-	r = print_helper(r, fprintf(output, "pwseq16 = (wire: %.0f)\n", (double)(o->can_0x605_megasquirt_gp21.pwseq16)));
-	r = print_helper(r, fprintf(output, "pwseq13 = (wire: %.0f)\n", (double)(o->can_0x605_megasquirt_gp21.pwseq13)));
-	return r;
-}
-
-static int pack_can_0x606_megasquirt_gp22(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* egt2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x606_megasquirt_gp22.egt2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* egt3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x606_megasquirt_gp22.egt3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* egt4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x606_megasquirt_gp22.egt4)) & 0xffff;
-	m |= x;
-	/* egt1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x606_megasquirt_gp22.egt1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x606_megasquirt_gp22_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x606_megasquirt_gp22(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* egt2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x606_megasquirt_gp22.egt2 = x;
-	/* egt3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x606_megasquirt_gp22.egt3 = x;
-	/* egt4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x606_megasquirt_gp22.egt4 = x;
-	/* egt1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x606_megasquirt_gp22.egt1 = x;
-	o->can_0x606_megasquirt_gp22_rx = 1;
-	o->can_0x606_megasquirt_gp22_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x606_egt2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x606_megasquirt_gp22.egt2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x606_egt2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x606_megasquirt_gp22.egt2 = in;
-	return 0;
-}
-
-int decode_can_0x606_egt3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x606_megasquirt_gp22.egt3);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x606_egt3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x606_megasquirt_gp22.egt3 = in;
-	return 0;
-}
-
-int decode_can_0x606_egt4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x606_megasquirt_gp22.egt4);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x606_egt4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x606_megasquirt_gp22.egt4 = in;
-	return 0;
-}
-
-int decode_can_0x606_egt1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x606_megasquirt_gp22.egt1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x606_egt1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x606_megasquirt_gp22.egt1 = in;
-	return 0;
-}
-
-int print_can_0x606_megasquirt_gp22(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "egt2 = (wire: %.0f)\n", (double)(o->can_0x606_megasquirt_gp22.egt2)));
-	r = print_helper(r, fprintf(output, "egt3 = (wire: %.0f)\n", (double)(o->can_0x606_megasquirt_gp22.egt3)));
-	r = print_helper(r, fprintf(output, "egt4 = (wire: %.0f)\n", (double)(o->can_0x606_megasquirt_gp22.egt4)));
-	r = print_helper(r, fprintf(output, "egt1 = (wire: %.0f)\n", (double)(o->can_0x606_megasquirt_gp22.egt1)));
-	return r;
-}
-
-static int pack_can_0x607_megasquirt_gp23(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* egt6: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x607_megasquirt_gp23.egt6)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* egt7: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x607_megasquirt_gp23.egt7)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* egt8: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x607_megasquirt_gp23.egt8)) & 0xffff;
-	m |= x;
-	/* egt5: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x607_megasquirt_gp23.egt5)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x607_megasquirt_gp23_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x607_megasquirt_gp23(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* egt6: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x607_megasquirt_gp23.egt6 = x;
-	/* egt7: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x607_megasquirt_gp23.egt7 = x;
-	/* egt8: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x607_megasquirt_gp23.egt8 = x;
-	/* egt5: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x607_megasquirt_gp23.egt5 = x;
-	o->can_0x607_megasquirt_gp23_rx = 1;
-	o->can_0x607_megasquirt_gp23_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x607_egt6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x607_megasquirt_gp23.egt6);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x607_egt6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x607_megasquirt_gp23.egt6 = in;
-	return 0;
-}
-
-int decode_can_0x607_egt7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x607_megasquirt_gp23.egt7);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x607_egt7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x607_megasquirt_gp23.egt7 = in;
-	return 0;
-}
-
-int decode_can_0x607_egt8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x607_megasquirt_gp23.egt8);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x607_egt8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x607_megasquirt_gp23.egt8 = in;
-	return 0;
-}
-
-int decode_can_0x607_egt5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x607_megasquirt_gp23.egt5);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x607_egt5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x607_megasquirt_gp23.egt5 = in;
-	return 0;
-}
-
-int print_can_0x607_megasquirt_gp23(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "egt6 = (wire: %.0f)\n", (double)(o->can_0x607_megasquirt_gp23.egt6)));
-	r = print_helper(r, fprintf(output, "egt7 = (wire: %.0f)\n", (double)(o->can_0x607_megasquirt_gp23.egt7)));
-	r = print_helper(r, fprintf(output, "egt8 = (wire: %.0f)\n", (double)(o->can_0x607_megasquirt_gp23.egt8)));
-	r = print_helper(r, fprintf(output, "egt5 = (wire: %.0f)\n", (double)(o->can_0x607_megasquirt_gp23.egt5)));
-	return r;
-}
-
-static int pack_can_0x608_megasquirt_gp24(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* egt10: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x608_megasquirt_gp24.egt10)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* egt11: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x608_megasquirt_gp24.egt11)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* egt12: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x608_megasquirt_gp24.egt12)) & 0xffff;
-	m |= x;
-	/* egt9: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x608_megasquirt_gp24.egt9)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x608_megasquirt_gp24_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x608_megasquirt_gp24(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* egt10: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x608_megasquirt_gp24.egt10 = x;
-	/* egt11: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x608_megasquirt_gp24.egt11 = x;
-	/* egt12: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x608_megasquirt_gp24.egt12 = x;
-	/* egt9: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x608_megasquirt_gp24.egt9 = x;
-	o->can_0x608_megasquirt_gp24_rx = 1;
-	o->can_0x608_megasquirt_gp24_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x608_egt10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x608_megasquirt_gp24.egt10);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x608_egt10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x608_megasquirt_gp24.egt10 = in;
-	return 0;
-}
-
-int decode_can_0x608_egt11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x608_megasquirt_gp24.egt11);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x608_egt11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x608_megasquirt_gp24.egt11 = in;
-	return 0;
-}
-
-int decode_can_0x608_egt12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x608_megasquirt_gp24.egt12);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x608_egt12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x608_megasquirt_gp24.egt12 = in;
-	return 0;
-}
-
-int decode_can_0x608_egt9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x608_megasquirt_gp24.egt9);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x608_egt9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x608_megasquirt_gp24.egt9 = in;
-	return 0;
-}
-
-int print_can_0x608_megasquirt_gp24(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "egt10 = (wire: %.0f)\n", (double)(o->can_0x608_megasquirt_gp24.egt10)));
-	r = print_helper(r, fprintf(output, "egt11 = (wire: %.0f)\n", (double)(o->can_0x608_megasquirt_gp24.egt11)));
-	r = print_helper(r, fprintf(output, "egt12 = (wire: %.0f)\n", (double)(o->can_0x608_megasquirt_gp24.egt12)));
-	r = print_helper(r, fprintf(output, "egt9 = (wire: %.0f)\n", (double)(o->can_0x608_megasquirt_gp24.egt9)));
-	return r;
-}
-
-static int pack_can_0x609_megasquirt_gp25(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* egt14: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x609_megasquirt_gp25.egt14)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* egt15: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x609_megasquirt_gp25.egt15)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* egt16: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x609_megasquirt_gp25.egt16)) & 0xffff;
-	m |= x;
-	/* egt13: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x609_megasquirt_gp25.egt13)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x609_megasquirt_gp25_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x609_megasquirt_gp25(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* egt14: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x609_megasquirt_gp25.egt14 = x;
-	/* egt15: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x609_megasquirt_gp25.egt15 = x;
-	/* egt16: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x609_megasquirt_gp25.egt16 = x;
-	/* egt13: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x609_megasquirt_gp25.egt13 = x;
-	o->can_0x609_megasquirt_gp25_rx = 1;
-	o->can_0x609_megasquirt_gp25_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x609_egt14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x609_megasquirt_gp25.egt14);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x609_egt14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x609_megasquirt_gp25.egt14 = in;
-	return 0;
-}
-
-int decode_can_0x609_egt15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x609_megasquirt_gp25.egt15);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x609_egt15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x609_megasquirt_gp25.egt15 = in;
-	return 0;
-}
-
-int decode_can_0x609_egt16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x609_megasquirt_gp25.egt16);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x609_egt16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x609_megasquirt_gp25.egt16 = in;
-	return 0;
-}
-
-int decode_can_0x609_egt13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x609_megasquirt_gp25.egt13);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x609_egt13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x609_megasquirt_gp25.egt13 = in;
-	return 0;
-}
-
-int print_can_0x609_megasquirt_gp25(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "egt14 = (wire: %.0f)\n", (double)(o->can_0x609_megasquirt_gp25.egt14)));
-	r = print_helper(r, fprintf(output, "egt15 = (wire: %.0f)\n", (double)(o->can_0x609_megasquirt_gp25.egt15)));
-	r = print_helper(r, fprintf(output, "egt16 = (wire: %.0f)\n", (double)(o->can_0x609_megasquirt_gp25.egt16)));
-	r = print_helper(r, fprintf(output, "egt13 = (wire: %.0f)\n", (double)(o->can_0x609_megasquirt_gp25.egt13)));
-	return r;
-}
-
-static int pack_can_0x60a_megasquirt_gp26(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* n2o_addfuel: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x60a_megasquirt_gp26.n2o_addfuel)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* nitrous_timer_out: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x60a_megasquirt_gp26.nitrous_timer_out)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* n2o_retard: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60a_megasquirt_gp26.n2o_retard)) & 0xffff;
-	m |= x;
-	/* nitrous2_duty: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x60a_megasquirt_gp26.nitrous2_duty)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* nitrous1_duty: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x60a_megasquirt_gp26.nitrous1_duty)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x60a_megasquirt_gp26_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x60a_megasquirt_gp26(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* n2o_addfuel: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x60a_megasquirt_gp26.n2o_addfuel = x;
-	/* nitrous_timer_out: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x60a_megasquirt_gp26.nitrous_timer_out = x;
-	/* n2o_retard: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x60a_megasquirt_gp26.n2o_retard = x;
-	/* nitrous2_duty: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x60a_megasquirt_gp26.nitrous2_duty = x;
-	/* nitrous1_duty: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x60a_megasquirt_gp26.nitrous1_duty = x;
-	o->can_0x60a_megasquirt_gp26_rx = 1;
-	o->can_0x60a_megasquirt_gp26_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x60a_n2o_addfuel(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60a_megasquirt_gp26.n2o_addfuel);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60a_n2o_addfuel(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x60a_megasquirt_gp26.n2o_addfuel = in;
-	return 0;
-}
-
-int decode_can_0x60a_nitrous_timer_out(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60a_megasquirt_gp26.nitrous_timer_out);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60a_nitrous_timer_out(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x60a_megasquirt_gp26.nitrous_timer_out = in;
-	return 0;
-}
-
-int decode_can_0x60a_n2o_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60a_megasquirt_gp26.n2o_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60a_n2o_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60a_megasquirt_gp26.n2o_retard = in;
-	return 0;
-}
-
-int decode_can_0x60a_nitrous2_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x60a_megasquirt_gp26.nitrous2_duty);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60a_nitrous2_duty(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x60a_megasquirt_gp26.nitrous2_duty = in;
-	return 0;
-}
-
-int decode_can_0x60a_nitrous1_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x60a_megasquirt_gp26.nitrous1_duty);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60a_nitrous1_duty(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x60a_megasquirt_gp26.nitrous1_duty = in;
-	return 0;
-}
-
-int print_can_0x60a_megasquirt_gp26(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "n2o_addfuel = (wire: %.0f)\n", (double)(o->can_0x60a_megasquirt_gp26.n2o_addfuel)));
-	r = print_helper(r, fprintf(output, "nitrous_timer_out = (wire: %.0f)\n", (double)(o->can_0x60a_megasquirt_gp26.nitrous_timer_out)));
-	r = print_helper(r, fprintf(output, "n2o_retard = (wire: %.0f)\n", (double)(o->can_0x60a_megasquirt_gp26.n2o_retard)));
-	r = print_helper(r, fprintf(output, "nitrous2_duty = (wire: %.0f)\n", (double)(o->can_0x60a_megasquirt_gp26.nitrous2_duty)));
-	r = print_helper(r, fprintf(output, "nitrous1_duty = (wire: %.0f)\n", (double)(o->can_0x60a_megasquirt_gp26.nitrous1_duty)));
-	return r;
-}
-
-static int pack_can_0x60b_megasquirt_gp27(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* canpwmin2: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x60b_megasquirt_gp27.canpwmin2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* canpwmin3: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x60b_megasquirt_gp27.canpwmin3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* canpwmin4: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x60b_megasquirt_gp27.canpwmin4)) & 0xffff;
-	m |= x;
-	/* canpwmin1: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x60b_megasquirt_gp27.canpwmin1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x60b_megasquirt_gp27_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x60b_megasquirt_gp27(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* canpwmin2: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x60b_megasquirt_gp27.canpwmin2 = x;
-	/* canpwmin3: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x60b_megasquirt_gp27.canpwmin3 = x;
-	/* canpwmin4: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x60b_megasquirt_gp27.canpwmin4 = x;
-	/* canpwmin1: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x60b_megasquirt_gp27.canpwmin1 = x;
-	o->can_0x60b_megasquirt_gp27_rx = 1;
-	o->can_0x60b_megasquirt_gp27_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x60b_canpwmin2(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x60b_megasquirt_gp27.canpwmin2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60b_canpwmin2(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x60b_megasquirt_gp27.canpwmin2 = in;
-	return 0;
-}
-
-int decode_can_0x60b_canpwmin3(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x60b_megasquirt_gp27.canpwmin3);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60b_canpwmin3(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x60b_megasquirt_gp27.canpwmin3 = in;
-	return 0;
-}
-
-int decode_can_0x60b_canpwmin4(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x60b_megasquirt_gp27.canpwmin4);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60b_canpwmin4(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x60b_megasquirt_gp27.canpwmin4 = in;
-	return 0;
-}
-
-int decode_can_0x60b_canpwmin1(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x60b_megasquirt_gp27.canpwmin1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60b_canpwmin1(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x60b_megasquirt_gp27.canpwmin1 = in;
-	return 0;
-}
-
-int print_can_0x60b_megasquirt_gp27(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "canpwmin2 = (wire: %.0f)\n", (double)(o->can_0x60b_megasquirt_gp27.canpwmin2)));
-	r = print_helper(r, fprintf(output, "canpwmin3 = (wire: %.0f)\n", (double)(o->can_0x60b_megasquirt_gp27.canpwmin3)));
-	r = print_helper(r, fprintf(output, "canpwmin4 = (wire: %.0f)\n", (double)(o->can_0x60b_megasquirt_gp27.canpwmin4)));
-	r = print_helper(r, fprintf(output, "canpwmin1 = (wire: %.0f)\n", (double)(o->can_0x60b_megasquirt_gp27.canpwmin1)));
-	return r;
-}
-
-static int pack_can_0x60c_megasquirt_gp28(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* tpsadc: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x60c_megasquirt_gp28.tpsadc)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* eaeload: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60c_megasquirt_gp28.eaeload)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* afrload: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60c_megasquirt_gp28.afrload)) & 0xffff;
-	m |= x;
-	/* cl_idle_targ_rpm: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x60c_megasquirt_gp28.cl_idle_targ_rpm)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x60c_megasquirt_gp28_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x60c_megasquirt_gp28(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* tpsadc: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x60c_megasquirt_gp28.tpsadc = x;
-	/* eaeload: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x60c_megasquirt_gp28.eaeload = x;
-	/* afrload: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x60c_megasquirt_gp28.afrload = x;
-	/* cl_idle_targ_rpm: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x60c_megasquirt_gp28.cl_idle_targ_rpm = x;
-	o->can_0x60c_megasquirt_gp28_rx = 1;
-	o->can_0x60c_megasquirt_gp28_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x60c_tpsadc(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x60c_megasquirt_gp28.tpsadc);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60c_tpsadc(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x60c_megasquirt_gp28.tpsadc = in;
-	return 0;
-}
-
-int decode_can_0x60c_eaeload(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60c_megasquirt_gp28.eaeload);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60c_eaeload(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60c_megasquirt_gp28.eaeload = in;
-	return 0;
-}
-
-int decode_can_0x60c_afrload(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60c_megasquirt_gp28.afrload);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60c_afrload(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60c_megasquirt_gp28.afrload = in;
-	return 0;
-}
-
-int decode_can_0x60c_cl_idle_targ_rpm(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x60c_megasquirt_gp28.cl_idle_targ_rpm);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60c_cl_idle_targ_rpm(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x60c_megasquirt_gp28.cl_idle_targ_rpm = in;
-	return 0;
-}
-
-int print_can_0x60c_megasquirt_gp28(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "tpsadc = (wire: %.0f)\n", (double)(o->can_0x60c_megasquirt_gp28.tpsadc)));
-	r = print_helper(r, fprintf(output, "eaeload = (wire: %.0f)\n", (double)(o->can_0x60c_megasquirt_gp28.eaeload)));
-	r = print_helper(r, fprintf(output, "afrload = (wire: %.0f)\n", (double)(o->can_0x60c_megasquirt_gp28.afrload)));
-	r = print_helper(r, fprintf(output, "cl_idle_targ_rpm = (wire: %.0f)\n", (double)(o->can_0x60c_megasquirt_gp28.cl_idle_targ_rpm)));
-	return r;
-}
-
-static int pack_can_0x60d_megasquirt_gp29(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EAEfcor2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60d_megasquirt_gp29.EAEfcor2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* VSS1dot: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60d_megasquirt_gp29.VSS1dot)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* VSS2dot: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60d_megasquirt_gp29.VSS2dot)) & 0xffff;
-	m |= x;
-	/* EAEfcor1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x60d_megasquirt_gp29.EAEfcor1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x60d_megasquirt_gp29_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x60d_megasquirt_gp29(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EAEfcor2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x60d_megasquirt_gp29.EAEfcor2 = x;
-	/* VSS1dot: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x60d_megasquirt_gp29.VSS1dot = x;
-	/* VSS2dot: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x60d_megasquirt_gp29.VSS2dot = x;
-	/* EAEfcor1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x60d_megasquirt_gp29.EAEfcor1 = x;
-	o->can_0x60d_megasquirt_gp29_rx = 1;
-	o->can_0x60d_megasquirt_gp29_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x60d_EAEfcor2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60d_megasquirt_gp29.EAEfcor2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60d_EAEfcor2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60d_megasquirt_gp29.EAEfcor2 = in;
-	return 0;
-}
-
-int decode_can_0x60d_VSS1dot(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60d_megasquirt_gp29.VSS1dot);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60d_VSS1dot(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60d_megasquirt_gp29.VSS1dot = in;
-	return 0;
-}
-
-int decode_can_0x60d_VSS2dot(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60d_megasquirt_gp29.VSS2dot);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60d_VSS2dot(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60d_megasquirt_gp29.VSS2dot = in;
-	return 0;
-}
-
-int decode_can_0x60d_EAEfcor1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60d_megasquirt_gp29.EAEfcor1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60d_EAEfcor1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60d_megasquirt_gp29.EAEfcor1 = in;
-	return 0;
-}
-
-int print_can_0x60d_megasquirt_gp29(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EAEfcor2 = (wire: %.0f)\n", (double)(o->can_0x60d_megasquirt_gp29.EAEfcor2)));
-	r = print_helper(r, fprintf(output, "VSS1dot = (wire: %.0f)\n", (double)(o->can_0x60d_megasquirt_gp29.VSS1dot)));
-	r = print_helper(r, fprintf(output, "VSS2dot = (wire: %.0f)\n", (double)(o->can_0x60d_megasquirt_gp29.VSS2dot)));
-	r = print_helper(r, fprintf(output, "EAEfcor1 = (wire: %.0f)\n", (double)(o->can_0x60d_megasquirt_gp29.EAEfcor1)));
-	return r;
-}
-
-static int pack_can_0x60e_megasquirt_gp30(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* accely: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x60e_megasquirt_gp30.accely)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* accelz: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x60e_megasquirt_gp30.accelz)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* accelx: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x60e_megasquirt_gp30.accelx)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	/* water_duty: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x60e_megasquirt_gp30.water_duty)) & 0xff;
-	m |= x;
-	/* stream_level: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x60e_megasquirt_gp30.stream_level)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x60e_megasquirt_gp30_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x60e_megasquirt_gp30(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* accely: start-bit 23, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x60e_megasquirt_gp30.accely = x;
-	/* accelz: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x60e_megasquirt_gp30.accelz = x;
-	/* accelx: start-bit 7, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x60e_megasquirt_gp30.accelx = x;
-	/* water_duty: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x60e_megasquirt_gp30.water_duty = x;
-	/* stream_level: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x60e_megasquirt_gp30.stream_level = x;
-	o->can_0x60e_megasquirt_gp30_rx = 1;
-	o->can_0x60e_megasquirt_gp30_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x60e_accely(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60e_megasquirt_gp30.accely);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60e_accely(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x60e_megasquirt_gp30.accely = in;
-	return 0;
-}
-
-int decode_can_0x60e_accelz(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60e_megasquirt_gp30.accelz);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60e_accelz(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x60e_megasquirt_gp30.accelz = in;
-	return 0;
-}
-
-int decode_can_0x60e_accelx(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60e_megasquirt_gp30.accelx);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60e_accelx(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x60e_megasquirt_gp30.accelx = in;
-	return 0;
-}
-
-int decode_can_0x60e_water_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x60e_megasquirt_gp30.water_duty);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60e_water_duty(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x60e_megasquirt_gp30.water_duty = in;
-	return 0;
-}
-
-int decode_can_0x60e_stream_level(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x60e_megasquirt_gp30.stream_level);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60e_stream_level(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x60e_megasquirt_gp30.stream_level = in;
-	return 0;
-}
-
-int print_can_0x60e_megasquirt_gp30(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "accely = (wire: %.0f)\n", (double)(o->can_0x60e_megasquirt_gp30.accely)));
-	r = print_helper(r, fprintf(output, "accelz = (wire: %.0f)\n", (double)(o->can_0x60e_megasquirt_gp30.accelz)));
-	r = print_helper(r, fprintf(output, "accelx = (wire: %.0f)\n", (double)(o->can_0x60e_megasquirt_gp30.accelx)));
-	r = print_helper(r, fprintf(output, "water_duty = (wire: %.0f)\n", (double)(o->can_0x60e_megasquirt_gp30.water_duty)));
-	r = print_helper(r, fprintf(output, "stream_level = (wire: %.0f)\n", (double)(o->can_0x60e_megasquirt_gp30.stream_level)));
-	return r;
-}
-
-static int pack_can_0x60f_megasquirt_gp31(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* AFR2: start-bit 15, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* AFR3: start-bit 23, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR3)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* AFR4: start-bit 31, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR4)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* AFR5: start-bit 39, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR5)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* AFR6: start-bit 47, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR6)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* AFR7: start-bit 55, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR7)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* AFR8: start-bit 63, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR8)) & 0xff;
-	m |= x;
-	/* AFR1: start-bit 7, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x60f_megasquirt_gp31.AFR1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x60f_megasquirt_gp31_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x60f_megasquirt_gp31(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* AFR2: start-bit 15, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR2 = x;
-	/* AFR3: start-bit 23, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR3 = x;
-	/* AFR4: start-bit 31, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR4 = x;
-	/* AFR5: start-bit 39, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR5 = x;
-	/* AFR6: start-bit 47, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR6 = x;
-	/* AFR7: start-bit 55, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR7 = x;
-	/* AFR8: start-bit 63, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR8 = x;
-	/* AFR1: start-bit 7, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x60f_megasquirt_gp31.AFR1 = x;
-	o->can_0x60f_megasquirt_gp31_rx = 1;
-	o->can_0x60f_megasquirt_gp31_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x60f_AFR2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR2 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR3);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR3 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR4);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR4 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR5);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR5 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR6);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR6 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR7);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR7 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR8);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR8 = in;
-	return 0;
-}
-
-int decode_can_0x60f_AFR1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x60f_megasquirt_gp31.AFR1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x60f_AFR1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x60f_megasquirt_gp31.AFR1 = in;
-	return 0;
-}
-
-int print_can_0x60f_megasquirt_gp31(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "AFR2 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR2)));
-	r = print_helper(r, fprintf(output, "AFR3 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR3)));
-	r = print_helper(r, fprintf(output, "AFR4 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR4)));
-	r = print_helper(r, fprintf(output, "AFR5 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR5)));
-	r = print_helper(r, fprintf(output, "AFR6 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR6)));
-	r = print_helper(r, fprintf(output, "AFR7 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR7)));
-	r = print_helper(r, fprintf(output, "AFR8 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR8)));
-	r = print_helper(r, fprintf(output, "AFR1 = (wire: %.0f)\n", (double)(o->can_0x60f_megasquirt_gp31.AFR1)));
-	return r;
-}
-
-static int pack_can_0x610_megasquirt_gp32(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* AFR10: start-bit 15, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR10)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* AFR11: start-bit 23, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR11)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* AFR12: start-bit 31, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR12)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* AFR13: start-bit 39, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR13)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* AFR14: start-bit 47, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR14)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* AFR15: start-bit 55, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR15)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* AFR16: start-bit 63, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR16)) & 0xff;
-	m |= x;
-	/* AFR9: start-bit 7, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x610_megasquirt_gp32.AFR9)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x610_megasquirt_gp32_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x610_megasquirt_gp32(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* AFR10: start-bit 15, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR10 = x;
-	/* AFR11: start-bit 23, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR11 = x;
-	/* AFR12: start-bit 31, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR12 = x;
-	/* AFR13: start-bit 39, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR13 = x;
-	/* AFR14: start-bit 47, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR14 = x;
-	/* AFR15: start-bit 55, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR15 = x;
-	/* AFR16: start-bit 63, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR16 = x;
-	/* AFR9: start-bit 7, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x610_megasquirt_gp32.AFR9 = x;
-	o->can_0x610_megasquirt_gp32_rx = 1;
-	o->can_0x610_megasquirt_gp32_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x610_AFR10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR10);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR10 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR11);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR11 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR12);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR12 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR13);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR13 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR14);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR14 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR15);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR15 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR16);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR16 = in;
-	return 0;
-}
-
-int decode_can_0x610_AFR9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x610_megasquirt_gp32.AFR9);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x610_AFR9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x610_megasquirt_gp32.AFR9 = in;
-	return 0;
-}
-
-int print_can_0x610_megasquirt_gp32(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "AFR10 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR10)));
-	r = print_helper(r, fprintf(output, "AFR11 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR11)));
-	r = print_helper(r, fprintf(output, "AFR12 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR12)));
-	r = print_helper(r, fprintf(output, "AFR13 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR13)));
-	r = print_helper(r, fprintf(output, "AFR14 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR14)));
-	r = print_helper(r, fprintf(output, "AFR15 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR15)));
-	r = print_helper(r, fprintf(output, "AFR16 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR16)));
-	r = print_helper(r, fprintf(output, "AFR9 = (wire: %.0f)\n", (double)(o->can_0x610_megasquirt_gp32.AFR9)));
-	return r;
-}
-
-static int pack_can_0x611_megasquirt_gp33(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* duty_pwm2: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* duty_pwm3: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm3)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* duty_pwm4: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm4)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* duty_pwm5: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm5)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* duty_pwm6: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm6)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* gear: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.gear)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* status8: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.status8)) & 0xff;
-	m |= x;
-	/* duty_pwm1: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x611_megasquirt_gp33_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x611_megasquirt_gp33(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* duty_pwm2: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x611_megasquirt_gp33.duty_pwm2 = x;
-	/* duty_pwm3: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x611_megasquirt_gp33.duty_pwm3 = x;
-	/* duty_pwm4: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x611_megasquirt_gp33.duty_pwm4 = x;
-	/* duty_pwm5: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x611_megasquirt_gp33.duty_pwm5 = x;
-	/* duty_pwm6: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x611_megasquirt_gp33.duty_pwm6 = x;
-	/* gear: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x611_megasquirt_gp33.gear = x;
-	/* status8: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x611_megasquirt_gp33.status8 = x;
-	/* duty_pwm1: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x611_megasquirt_gp33.duty_pwm1 = x;
-	o->can_0x611_megasquirt_gp33_rx = 1;
-	o->can_0x611_megasquirt_gp33_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x611_duty_pwm2(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_duty_pwm2(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.duty_pwm2 = in;
-	return 0;
-}
-
-int decode_can_0x611_duty_pwm3(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm3);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_duty_pwm3(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.duty_pwm3 = in;
-	return 0;
-}
-
-int decode_can_0x611_duty_pwm4(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm4);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_duty_pwm4(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.duty_pwm4 = in;
-	return 0;
-}
-
-int decode_can_0x611_duty_pwm5(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm5);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_duty_pwm5(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.duty_pwm5 = in;
-	return 0;
-}
-
-int decode_can_0x611_duty_pwm6(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm6);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_duty_pwm6(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.duty_pwm6 = in;
-	return 0;
-}
-
-int decode_can_0x611_gear(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.gear);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_gear(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.gear = in;
-	return 0;
-}
-
-int decode_can_0x611_status8(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.status8);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_status8(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.status8 = in;
-	return 0;
-}
-
-int decode_can_0x611_duty_pwm1(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x611_megasquirt_gp33.duty_pwm1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x611_duty_pwm1(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x611_megasquirt_gp33.duty_pwm1 = in;
-	return 0;
-}
-
-int print_can_0x611_megasquirt_gp33(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "duty_pwm2 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.duty_pwm2)));
-	r = print_helper(r, fprintf(output, "duty_pwm3 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.duty_pwm3)));
-	r = print_helper(r, fprintf(output, "duty_pwm4 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.duty_pwm4)));
-	r = print_helper(r, fprintf(output, "duty_pwm5 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.duty_pwm5)));
-	r = print_helper(r, fprintf(output, "duty_pwm6 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.duty_pwm6)));
-	r = print_helper(r, fprintf(output, "gear = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.gear)));
-	r = print_helper(r, fprintf(output, "status8 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.status8)));
-	r = print_helper(r, fprintf(output, "duty_pwm1 = (wire: %.0f)\n", (double)(o->can_0x611_megasquirt_gp33.duty_pwm1)));
-	return r;
-}
-
-static int pack_can_0x612_megasquirt_gp34(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOv2: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x612_megasquirt_gp34.EGOv2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOv3: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x612_megasquirt_gp34.EGOv3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOv4: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x612_megasquirt_gp34.EGOv4)) & 0xffff;
-	m |= x;
-	/* EGOv1: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x612_megasquirt_gp34.EGOv1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x612_megasquirt_gp34_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x612_megasquirt_gp34(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOv2: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x612_megasquirt_gp34.EGOv2 = x;
-	/* EGOv3: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x612_megasquirt_gp34.EGOv3 = x;
-	/* EGOv4: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = m & 0xffff;
-	o->can_0x612_megasquirt_gp34.EGOv4 = x;
-	/* EGOv1: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x612_megasquirt_gp34.EGOv1 = x;
-	o->can_0x612_megasquirt_gp34_rx = 1;
-	o->can_0x612_megasquirt_gp34_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x612_EGOv2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x612_megasquirt_gp34.EGOv2);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x612_EGOv2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x612_megasquirt_gp34.EGOv2 = in;
-	return 0;
-}
-
-int decode_can_0x612_EGOv3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x612_megasquirt_gp34.EGOv3);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x612_EGOv3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x612_megasquirt_gp34.EGOv3 = in;
-	return 0;
-}
-
-int decode_can_0x612_EGOv4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x612_megasquirt_gp34.EGOv4);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x612_EGOv4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x612_megasquirt_gp34.EGOv4 = in;
-	return 0;
-}
-
-int decode_can_0x612_EGOv1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x612_megasquirt_gp34.EGOv1);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x612_EGOv1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x612_megasquirt_gp34.EGOv1 = in;
-	return 0;
-}
-
-int print_can_0x612_megasquirt_gp34(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOv2 = (wire: %.0f)\n", (double)(o->can_0x612_megasquirt_gp34.EGOv2)));
-	r = print_helper(r, fprintf(output, "EGOv3 = (wire: %.0f)\n", (double)(o->can_0x612_megasquirt_gp34.EGOv3)));
-	r = print_helper(r, fprintf(output, "EGOv4 = (wire: %.0f)\n", (double)(o->can_0x612_megasquirt_gp34.EGOv4)));
-	r = print_helper(r, fprintf(output, "EGOv1 = (wire: %.0f)\n", (double)(o->can_0x612_megasquirt_gp34.EGOv1)));
-	return r;
-}
-
-static int pack_can_0x613_megasquirt_gp35(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOv6: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x613_megasquirt_gp35.EGOv6)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOv7: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x613_megasquirt_gp35.EGOv7)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOv8: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x613_megasquirt_gp35.EGOv8)) & 0xffff;
-	m |= x;
-	/* EGOv5: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x613_megasquirt_gp35.EGOv5)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x613_megasquirt_gp35_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x613_megasquirt_gp35(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOv6: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x613_megasquirt_gp35.EGOv6 = x;
-	/* EGOv7: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x613_megasquirt_gp35.EGOv7 = x;
-	/* EGOv8: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = m & 0xffff;
-	o->can_0x613_megasquirt_gp35.EGOv8 = x;
-	/* EGOv5: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x613_megasquirt_gp35.EGOv5 = x;
-	o->can_0x613_megasquirt_gp35_rx = 1;
-	o->can_0x613_megasquirt_gp35_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x613_EGOv6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x613_megasquirt_gp35.EGOv6);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x613_EGOv6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x613_megasquirt_gp35.EGOv6 = in;
-	return 0;
-}
-
-int decode_can_0x613_EGOv7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x613_megasquirt_gp35.EGOv7);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x613_EGOv7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x613_megasquirt_gp35.EGOv7 = in;
-	return 0;
-}
-
-int decode_can_0x613_EGOv8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x613_megasquirt_gp35.EGOv8);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x613_EGOv8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x613_megasquirt_gp35.EGOv8 = in;
-	return 0;
-}
-
-int decode_can_0x613_EGOv5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x613_megasquirt_gp35.EGOv5);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x613_EGOv5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x613_megasquirt_gp35.EGOv5 = in;
-	return 0;
-}
-
-int print_can_0x613_megasquirt_gp35(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOv6 = (wire: %.0f)\n", (double)(o->can_0x613_megasquirt_gp35.EGOv6)));
-	r = print_helper(r, fprintf(output, "EGOv7 = (wire: %.0f)\n", (double)(o->can_0x613_megasquirt_gp35.EGOv7)));
-	r = print_helper(r, fprintf(output, "EGOv8 = (wire: %.0f)\n", (double)(o->can_0x613_megasquirt_gp35.EGOv8)));
-	r = print_helper(r, fprintf(output, "EGOv5 = (wire: %.0f)\n", (double)(o->can_0x613_megasquirt_gp35.EGOv5)));
-	return r;
-}
-
-static int pack_can_0x614_megasquirt_gp36(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOv10: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x614_megasquirt_gp36.EGOv10)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOv11: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x614_megasquirt_gp36.EGOv11)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOv12: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x614_megasquirt_gp36.EGOv12)) & 0xffff;
-	m |= x;
-	/* EGOv9: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x614_megasquirt_gp36.EGOv9)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x614_megasquirt_gp36_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x614_megasquirt_gp36(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOv10: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x614_megasquirt_gp36.EGOv10 = x;
-	/* EGOv11: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x614_megasquirt_gp36.EGOv11 = x;
-	/* EGOv12: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = m & 0xffff;
-	o->can_0x614_megasquirt_gp36.EGOv12 = x;
-	/* EGOv9: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x614_megasquirt_gp36.EGOv9 = x;
-	o->can_0x614_megasquirt_gp36_rx = 1;
-	o->can_0x614_megasquirt_gp36_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x614_EGOv10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x614_megasquirt_gp36.EGOv10);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x614_EGOv10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x614_megasquirt_gp36.EGOv10 = in;
-	return 0;
-}
-
-int decode_can_0x614_EGOv11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x614_megasquirt_gp36.EGOv11);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x614_EGOv11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x614_megasquirt_gp36.EGOv11 = in;
-	return 0;
-}
-
-int decode_can_0x614_EGOv12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x614_megasquirt_gp36.EGOv12);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x614_EGOv12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x614_megasquirt_gp36.EGOv12 = in;
-	return 0;
-}
-
-int decode_can_0x614_EGOv9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x614_megasquirt_gp36.EGOv9);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x614_EGOv9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x614_megasquirt_gp36.EGOv9 = in;
-	return 0;
-}
-
-int print_can_0x614_megasquirt_gp36(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOv10 = (wire: %.0f)\n", (double)(o->can_0x614_megasquirt_gp36.EGOv10)));
-	r = print_helper(r, fprintf(output, "EGOv11 = (wire: %.0f)\n", (double)(o->can_0x614_megasquirt_gp36.EGOv11)));
-	r = print_helper(r, fprintf(output, "EGOv12 = (wire: %.0f)\n", (double)(o->can_0x614_megasquirt_gp36.EGOv12)));
-	r = print_helper(r, fprintf(output, "EGOv9 = (wire: %.0f)\n", (double)(o->can_0x614_megasquirt_gp36.EGOv9)));
-	return r;
-}
-
-static int pack_can_0x615_megasquirt_gp37(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOv14: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x615_megasquirt_gp37.EGOv14)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOv15: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x615_megasquirt_gp37.EGOv15)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOv16: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x615_megasquirt_gp37.EGOv16)) & 0xffff;
-	m |= x;
-	/* EGOv13: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = ((uint16_t)(o->can_0x615_megasquirt_gp37.EGOv13)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x615_megasquirt_gp37_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x615_megasquirt_gp37(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOv14: start-bit 23, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x615_megasquirt_gp37.EGOv14 = x;
-	/* EGOv15: start-bit 39, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x615_megasquirt_gp37.EGOv15 = x;
-	/* EGOv16: start-bit 55, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = m & 0xffff;
-	o->can_0x615_megasquirt_gp37.EGOv16 = x;
-	/* EGOv13: start-bit 7, length 16, endianess motorola, scaling 0.00489, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x615_megasquirt_gp37.EGOv13 = x;
-	o->can_0x615_megasquirt_gp37_rx = 1;
-	o->can_0x615_megasquirt_gp37_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x615_EGOv14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x615_megasquirt_gp37.EGOv14);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x615_EGOv14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x615_megasquirt_gp37.EGOv14 = in;
-	return 0;
-}
-
-int decode_can_0x615_EGOv15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x615_megasquirt_gp37.EGOv15);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x615_EGOv15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x615_megasquirt_gp37.EGOv15 = in;
-	return 0;
-}
-
-int decode_can_0x615_EGOv16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x615_megasquirt_gp37.EGOv16);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x615_EGOv16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x615_megasquirt_gp37.EGOv16 = in;
-	return 0;
-}
-
-int decode_can_0x615_EGOv13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x615_megasquirt_gp37.EGOv13);
-	rval *= 0.00489;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x615_EGOv13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 204.499;
-	o->can_0x615_megasquirt_gp37.EGOv13 = in;
-	return 0;
-}
-
-int print_can_0x615_megasquirt_gp37(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOv14 = (wire: %.0f)\n", (double)(o->can_0x615_megasquirt_gp37.EGOv14)));
-	r = print_helper(r, fprintf(output, "EGOv15 = (wire: %.0f)\n", (double)(o->can_0x615_megasquirt_gp37.EGOv15)));
-	r = print_helper(r, fprintf(output, "EGOv16 = (wire: %.0f)\n", (double)(o->can_0x615_megasquirt_gp37.EGOv16)));
-	r = print_helper(r, fprintf(output, "EGOv13 = (wire: %.0f)\n", (double)(o->can_0x615_megasquirt_gp37.EGOv13)));
-	return r;
-}
-
-static int pack_can_0x616_megasquirt_gp38(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOcor2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x616_megasquirt_gp38.EGOcor2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOcor3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x616_megasquirt_gp38.EGOcor3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOcor4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x616_megasquirt_gp38.EGOcor4)) & 0xffff;
-	m |= x;
-	/* EGOcor1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x616_megasquirt_gp38.EGOcor1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x616_megasquirt_gp38_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x616_megasquirt_gp38(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOcor2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x616_megasquirt_gp38.EGOcor2 = x;
-	/* EGOcor3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x616_megasquirt_gp38.EGOcor3 = x;
-	/* EGOcor4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x616_megasquirt_gp38.EGOcor4 = x;
-	/* EGOcor1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x616_megasquirt_gp38.EGOcor1 = x;
-	o->can_0x616_megasquirt_gp38_rx = 1;
-	o->can_0x616_megasquirt_gp38_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x616_EGOcor2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x616_megasquirt_gp38.EGOcor2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x616_EGOcor2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x616_megasquirt_gp38.EGOcor2 = in;
-	return 0;
-}
-
-int decode_can_0x616_EGOcor3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x616_megasquirt_gp38.EGOcor3);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x616_EGOcor3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x616_megasquirt_gp38.EGOcor3 = in;
-	return 0;
-}
-
-int decode_can_0x616_EGOcor4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x616_megasquirt_gp38.EGOcor4);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x616_EGOcor4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x616_megasquirt_gp38.EGOcor4 = in;
-	return 0;
-}
-
-int decode_can_0x616_EGOcor1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x616_megasquirt_gp38.EGOcor1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x616_EGOcor1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x616_megasquirt_gp38.EGOcor1 = in;
-	return 0;
-}
-
-int print_can_0x616_megasquirt_gp38(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOcor2 = (wire: %.0f)\n", (double)(o->can_0x616_megasquirt_gp38.EGOcor2)));
-	r = print_helper(r, fprintf(output, "EGOcor3 = (wire: %.0f)\n", (double)(o->can_0x616_megasquirt_gp38.EGOcor3)));
-	r = print_helper(r, fprintf(output, "EGOcor4 = (wire: %.0f)\n", (double)(o->can_0x616_megasquirt_gp38.EGOcor4)));
-	r = print_helper(r, fprintf(output, "EGOcor1 = (wire: %.0f)\n", (double)(o->can_0x616_megasquirt_gp38.EGOcor1)));
-	return r;
-}
-
-static int pack_can_0x617_megasquirt_gp39(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOcor6: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x617_megasquirt_gp39.EGOcor6)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOcor7: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x617_megasquirt_gp39.EGOcor7)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOcor8: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x617_megasquirt_gp39.EGOcor8)) & 0xffff;
-	m |= x;
-	/* EGOcor5: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x617_megasquirt_gp39.EGOcor5)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x617_megasquirt_gp39_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x617_megasquirt_gp39(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOcor6: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x617_megasquirt_gp39.EGOcor6 = x;
-	/* EGOcor7: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x617_megasquirt_gp39.EGOcor7 = x;
-	/* EGOcor8: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x617_megasquirt_gp39.EGOcor8 = x;
-	/* EGOcor5: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x617_megasquirt_gp39.EGOcor5 = x;
-	o->can_0x617_megasquirt_gp39_rx = 1;
-	o->can_0x617_megasquirt_gp39_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x617_EGOcor6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x617_megasquirt_gp39.EGOcor6);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x617_EGOcor6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x617_megasquirt_gp39.EGOcor6 = in;
-	return 0;
-}
-
-int decode_can_0x617_EGOcor7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x617_megasquirt_gp39.EGOcor7);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x617_EGOcor7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x617_megasquirt_gp39.EGOcor7 = in;
-	return 0;
-}
-
-int decode_can_0x617_EGOcor8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x617_megasquirt_gp39.EGOcor8);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x617_EGOcor8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x617_megasquirt_gp39.EGOcor8 = in;
-	return 0;
-}
-
-int decode_can_0x617_EGOcor5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x617_megasquirt_gp39.EGOcor5);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x617_EGOcor5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x617_megasquirt_gp39.EGOcor5 = in;
-	return 0;
-}
-
-int print_can_0x617_megasquirt_gp39(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOcor6 = (wire: %.0f)\n", (double)(o->can_0x617_megasquirt_gp39.EGOcor6)));
-	r = print_helper(r, fprintf(output, "EGOcor7 = (wire: %.0f)\n", (double)(o->can_0x617_megasquirt_gp39.EGOcor7)));
-	r = print_helper(r, fprintf(output, "EGOcor8 = (wire: %.0f)\n", (double)(o->can_0x617_megasquirt_gp39.EGOcor8)));
-	r = print_helper(r, fprintf(output, "EGOcor5 = (wire: %.0f)\n", (double)(o->can_0x617_megasquirt_gp39.EGOcor5)));
-	return r;
-}
-
-static int pack_can_0x618_megasquirt_gp40(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOcor10: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x618_megasquirt_gp40.EGOcor10)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOcor11: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x618_megasquirt_gp40.EGOcor11)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOcor12: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x618_megasquirt_gp40.EGOcor12)) & 0xffff;
-	m |= x;
-	/* EGOcor9: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x618_megasquirt_gp40.EGOcor9)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x618_megasquirt_gp40_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x618_megasquirt_gp40(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOcor10: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x618_megasquirt_gp40.EGOcor10 = x;
-	/* EGOcor11: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x618_megasquirt_gp40.EGOcor11 = x;
-	/* EGOcor12: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x618_megasquirt_gp40.EGOcor12 = x;
-	/* EGOcor9: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x618_megasquirt_gp40.EGOcor9 = x;
-	o->can_0x618_megasquirt_gp40_rx = 1;
-	o->can_0x618_megasquirt_gp40_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x618_EGOcor10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x618_megasquirt_gp40.EGOcor10);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x618_EGOcor10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x618_megasquirt_gp40.EGOcor10 = in;
-	return 0;
-}
-
-int decode_can_0x618_EGOcor11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x618_megasquirt_gp40.EGOcor11);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x618_EGOcor11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x618_megasquirt_gp40.EGOcor11 = in;
-	return 0;
-}
-
-int decode_can_0x618_EGOcor12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x618_megasquirt_gp40.EGOcor12);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x618_EGOcor12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x618_megasquirt_gp40.EGOcor12 = in;
-	return 0;
-}
-
-int decode_can_0x618_EGOcor9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x618_megasquirt_gp40.EGOcor9);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x618_EGOcor9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x618_megasquirt_gp40.EGOcor9 = in;
-	return 0;
-}
-
-int print_can_0x618_megasquirt_gp40(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOcor10 = (wire: %.0f)\n", (double)(o->can_0x618_megasquirt_gp40.EGOcor10)));
-	r = print_helper(r, fprintf(output, "EGOcor11 = (wire: %.0f)\n", (double)(o->can_0x618_megasquirt_gp40.EGOcor11)));
-	r = print_helper(r, fprintf(output, "EGOcor12 = (wire: %.0f)\n", (double)(o->can_0x618_megasquirt_gp40.EGOcor12)));
-	r = print_helper(r, fprintf(output, "EGOcor9 = (wire: %.0f)\n", (double)(o->can_0x618_megasquirt_gp40.EGOcor9)));
-	return r;
-}
-
-static int pack_can_0x619_megasquirt_gp41(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* EGOcor14: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x619_megasquirt_gp41.EGOcor14)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* EGOcor15: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x619_megasquirt_gp41.EGOcor15)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* EGOcor16: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x619_megasquirt_gp41.EGOcor16)) & 0xffff;
-	m |= x;
-	/* EGOcor13: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x619_megasquirt_gp41.EGOcor13)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x619_megasquirt_gp41_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x619_megasquirt_gp41(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* EGOcor14: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x619_megasquirt_gp41.EGOcor14 = x;
-	/* EGOcor15: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x619_megasquirt_gp41.EGOcor15 = x;
-	/* EGOcor16: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x619_megasquirt_gp41.EGOcor16 = x;
-	/* EGOcor13: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x619_megasquirt_gp41.EGOcor13 = x;
-	o->can_0x619_megasquirt_gp41_rx = 1;
-	o->can_0x619_megasquirt_gp41_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x619_EGOcor14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x619_megasquirt_gp41.EGOcor14);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x619_EGOcor14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x619_megasquirt_gp41.EGOcor14 = in;
-	return 0;
-}
-
-int decode_can_0x619_EGOcor15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x619_megasquirt_gp41.EGOcor15);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x619_EGOcor15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x619_megasquirt_gp41.EGOcor15 = in;
-	return 0;
-}
-
-int decode_can_0x619_EGOcor16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x619_megasquirt_gp41.EGOcor16);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x619_EGOcor16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x619_megasquirt_gp41.EGOcor16 = in;
-	return 0;
-}
-
-int decode_can_0x619_EGOcor13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x619_megasquirt_gp41.EGOcor13);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x619_EGOcor13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x619_megasquirt_gp41.EGOcor13 = in;
-	return 0;
-}
-
-int print_can_0x619_megasquirt_gp41(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "EGOcor14 = (wire: %.0f)\n", (double)(o->can_0x619_megasquirt_gp41.EGOcor14)));
-	r = print_helper(r, fprintf(output, "EGOcor15 = (wire: %.0f)\n", (double)(o->can_0x619_megasquirt_gp41.EGOcor15)));
-	r = print_helper(r, fprintf(output, "EGOcor16 = (wire: %.0f)\n", (double)(o->can_0x619_megasquirt_gp41.EGOcor16)));
-	r = print_helper(r, fprintf(output, "EGOcor13 = (wire: %.0f)\n", (double)(o->can_0x619_megasquirt_gp41.EGOcor13)));
-	return r;
-}
-
-static int pack_can_0x61a_megasquirt_gp42(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* VSS2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61a_megasquirt_gp42.VSS2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* VSS3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61a_megasquirt_gp42.VSS3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* VSS4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61a_megasquirt_gp42.VSS4)) & 0xffff;
-	m |= x;
-	/* VSS1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61a_megasquirt_gp42.VSS1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x61a_megasquirt_gp42_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x61a_megasquirt_gp42(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* VSS2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x61a_megasquirt_gp42.VSS2 = x;
-	/* VSS3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x61a_megasquirt_gp42.VSS3 = x;
-	/* VSS4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x61a_megasquirt_gp42.VSS4 = x;
-	/* VSS1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x61a_megasquirt_gp42.VSS1 = x;
-	o->can_0x61a_megasquirt_gp42_rx = 1;
-	o->can_0x61a_megasquirt_gp42_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x61a_VSS2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61a_megasquirt_gp42.VSS2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61a_VSS2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61a_megasquirt_gp42.VSS2 = in;
-	return 0;
-}
-
-int decode_can_0x61a_VSS3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61a_megasquirt_gp42.VSS3);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61a_VSS3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61a_megasquirt_gp42.VSS3 = in;
-	return 0;
-}
-
-int decode_can_0x61a_VSS4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61a_megasquirt_gp42.VSS4);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61a_VSS4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61a_megasquirt_gp42.VSS4 = in;
-	return 0;
-}
-
-int decode_can_0x61a_VSS1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61a_megasquirt_gp42.VSS1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61a_VSS1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61a_megasquirt_gp42.VSS1 = in;
-	return 0;
-}
-
-int print_can_0x61a_megasquirt_gp42(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "VSS2 = (wire: %.0f)\n", (double)(o->can_0x61a_megasquirt_gp42.VSS2)));
-	r = print_helper(r, fprintf(output, "VSS3 = (wire: %.0f)\n", (double)(o->can_0x61a_megasquirt_gp42.VSS3)));
-	r = print_helper(r, fprintf(output, "VSS4 = (wire: %.0f)\n", (double)(o->can_0x61a_megasquirt_gp42.VSS4)));
-	r = print_helper(r, fprintf(output, "VSS1 = (wire: %.0f)\n", (double)(o->can_0x61a_megasquirt_gp42.VSS1)));
-	return r;
-}
-
-static int pack_can_0x61b_megasquirt_gp43(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* sd_filenum: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61b_megasquirt_gp43.sd_filenum)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* syncreason: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x61b_megasquirt_gp43.syncreason)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* sd_error: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x61b_megasquirt_gp43.sd_error)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* sd_phase: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x61b_megasquirt_gp43.sd_phase)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* sd_status: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x61b_megasquirt_gp43.sd_status)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* timing_err: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x61b_megasquirt_gp43.timing_err)) & 0xff;
-	m |= x;
-	/* synccnt: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x61b_megasquirt_gp43.synccnt)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x61b_megasquirt_gp43_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x61b_megasquirt_gp43(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* sd_filenum: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x61b_megasquirt_gp43.sd_filenum = x;
-	/* syncreason: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x61b_megasquirt_gp43.syncreason = x;
-	/* sd_error: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x61b_megasquirt_gp43.sd_error = x;
-	/* sd_phase: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x61b_megasquirt_gp43.sd_phase = x;
-	/* sd_status: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x61b_megasquirt_gp43.sd_status = x;
-	/* timing_err: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x61b_megasquirt_gp43.timing_err = x;
-	/* synccnt: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x61b_megasquirt_gp43.synccnt = x;
-	o->can_0x61b_megasquirt_gp43_rx = 1;
-	o->can_0x61b_megasquirt_gp43_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x61b_sd_filenum(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x61b_megasquirt_gp43.sd_filenum);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_sd_filenum(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.sd_filenum = in;
-	return 0;
-}
-
-int decode_can_0x61b_syncreason(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x61b_megasquirt_gp43.syncreason);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_syncreason(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.syncreason = in;
-	return 0;
-}
-
-int decode_can_0x61b_sd_error(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x61b_megasquirt_gp43.sd_error);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_sd_error(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.sd_error = in;
-	return 0;
-}
-
-int decode_can_0x61b_sd_phase(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x61b_megasquirt_gp43.sd_phase);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_sd_phase(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.sd_phase = in;
-	return 0;
-}
-
-int decode_can_0x61b_sd_status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x61b_megasquirt_gp43.sd_status);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_sd_status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.sd_status = in;
-	return 0;
-}
-
-int decode_can_0x61b_timing_err(const can_obj_ksu_dbc_h_t *o, int8_t *out) {
-	assert(o);
-	assert(out);
-	int8_t rval = (int8_t)(o->can_0x61b_megasquirt_gp43.timing_err);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_timing_err(can_obj_ksu_dbc_h_t *o, int8_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.timing_err = in;
-	return 0;
-}
-
-int decode_can_0x61b_synccnt(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x61b_megasquirt_gp43.synccnt);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61b_synccnt(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x61b_megasquirt_gp43.synccnt = in;
-	return 0;
-}
-
-int print_can_0x61b_megasquirt_gp43(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "sd_filenum = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.sd_filenum)));
-	r = print_helper(r, fprintf(output, "syncreason = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.syncreason)));
-	r = print_helper(r, fprintf(output, "sd_error = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.sd_error)));
-	r = print_helper(r, fprintf(output, "sd_phase = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.sd_phase)));
-	r = print_helper(r, fprintf(output, "sd_status = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.sd_status)));
-	r = print_helper(r, fprintf(output, "timing_err = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.timing_err)));
-	r = print_helper(r, fprintf(output, "synccnt = (wire: %.0f)\n", (double)(o->can_0x61b_megasquirt_gp43.synccnt)));
-	return r;
-}
-
-static int pack_can_0x61c_megasquirt_gp44(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* vvt_ang2: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* vvt_ang3: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* vvt_ang4: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang4)) & 0xffff;
-	m |= x;
-	/* vvt_ang1: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x61c_megasquirt_gp44_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x61c_megasquirt_gp44(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* vvt_ang2: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x61c_megasquirt_gp44.vvt_ang2 = x;
-	/* vvt_ang3: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x61c_megasquirt_gp44.vvt_ang3 = x;
-	/* vvt_ang4: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x61c_megasquirt_gp44.vvt_ang4 = x;
-	/* vvt_ang1: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x61c_megasquirt_gp44.vvt_ang1 = x;
-	o->can_0x61c_megasquirt_gp44_rx = 1;
-	o->can_0x61c_megasquirt_gp44_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x61c_vvt_ang2(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61c_vvt_ang2(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61c_megasquirt_gp44.vvt_ang2 = in;
-	return 0;
-}
-
-int decode_can_0x61c_vvt_ang3(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang3);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61c_vvt_ang3(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61c_megasquirt_gp44.vvt_ang3 = in;
-	return 0;
-}
-
-int decode_can_0x61c_vvt_ang4(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang4);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61c_vvt_ang4(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61c_megasquirt_gp44.vvt_ang4 = in;
-	return 0;
-}
-
-int decode_can_0x61c_vvt_ang1(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61c_megasquirt_gp44.vvt_ang1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61c_vvt_ang1(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61c_megasquirt_gp44.vvt_ang1 = in;
-	return 0;
-}
-
-int print_can_0x61c_megasquirt_gp44(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "vvt_ang2 = (wire: %.0f)\n", (double)(o->can_0x61c_megasquirt_gp44.vvt_ang2)));
-	r = print_helper(r, fprintf(output, "vvt_ang3 = (wire: %.0f)\n", (double)(o->can_0x61c_megasquirt_gp44.vvt_ang3)));
-	r = print_helper(r, fprintf(output, "vvt_ang4 = (wire: %.0f)\n", (double)(o->can_0x61c_megasquirt_gp44.vvt_ang4)));
-	r = print_helper(r, fprintf(output, "vvt_ang1 = (wire: %.0f)\n", (double)(o->can_0x61c_megasquirt_gp44.vvt_ang1)));
-	return r;
-}
-
-static int pack_can_0x61d_megasquirt_gp45(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* vvt_target2: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61d_megasquirt_gp45.vvt_target2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* vvt_target3: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61d_megasquirt_gp45.vvt_target3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* vvt_target4: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61d_megasquirt_gp45.vvt_target4)) & 0xffff;
-	m |= x;
-	/* vvt_target1: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61d_megasquirt_gp45.vvt_target1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x61d_megasquirt_gp45_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x61d_megasquirt_gp45(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* vvt_target2: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x61d_megasquirt_gp45.vvt_target2 = x;
-	/* vvt_target3: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x61d_megasquirt_gp45.vvt_target3 = x;
-	/* vvt_target4: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x61d_megasquirt_gp45.vvt_target4 = x;
-	/* vvt_target1: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x61d_megasquirt_gp45.vvt_target1 = x;
-	o->can_0x61d_megasquirt_gp45_rx = 1;
-	o->can_0x61d_megasquirt_gp45_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x61d_vvt_target2(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61d_megasquirt_gp45.vvt_target2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61d_vvt_target2(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61d_megasquirt_gp45.vvt_target2 = in;
-	return 0;
-}
-
-int decode_can_0x61d_vvt_target3(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61d_megasquirt_gp45.vvt_target3);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61d_vvt_target3(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61d_megasquirt_gp45.vvt_target3 = in;
-	return 0;
-}
-
-int decode_can_0x61d_vvt_target4(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61d_megasquirt_gp45.vvt_target4);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61d_vvt_target4(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61d_megasquirt_gp45.vvt_target4 = in;
-	return 0;
-}
-
-int decode_can_0x61d_vvt_target1(const can_obj_ksu_dbc_h_t *o, int16_t *out) {
-	assert(o);
-	assert(out);
-	int16_t rval = (int16_t)(o->can_0x61d_megasquirt_gp45.vvt_target1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61d_vvt_target1(can_obj_ksu_dbc_h_t *o, int16_t in) {
-	assert(o);
-	o->can_0x61d_megasquirt_gp45.vvt_target1 = in;
-	return 0;
-}
-
-int print_can_0x61d_megasquirt_gp45(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "vvt_target2 = (wire: %.0f)\n", (double)(o->can_0x61d_megasquirt_gp45.vvt_target2)));
-	r = print_helper(r, fprintf(output, "vvt_target3 = (wire: %.0f)\n", (double)(o->can_0x61d_megasquirt_gp45.vvt_target3)));
-	r = print_helper(r, fprintf(output, "vvt_target4 = (wire: %.0f)\n", (double)(o->can_0x61d_megasquirt_gp45.vvt_target4)));
-	r = print_helper(r, fprintf(output, "vvt_target1 = (wire: %.0f)\n", (double)(o->can_0x61d_megasquirt_gp45.vvt_target1)));
-	return r;
-}
-
-static int pack_can_0x61e_megasquirt_gp46(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* inj_timing_pri: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61e_megasquirt_gp46.inj_timing_pri)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* inj_timing_sec: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61e_megasquirt_gp46.inj_timing_sec)) & 0xffff;
-	m |= x;
-	/* vvt_duty4: start-bit 31, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x61e_megasquirt_gp46.vvt_duty4)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* vvt_duty3: start-bit 23, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x61e_megasquirt_gp46.vvt_duty3)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* vvt_duty2: start-bit 15, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x61e_megasquirt_gp46.vvt_duty2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* vvt_duty1: start-bit 7, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x61e_megasquirt_gp46.vvt_duty1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x61e_megasquirt_gp46_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x61e_megasquirt_gp46(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* inj_timing_pri: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x61e_megasquirt_gp46.inj_timing_pri = x;
-	/* inj_timing_sec: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x61e_megasquirt_gp46.inj_timing_sec = x;
-	/* vvt_duty4: start-bit 31, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x61e_megasquirt_gp46.vvt_duty4 = x;
-	/* vvt_duty3: start-bit 23, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x61e_megasquirt_gp46.vvt_duty3 = x;
-	/* vvt_duty2: start-bit 15, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x61e_megasquirt_gp46.vvt_duty2 = x;
-	/* vvt_duty1: start-bit 7, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x61e_megasquirt_gp46.vvt_duty1 = x;
-	o->can_0x61e_megasquirt_gp46_rx = 1;
-	o->can_0x61e_megasquirt_gp46_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x61e_inj_timing_pri(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61e_megasquirt_gp46.inj_timing_pri);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61e_inj_timing_pri(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61e_megasquirt_gp46.inj_timing_pri = in;
-	return 0;
-}
-
-int decode_can_0x61e_inj_timing_sec(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61e_megasquirt_gp46.inj_timing_sec);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61e_inj_timing_sec(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61e_megasquirt_gp46.inj_timing_sec = in;
-	return 0;
-}
-
-int decode_can_0x61e_vvt_duty4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61e_megasquirt_gp46.vvt_duty4);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61e_vvt_duty4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x61e_megasquirt_gp46.vvt_duty4 = in;
-	return 0;
-}
-
-int decode_can_0x61e_vvt_duty3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61e_megasquirt_gp46.vvt_duty3);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61e_vvt_duty3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x61e_megasquirt_gp46.vvt_duty3 = in;
-	return 0;
-}
-
-int decode_can_0x61e_vvt_duty2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61e_megasquirt_gp46.vvt_duty2);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61e_vvt_duty2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x61e_megasquirt_gp46.vvt_duty2 = in;
-	return 0;
-}
-
-int decode_can_0x61e_vvt_duty1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61e_megasquirt_gp46.vvt_duty1);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61e_vvt_duty1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x61e_megasquirt_gp46.vvt_duty1 = in;
-	return 0;
-}
-
-int print_can_0x61e_megasquirt_gp46(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "inj_timing_pri = (wire: %.0f)\n", (double)(o->can_0x61e_megasquirt_gp46.inj_timing_pri)));
-	r = print_helper(r, fprintf(output, "inj_timing_sec = (wire: %.0f)\n", (double)(o->can_0x61e_megasquirt_gp46.inj_timing_sec)));
-	r = print_helper(r, fprintf(output, "vvt_duty4 = (wire: %.0f)\n", (double)(o->can_0x61e_megasquirt_gp46.vvt_duty4)));
-	r = print_helper(r, fprintf(output, "vvt_duty3 = (wire: %.0f)\n", (double)(o->can_0x61e_megasquirt_gp46.vvt_duty3)));
-	r = print_helper(r, fprintf(output, "vvt_duty2 = (wire: %.0f)\n", (double)(o->can_0x61e_megasquirt_gp46.vvt_duty2)));
-	r = print_helper(r, fprintf(output, "vvt_duty1 = (wire: %.0f)\n", (double)(o->can_0x61e_megasquirt_gp46.vvt_duty1)));
-	return r;
-}
-
-static int pack_can_0x61f_megasquirt_gp47(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* tps_accel: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61f_megasquirt_gp47.tps_accel)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* SS1: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61f_megasquirt_gp47.SS1)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* SS2: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x61f_megasquirt_gp47.SS2)) & 0xffff;
-	m |= x;
-	/* fuel_pct: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x61f_megasquirt_gp47.fuel_pct)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x61f_megasquirt_gp47_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x61f_megasquirt_gp47(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* tps_accel: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x61f_megasquirt_gp47.tps_accel = x;
-	/* SS1: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x61f_megasquirt_gp47.SS1 = x;
-	/* SS2: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x61f_megasquirt_gp47.SS2 = x;
-	/* fuel_pct: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x61f_megasquirt_gp47.fuel_pct = x;
-	o->can_0x61f_megasquirt_gp47_rx = 1;
-	o->can_0x61f_megasquirt_gp47_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x61f_tps_accel(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61f_megasquirt_gp47.tps_accel);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61f_tps_accel(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61f_megasquirt_gp47.tps_accel = in;
-	return 0;
-}
-
-int decode_can_0x61f_SS1(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x61f_megasquirt_gp47.SS1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61f_SS1(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x61f_megasquirt_gp47.SS1 = in;
-	return 0;
-}
-
-int decode_can_0x61f_SS2(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x61f_megasquirt_gp47.SS2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61f_SS2(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x61f_megasquirt_gp47.SS2 = in;
-	return 0;
-}
-
-int decode_can_0x61f_fuel_pct(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x61f_megasquirt_gp47.fuel_pct);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x61f_fuel_pct(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x61f_megasquirt_gp47.fuel_pct = in;
-	return 0;
-}
-
-int print_can_0x61f_megasquirt_gp47(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "tps_accel = (wire: %.0f)\n", (double)(o->can_0x61f_megasquirt_gp47.tps_accel)));
-	r = print_helper(r, fprintf(output, "SS1 = (wire: %.0f)\n", (double)(o->can_0x61f_megasquirt_gp47.SS1)));
-	r = print_helper(r, fprintf(output, "SS2 = (wire: %.0f)\n", (double)(o->can_0x61f_megasquirt_gp47.SS2)));
-	r = print_helper(r, fprintf(output, "fuel_pct = (wire: %.0f)\n", (double)(o->can_0x61f_megasquirt_gp47.fuel_pct)));
-	return r;
-}
-
-static int pack_can_0x620_megasquirt_gp48(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* knock_cyl2: start-bit 15, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* knock_cyl3: start-bit 23, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl3)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* knock_cyl4: start-bit 31, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl4)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* knock_cyl5: start-bit 39, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl5)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* knock_cyl6: start-bit 47, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl6)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* knock_cyl7: start-bit 55, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl7)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* knock_cyl8: start-bit 63, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl8)) & 0xff;
-	m |= x;
-	/* knock_cyl1: start-bit 7, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x620_megasquirt_gp48.knock_cyl1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x620_megasquirt_gp48_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x620_megasquirt_gp48(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* knock_cyl2: start-bit 15, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl2 = x;
-	/* knock_cyl3: start-bit 23, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl3 = x;
-	/* knock_cyl4: start-bit 31, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl4 = x;
-	/* knock_cyl5: start-bit 39, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl5 = x;
-	/* knock_cyl6: start-bit 47, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl6 = x;
-	/* knock_cyl7: start-bit 55, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl7 = x;
-	/* knock_cyl8: start-bit 63, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = m & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl8 = x;
-	/* knock_cyl1: start-bit 7, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x620_megasquirt_gp48.knock_cyl1 = x;
-	o->can_0x620_megasquirt_gp48_rx = 1;
-	o->can_0x620_megasquirt_gp48_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x620_knock_cyl2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl2);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl2 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl3);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl3 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl4);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl4 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl5(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl5);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl5(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl5 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl6(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl6);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl6(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl6 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl7(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl7);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl7(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl7 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl8(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl8);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl8(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl8 = in;
-	return 0;
-}
-
-int decode_can_0x620_knock_cyl1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x620_megasquirt_gp48.knock_cyl1);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x620_knock_cyl1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x620_megasquirt_gp48.knock_cyl1 = in;
-	return 0;
-}
-
-int print_can_0x620_megasquirt_gp48(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "knock_cyl2 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl2)));
-	r = print_helper(r, fprintf(output, "knock_cyl3 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl3)));
-	r = print_helper(r, fprintf(output, "knock_cyl4 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl4)));
-	r = print_helper(r, fprintf(output, "knock_cyl5 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl5)));
-	r = print_helper(r, fprintf(output, "knock_cyl6 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl6)));
-	r = print_helper(r, fprintf(output, "knock_cyl7 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl7)));
-	r = print_helper(r, fprintf(output, "knock_cyl8 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl8)));
-	r = print_helper(r, fprintf(output, "knock_cyl1 = (wire: %.0f)\n", (double)(o->can_0x620_megasquirt_gp48.knock_cyl1)));
-	return r;
-}
-
-static int pack_can_0x621_megasquirt_gp49(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* knock_cyl10: start-bit 15, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl10)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* knock_cyl11: start-bit 23, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl11)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* knock_cyl12: start-bit 31, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl12)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* knock_cyl13: start-bit 39, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl13)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* knock_cyl14: start-bit 47, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl14)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* knock_cyl15: start-bit 55, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl15)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* knock_cyl16: start-bit 63, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl16)) & 0xff;
-	m |= x;
-	/* knock_cyl9: start-bit 7, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = ((uint8_t)(o->can_0x621_megasquirt_gp49.knock_cyl9)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x621_megasquirt_gp49_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x621_megasquirt_gp49(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* knock_cyl10: start-bit 15, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl10 = x;
-	/* knock_cyl11: start-bit 23, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl11 = x;
-	/* knock_cyl12: start-bit 31, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl12 = x;
-	/* knock_cyl13: start-bit 39, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl13 = x;
-	/* knock_cyl14: start-bit 47, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl14 = x;
-	/* knock_cyl15: start-bit 55, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl15 = x;
-	/* knock_cyl16: start-bit 63, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = m & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl16 = x;
-	/* knock_cyl9: start-bit 7, length 8, endianess motorola, scaling 0.4, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x621_megasquirt_gp49.knock_cyl9 = x;
-	o->can_0x621_megasquirt_gp49_rx = 1;
-	o->can_0x621_megasquirt_gp49_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x621_knock_cyl10(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl10);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl10(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl10 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl11(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl11);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl11(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl11 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl12(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl12);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl12(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl12 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl13(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl13);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl13(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl13 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl14(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl14);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl14(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl14 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl15(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl15);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl15(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl15 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl16(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl16);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl16(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl16 = in;
-	return 0;
-}
-
-int decode_can_0x621_knock_cyl9(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x621_megasquirt_gp49.knock_cyl9);
-	rval *= 0.4;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x621_knock_cyl9(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.5;
-	o->can_0x621_megasquirt_gp49.knock_cyl9 = in;
-	return 0;
-}
-
-int print_can_0x621_megasquirt_gp49(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "knock_cyl10 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl10)));
-	r = print_helper(r, fprintf(output, "knock_cyl11 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl11)));
-	r = print_helper(r, fprintf(output, "knock_cyl12 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl12)));
-	r = print_helper(r, fprintf(output, "knock_cyl13 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl13)));
-	r = print_helper(r, fprintf(output, "knock_cyl14 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl14)));
-	r = print_helper(r, fprintf(output, "knock_cyl15 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl15)));
-	r = print_helper(r, fprintf(output, "knock_cyl16 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl16)));
-	r = print_helper(r, fprintf(output, "knock_cyl9 = (wire: %.0f)\n", (double)(o->can_0x621_megasquirt_gp49.knock_cyl9)));
-	return r;
-}
-
-static int pack_can_0x622_megasquirt_gp50(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* total_accel: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x622_megasquirt_gp50.total_accel)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* launch_timer: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x622_megasquirt_gp50.launch_timer)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* launch_retard: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x622_megasquirt_gp50.launch_retard)) & 0xffff;
-	m |= x;
-	/* map_accel: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x622_megasquirt_gp50.map_accel)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x622_megasquirt_gp50_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x622_megasquirt_gp50(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* total_accel: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x622_megasquirt_gp50.total_accel = x;
-	/* launch_timer: start-bit 39, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x622_megasquirt_gp50.launch_timer = x;
-	/* launch_retard: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x622_megasquirt_gp50.launch_retard = x;
-	/* map_accel: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x622_megasquirt_gp50.map_accel = x;
-	o->can_0x622_megasquirt_gp50_rx = 1;
-	o->can_0x622_megasquirt_gp50_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x622_total_accel(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x622_megasquirt_gp50.total_accel);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x622_total_accel(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x622_megasquirt_gp50.total_accel = in;
-	return 0;
-}
-
-int decode_can_0x622_launch_timer(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x622_megasquirt_gp50.launch_timer);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x622_launch_timer(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x622_megasquirt_gp50.launch_timer = in;
-	return 0;
-}
-
-int decode_can_0x622_launch_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x622_megasquirt_gp50.launch_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x622_launch_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x622_megasquirt_gp50.launch_retard = in;
-	return 0;
-}
-
-int decode_can_0x622_map_accel(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x622_megasquirt_gp50.map_accel);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x622_map_accel(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x622_megasquirt_gp50.map_accel = in;
-	return 0;
-}
-
-int print_can_0x622_megasquirt_gp50(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "total_accel = (wire: %.0f)\n", (double)(o->can_0x622_megasquirt_gp50.total_accel)));
-	r = print_helper(r, fprintf(output, "launch_timer = (wire: %.0f)\n", (double)(o->can_0x622_megasquirt_gp50.launch_timer)));
-	r = print_helper(r, fprintf(output, "launch_retard = (wire: %.0f)\n", (double)(o->can_0x622_megasquirt_gp50.launch_retard)));
-	r = print_helper(r, fprintf(output, "map_accel = (wire: %.0f)\n", (double)(o->can_0x622_megasquirt_gp50.map_accel)));
-	return r;
-}
-
-static int pack_can_0x623_megasquirt_gp51(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* portb: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.portb)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* porteh: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.porteh)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* portk: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.portk)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* portmj: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.portmj)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* portp: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.portp)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* portt: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.portt)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* cel_errorcode: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.cel_errorcode)) & 0xff;
-	m |= x;
-	/* porta: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x623_megasquirt_gp51.porta)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x623_megasquirt_gp51_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x623_megasquirt_gp51(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* portb: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x623_megasquirt_gp51.portb = x;
-	/* porteh: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x623_megasquirt_gp51.porteh = x;
-	/* portk: start-bit 31, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x623_megasquirt_gp51.portk = x;
-	/* portmj: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x623_megasquirt_gp51.portmj = x;
-	/* portp: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x623_megasquirt_gp51.portp = x;
-	/* portt: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x623_megasquirt_gp51.portt = x;
-	/* cel_errorcode: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x623_megasquirt_gp51.cel_errorcode = x;
-	/* porta: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x623_megasquirt_gp51.porta = x;
-	o->can_0x623_megasquirt_gp51_rx = 1;
-	o->can_0x623_megasquirt_gp51_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x623_portb(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.portb);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_portb(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.portb = in;
-	return 0;
-}
-
-int decode_can_0x623_porteh(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.porteh);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_porteh(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.porteh = in;
-	return 0;
-}
-
-int decode_can_0x623_portk(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.portk);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_portk(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.portk = in;
-	return 0;
-}
-
-int decode_can_0x623_portmj(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.portmj);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_portmj(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.portmj = in;
-	return 0;
-}
-
-int decode_can_0x623_portp(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.portp);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_portp(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.portp = in;
-	return 0;
-}
-
-int decode_can_0x623_portt(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.portt);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_portt(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.portt = in;
-	return 0;
-}
-
-int decode_can_0x623_cel_errorcode(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.cel_errorcode);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_cel_errorcode(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.cel_errorcode = in;
-	return 0;
-}
-
-int decode_can_0x623_porta(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x623_megasquirt_gp51.porta);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x623_porta(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x623_megasquirt_gp51.porta = in;
-	return 0;
-}
-
-int print_can_0x623_megasquirt_gp51(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "portb = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.portb)));
-	r = print_helper(r, fprintf(output, "porteh = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.porteh)));
-	r = print_helper(r, fprintf(output, "portk = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.portk)));
-	r = print_helper(r, fprintf(output, "portmj = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.portmj)));
-	r = print_helper(r, fprintf(output, "portp = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.portp)));
-	r = print_helper(r, fprintf(output, "portt = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.portt)));
-	r = print_helper(r, fprintf(output, "cel_errorcode = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.cel_errorcode)));
-	r = print_helper(r, fprintf(output, "porta = (wire: %.0f)\n", (double)(o->can_0x623_megasquirt_gp51.porta)));
-	return r;
-}
-
-static int pack_can_0x624_megasquirt_gp52(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* fuelflow: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x624_megasquirt_gp52.fuelflow)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* fuelcons: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x624_megasquirt_gp52.fuelcons)) & 0xffff;
-	m |= x;
-	/* knk_rtd: start-bit 31, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x624_megasquirt_gp52.knk_rtd)) & 0xff;
-	x <<= 32; 
-	m |= x;
-	/* canout: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x624_megasquirt_gp52.canout)) & 0xff;
-	x <<= 40; 
-	m |= x;
-	/* canin2: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x624_megasquirt_gp52.canin2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* canin1: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x624_megasquirt_gp52.canin1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x624_megasquirt_gp52_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x624_megasquirt_gp52(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* fuelflow: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x624_megasquirt_gp52.fuelflow = x;
-	/* fuelcons: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x624_megasquirt_gp52.fuelcons = x;
-	/* knk_rtd: start-bit 31, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xff;
-	o->can_0x624_megasquirt_gp52.knk_rtd = x;
-	/* canout: start-bit 23, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 40) & 0xff;
-	o->can_0x624_megasquirt_gp52.canout = x;
-	/* canin2: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x624_megasquirt_gp52.canin2 = x;
-	/* canin1: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x624_megasquirt_gp52.canin1 = x;
-	o->can_0x624_megasquirt_gp52_rx = 1;
-	o->can_0x624_megasquirt_gp52_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x624_fuelflow(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x624_megasquirt_gp52.fuelflow);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x624_fuelflow(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x624_megasquirt_gp52.fuelflow = in;
-	return 0;
-}
-
-int decode_can_0x624_fuelcons(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x624_megasquirt_gp52.fuelcons);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x624_fuelcons(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x624_megasquirt_gp52.fuelcons = in;
-	return 0;
-}
-
-int decode_can_0x624_knk_rtd(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x624_megasquirt_gp52.knk_rtd);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x624_knk_rtd(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x624_megasquirt_gp52.knk_rtd = in;
-	return 0;
-}
-
-int decode_can_0x624_canout(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x624_megasquirt_gp52.canout);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x624_canout(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x624_megasquirt_gp52.canout = in;
-	return 0;
-}
-
-int decode_can_0x624_canin2(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x624_megasquirt_gp52.canin2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x624_canin2(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x624_megasquirt_gp52.canin2 = in;
-	return 0;
-}
-
-int decode_can_0x624_canin1(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x624_megasquirt_gp52.canin1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x624_canin1(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x624_megasquirt_gp52.canin1 = in;
-	return 0;
-}
-
-int print_can_0x624_megasquirt_gp52(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "fuelflow = (wire: %.0f)\n", (double)(o->can_0x624_megasquirt_gp52.fuelflow)));
-	r = print_helper(r, fprintf(output, "fuelcons = (wire: %.0f)\n", (double)(o->can_0x624_megasquirt_gp52.fuelcons)));
-	r = print_helper(r, fprintf(output, "knk_rtd = (wire: %.0f)\n", (double)(o->can_0x624_megasquirt_gp52.knk_rtd)));
-	r = print_helper(r, fprintf(output, "canout = (wire: %.0f)\n", (double)(o->can_0x624_megasquirt_gp52.canout)));
-	r = print_helper(r, fprintf(output, "canin2 = (wire: %.0f)\n", (double)(o->can_0x624_megasquirt_gp52.canin2)));
-	r = print_helper(r, fprintf(output, "canin1 = (wire: %.0f)\n", (double)(o->can_0x624_megasquirt_gp52.canin1)));
-	return r;
-}
-
-static int pack_can_0x625_megasquirt_gp53(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* fuel_press2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x625_megasquirt_gp53.fuel_press2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* fuel_temp1: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x625_megasquirt_gp53.fuel_temp1)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* fuel_temp2: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x625_megasquirt_gp53.fuel_temp2)) & 0xffff;
-	m |= x;
-	/* fuel_press1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x625_megasquirt_gp53.fuel_press1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x625_megasquirt_gp53_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x625_megasquirt_gp53(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* fuel_press2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x625_megasquirt_gp53.fuel_press2 = x;
-	/* fuel_temp1: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x625_megasquirt_gp53.fuel_temp1 = x;
-	/* fuel_temp2: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x625_megasquirt_gp53.fuel_temp2 = x;
-	/* fuel_press1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x625_megasquirt_gp53.fuel_press1 = x;
-	o->can_0x625_megasquirt_gp53_rx = 1;
-	o->can_0x625_megasquirt_gp53_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x625_fuel_press2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x625_megasquirt_gp53.fuel_press2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x625_fuel_press2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x625_megasquirt_gp53.fuel_press2 = in;
-	return 0;
-}
-
-int decode_can_0x625_fuel_temp1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x625_megasquirt_gp53.fuel_temp1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x625_fuel_temp1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x625_megasquirt_gp53.fuel_temp1 = in;
-	return 0;
-}
-
-int decode_can_0x625_fuel_temp2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x625_megasquirt_gp53.fuel_temp2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x625_fuel_temp2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x625_megasquirt_gp53.fuel_temp2 = in;
-	return 0;
-}
-
-int decode_can_0x625_fuel_press1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x625_megasquirt_gp53.fuel_press1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x625_fuel_press1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x625_megasquirt_gp53.fuel_press1 = in;
-	return 0;
-}
-
-int print_can_0x625_megasquirt_gp53(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "fuel_press2 = (wire: %.0f)\n", (double)(o->can_0x625_megasquirt_gp53.fuel_press2)));
-	r = print_helper(r, fprintf(output, "fuel_temp1 = (wire: %.0f)\n", (double)(o->can_0x625_megasquirt_gp53.fuel_temp1)));
-	r = print_helper(r, fprintf(output, "fuel_temp2 = (wire: %.0f)\n", (double)(o->can_0x625_megasquirt_gp53.fuel_temp2)));
-	r = print_helper(r, fprintf(output, "fuel_press1 = (wire: %.0f)\n", (double)(o->can_0x625_megasquirt_gp53.fuel_press1)));
-	return r;
-}
-
-static int pack_can_0x626_megasquirt_gp54(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* cel_status: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x626_megasquirt_gp54.cel_status)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* batt_cur: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x626_megasquirt_gp54.batt_cur)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	/* alt_duty: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x626_megasquirt_gp54.alt_duty)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* load_duty: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x626_megasquirt_gp54.load_duty)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	/* alt_targv: start-bit 63, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x626_megasquirt_gp54.alt_targv)) & 0xff;
-	m |= x;
-	/* fp_duty: start-bit 39, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x626_megasquirt_gp54.fp_duty)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x626_megasquirt_gp54_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x626_megasquirt_gp54(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* cel_status: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x626_megasquirt_gp54.cel_status = x;
-	/* batt_cur: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x626_megasquirt_gp54.batt_cur = x;
-	/* alt_duty: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x626_megasquirt_gp54.alt_duty = x;
-	/* load_duty: start-bit 55, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x626_megasquirt_gp54.load_duty = x;
-	/* alt_targv: start-bit 63, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xff;
-	o->can_0x626_megasquirt_gp54.alt_targv = x;
-	/* fp_duty: start-bit 39, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x626_megasquirt_gp54.fp_duty = x;
-	o->can_0x626_megasquirt_gp54_rx = 1;
-	o->can_0x626_megasquirt_gp54_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x626_cel_status(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x626_megasquirt_gp54.cel_status);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x626_cel_status(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x626_megasquirt_gp54.cel_status = in;
-	return 0;
-}
-
-int decode_can_0x626_batt_cur(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x626_megasquirt_gp54.batt_cur);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x626_batt_cur(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x626_megasquirt_gp54.batt_cur = in;
-	return 0;
-}
-
-int decode_can_0x626_alt_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x626_megasquirt_gp54.alt_duty);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x626_alt_duty(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x626_megasquirt_gp54.alt_duty = in;
-	return 0;
-}
-
-int decode_can_0x626_load_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x626_megasquirt_gp54.load_duty);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x626_load_duty(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x626_megasquirt_gp54.load_duty = in;
-	return 0;
-}
-
-int decode_can_0x626_alt_targv(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x626_megasquirt_gp54.alt_targv);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x626_alt_targv(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x626_megasquirt_gp54.alt_targv = in;
-	return 0;
-}
-
-int decode_can_0x626_fp_duty(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x626_megasquirt_gp54.fp_duty);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x626_fp_duty(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x626_megasquirt_gp54.fp_duty = in;
-	return 0;
-}
-
-int print_can_0x626_megasquirt_gp54(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "cel_status = (wire: %.0f)\n", (double)(o->can_0x626_megasquirt_gp54.cel_status)));
-	r = print_helper(r, fprintf(output, "batt_cur = (wire: %.0f)\n", (double)(o->can_0x626_megasquirt_gp54.batt_cur)));
-	r = print_helper(r, fprintf(output, "alt_duty = (wire: %.0f)\n", (double)(o->can_0x626_megasquirt_gp54.alt_duty)));
-	r = print_helper(r, fprintf(output, "load_duty = (wire: %.0f)\n", (double)(o->can_0x626_megasquirt_gp54.load_duty)));
-	r = print_helper(r, fprintf(output, "alt_targv = (wire: %.0f)\n", (double)(o->can_0x626_megasquirt_gp54.alt_targv)));
-	r = print_helper(r, fprintf(output, "fp_duty = (wire: %.0f)\n", (double)(o->can_0x626_megasquirt_gp54.fp_duty)));
-	return r;
-}
-
-static int pack_can_0x627_megasquirt_gp55(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* fueltemp_cor: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x627_megasquirt_gp55.fueltemp_cor)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* fuelpress_cor: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x627_megasquirt_gp55.fuelpress_cor)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* looptime: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x627_megasquirt_gp55.looptime)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	/* sp1: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x627_megasquirt_gp55.sp1)) & 0xff;
-	m |= x;
-	/* ltt_cor: start-bit 55, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint8_t)(o->can_0x627_megasquirt_gp55.ltt_cor)) & 0xff;
-	x <<= 8; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x627_megasquirt_gp55_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x627_megasquirt_gp55(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* fueltemp_cor: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x627_megasquirt_gp55.fueltemp_cor = x;
-	/* fuelpress_cor: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x627_megasquirt_gp55.fuelpress_cor = x;
-	/* looptime: start-bit 7, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x627_megasquirt_gp55.looptime = x;
-	/* sp1: start-bit 63, length 8, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xff;
-	o->can_0x627_megasquirt_gp55.sp1 = x;
-	/* ltt_cor: start-bit 55, length 8, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 8) & 0xff;
-	o->can_0x627_megasquirt_gp55.ltt_cor = x;
-	o->can_0x627_megasquirt_gp55_rx = 1;
-	o->can_0x627_megasquirt_gp55_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x627_fueltemp_cor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x627_megasquirt_gp55.fueltemp_cor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x627_fueltemp_cor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x627_megasquirt_gp55.fueltemp_cor = in;
-	return 0;
-}
-
-int decode_can_0x627_fuelpress_cor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x627_megasquirt_gp55.fuelpress_cor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x627_fuelpress_cor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x627_megasquirt_gp55.fuelpress_cor = in;
-	return 0;
-}
-
-int decode_can_0x627_looptime(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x627_megasquirt_gp55.looptime);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x627_looptime(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x627_megasquirt_gp55.looptime = in;
-	return 0;
-}
-
-int decode_can_0x627_sp1(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x627_megasquirt_gp55.sp1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x627_sp1(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x627_megasquirt_gp55.sp1 = in;
-	return 0;
-}
-
-int decode_can_0x627_ltt_cor(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x627_megasquirt_gp55.ltt_cor);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x627_ltt_cor(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x627_megasquirt_gp55.ltt_cor = in;
-	return 0;
-}
-
-int print_can_0x627_megasquirt_gp55(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "fueltemp_cor = (wire: %.0f)\n", (double)(o->can_0x627_megasquirt_gp55.fueltemp_cor)));
-	r = print_helper(r, fprintf(output, "fuelpress_cor = (wire: %.0f)\n", (double)(o->can_0x627_megasquirt_gp55.fuelpress_cor)));
-	r = print_helper(r, fprintf(output, "looptime = (wire: %.0f)\n", (double)(o->can_0x627_megasquirt_gp55.looptime)));
-	r = print_helper(r, fprintf(output, "sp1 = (wire: %.0f)\n", (double)(o->can_0x627_megasquirt_gp55.sp1)));
-	r = print_helper(r, fprintf(output, "ltt_cor = (wire: %.0f)\n", (double)(o->can_0x627_megasquirt_gp55.ltt_cor)));
-	return r;
-}
-
-static int pack_can_0x628_megasquirt_gp56(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* cel_retard: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x628_megasquirt_gp56.cel_retard)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* fc_retard: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x628_megasquirt_gp56.fc_retard)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* als_addfuel: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x628_megasquirt_gp56.als_addfuel)) & 0xffff;
-	m |= x;
-	/* tc_retard: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x628_megasquirt_gp56.tc_retard)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x628_megasquirt_gp56_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x628_megasquirt_gp56(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* cel_retard: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x628_megasquirt_gp56.cel_retard = x;
-	/* fc_retard: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x628_megasquirt_gp56.fc_retard = x;
-	/* als_addfuel: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x628_megasquirt_gp56.als_addfuel = x;
-	/* tc_retard: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x628_megasquirt_gp56.tc_retard = x;
-	o->can_0x628_megasquirt_gp56_rx = 1;
-	o->can_0x628_megasquirt_gp56_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x628_cel_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x628_megasquirt_gp56.cel_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x628_cel_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x628_megasquirt_gp56.cel_retard = in;
-	return 0;
-}
-
-int decode_can_0x628_fc_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x628_megasquirt_gp56.fc_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x628_fc_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x628_megasquirt_gp56.fc_retard = in;
-	return 0;
-}
-
-int decode_can_0x628_als_addfuel(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x628_megasquirt_gp56.als_addfuel);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x628_als_addfuel(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x628_megasquirt_gp56.als_addfuel = in;
-	return 0;
-}
-
-int decode_can_0x628_tc_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x628_megasquirt_gp56.tc_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x628_tc_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x628_megasquirt_gp56.tc_retard = in;
-	return 0;
-}
-
-int print_can_0x628_megasquirt_gp56(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "cel_retard = (wire: %.0f)\n", (double)(o->can_0x628_megasquirt_gp56.cel_retard)));
-	r = print_helper(r, fprintf(output, "fc_retard = (wire: %.0f)\n", (double)(o->can_0x628_megasquirt_gp56.fc_retard)));
-	r = print_helper(r, fprintf(output, "als_addfuel = (wire: %.0f)\n", (double)(o->can_0x628_megasquirt_gp56.als_addfuel)));
-	r = print_helper(r, fprintf(output, "tc_retard = (wire: %.0f)\n", (double)(o->can_0x628_megasquirt_gp56.tc_retard)));
-	return r;
-}
-
-static int pack_can_0x629_megasquirt_gp57(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* idle_cor_advance: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x629_megasquirt_gp57.idle_cor_advance)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* mat_retard: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x629_megasquirt_gp57.mat_retard)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* flex_advance: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x629_megasquirt_gp57.flex_advance)) & 0xffff;
-	m |= x;
-	/* base_advance: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x629_megasquirt_gp57.base_advance)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x629_megasquirt_gp57_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x629_megasquirt_gp57(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* idle_cor_advance: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x629_megasquirt_gp57.idle_cor_advance = x;
-	/* mat_retard: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x629_megasquirt_gp57.mat_retard = x;
-	/* flex_advance: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x629_megasquirt_gp57.flex_advance = x;
-	/* base_advance: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x629_megasquirt_gp57.base_advance = x;
-	o->can_0x629_megasquirt_gp57_rx = 1;
-	o->can_0x629_megasquirt_gp57_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x629_idle_cor_advance(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x629_megasquirt_gp57.idle_cor_advance);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x629_idle_cor_advance(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x629_megasquirt_gp57.idle_cor_advance = in;
-	return 0;
-}
-
-int decode_can_0x629_mat_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x629_megasquirt_gp57.mat_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x629_mat_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x629_megasquirt_gp57.mat_retard = in;
-	return 0;
-}
-
-int decode_can_0x629_flex_advance(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x629_megasquirt_gp57.flex_advance);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x629_flex_advance(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x629_megasquirt_gp57.flex_advance = in;
-	return 0;
-}
-
-int decode_can_0x629_base_advance(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x629_megasquirt_gp57.base_advance);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x629_base_advance(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x629_megasquirt_gp57.base_advance = in;
-	return 0;
-}
-
-int print_can_0x629_megasquirt_gp57(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "idle_cor_advance = (wire: %.0f)\n", (double)(o->can_0x629_megasquirt_gp57.idle_cor_advance)));
-	r = print_helper(r, fprintf(output, "mat_retard = (wire: %.0f)\n", (double)(o->can_0x629_megasquirt_gp57.mat_retard)));
-	r = print_helper(r, fprintf(output, "flex_advance = (wire: %.0f)\n", (double)(o->can_0x629_megasquirt_gp57.flex_advance)));
-	r = print_helper(r, fprintf(output, "base_advance = (wire: %.0f)\n", (double)(o->can_0x629_megasquirt_gp57.base_advance)));
-	return r;
-}
-
-static int pack_can_0x62a_megasquirt_gp58(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* adv2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62a_megasquirt_gp58.adv2)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* adv3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62a_megasquirt_gp58.adv3)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* adv4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62a_megasquirt_gp58.adv4)) & 0xffff;
-	m |= x;
-	/* adv1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62a_megasquirt_gp58.adv1)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x62a_megasquirt_gp58_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x62a_megasquirt_gp58(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* adv2: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x62a_megasquirt_gp58.adv2 = x;
-	/* adv3: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x62a_megasquirt_gp58.adv3 = x;
-	/* adv4: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x62a_megasquirt_gp58.adv4 = x;
-	/* adv1: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x62a_megasquirt_gp58.adv1 = x;
-	o->can_0x62a_megasquirt_gp58_rx = 1;
-	o->can_0x62a_megasquirt_gp58_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x62a_adv2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62a_megasquirt_gp58.adv2);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62a_adv2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62a_megasquirt_gp58.adv2 = in;
-	return 0;
-}
-
-int decode_can_0x62a_adv3(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62a_megasquirt_gp58.adv3);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62a_adv3(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62a_megasquirt_gp58.adv3 = in;
-	return 0;
-}
-
-int decode_can_0x62a_adv4(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62a_megasquirt_gp58.adv4);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62a_adv4(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62a_megasquirt_gp58.adv4 = in;
-	return 0;
-}
-
-int decode_can_0x62a_adv1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62a_megasquirt_gp58.adv1);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62a_adv1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62a_megasquirt_gp58.adv1 = in;
-	return 0;
-}
-
-int print_can_0x62a_megasquirt_gp58(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "adv2 = (wire: %.0f)\n", (double)(o->can_0x62a_megasquirt_gp58.adv2)));
-	r = print_helper(r, fprintf(output, "adv3 = (wire: %.0f)\n", (double)(o->can_0x62a_megasquirt_gp58.adv3)));
-	r = print_helper(r, fprintf(output, "adv4 = (wire: %.0f)\n", (double)(o->can_0x62a_megasquirt_gp58.adv4)));
-	r = print_helper(r, fprintf(output, "adv1 = (wire: %.0f)\n", (double)(o->can_0x62a_megasquirt_gp58.adv1)));
-	return r;
-}
-
-static int pack_can_0x62b_megasquirt_gp59(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* als_timing: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62b_megasquirt_gp59.als_timing)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* ext_advance: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62b_megasquirt_gp59.ext_advance)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* deadtime1: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = ((uint16_t)(o->can_0x62b_megasquirt_gp59.deadtime1)) & 0xffff;
-	m |= x;
-	/* revlim_retard: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62b_megasquirt_gp59.revlim_retard)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x62b_megasquirt_gp59_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x62b_megasquirt_gp59(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* als_timing: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x62b_megasquirt_gp59.als_timing = x;
-	/* ext_advance: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x62b_megasquirt_gp59.ext_advance = x;
-	/* deadtime1: start-bit 55, length 16, endianess motorola, scaling 0.001, offset 0 */
-	x = m & 0xffff;
-	o->can_0x62b_megasquirt_gp59.deadtime1 = x;
-	/* revlim_retard: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x62b_megasquirt_gp59.revlim_retard = x;
-	o->can_0x62b_megasquirt_gp59_rx = 1;
-	o->can_0x62b_megasquirt_gp59_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x62b_als_timing(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62b_megasquirt_gp59.als_timing);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62b_als_timing(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62b_megasquirt_gp59.als_timing = in;
-	return 0;
-}
-
-int decode_can_0x62b_ext_advance(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62b_megasquirt_gp59.ext_advance);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62b_ext_advance(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62b_megasquirt_gp59.ext_advance = in;
-	return 0;
-}
-
-int decode_can_0x62b_deadtime1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62b_megasquirt_gp59.deadtime1);
-	rval *= 0.001;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62b_deadtime1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 1000;
-	o->can_0x62b_megasquirt_gp59.deadtime1 = in;
-	return 0;
-}
-
-int decode_can_0x62b_revlim_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62b_megasquirt_gp59.revlim_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62b_revlim_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62b_megasquirt_gp59.revlim_retard = in;
-	return 0;
-}
-
-int print_can_0x62b_megasquirt_gp59(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "als_timing = (wire: %.0f)\n", (double)(o->can_0x62b_megasquirt_gp59.als_timing)));
-	r = print_helper(r, fprintf(output, "ext_advance = (wire: %.0f)\n", (double)(o->can_0x62b_megasquirt_gp59.ext_advance)));
-	r = print_helper(r, fprintf(output, "deadtime1 = (wire: %.0f)\n", (double)(o->can_0x62b_megasquirt_gp59.deadtime1)));
-	r = print_helper(r, fprintf(output, "revlim_retard = (wire: %.0f)\n", (double)(o->can_0x62b_megasquirt_gp59.revlim_retard)));
-	return r;
-}
-
-static int pack_can_0x62c_megasquirt_gp60(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* step3_timing: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62c_megasquirt_gp60.step3_timing)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* vsslaunch_retard: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62c_megasquirt_gp60.vsslaunch_retard)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* cel_status2: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62c_megasquirt_gp60.cel_status2)) & 0xffff;
-	m |= x;
-	/* launch_timing: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62c_megasquirt_gp60.launch_timing)) & 0xffff;
-	x <<= 48; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x62c_megasquirt_gp60_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x62c_megasquirt_gp60(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* step3_timing: start-bit 23, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x62c_megasquirt_gp60.step3_timing = x;
-	/* vsslaunch_retard: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x62c_megasquirt_gp60.vsslaunch_retard = x;
-	/* cel_status2: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x62c_megasquirt_gp60.cel_status2 = x;
-	/* launch_timing: start-bit 7, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 48) & 0xffff;
-	o->can_0x62c_megasquirt_gp60.launch_timing = x;
-	o->can_0x62c_megasquirt_gp60_rx = 1;
-	o->can_0x62c_megasquirt_gp60_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x62c_step3_timing(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62c_megasquirt_gp60.step3_timing);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62c_step3_timing(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62c_megasquirt_gp60.step3_timing = in;
-	return 0;
-}
-
-int decode_can_0x62c_vsslaunch_retard(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62c_megasquirt_gp60.vsslaunch_retard);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62c_vsslaunch_retard(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62c_megasquirt_gp60.vsslaunch_retard = in;
-	return 0;
-}
-
-int decode_can_0x62c_cel_status2(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62c_megasquirt_gp60.cel_status2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62c_cel_status2(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62c_megasquirt_gp60.cel_status2 = in;
-	return 0;
-}
-
-int decode_can_0x62c_launch_timing(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62c_megasquirt_gp60.launch_timing);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62c_launch_timing(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62c_megasquirt_gp60.launch_timing = in;
-	return 0;
-}
-
-int print_can_0x62c_megasquirt_gp60(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "step3_timing = (wire: %.0f)\n", (double)(o->can_0x62c_megasquirt_gp60.step3_timing)));
-	r = print_helper(r, fprintf(output, "vsslaunch_retard = (wire: %.0f)\n", (double)(o->can_0x62c_megasquirt_gp60.vsslaunch_retard)));
-	r = print_helper(r, fprintf(output, "cel_status2 = (wire: %.0f)\n", (double)(o->can_0x62c_megasquirt_gp60.cel_status2)));
-	r = print_helper(r, fprintf(output, "launch_timing = (wire: %.0f)\n", (double)(o->can_0x62c_megasquirt_gp60.launch_timing)));
-	return r;
-}
-
-static int pack_can_0x62d_megasquirt_gp61(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* gps_latmmin: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62d_megasquirt_gp61.gps_latmmin)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* gps_lonmmin: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62d_megasquirt_gp61.gps_lonmmin)) & 0xffff;
-	m |= x;
-	/* gps_londeg: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x62d_megasquirt_gp61.gps_londeg)) & 0xff;
-	x <<= 24; 
-	m |= x;
-	/* gps_lonmin: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x62d_megasquirt_gp61.gps_lonmin)) & 0xff;
-	x <<= 16; 
-	m |= x;
-	/* gps_latmin: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x62d_megasquirt_gp61.gps_latmin)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* gps_latdeg: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x62d_megasquirt_gp61.gps_latdeg)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x62d_megasquirt_gp61_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x62d_megasquirt_gp61(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* gps_latmmin: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x62d_megasquirt_gp61.gps_latmmin = x;
-	/* gps_lonmmin: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x62d_megasquirt_gp61.gps_lonmmin = x;
-	/* gps_londeg: start-bit 39, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 24) & 0xff;
-	o->can_0x62d_megasquirt_gp61.gps_londeg = x;
-	/* gps_lonmin: start-bit 47, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xff;
-	o->can_0x62d_megasquirt_gp61.gps_lonmin = x;
-	/* gps_latmin: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x62d_megasquirt_gp61.gps_latmin = x;
-	/* gps_latdeg: start-bit 7, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x62d_megasquirt_gp61.gps_latdeg = x;
-	o->can_0x62d_megasquirt_gp61_rx = 1;
-	o->can_0x62d_megasquirt_gp61_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x62d_gps_latmmin(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62d_megasquirt_gp61.gps_latmmin);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62d_gps_latmmin(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62d_megasquirt_gp61.gps_latmmin = in;
-	return 0;
-}
-
-int decode_can_0x62d_gps_lonmmin(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62d_megasquirt_gp61.gps_lonmmin);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62d_gps_lonmmin(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62d_megasquirt_gp61.gps_lonmmin = in;
-	return 0;
-}
-
-int decode_can_0x62d_gps_londeg(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x62d_megasquirt_gp61.gps_londeg);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62d_gps_londeg(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x62d_megasquirt_gp61.gps_londeg = in;
-	return 0;
-}
-
-int decode_can_0x62d_gps_lonmin(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x62d_megasquirt_gp61.gps_lonmin);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62d_gps_lonmin(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x62d_megasquirt_gp61.gps_lonmin = in;
-	return 0;
-}
-
-int decode_can_0x62d_gps_latmin(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x62d_megasquirt_gp61.gps_latmin);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62d_gps_latmin(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x62d_megasquirt_gp61.gps_latmin = in;
-	return 0;
-}
-
-int decode_can_0x62d_gps_latdeg(const can_obj_ksu_dbc_h_t *o, int8_t *out) {
-	assert(o);
-	assert(out);
-	int8_t rval = (int8_t)(o->can_0x62d_megasquirt_gp61.gps_latdeg);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62d_gps_latdeg(can_obj_ksu_dbc_h_t *o, int8_t in) {
-	assert(o);
-	o->can_0x62d_megasquirt_gp61.gps_latdeg = in;
-	return 0;
-}
-
-int print_can_0x62d_megasquirt_gp61(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "gps_latmmin = (wire: %.0f)\n", (double)(o->can_0x62d_megasquirt_gp61.gps_latmmin)));
-	r = print_helper(r, fprintf(output, "gps_lonmmin = (wire: %.0f)\n", (double)(o->can_0x62d_megasquirt_gp61.gps_lonmmin)));
-	r = print_helper(r, fprintf(output, "gps_londeg = (wire: %.0f)\n", (double)(o->can_0x62d_megasquirt_gp61.gps_londeg)));
-	r = print_helper(r, fprintf(output, "gps_lonmin = (wire: %.0f)\n", (double)(o->can_0x62d_megasquirt_gp61.gps_lonmin)));
-	r = print_helper(r, fprintf(output, "gps_latmin = (wire: %.0f)\n", (double)(o->can_0x62d_megasquirt_gp61.gps_latmin)));
-	r = print_helper(r, fprintf(output, "gps_latdeg = (wire: %.0f)\n", (double)(o->can_0x62d_megasquirt_gp61.gps_latdeg)));
-	return r;
-}
-
-static int pack_can_0x62e_megasquirt_gp62(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* gps_speed: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62e_megasquirt_gp62.gps_speed)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* gps_altm: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62e_megasquirt_gp62.gps_altm)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* gps_course: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = ((uint16_t)(o->can_0x62e_megasquirt_gp62.gps_course)) & 0xffff;
-	m |= x;
-	/* gps_altk: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x62e_megasquirt_gp62.gps_altk)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* gps_west: start-bit 0, length 1, endianess motorola, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x62e_megasquirt_gp62.gps_west)) & 0x1;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x62e_megasquirt_gp62_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x62e_megasquirt_gp62(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* gps_speed: start-bit 39, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x62e_megasquirt_gp62.gps_speed = x;
-	/* gps_altm: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x62e_megasquirt_gp62.gps_altm = x;
-	/* gps_course: start-bit 55, length 16, endianess motorola, scaling 0.1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x62e_megasquirt_gp62.gps_course = x;
-	/* gps_altk: start-bit 15, length 8, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x62e_megasquirt_gp62.gps_altk = x;
-	/* gps_west: start-bit 0, length 1, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 56) & 0x1;
-	x = (x & 0x1) ? (x | 0xfe) : x; 
-	o->can_0x62e_megasquirt_gp62.gps_west = x;
-	o->can_0x62e_megasquirt_gp62_rx = 1;
-	o->can_0x62e_megasquirt_gp62_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x62e_gps_speed(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62e_megasquirt_gp62.gps_speed);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62e_gps_speed(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62e_megasquirt_gp62.gps_speed = in;
-	return 0;
-}
-
-int decode_can_0x62e_gps_altm(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62e_megasquirt_gp62.gps_altm);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62e_gps_altm(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62e_megasquirt_gp62.gps_altm = in;
-	return 0;
-}
-
-int decode_can_0x62e_gps_course(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62e_megasquirt_gp62.gps_course);
-	rval *= 0.1;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62e_gps_course(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 10;
-	o->can_0x62e_megasquirt_gp62.gps_course = in;
-	return 0;
-}
-
-int decode_can_0x62e_gps_altk(const can_obj_ksu_dbc_h_t *o, int8_t *out) {
-	assert(o);
-	assert(out);
-	int8_t rval = (int8_t)(o->can_0x62e_megasquirt_gp62.gps_altk);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62e_gps_altk(can_obj_ksu_dbc_h_t *o, int8_t in) {
-	assert(o);
-	o->can_0x62e_megasquirt_gp62.gps_altk = in;
-	return 0;
-}
-
-int decode_can_0x62e_gps_west(const can_obj_ksu_dbc_h_t *o, int8_t *out) {
-	assert(o);
-	assert(out);
-	int8_t rval = (int8_t)(o->can_0x62e_megasquirt_gp62.gps_west);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62e_gps_west(can_obj_ksu_dbc_h_t *o, int8_t in) {
-	assert(o);
-	o->can_0x62e_megasquirt_gp62.gps_west = in;
-	return 0;
-}
-
-int print_can_0x62e_megasquirt_gp62(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "gps_speed = (wire: %.0f)\n", (double)(o->can_0x62e_megasquirt_gp62.gps_speed)));
-	r = print_helper(r, fprintf(output, "gps_altm = (wire: %.0f)\n", (double)(o->can_0x62e_megasquirt_gp62.gps_altm)));
-	r = print_helper(r, fprintf(output, "gps_course = (wire: %.0f)\n", (double)(o->can_0x62e_megasquirt_gp62.gps_course)));
-	r = print_helper(r, fprintf(output, "gps_altk = (wire: %.0f)\n", (double)(o->can_0x62e_megasquirt_gp62.gps_altk)));
-	r = print_helper(r, fprintf(output, "gps_west = (wire: %.0f)\n", (double)(o->can_0x62e_megasquirt_gp62.gps_west)));
-	return r;
-}
-
-static int pack_can_0x62f_megasquirt_gp63(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
-	assert(o);
-	assert(data);
-	register uint64_t x;
-	register uint64_t m = 0;
-	/* spare63_2: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62f_megasquirt_gp63.spare63_2)) & 0xffff;
-	x <<= 16; 
-	m |= x;
-	/* spare63_1: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62f_megasquirt_gp63.spare63_1)) & 0xffff;
-	x <<= 32; 
-	m |= x;
-	/* spare63_3: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = ((uint16_t)(o->can_0x62f_megasquirt_gp63.spare63_3)) & 0xffff;
-	m |= x;
-	/* generic_pid_duty2: start-bit 15, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x62f_megasquirt_gp63.generic_pid_duty2)) & 0xff;
-	x <<= 48; 
-	m |= x;
-	/* generic_pid_duty1: start-bit 7, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = ((uint8_t)(o->can_0x62f_megasquirt_gp63.generic_pid_duty1)) & 0xff;
-	x <<= 56; 
-	m |= x;
-	*data = reverse_byte_order(m);
-	o->can_0x62f_megasquirt_gp63_tx = 1;
-	return 8;
-}
-
-static int unpack_can_0x62f_megasquirt_gp63(can_obj_ksu_dbc_h_t *o, uint64_t data, uint8_t dlc, dbcc_time_stamp_t time_stamp) {
-	assert(o);
-	assert(dlc <= 8);
-	register uint64_t x;
-	register uint64_t m = reverse_byte_order(data);
-	if (dlc < 8)
-		return -1;
-	/* spare63_2: start-bit 39, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 16) & 0xffff;
-	o->can_0x62f_megasquirt_gp63.spare63_2 = x;
-	/* spare63_1: start-bit 23, length 16, endianess motorola, scaling 1, offset 0 */
-	x = (m >> 32) & 0xffff;
-	o->can_0x62f_megasquirt_gp63.spare63_1 = x;
-	/* spare63_3: start-bit 55, length 16, endianess motorola, scaling 1, offset 0 */
-	x = m & 0xffff;
-	o->can_0x62f_megasquirt_gp63.spare63_3 = x;
-	/* generic_pid_duty2: start-bit 15, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 48) & 0xff;
-	o->can_0x62f_megasquirt_gp63.generic_pid_duty2 = x;
-	/* generic_pid_duty1: start-bit 7, length 8, endianess motorola, scaling 0.392, offset 0 */
-	x = (m >> 56) & 0xff;
-	o->can_0x62f_megasquirt_gp63.generic_pid_duty1 = x;
-	o->can_0x62f_megasquirt_gp63_rx = 1;
-	o->can_0x62f_megasquirt_gp63_time_stamp_rx = time_stamp;
-	return 8;
-}
-
-int decode_can_0x62f_spare63_2(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62f_megasquirt_gp63.spare63_2);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62f_spare63_2(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62f_megasquirt_gp63.spare63_2 = in;
-	return 0;
-}
-
-int decode_can_0x62f_spare63_1(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62f_megasquirt_gp63.spare63_1);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62f_spare63_1(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62f_megasquirt_gp63.spare63_1 = in;
-	return 0;
-}
-
-int decode_can_0x62f_spare63_3(const can_obj_ksu_dbc_h_t *o, uint16_t *out) {
-	assert(o);
-	assert(out);
-	uint16_t rval = (uint16_t)(o->can_0x62f_megasquirt_gp63.spare63_3);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62f_spare63_3(can_obj_ksu_dbc_h_t *o, uint16_t in) {
-	assert(o);
-	o->can_0x62f_megasquirt_gp63.spare63_3 = in;
-	return 0;
-}
-
-int decode_can_0x62f_generic_pid_duty2(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62f_megasquirt_gp63.generic_pid_duty2);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62f_generic_pid_duty2(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x62f_megasquirt_gp63.generic_pid_duty2 = in;
-	return 0;
-}
-
-int decode_can_0x62f_generic_pid_duty1(const can_obj_ksu_dbc_h_t *o, double *out) {
-	assert(o);
-	assert(out);
-	double rval = (double)(o->can_0x62f_megasquirt_gp63.generic_pid_duty1);
-	rval *= 0.392;
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x62f_generic_pid_duty1(can_obj_ksu_dbc_h_t *o, double in) {
-	assert(o);
-	in *= 2.55102;
-	o->can_0x62f_megasquirt_gp63.generic_pid_duty1 = in;
-	return 0;
-}
-
-int print_can_0x62f_megasquirt_gp63(const can_obj_ksu_dbc_h_t *o, FILE *output) {
-	assert(o);
-	assert(output);
-	int r = 0;
-	r = print_helper(r, fprintf(output, "spare63_2 = (wire: %.0f)\n", (double)(o->can_0x62f_megasquirt_gp63.spare63_2)));
-	r = print_helper(r, fprintf(output, "spare63_1 = (wire: %.0f)\n", (double)(o->can_0x62f_megasquirt_gp63.spare63_1)));
-	r = print_helper(r, fprintf(output, "spare63_3 = (wire: %.0f)\n", (double)(o->can_0x62f_megasquirt_gp63.spare63_3)));
-	r = print_helper(r, fprintf(output, "generic_pid_duty2 = (wire: %.0f)\n", (double)(o->can_0x62f_megasquirt_gp63.generic_pid_duty2)));
-	r = print_helper(r, fprintf(output, "generic_pid_duty1 = (wire: %.0f)\n", (double)(o->can_0x62f_megasquirt_gp63.generic_pid_duty1)));
 	return r;
 }
 
@@ -16830,73 +8192,11 @@ int unpack_message(can_obj_ksu_dbc_h_t *o, const unsigned long id, uint64_t data
 	case 0x0c4: return unpack_can_0x0c4_VCU_PEDAL_READINGS(o, data, dlc, time_stamp);
 	case 0x0c5: return unpack_can_0x0c5_DAQ_SHOCKPOTS(o, data, dlc, time_stamp);
 	case 0x0c6: return unpack_can_0x0c6_VCU_WHEELSPEED_READINGS(o, data, dlc, time_stamp);
+	case 0x0c8: return unpack_can_0x0c8_vcu_firmware_version(o, data, dlc, time_stamp);
+	case 0x0eb: return unpack_can_0x0eb_dash_buttons(o, data, dlc, time_stamp);
 	case 0x1d5: return unpack_can_0x1d5_M188_U2C_Message_Rxd(o, data, dlc, time_stamp);
 	case 0x1d7: return unpack_can_0x1d7_M187_U2C_Command_Txd(o, data, dlc, time_stamp);
 	case 0x202: return unpack_can_0x202_BMS_Current_Limit(o, data, dlc, time_stamp);
-	case 0x5f0: return unpack_can_0x5f0_megasquirt_gp0(o, data, dlc, time_stamp);
-	case 0x5f1: return unpack_can_0x5f1_megasquirt_gp1(o, data, dlc, time_stamp);
-	case 0x5f2: return unpack_can_0x5f2_megasquirt_gp2(o, data, dlc, time_stamp);
-	case 0x5f3: return unpack_can_0x5f3_megasquirt_gp3(o, data, dlc, time_stamp);
-	case 0x5f4: return unpack_can_0x5f4_megasquirt_gp4(o, data, dlc, time_stamp);
-	case 0x5f5: return unpack_can_0x5f5_megasquirt_gp5(o, data, dlc, time_stamp);
-	case 0x5f6: return unpack_can_0x5f6_megasquirt_gp6(o, data, dlc, time_stamp);
-	case 0x5f7: return unpack_can_0x5f7_megasquirt_gp7(o, data, dlc, time_stamp);
-	case 0x5f8: return unpack_can_0x5f8_megasquirt_gp8(o, data, dlc, time_stamp);
-	case 0x5f9: return unpack_can_0x5f9_megasquirt_gp9(o, data, dlc, time_stamp);
-	case 0x5fa: return unpack_can_0x5fa_megasquirt_gp10(o, data, dlc, time_stamp);
-	case 0x5fb: return unpack_can_0x5fb_megasquirt_gp11(o, data, dlc, time_stamp);
-	case 0x5fc: return unpack_can_0x5fc_megasquirt_gp12(o, data, dlc, time_stamp);
-	case 0x5fd: return unpack_can_0x5fd_megasquirt_gp13(o, data, dlc, time_stamp);
-	case 0x5fe: return unpack_can_0x5fe_megasquirt_gp14(o, data, dlc, time_stamp);
-	case 0x5ff: return unpack_can_0x5ff_megasquirt_gp15(o, data, dlc, time_stamp);
-	case 0x600: return unpack_can_0x600_megasquirt_gp16(o, data, dlc, time_stamp);
-	case 0x601: return unpack_can_0x601_megasquirt_gp17(o, data, dlc, time_stamp);
-	case 0x602: return unpack_can_0x602_megasquirt_gp18(o, data, dlc, time_stamp);
-	case 0x603: return unpack_can_0x603_megasquirt_gp19(o, data, dlc, time_stamp);
-	case 0x604: return unpack_can_0x604_megasquirt_gp20(o, data, dlc, time_stamp);
-	case 0x605: return unpack_can_0x605_megasquirt_gp21(o, data, dlc, time_stamp);
-	case 0x606: return unpack_can_0x606_megasquirt_gp22(o, data, dlc, time_stamp);
-	case 0x607: return unpack_can_0x607_megasquirt_gp23(o, data, dlc, time_stamp);
-	case 0x608: return unpack_can_0x608_megasquirt_gp24(o, data, dlc, time_stamp);
-	case 0x609: return unpack_can_0x609_megasquirt_gp25(o, data, dlc, time_stamp);
-	case 0x60a: return unpack_can_0x60a_megasquirt_gp26(o, data, dlc, time_stamp);
-	case 0x60b: return unpack_can_0x60b_megasquirt_gp27(o, data, dlc, time_stamp);
-	case 0x60c: return unpack_can_0x60c_megasquirt_gp28(o, data, dlc, time_stamp);
-	case 0x60d: return unpack_can_0x60d_megasquirt_gp29(o, data, dlc, time_stamp);
-	case 0x60e: return unpack_can_0x60e_megasquirt_gp30(o, data, dlc, time_stamp);
-	case 0x60f: return unpack_can_0x60f_megasquirt_gp31(o, data, dlc, time_stamp);
-	case 0x610: return unpack_can_0x610_megasquirt_gp32(o, data, dlc, time_stamp);
-	case 0x611: return unpack_can_0x611_megasquirt_gp33(o, data, dlc, time_stamp);
-	case 0x612: return unpack_can_0x612_megasquirt_gp34(o, data, dlc, time_stamp);
-	case 0x613: return unpack_can_0x613_megasquirt_gp35(o, data, dlc, time_stamp);
-	case 0x614: return unpack_can_0x614_megasquirt_gp36(o, data, dlc, time_stamp);
-	case 0x615: return unpack_can_0x615_megasquirt_gp37(o, data, dlc, time_stamp);
-	case 0x616: return unpack_can_0x616_megasquirt_gp38(o, data, dlc, time_stamp);
-	case 0x617: return unpack_can_0x617_megasquirt_gp39(o, data, dlc, time_stamp);
-	case 0x618: return unpack_can_0x618_megasquirt_gp40(o, data, dlc, time_stamp);
-	case 0x619: return unpack_can_0x619_megasquirt_gp41(o, data, dlc, time_stamp);
-	case 0x61a: return unpack_can_0x61a_megasquirt_gp42(o, data, dlc, time_stamp);
-	case 0x61b: return unpack_can_0x61b_megasquirt_gp43(o, data, dlc, time_stamp);
-	case 0x61c: return unpack_can_0x61c_megasquirt_gp44(o, data, dlc, time_stamp);
-	case 0x61d: return unpack_can_0x61d_megasquirt_gp45(o, data, dlc, time_stamp);
-	case 0x61e: return unpack_can_0x61e_megasquirt_gp46(o, data, dlc, time_stamp);
-	case 0x61f: return unpack_can_0x61f_megasquirt_gp47(o, data, dlc, time_stamp);
-	case 0x620: return unpack_can_0x620_megasquirt_gp48(o, data, dlc, time_stamp);
-	case 0x621: return unpack_can_0x621_megasquirt_gp49(o, data, dlc, time_stamp);
-	case 0x622: return unpack_can_0x622_megasquirt_gp50(o, data, dlc, time_stamp);
-	case 0x623: return unpack_can_0x623_megasquirt_gp51(o, data, dlc, time_stamp);
-	case 0x624: return unpack_can_0x624_megasquirt_gp52(o, data, dlc, time_stamp);
-	case 0x625: return unpack_can_0x625_megasquirt_gp53(o, data, dlc, time_stamp);
-	case 0x626: return unpack_can_0x626_megasquirt_gp54(o, data, dlc, time_stamp);
-	case 0x627: return unpack_can_0x627_megasquirt_gp55(o, data, dlc, time_stamp);
-	case 0x628: return unpack_can_0x628_megasquirt_gp56(o, data, dlc, time_stamp);
-	case 0x629: return unpack_can_0x629_megasquirt_gp57(o, data, dlc, time_stamp);
-	case 0x62a: return unpack_can_0x62a_megasquirt_gp58(o, data, dlc, time_stamp);
-	case 0x62b: return unpack_can_0x62b_megasquirt_gp59(o, data, dlc, time_stamp);
-	case 0x62c: return unpack_can_0x62c_megasquirt_gp60(o, data, dlc, time_stamp);
-	case 0x62d: return unpack_can_0x62d_megasquirt_gp61(o, data, dlc, time_stamp);
-	case 0x62e: return unpack_can_0x62e_megasquirt_gp62(o, data, dlc, time_stamp);
-	case 0x62f: return unpack_can_0x62f_megasquirt_gp63(o, data, dlc, time_stamp);
 	case 0x6b1: return unpack_can_0x6b1_MSGID_0X6B1(o, data, dlc, time_stamp);
 	case 0x6b2: return unpack_can_0x6b2_MSGID_0X6B2(o, data, dlc, time_stamp);
 	case 0x6b3: return unpack_can_0x6b3_MSGID_0X6B3(o, data, dlc, time_stamp);
@@ -16944,73 +8244,11 @@ int pack_message(can_obj_ksu_dbc_h_t *o, const unsigned long id, uint64_t *data)
 	case 0x0c4: return pack_can_0x0c4_VCU_PEDAL_READINGS(o, data);
 	case 0x0c5: return pack_can_0x0c5_DAQ_SHOCKPOTS(o, data);
 	case 0x0c6: return pack_can_0x0c6_VCU_WHEELSPEED_READINGS(o, data);
+	case 0x0c8: return pack_can_0x0c8_vcu_firmware_version(o, data);
+	case 0x0eb: return pack_can_0x0eb_dash_buttons(o, data);
 	case 0x1d5: return pack_can_0x1d5_M188_U2C_Message_Rxd(o, data);
 	case 0x1d7: return pack_can_0x1d7_M187_U2C_Command_Txd(o, data);
 	case 0x202: return pack_can_0x202_BMS_Current_Limit(o, data);
-	case 0x5f0: return pack_can_0x5f0_megasquirt_gp0(o, data);
-	case 0x5f1: return pack_can_0x5f1_megasquirt_gp1(o, data);
-	case 0x5f2: return pack_can_0x5f2_megasquirt_gp2(o, data);
-	case 0x5f3: return pack_can_0x5f3_megasquirt_gp3(o, data);
-	case 0x5f4: return pack_can_0x5f4_megasquirt_gp4(o, data);
-	case 0x5f5: return pack_can_0x5f5_megasquirt_gp5(o, data);
-	case 0x5f6: return pack_can_0x5f6_megasquirt_gp6(o, data);
-	case 0x5f7: return pack_can_0x5f7_megasquirt_gp7(o, data);
-	case 0x5f8: return pack_can_0x5f8_megasquirt_gp8(o, data);
-	case 0x5f9: return pack_can_0x5f9_megasquirt_gp9(o, data);
-	case 0x5fa: return pack_can_0x5fa_megasquirt_gp10(o, data);
-	case 0x5fb: return pack_can_0x5fb_megasquirt_gp11(o, data);
-	case 0x5fc: return pack_can_0x5fc_megasquirt_gp12(o, data);
-	case 0x5fd: return pack_can_0x5fd_megasquirt_gp13(o, data);
-	case 0x5fe: return pack_can_0x5fe_megasquirt_gp14(o, data);
-	case 0x5ff: return pack_can_0x5ff_megasquirt_gp15(o, data);
-	case 0x600: return pack_can_0x600_megasquirt_gp16(o, data);
-	case 0x601: return pack_can_0x601_megasquirt_gp17(o, data);
-	case 0x602: return pack_can_0x602_megasquirt_gp18(o, data);
-	case 0x603: return pack_can_0x603_megasquirt_gp19(o, data);
-	case 0x604: return pack_can_0x604_megasquirt_gp20(o, data);
-	case 0x605: return pack_can_0x605_megasquirt_gp21(o, data);
-	case 0x606: return pack_can_0x606_megasquirt_gp22(o, data);
-	case 0x607: return pack_can_0x607_megasquirt_gp23(o, data);
-	case 0x608: return pack_can_0x608_megasquirt_gp24(o, data);
-	case 0x609: return pack_can_0x609_megasquirt_gp25(o, data);
-	case 0x60a: return pack_can_0x60a_megasquirt_gp26(o, data);
-	case 0x60b: return pack_can_0x60b_megasquirt_gp27(o, data);
-	case 0x60c: return pack_can_0x60c_megasquirt_gp28(o, data);
-	case 0x60d: return pack_can_0x60d_megasquirt_gp29(o, data);
-	case 0x60e: return pack_can_0x60e_megasquirt_gp30(o, data);
-	case 0x60f: return pack_can_0x60f_megasquirt_gp31(o, data);
-	case 0x610: return pack_can_0x610_megasquirt_gp32(o, data);
-	case 0x611: return pack_can_0x611_megasquirt_gp33(o, data);
-	case 0x612: return pack_can_0x612_megasquirt_gp34(o, data);
-	case 0x613: return pack_can_0x613_megasquirt_gp35(o, data);
-	case 0x614: return pack_can_0x614_megasquirt_gp36(o, data);
-	case 0x615: return pack_can_0x615_megasquirt_gp37(o, data);
-	case 0x616: return pack_can_0x616_megasquirt_gp38(o, data);
-	case 0x617: return pack_can_0x617_megasquirt_gp39(o, data);
-	case 0x618: return pack_can_0x618_megasquirt_gp40(o, data);
-	case 0x619: return pack_can_0x619_megasquirt_gp41(o, data);
-	case 0x61a: return pack_can_0x61a_megasquirt_gp42(o, data);
-	case 0x61b: return pack_can_0x61b_megasquirt_gp43(o, data);
-	case 0x61c: return pack_can_0x61c_megasquirt_gp44(o, data);
-	case 0x61d: return pack_can_0x61d_megasquirt_gp45(o, data);
-	case 0x61e: return pack_can_0x61e_megasquirt_gp46(o, data);
-	case 0x61f: return pack_can_0x61f_megasquirt_gp47(o, data);
-	case 0x620: return pack_can_0x620_megasquirt_gp48(o, data);
-	case 0x621: return pack_can_0x621_megasquirt_gp49(o, data);
-	case 0x622: return pack_can_0x622_megasquirt_gp50(o, data);
-	case 0x623: return pack_can_0x623_megasquirt_gp51(o, data);
-	case 0x624: return pack_can_0x624_megasquirt_gp52(o, data);
-	case 0x625: return pack_can_0x625_megasquirt_gp53(o, data);
-	case 0x626: return pack_can_0x626_megasquirt_gp54(o, data);
-	case 0x627: return pack_can_0x627_megasquirt_gp55(o, data);
-	case 0x628: return pack_can_0x628_megasquirt_gp56(o, data);
-	case 0x629: return pack_can_0x629_megasquirt_gp57(o, data);
-	case 0x62a: return pack_can_0x62a_megasquirt_gp58(o, data);
-	case 0x62b: return pack_can_0x62b_megasquirt_gp59(o, data);
-	case 0x62c: return pack_can_0x62c_megasquirt_gp60(o, data);
-	case 0x62d: return pack_can_0x62d_megasquirt_gp61(o, data);
-	case 0x62e: return pack_can_0x62e_megasquirt_gp62(o, data);
-	case 0x62f: return pack_can_0x62f_megasquirt_gp63(o, data);
 	case 0x6b1: return pack_can_0x6b1_MSGID_0X6B1(o, data);
 	case 0x6b2: return pack_can_0x6b2_MSGID_0X6B2(o, data);
 	case 0x6b3: return pack_can_0x6b3_MSGID_0X6B3(o, data);
@@ -17059,73 +8297,11 @@ int print_message(const can_obj_ksu_dbc_h_t *o, const unsigned long id, FILE *ou
 	case 0x0c4: return print_can_0x0c4_VCU_PEDAL_READINGS(o, output);
 	case 0x0c5: return print_can_0x0c5_DAQ_SHOCKPOTS(o, output);
 	case 0x0c6: return print_can_0x0c6_VCU_WHEELSPEED_READINGS(o, output);
+	case 0x0c8: return print_can_0x0c8_vcu_firmware_version(o, output);
+	case 0x0eb: return print_can_0x0eb_dash_buttons(o, output);
 	case 0x1d5: return print_can_0x1d5_M188_U2C_Message_Rxd(o, output);
 	case 0x1d7: return print_can_0x1d7_M187_U2C_Command_Txd(o, output);
 	case 0x202: return print_can_0x202_BMS_Current_Limit(o, output);
-	case 0x5f0: return print_can_0x5f0_megasquirt_gp0(o, output);
-	case 0x5f1: return print_can_0x5f1_megasquirt_gp1(o, output);
-	case 0x5f2: return print_can_0x5f2_megasquirt_gp2(o, output);
-	case 0x5f3: return print_can_0x5f3_megasquirt_gp3(o, output);
-	case 0x5f4: return print_can_0x5f4_megasquirt_gp4(o, output);
-	case 0x5f5: return print_can_0x5f5_megasquirt_gp5(o, output);
-	case 0x5f6: return print_can_0x5f6_megasquirt_gp6(o, output);
-	case 0x5f7: return print_can_0x5f7_megasquirt_gp7(o, output);
-	case 0x5f8: return print_can_0x5f8_megasquirt_gp8(o, output);
-	case 0x5f9: return print_can_0x5f9_megasquirt_gp9(o, output);
-	case 0x5fa: return print_can_0x5fa_megasquirt_gp10(o, output);
-	case 0x5fb: return print_can_0x5fb_megasquirt_gp11(o, output);
-	case 0x5fc: return print_can_0x5fc_megasquirt_gp12(o, output);
-	case 0x5fd: return print_can_0x5fd_megasquirt_gp13(o, output);
-	case 0x5fe: return print_can_0x5fe_megasquirt_gp14(o, output);
-	case 0x5ff: return print_can_0x5ff_megasquirt_gp15(o, output);
-	case 0x600: return print_can_0x600_megasquirt_gp16(o, output);
-	case 0x601: return print_can_0x601_megasquirt_gp17(o, output);
-	case 0x602: return print_can_0x602_megasquirt_gp18(o, output);
-	case 0x603: return print_can_0x603_megasquirt_gp19(o, output);
-	case 0x604: return print_can_0x604_megasquirt_gp20(o, output);
-	case 0x605: return print_can_0x605_megasquirt_gp21(o, output);
-	case 0x606: return print_can_0x606_megasquirt_gp22(o, output);
-	case 0x607: return print_can_0x607_megasquirt_gp23(o, output);
-	case 0x608: return print_can_0x608_megasquirt_gp24(o, output);
-	case 0x609: return print_can_0x609_megasquirt_gp25(o, output);
-	case 0x60a: return print_can_0x60a_megasquirt_gp26(o, output);
-	case 0x60b: return print_can_0x60b_megasquirt_gp27(o, output);
-	case 0x60c: return print_can_0x60c_megasquirt_gp28(o, output);
-	case 0x60d: return print_can_0x60d_megasquirt_gp29(o, output);
-	case 0x60e: return print_can_0x60e_megasquirt_gp30(o, output);
-	case 0x60f: return print_can_0x60f_megasquirt_gp31(o, output);
-	case 0x610: return print_can_0x610_megasquirt_gp32(o, output);
-	case 0x611: return print_can_0x611_megasquirt_gp33(o, output);
-	case 0x612: return print_can_0x612_megasquirt_gp34(o, output);
-	case 0x613: return print_can_0x613_megasquirt_gp35(o, output);
-	case 0x614: return print_can_0x614_megasquirt_gp36(o, output);
-	case 0x615: return print_can_0x615_megasquirt_gp37(o, output);
-	case 0x616: return print_can_0x616_megasquirt_gp38(o, output);
-	case 0x617: return print_can_0x617_megasquirt_gp39(o, output);
-	case 0x618: return print_can_0x618_megasquirt_gp40(o, output);
-	case 0x619: return print_can_0x619_megasquirt_gp41(o, output);
-	case 0x61a: return print_can_0x61a_megasquirt_gp42(o, output);
-	case 0x61b: return print_can_0x61b_megasquirt_gp43(o, output);
-	case 0x61c: return print_can_0x61c_megasquirt_gp44(o, output);
-	case 0x61d: return print_can_0x61d_megasquirt_gp45(o, output);
-	case 0x61e: return print_can_0x61e_megasquirt_gp46(o, output);
-	case 0x61f: return print_can_0x61f_megasquirt_gp47(o, output);
-	case 0x620: return print_can_0x620_megasquirt_gp48(o, output);
-	case 0x621: return print_can_0x621_megasquirt_gp49(o, output);
-	case 0x622: return print_can_0x622_megasquirt_gp50(o, output);
-	case 0x623: return print_can_0x623_megasquirt_gp51(o, output);
-	case 0x624: return print_can_0x624_megasquirt_gp52(o, output);
-	case 0x625: return print_can_0x625_megasquirt_gp53(o, output);
-	case 0x626: return print_can_0x626_megasquirt_gp54(o, output);
-	case 0x627: return print_can_0x627_megasquirt_gp55(o, output);
-	case 0x628: return print_can_0x628_megasquirt_gp56(o, output);
-	case 0x629: return print_can_0x629_megasquirt_gp57(o, output);
-	case 0x62a: return print_can_0x62a_megasquirt_gp58(o, output);
-	case 0x62b: return print_can_0x62b_megasquirt_gp59(o, output);
-	case 0x62c: return print_can_0x62c_megasquirt_gp60(o, output);
-	case 0x62d: return print_can_0x62d_megasquirt_gp61(o, output);
-	case 0x62e: return print_can_0x62e_megasquirt_gp62(o, output);
-	case 0x62f: return print_can_0x62f_megasquirt_gp63(o, output);
 	case 0x6b1: return print_can_0x6b1_MSGID_0X6B1(o, output);
 	case 0x6b2: return print_can_0x6b2_MSGID_0X6B2(o, output);
 	case 0x6b3: return print_can_0x6b3_MSGID_0X6B3(o, output);

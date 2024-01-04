@@ -72,73 +72,11 @@ typedef enum {
 #define CAN_ID_VCU_PEDAL_READINGS (196) /* 0xc4 */
 #define CAN_ID_DAQ_SHOCKPOTS (197) /* 0xc5 */
 #define CAN_ID_VCU_WHEELSPEED_READINGS (198) /* 0xc6 */
+#define CAN_ID_VCU_FIRMWARE_VERSION (200) /* 0xc8 */
+#define CAN_ID_DASH_BUTTONS (235) /* 0xeb */
 #define CAN_ID_M188_U2C_MESSAGE_RXD (469) /* 0x1d5 */
 #define CAN_ID_M187_U2C_COMMAND_TXD (471) /* 0x1d7 */
 #define CAN_ID_BMS_CURRENT_LIMIT (514) /* 0x202 */
-#define CAN_ID_MEGASQUIRT_GP0 (1520) /* 0x5f0 */
-#define CAN_ID_MEGASQUIRT_GP1 (1521) /* 0x5f1 */
-#define CAN_ID_MEGASQUIRT_GP2 (1522) /* 0x5f2 */
-#define CAN_ID_MEGASQUIRT_GP3 (1523) /* 0x5f3 */
-#define CAN_ID_MEGASQUIRT_GP4 (1524) /* 0x5f4 */
-#define CAN_ID_MEGASQUIRT_GP5 (1525) /* 0x5f5 */
-#define CAN_ID_MEGASQUIRT_GP6 (1526) /* 0x5f6 */
-#define CAN_ID_MEGASQUIRT_GP7 (1527) /* 0x5f7 */
-#define CAN_ID_MEGASQUIRT_GP8 (1528) /* 0x5f8 */
-#define CAN_ID_MEGASQUIRT_GP9 (1529) /* 0x5f9 */
-#define CAN_ID_MEGASQUIRT_GP10 (1530) /* 0x5fa */
-#define CAN_ID_MEGASQUIRT_GP11 (1531) /* 0x5fb */
-#define CAN_ID_MEGASQUIRT_GP12 (1532) /* 0x5fc */
-#define CAN_ID_MEGASQUIRT_GP13 (1533) /* 0x5fd */
-#define CAN_ID_MEGASQUIRT_GP14 (1534) /* 0x5fe */
-#define CAN_ID_MEGASQUIRT_GP15 (1535) /* 0x5ff */
-#define CAN_ID_MEGASQUIRT_GP16 (1536) /* 0x600 */
-#define CAN_ID_MEGASQUIRT_GP17 (1537) /* 0x601 */
-#define CAN_ID_MEGASQUIRT_GP18 (1538) /* 0x602 */
-#define CAN_ID_MEGASQUIRT_GP19 (1539) /* 0x603 */
-#define CAN_ID_MEGASQUIRT_GP20 (1540) /* 0x604 */
-#define CAN_ID_MEGASQUIRT_GP21 (1541) /* 0x605 */
-#define CAN_ID_MEGASQUIRT_GP22 (1542) /* 0x606 */
-#define CAN_ID_MEGASQUIRT_GP23 (1543) /* 0x607 */
-#define CAN_ID_MEGASQUIRT_GP24 (1544) /* 0x608 */
-#define CAN_ID_MEGASQUIRT_GP25 (1545) /* 0x609 */
-#define CAN_ID_MEGASQUIRT_GP26 (1546) /* 0x60a */
-#define CAN_ID_MEGASQUIRT_GP27 (1547) /* 0x60b */
-#define CAN_ID_MEGASQUIRT_GP28 (1548) /* 0x60c */
-#define CAN_ID_MEGASQUIRT_GP29 (1549) /* 0x60d */
-#define CAN_ID_MEGASQUIRT_GP30 (1550) /* 0x60e */
-#define CAN_ID_MEGASQUIRT_GP31 (1551) /* 0x60f */
-#define CAN_ID_MEGASQUIRT_GP32 (1552) /* 0x610 */
-#define CAN_ID_MEGASQUIRT_GP33 (1553) /* 0x611 */
-#define CAN_ID_MEGASQUIRT_GP34 (1554) /* 0x612 */
-#define CAN_ID_MEGASQUIRT_GP35 (1555) /* 0x613 */
-#define CAN_ID_MEGASQUIRT_GP36 (1556) /* 0x614 */
-#define CAN_ID_MEGASQUIRT_GP37 (1557) /* 0x615 */
-#define CAN_ID_MEGASQUIRT_GP38 (1558) /* 0x616 */
-#define CAN_ID_MEGASQUIRT_GP39 (1559) /* 0x617 */
-#define CAN_ID_MEGASQUIRT_GP40 (1560) /* 0x618 */
-#define CAN_ID_MEGASQUIRT_GP41 (1561) /* 0x619 */
-#define CAN_ID_MEGASQUIRT_GP42 (1562) /* 0x61a */
-#define CAN_ID_MEGASQUIRT_GP43 (1563) /* 0x61b */
-#define CAN_ID_MEGASQUIRT_GP44 (1564) /* 0x61c */
-#define CAN_ID_MEGASQUIRT_GP45 (1565) /* 0x61d */
-#define CAN_ID_MEGASQUIRT_GP46 (1566) /* 0x61e */
-#define CAN_ID_MEGASQUIRT_GP47 (1567) /* 0x61f */
-#define CAN_ID_MEGASQUIRT_GP48 (1568) /* 0x620 */
-#define CAN_ID_MEGASQUIRT_GP49 (1569) /* 0x621 */
-#define CAN_ID_MEGASQUIRT_GP50 (1570) /* 0x622 */
-#define CAN_ID_MEGASQUIRT_GP51 (1571) /* 0x623 */
-#define CAN_ID_MEGASQUIRT_GP52 (1572) /* 0x624 */
-#define CAN_ID_MEGASQUIRT_GP53 (1573) /* 0x625 */
-#define CAN_ID_MEGASQUIRT_GP54 (1574) /* 0x626 */
-#define CAN_ID_MEGASQUIRT_GP55 (1575) /* 0x627 */
-#define CAN_ID_MEGASQUIRT_GP56 (1576) /* 0x628 */
-#define CAN_ID_MEGASQUIRT_GP57 (1577) /* 0x629 */
-#define CAN_ID_MEGASQUIRT_GP58 (1578) /* 0x62a */
-#define CAN_ID_MEGASQUIRT_GP59 (1579) /* 0x62b */
-#define CAN_ID_MEGASQUIRT_GP60 (1580) /* 0x62c */
-#define CAN_ID_MEGASQUIRT_GP61 (1581) /* 0x62d */
-#define CAN_ID_MEGASQUIRT_GP62 (1582) /* 0x62e */
-#define CAN_ID_MEGASQUIRT_GP63 (1583) /* 0x62f */
 #define CAN_ID_MSGID_0X6B1 (1713) /* 0x6b1 */
 #define CAN_ID_MSGID_0X6B2 (1714) /* 0x6b2 */
 #define CAN_ID_MSGID_0X6B3 (1715) /* 0x6b3 */
@@ -169,122 +107,122 @@ typedef PREPACK struct {
 
 /* raw ADC voltage reading of module2 cells 1-6 */
 typedef PREPACK struct {
-	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell14temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell15temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell16temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell17temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell18temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp13to18; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp13to18; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell13temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x02a_segment2_temps1_t;
 
 /* raw ADC voltage reading of module2 cells 6-12 */
 typedef PREPACK struct {
-	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell20temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell21temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell22temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell23temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell24temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp19to24; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp19to24; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell19temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x02b_segment2_temps2_t;
 
 /* raw ADC voltage reading of module3 cells 1-6 */
 typedef PREPACK struct {
-	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell26temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell27temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell28temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell29temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell30temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp25to30; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp25to30; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell25temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x03a_segment3_temps1_t;
 
 /* raw ADC voltage reading of module3 cells 6-12 */
 typedef PREPACK struct {
-	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell32temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell33temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell34temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell35temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell36temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp31to36; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp31to36; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell31temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x03b_segment3_temps2_t;
 
 /* raw ADC voltage reading of module4 cells 1-6 */
 typedef PREPACK struct {
-	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell38temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell39temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell40temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell41temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell42temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp37to42; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp37to42; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell37temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x04a_segment4_temps1_t;
 
 /* raw ADC voltage reading of module4 cells 6-12 */
 typedef PREPACK struct {
-	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell44temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell45temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell46temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell47temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell48temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp43to48; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp43to48; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell43temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x04b_segment4_temps2_t;
 
 /* raw ADC voltage reading of module5 cells 1-6 */
 typedef PREPACK struct {
-	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell50temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell51temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell52temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell53temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell54temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp49to54; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp49to54; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell49temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x05a_segment5_temps1_t;
 
 /* raw ADC voltage reading of module5 cells 6-12 */
 typedef PREPACK struct {
-	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell56temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell57temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell58temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell59temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell60temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp55to60; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp55to60; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell55temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x05b_segment5_temps2_t;
 
 /* raw ADC voltage reading of module6 cells 1-6 */
 typedef PREPACK struct {
-	uint8_t cell2temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell3temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell4temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell5temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell6temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp1to6; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell1temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell62temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell63temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell64temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell65temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell66temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp61to66; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp61to66; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell61temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x06a_segment6_temps1_t;
 
 /* raw ADC voltage reading of module6 cells 6-12 */
 typedef PREPACK struct {
-	uint8_t cell8temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell9temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell10temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell11temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell12temp; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t mintemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t maxtemp7to12; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t cell7temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell68temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell69temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell70temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell71temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell72temp; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t mintemp67to72; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t maxtemp67to72; /* scaling 0.0, offset 0.0, units none  */
+	uint8_t cell67temp; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x06b_segment6_temps2_t;
 
 typedef PREPACK struct {
@@ -476,6 +414,21 @@ typedef PREPACK struct {
 	uint32_t RPM_FL; /* scaling 0.0, offset 0.0, units none  */
 } POSTPACK can_0x0c6_VCU_WHEELSPEED_READINGS_t;
 
+/* commit hash of the firmware on the VCU */
+typedef PREPACK struct {
+	uint32_t fw_version; /* scaling 1.0, offset 0.0, units none  */
+} POSTPACK can_0x0c8_vcu_firmware_version_t;
+
+/* commit hash of the firmware on the VCU */
+typedef PREPACK struct {
+	uint8_t dash_button5status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button4status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button3status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button2status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button1status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button6status; /* scaling 1.0, offset 0.0, units none  */
+} POSTPACK can_0x0eb_dash_buttons_t;
+
 typedef PREPACK struct {
 	uint8_t D6_14V_Monitor; /* scaling 1.0, offset 0.0, units none  */
 	uint8_t D3_HV_Input_Current; /* scaling 1.0, offset 0.0, units none  */
@@ -497,499 +450,6 @@ typedef PREPACK struct {
 	uint16_t D2_Max_Charge_Current; /* scaling 1.0, offset 0.0, units none  */
 	uint16_t D1_Max_Discharge_Current; /* scaling 1.0, offset 0.0, units none  */
 } POSTPACK can_0x202_BMS_Current_Limit_t;
-
-typedef PREPACK struct {
-	uint16_t pw1; /* scaling 0.0, offset 0.0, units none  */
-	uint16_t pw2; /* scaling 0.0, offset 0.0, units none  */
-	uint16_t rpm; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t seconds; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x5f0_megasquirt_gp0_t;
-
-typedef PREPACK struct {
-	int16_t adv_deg; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t engine; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t afrtgt1; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t afrtgt2; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t wbo2_en1; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t wbo2_en2; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t squirt; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x5f1_megasquirt_gp1_t;
-
-typedef PREPACK struct {
-	int16_t map; /* scaling 0.1, offset 0.0, units none  */
-	int16_t mat; /* scaling 0.1, offset 0.0, units none  */
-	int16_t clt; /* scaling 0.1, offset 0.0, units none  */
-	int16_t baro; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f2_megasquirt_gp2_t;
-
-typedef PREPACK struct {
-	int16_t batt; /* scaling 0.1, offset 0.0, units none  */
-	int16_t afr1_old; /* scaling 0.1, offset 0.0, units none  */
-	int16_t afr2_old; /* scaling 0.1, offset 0.0, units none  */
-	int16_t tps; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f3_megasquirt_gp3_t;
-
-typedef PREPACK struct {
-	int16_t egocor1; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egocor2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t aircor; /* scaling 0.1, offset 0.0, units none  */
-	int16_t knock; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f4_megasquirt_gp4_t;
-
-typedef PREPACK struct {
-	int16_t tpsaccel; /* scaling 0.1, offset 0.0, units none  */
-	int16_t tpsfuelcut; /* scaling 0.1, offset 0.0, units none  */
-	int16_t barocor; /* scaling 0.1, offset 0.0, units none  */
-	int16_t warmcor; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f5_megasquirt_gp5_t;
-
-typedef PREPACK struct {
-	int16_t ve1; /* scaling 0.1, offset 0.0, units none  */
-	int16_t ve2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t iacstep; /* scaling 1.0, offset 0.0, units none  */
-	int16_t totalcor; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f6_megasquirt_gp6_t;
-
-typedef PREPACK struct {
-	int16_t TPSdot; /* scaling 0.1, offset 0.0, units none  */
-	int16_t MAPdot; /* scaling 1.0, offset 0.0, units none  */
-	int16_t RPMdot; /* scaling 1.0, offset 0.0, units none  */
-	int16_t cold_adv_deg; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f7_megasquirt_gp7_t;
-
-typedef PREPACK struct {
-	int16_t fuelload; /* scaling 0.1, offset 0.0, units none  */
-	int16_t fuelcor; /* scaling 0.1, offset 0.0, units none  */
-	int16_t MAF; /* scaling 0.0, offset 0.0, units none  */
-	int16_t MAFload; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5f8_megasquirt_gp8_t;
-
-typedef PREPACK struct {
-	int16_t egoV2; /* scaling 0.0, offset 0.0, units none  */
-	uint16_t dwell; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t dwell_trl; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egoV1; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x5f9_megasquirt_gp9_t;
-
-typedef PREPACK struct {
-	int16_t status5; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status3; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status4; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status2; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status6; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status7; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status1; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x5fa_megasquirt_gp10_t;
-
-typedef PREPACK struct {
-	int16_t ignload; /* scaling 0.1, offset 0.0, units none  */
-	int16_t ignload2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t airtemp; /* scaling 0.1, offset 0.0, units none  */
-	int16_t fuelload2; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x5fb_megasquirt_gp11_t;
-
-typedef PREPACK struct {
-	int32_t wallfuel2; /* scaling 0.0, offset 0.0, units none  */
-	int32_t wallfuel1; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x5fc_megasquirt_gp12_t;
-
-typedef PREPACK struct {
-	int16_t sensors2; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors3; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors4; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors1; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x5fd_megasquirt_gp13_t;
-
-typedef PREPACK struct {
-	int16_t sensors6; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors7; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors8; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors5; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x5fe_megasquirt_gp14_t;
-
-typedef PREPACK struct {
-	int16_t sensors10; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors11; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors12; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors9; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x5ff_megasquirt_gp15_t;
-
-typedef PREPACK struct {
-	int16_t sensors14; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors15; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors16; /* scaling 0.0, offset 0.0, units none  */
-	int16_t sensors13; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x600_megasquirt_gp16_t;
-
-typedef PREPACK struct {
-	uint16_t boost_targ_2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t maf_volts; /* scaling 0.0, offset 0.0, units none  */
-	uint16_t boost_targ_1; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t boostduty2; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t boostduty; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x601_megasquirt_gp17_t;
-
-typedef PREPACK struct {
-	int16_t pwseq2; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq3; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq4; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq1; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x602_megasquirt_gp18_t;
-
-typedef PREPACK struct {
-	int16_t pwseq6; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq7; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq8; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq5; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x603_megasquirt_gp19_t;
-
-typedef PREPACK struct {
-	int16_t pwseq10; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq11; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq12; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq9; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x604_megasquirt_gp20_t;
-
-typedef PREPACK struct {
-	int16_t pwseq14; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq15; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq16; /* scaling 0.0, offset 0.0, units none  */
-	int16_t pwseq13; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x605_megasquirt_gp21_t;
-
-typedef PREPACK struct {
-	int16_t egt2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt3; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt4; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x606_megasquirt_gp22_t;
-
-typedef PREPACK struct {
-	int16_t egt6; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt7; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt8; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt5; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x607_megasquirt_gp23_t;
-
-typedef PREPACK struct {
-	int16_t egt10; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt11; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt12; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt9; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x608_megasquirt_gp24_t;
-
-typedef PREPACK struct {
-	int16_t egt14; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt15; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt16; /* scaling 0.1, offset 0.0, units none  */
-	int16_t egt13; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x609_megasquirt_gp25_t;
-
-typedef PREPACK struct {
-	int16_t n2o_addfuel; /* scaling 0.0, offset 0.0, units none  */
-	uint16_t nitrous_timer_out; /* scaling 0.0, offset 0.0, units none  */
-	int16_t n2o_retard; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t nitrous2_duty; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t nitrous1_duty; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x60a_megasquirt_gp26_t;
-
-typedef PREPACK struct {
-	int16_t canpwmin2; /* scaling 1.0, offset 0.0, units none  */
-	int16_t canpwmin3; /* scaling 1.0, offset 0.0, units none  */
-	int16_t canpwmin4; /* scaling 1.0, offset 0.0, units none  */
-	int16_t canpwmin1; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x60b_megasquirt_gp27_t;
-
-typedef PREPACK struct {
-	int16_t tpsadc; /* scaling 1.0, offset 0.0, units none  */
-	int16_t eaeload; /* scaling 0.1, offset 0.0, units none  */
-	int16_t afrload; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t cl_idle_targ_rpm; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x60c_megasquirt_gp28_t;
-
-typedef PREPACK struct {
-	uint16_t EAEfcor2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t VSS1dot; /* scaling 0.1, offset 0.0, units none  */
-	int16_t VSS2dot; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t EAEfcor1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x60d_megasquirt_gp29_t;
-
-typedef PREPACK struct {
-	int16_t accely; /* scaling 0.0, offset 0.0, units none  */
-	int16_t accelz; /* scaling 0.0, offset 0.0, units none  */
-	int16_t accelx; /* scaling 0.0, offset 0.0, units none  */
-	uint8_t water_duty; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t stream_level; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x60e_megasquirt_gp30_t;
-
-typedef PREPACK struct {
-	uint8_t AFR2; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR3; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR4; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR5; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR6; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR7; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR8; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x60f_megasquirt_gp31_t;
-
-typedef PREPACK struct {
-	uint8_t AFR10; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR11; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR12; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR13; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR14; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR15; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR16; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t AFR9; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x610_megasquirt_gp32_t;
-
-typedef PREPACK struct {
-	uint8_t duty_pwm2; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t duty_pwm3; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t duty_pwm4; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t duty_pwm5; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t duty_pwm6; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t gear; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t status8; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t duty_pwm1; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x611_megasquirt_gp33_t;
-
-typedef PREPACK struct {
-	int16_t EGOv2; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv3; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv4; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv1; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x612_megasquirt_gp34_t;
-
-typedef PREPACK struct {
-	int16_t EGOv6; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv7; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv8; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv5; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x613_megasquirt_gp35_t;
-
-typedef PREPACK struct {
-	int16_t EGOv10; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv11; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv12; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv9; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x614_megasquirt_gp36_t;
-
-typedef PREPACK struct {
-	int16_t EGOv14; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv15; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv16; /* scaling 0.0, offset 0.0, units none  */
-	int16_t EGOv13; /* scaling 0.0, offset 0.0, units none  */
-} POSTPACK can_0x615_megasquirt_gp37_t;
-
-typedef PREPACK struct {
-	int16_t EGOcor2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor3; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor4; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x616_megasquirt_gp38_t;
-
-typedef PREPACK struct {
-	int16_t EGOcor6; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor7; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor8; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor5; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x617_megasquirt_gp39_t;
-
-typedef PREPACK struct {
-	int16_t EGOcor10; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor11; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor12; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor9; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x618_megasquirt_gp40_t;
-
-typedef PREPACK struct {
-	int16_t EGOcor14; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor15; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor16; /* scaling 0.1, offset 0.0, units none  */
-	int16_t EGOcor13; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x619_megasquirt_gp41_t;
-
-typedef PREPACK struct {
-	uint16_t VSS2; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t VSS3; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t VSS4; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t VSS1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x61a_megasquirt_gp42_t;
-
-typedef PREPACK struct {
-	uint16_t sd_filenum; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t syncreason; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t sd_error; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t sd_phase; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t sd_status; /* scaling 1.0, offset 0.0, units none  */
-	int8_t timing_err; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t synccnt; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x61b_megasquirt_gp43_t;
-
-typedef PREPACK struct {
-	int16_t vvt_ang2; /* scaling 1.0, offset 0.0, units none  */
-	int16_t vvt_ang3; /* scaling 1.0, offset 0.0, units none  */
-	int16_t vvt_ang4; /* scaling 1.0, offset 0.0, units none  */
-	int16_t vvt_ang1; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x61c_megasquirt_gp44_t;
-
-typedef PREPACK struct {
-	int16_t vvt_target2; /* scaling 1.0, offset 0.0, units none  */
-	int16_t vvt_target3; /* scaling 1.0, offset 0.0, units none  */
-	int16_t vvt_target4; /* scaling 1.0, offset 0.0, units none  */
-	int16_t vvt_target1; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x61d_megasquirt_gp45_t;
-
-typedef PREPACK struct {
-	int16_t inj_timing_pri; /* scaling 0.1, offset 0.0, units none  */
-	int16_t inj_timing_sec; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t vvt_duty4; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t vvt_duty3; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t vvt_duty2; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t vvt_duty1; /* scaling 0.4, offset 0.0, units none  */
-} POSTPACK can_0x61e_megasquirt_gp46_t;
-
-typedef PREPACK struct {
-	int16_t tps_accel; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t SS1; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t SS2; /* scaling 1.0, offset 0.0, units none  */
-	int16_t fuel_pct; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x61f_megasquirt_gp47_t;
-
-typedef PREPACK struct {
-	uint8_t knock_cyl2; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl3; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl4; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl5; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl6; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl7; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl8; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl1; /* scaling 0.4, offset 0.0, units none  */
-} POSTPACK can_0x620_megasquirt_gp48_t;
-
-typedef PREPACK struct {
-	uint8_t knock_cyl10; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl11; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl12; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl13; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl14; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl15; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl16; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t knock_cyl9; /* scaling 0.4, offset 0.0, units none  */
-} POSTPACK can_0x621_megasquirt_gp49_t;
-
-typedef PREPACK struct {
-	int16_t total_accel; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t launch_timer; /* scaling 0.0, offset 0.0, units none  */
-	int16_t launch_retard; /* scaling 0.1, offset 0.0, units none  */
-	int16_t map_accel; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x622_megasquirt_gp50_t;
-
-typedef PREPACK struct {
-	uint8_t portb; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t porteh; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t portk; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t portmj; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t portp; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t portt; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t cel_errorcode; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t porta; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x623_megasquirt_gp51_t;
-
-typedef PREPACK struct {
-	uint16_t fuelflow; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t fuelcons; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t knk_rtd; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t canout; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t canin2; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t canin1; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x624_megasquirt_gp52_t;
-
-typedef PREPACK struct {
-	int16_t fuel_press2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t fuel_temp1; /* scaling 0.1, offset 0.0, units none  */
-	int16_t fuel_temp2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t fuel_press1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x625_megasquirt_gp53_t;
-
-typedef PREPACK struct {
-	uint16_t cel_status; /* scaling 1.0, offset 0.0, units none  */
-	int16_t batt_cur; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t alt_duty; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t load_duty; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t alt_targv; /* scaling 0.1, offset 0.0, units none  */
-	uint8_t fp_duty; /* scaling 0.4, offset 0.0, units none  */
-} POSTPACK can_0x626_megasquirt_gp54_t;
-
-typedef PREPACK struct {
-	uint16_t fueltemp_cor; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t fuelpress_cor; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t looptime; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t sp1; /* scaling 1.0, offset 0.0, units none  */
-	int8_t ltt_cor; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x627_megasquirt_gp55_t;
-
-typedef PREPACK struct {
-	int16_t cel_retard; /* scaling 0.1, offset 0.0, units none  */
-	int16_t fc_retard; /* scaling 0.1, offset 0.0, units none  */
-	int16_t als_addfuel; /* scaling 0.0, offset 0.0, units none  */
-	int16_t tc_retard; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x628_megasquirt_gp56_t;
-
-typedef PREPACK struct {
-	int16_t idle_cor_advance; /* scaling 0.1, offset 0.0, units none  */
-	int16_t mat_retard; /* scaling 0.1, offset 0.0, units none  */
-	int16_t flex_advance; /* scaling 0.1, offset 0.0, units none  */
-	int16_t base_advance; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x629_megasquirt_gp57_t;
-
-typedef PREPACK struct {
-	int16_t adv2; /* scaling 0.1, offset 0.0, units none  */
-	int16_t adv3; /* scaling 0.1, offset 0.0, units none  */
-	int16_t adv4; /* scaling 0.1, offset 0.0, units none  */
-	int16_t adv1; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x62a_megasquirt_gp58_t;
-
-typedef PREPACK struct {
-	int16_t als_timing; /* scaling 0.1, offset 0.0, units none  */
-	int16_t ext_advance; /* scaling 0.1, offset 0.0, units none  */
-	int16_t deadtime1; /* scaling 0.0, offset 0.0, units none  */
-	int16_t revlim_retard; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x62b_megasquirt_gp59_t;
-
-typedef PREPACK struct {
-	int16_t step3_timing; /* scaling 0.1, offset 0.0, units none  */
-	int16_t vsslaunch_retard; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t cel_status2; /* scaling 1.0, offset 0.0, units none  */
-	int16_t launch_timing; /* scaling 0.1, offset 0.0, units none  */
-} POSTPACK can_0x62c_megasquirt_gp60_t;
-
-typedef PREPACK struct {
-	uint16_t gps_latmmin; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t gps_lonmmin; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t gps_londeg; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t gps_lonmin; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t gps_latmin; /* scaling 1.0, offset 0.0, units none  */
-	int8_t gps_latdeg; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x62d_megasquirt_gp61_t;
-
-typedef PREPACK struct {
-	uint16_t gps_speed; /* scaling 0.1, offset 0.0, units none  */
-	uint16_t gps_altm; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t gps_course; /* scaling 0.1, offset 0.0, units none  */
-	int8_t gps_altk; /* scaling 1.0, offset 0.0, units none  */
-	int8_t gps_west; /* scaling 1.0, offset 0.0, units none  */
-} POSTPACK can_0x62e_megasquirt_gp62_t;
-
-typedef PREPACK struct {
-	uint16_t spare63_2; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t spare63_1; /* scaling 1.0, offset 0.0, units none  */
-	uint16_t spare63_3; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t generic_pid_duty2; /* scaling 0.4, offset 0.0, units none  */
-	uint8_t generic_pid_duty1; /* scaling 0.4, offset 0.0, units none  */
-} POSTPACK can_0x62f_megasquirt_gp63_t;
 
 /* This ID Transmits at 104 ms. */
 typedef PREPACK struct {
@@ -1056,73 +516,11 @@ typedef PREPACK struct {
 	dbcc_time_stamp_t can_0x0c4_VCU_PEDAL_READINGS_time_stamp_rx;
 	dbcc_time_stamp_t can_0x0c5_DAQ_SHOCKPOTS_time_stamp_rx;
 	dbcc_time_stamp_t can_0x0c6_VCU_WHEELSPEED_READINGS_time_stamp_rx;
+	dbcc_time_stamp_t can_0x0c8_vcu_firmware_version_time_stamp_rx;
+	dbcc_time_stamp_t can_0x0eb_dash_buttons_time_stamp_rx;
 	dbcc_time_stamp_t can_0x1d5_M188_U2C_Message_Rxd_time_stamp_rx;
 	dbcc_time_stamp_t can_0x1d7_M187_U2C_Command_Txd_time_stamp_rx;
 	dbcc_time_stamp_t can_0x202_BMS_Current_Limit_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f0_megasquirt_gp0_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f1_megasquirt_gp1_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f2_megasquirt_gp2_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f3_megasquirt_gp3_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f4_megasquirt_gp4_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f5_megasquirt_gp5_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f6_megasquirt_gp6_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f7_megasquirt_gp7_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f8_megasquirt_gp8_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5f9_megasquirt_gp9_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5fa_megasquirt_gp10_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5fb_megasquirt_gp11_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5fc_megasquirt_gp12_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5fd_megasquirt_gp13_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5fe_megasquirt_gp14_time_stamp_rx;
-	dbcc_time_stamp_t can_0x5ff_megasquirt_gp15_time_stamp_rx;
-	dbcc_time_stamp_t can_0x600_megasquirt_gp16_time_stamp_rx;
-	dbcc_time_stamp_t can_0x601_megasquirt_gp17_time_stamp_rx;
-	dbcc_time_stamp_t can_0x602_megasquirt_gp18_time_stamp_rx;
-	dbcc_time_stamp_t can_0x603_megasquirt_gp19_time_stamp_rx;
-	dbcc_time_stamp_t can_0x604_megasquirt_gp20_time_stamp_rx;
-	dbcc_time_stamp_t can_0x605_megasquirt_gp21_time_stamp_rx;
-	dbcc_time_stamp_t can_0x606_megasquirt_gp22_time_stamp_rx;
-	dbcc_time_stamp_t can_0x607_megasquirt_gp23_time_stamp_rx;
-	dbcc_time_stamp_t can_0x608_megasquirt_gp24_time_stamp_rx;
-	dbcc_time_stamp_t can_0x609_megasquirt_gp25_time_stamp_rx;
-	dbcc_time_stamp_t can_0x60a_megasquirt_gp26_time_stamp_rx;
-	dbcc_time_stamp_t can_0x60b_megasquirt_gp27_time_stamp_rx;
-	dbcc_time_stamp_t can_0x60c_megasquirt_gp28_time_stamp_rx;
-	dbcc_time_stamp_t can_0x60d_megasquirt_gp29_time_stamp_rx;
-	dbcc_time_stamp_t can_0x60e_megasquirt_gp30_time_stamp_rx;
-	dbcc_time_stamp_t can_0x60f_megasquirt_gp31_time_stamp_rx;
-	dbcc_time_stamp_t can_0x610_megasquirt_gp32_time_stamp_rx;
-	dbcc_time_stamp_t can_0x611_megasquirt_gp33_time_stamp_rx;
-	dbcc_time_stamp_t can_0x612_megasquirt_gp34_time_stamp_rx;
-	dbcc_time_stamp_t can_0x613_megasquirt_gp35_time_stamp_rx;
-	dbcc_time_stamp_t can_0x614_megasquirt_gp36_time_stamp_rx;
-	dbcc_time_stamp_t can_0x615_megasquirt_gp37_time_stamp_rx;
-	dbcc_time_stamp_t can_0x616_megasquirt_gp38_time_stamp_rx;
-	dbcc_time_stamp_t can_0x617_megasquirt_gp39_time_stamp_rx;
-	dbcc_time_stamp_t can_0x618_megasquirt_gp40_time_stamp_rx;
-	dbcc_time_stamp_t can_0x619_megasquirt_gp41_time_stamp_rx;
-	dbcc_time_stamp_t can_0x61a_megasquirt_gp42_time_stamp_rx;
-	dbcc_time_stamp_t can_0x61b_megasquirt_gp43_time_stamp_rx;
-	dbcc_time_stamp_t can_0x61c_megasquirt_gp44_time_stamp_rx;
-	dbcc_time_stamp_t can_0x61d_megasquirt_gp45_time_stamp_rx;
-	dbcc_time_stamp_t can_0x61e_megasquirt_gp46_time_stamp_rx;
-	dbcc_time_stamp_t can_0x61f_megasquirt_gp47_time_stamp_rx;
-	dbcc_time_stamp_t can_0x620_megasquirt_gp48_time_stamp_rx;
-	dbcc_time_stamp_t can_0x621_megasquirt_gp49_time_stamp_rx;
-	dbcc_time_stamp_t can_0x622_megasquirt_gp50_time_stamp_rx;
-	dbcc_time_stamp_t can_0x623_megasquirt_gp51_time_stamp_rx;
-	dbcc_time_stamp_t can_0x624_megasquirt_gp52_time_stamp_rx;
-	dbcc_time_stamp_t can_0x625_megasquirt_gp53_time_stamp_rx;
-	dbcc_time_stamp_t can_0x626_megasquirt_gp54_time_stamp_rx;
-	dbcc_time_stamp_t can_0x627_megasquirt_gp55_time_stamp_rx;
-	dbcc_time_stamp_t can_0x628_megasquirt_gp56_time_stamp_rx;
-	dbcc_time_stamp_t can_0x629_megasquirt_gp57_time_stamp_rx;
-	dbcc_time_stamp_t can_0x62a_megasquirt_gp58_time_stamp_rx;
-	dbcc_time_stamp_t can_0x62b_megasquirt_gp59_time_stamp_rx;
-	dbcc_time_stamp_t can_0x62c_megasquirt_gp60_time_stamp_rx;
-	dbcc_time_stamp_t can_0x62d_megasquirt_gp61_time_stamp_rx;
-	dbcc_time_stamp_t can_0x62e_megasquirt_gp62_time_stamp_rx;
-	dbcc_time_stamp_t can_0x62f_megasquirt_gp63_time_stamp_rx;
 	dbcc_time_stamp_t can_0x6b1_MSGID_0X6B1_time_stamp_rx;
 	dbcc_time_stamp_t can_0x6b2_MSGID_0X6B2_time_stamp_rx;
 	dbcc_time_stamp_t can_0x6b3_MSGID_0X6B3_time_stamp_rx;
@@ -1231,6 +629,12 @@ typedef PREPACK struct {
 	unsigned can_0x0c6_VCU_WHEELSPEED_READINGS_status : 2;
 	unsigned can_0x0c6_VCU_WHEELSPEED_READINGS_tx : 1;
 	unsigned can_0x0c6_VCU_WHEELSPEED_READINGS_rx : 1;
+	unsigned can_0x0c8_vcu_firmware_version_status : 2;
+	unsigned can_0x0c8_vcu_firmware_version_tx : 1;
+	unsigned can_0x0c8_vcu_firmware_version_rx : 1;
+	unsigned can_0x0eb_dash_buttons_status : 2;
+	unsigned can_0x0eb_dash_buttons_tx : 1;
+	unsigned can_0x0eb_dash_buttons_rx : 1;
 	unsigned can_0x1d5_M188_U2C_Message_Rxd_status : 2;
 	unsigned can_0x1d5_M188_U2C_Message_Rxd_tx : 1;
 	unsigned can_0x1d5_M188_U2C_Message_Rxd_rx : 1;
@@ -1240,198 +644,6 @@ typedef PREPACK struct {
 	unsigned can_0x202_BMS_Current_Limit_status : 2;
 	unsigned can_0x202_BMS_Current_Limit_tx : 1;
 	unsigned can_0x202_BMS_Current_Limit_rx : 1;
-	unsigned can_0x5f0_megasquirt_gp0_status : 2;
-	unsigned can_0x5f0_megasquirt_gp0_tx : 1;
-	unsigned can_0x5f0_megasquirt_gp0_rx : 1;
-	unsigned can_0x5f1_megasquirt_gp1_status : 2;
-	unsigned can_0x5f1_megasquirt_gp1_tx : 1;
-	unsigned can_0x5f1_megasquirt_gp1_rx : 1;
-	unsigned can_0x5f2_megasquirt_gp2_status : 2;
-	unsigned can_0x5f2_megasquirt_gp2_tx : 1;
-	unsigned can_0x5f2_megasquirt_gp2_rx : 1;
-	unsigned can_0x5f3_megasquirt_gp3_status : 2;
-	unsigned can_0x5f3_megasquirt_gp3_tx : 1;
-	unsigned can_0x5f3_megasquirt_gp3_rx : 1;
-	unsigned can_0x5f4_megasquirt_gp4_status : 2;
-	unsigned can_0x5f4_megasquirt_gp4_tx : 1;
-	unsigned can_0x5f4_megasquirt_gp4_rx : 1;
-	unsigned can_0x5f5_megasquirt_gp5_status : 2;
-	unsigned can_0x5f5_megasquirt_gp5_tx : 1;
-	unsigned can_0x5f5_megasquirt_gp5_rx : 1;
-	unsigned can_0x5f6_megasquirt_gp6_status : 2;
-	unsigned can_0x5f6_megasquirt_gp6_tx : 1;
-	unsigned can_0x5f6_megasquirt_gp6_rx : 1;
-	unsigned can_0x5f7_megasquirt_gp7_status : 2;
-	unsigned can_0x5f7_megasquirt_gp7_tx : 1;
-	unsigned can_0x5f7_megasquirt_gp7_rx : 1;
-	unsigned can_0x5f8_megasquirt_gp8_status : 2;
-	unsigned can_0x5f8_megasquirt_gp8_tx : 1;
-	unsigned can_0x5f8_megasquirt_gp8_rx : 1;
-	unsigned can_0x5f9_megasquirt_gp9_status : 2;
-	unsigned can_0x5f9_megasquirt_gp9_tx : 1;
-	unsigned can_0x5f9_megasquirt_gp9_rx : 1;
-	unsigned can_0x5fa_megasquirt_gp10_status : 2;
-	unsigned can_0x5fa_megasquirt_gp10_tx : 1;
-	unsigned can_0x5fa_megasquirt_gp10_rx : 1;
-	unsigned can_0x5fb_megasquirt_gp11_status : 2;
-	unsigned can_0x5fb_megasquirt_gp11_tx : 1;
-	unsigned can_0x5fb_megasquirt_gp11_rx : 1;
-	unsigned can_0x5fc_megasquirt_gp12_status : 2;
-	unsigned can_0x5fc_megasquirt_gp12_tx : 1;
-	unsigned can_0x5fc_megasquirt_gp12_rx : 1;
-	unsigned can_0x5fd_megasquirt_gp13_status : 2;
-	unsigned can_0x5fd_megasquirt_gp13_tx : 1;
-	unsigned can_0x5fd_megasquirt_gp13_rx : 1;
-	unsigned can_0x5fe_megasquirt_gp14_status : 2;
-	unsigned can_0x5fe_megasquirt_gp14_tx : 1;
-	unsigned can_0x5fe_megasquirt_gp14_rx : 1;
-	unsigned can_0x5ff_megasquirt_gp15_status : 2;
-	unsigned can_0x5ff_megasquirt_gp15_tx : 1;
-	unsigned can_0x5ff_megasquirt_gp15_rx : 1;
-	unsigned can_0x600_megasquirt_gp16_status : 2;
-	unsigned can_0x600_megasquirt_gp16_tx : 1;
-	unsigned can_0x600_megasquirt_gp16_rx : 1;
-	unsigned can_0x601_megasquirt_gp17_status : 2;
-	unsigned can_0x601_megasquirt_gp17_tx : 1;
-	unsigned can_0x601_megasquirt_gp17_rx : 1;
-	unsigned can_0x602_megasquirt_gp18_status : 2;
-	unsigned can_0x602_megasquirt_gp18_tx : 1;
-	unsigned can_0x602_megasquirt_gp18_rx : 1;
-	unsigned can_0x603_megasquirt_gp19_status : 2;
-	unsigned can_0x603_megasquirt_gp19_tx : 1;
-	unsigned can_0x603_megasquirt_gp19_rx : 1;
-	unsigned can_0x604_megasquirt_gp20_status : 2;
-	unsigned can_0x604_megasquirt_gp20_tx : 1;
-	unsigned can_0x604_megasquirt_gp20_rx : 1;
-	unsigned can_0x605_megasquirt_gp21_status : 2;
-	unsigned can_0x605_megasquirt_gp21_tx : 1;
-	unsigned can_0x605_megasquirt_gp21_rx : 1;
-	unsigned can_0x606_megasquirt_gp22_status : 2;
-	unsigned can_0x606_megasquirt_gp22_tx : 1;
-	unsigned can_0x606_megasquirt_gp22_rx : 1;
-	unsigned can_0x607_megasquirt_gp23_status : 2;
-	unsigned can_0x607_megasquirt_gp23_tx : 1;
-	unsigned can_0x607_megasquirt_gp23_rx : 1;
-	unsigned can_0x608_megasquirt_gp24_status : 2;
-	unsigned can_0x608_megasquirt_gp24_tx : 1;
-	unsigned can_0x608_megasquirt_gp24_rx : 1;
-	unsigned can_0x609_megasquirt_gp25_status : 2;
-	unsigned can_0x609_megasquirt_gp25_tx : 1;
-	unsigned can_0x609_megasquirt_gp25_rx : 1;
-	unsigned can_0x60a_megasquirt_gp26_status : 2;
-	unsigned can_0x60a_megasquirt_gp26_tx : 1;
-	unsigned can_0x60a_megasquirt_gp26_rx : 1;
-	unsigned can_0x60b_megasquirt_gp27_status : 2;
-	unsigned can_0x60b_megasquirt_gp27_tx : 1;
-	unsigned can_0x60b_megasquirt_gp27_rx : 1;
-	unsigned can_0x60c_megasquirt_gp28_status : 2;
-	unsigned can_0x60c_megasquirt_gp28_tx : 1;
-	unsigned can_0x60c_megasquirt_gp28_rx : 1;
-	unsigned can_0x60d_megasquirt_gp29_status : 2;
-	unsigned can_0x60d_megasquirt_gp29_tx : 1;
-	unsigned can_0x60d_megasquirt_gp29_rx : 1;
-	unsigned can_0x60e_megasquirt_gp30_status : 2;
-	unsigned can_0x60e_megasquirt_gp30_tx : 1;
-	unsigned can_0x60e_megasquirt_gp30_rx : 1;
-	unsigned can_0x60f_megasquirt_gp31_status : 2;
-	unsigned can_0x60f_megasquirt_gp31_tx : 1;
-	unsigned can_0x60f_megasquirt_gp31_rx : 1;
-	unsigned can_0x610_megasquirt_gp32_status : 2;
-	unsigned can_0x610_megasquirt_gp32_tx : 1;
-	unsigned can_0x610_megasquirt_gp32_rx : 1;
-	unsigned can_0x611_megasquirt_gp33_status : 2;
-	unsigned can_0x611_megasquirt_gp33_tx : 1;
-	unsigned can_0x611_megasquirt_gp33_rx : 1;
-	unsigned can_0x612_megasquirt_gp34_status : 2;
-	unsigned can_0x612_megasquirt_gp34_tx : 1;
-	unsigned can_0x612_megasquirt_gp34_rx : 1;
-	unsigned can_0x613_megasquirt_gp35_status : 2;
-	unsigned can_0x613_megasquirt_gp35_tx : 1;
-	unsigned can_0x613_megasquirt_gp35_rx : 1;
-	unsigned can_0x614_megasquirt_gp36_status : 2;
-	unsigned can_0x614_megasquirt_gp36_tx : 1;
-	unsigned can_0x614_megasquirt_gp36_rx : 1;
-	unsigned can_0x615_megasquirt_gp37_status : 2;
-	unsigned can_0x615_megasquirt_gp37_tx : 1;
-	unsigned can_0x615_megasquirt_gp37_rx : 1;
-	unsigned can_0x616_megasquirt_gp38_status : 2;
-	unsigned can_0x616_megasquirt_gp38_tx : 1;
-	unsigned can_0x616_megasquirt_gp38_rx : 1;
-	unsigned can_0x617_megasquirt_gp39_status : 2;
-	unsigned can_0x617_megasquirt_gp39_tx : 1;
-	unsigned can_0x617_megasquirt_gp39_rx : 1;
-	unsigned can_0x618_megasquirt_gp40_status : 2;
-	unsigned can_0x618_megasquirt_gp40_tx : 1;
-	unsigned can_0x618_megasquirt_gp40_rx : 1;
-	unsigned can_0x619_megasquirt_gp41_status : 2;
-	unsigned can_0x619_megasquirt_gp41_tx : 1;
-	unsigned can_0x619_megasquirt_gp41_rx : 1;
-	unsigned can_0x61a_megasquirt_gp42_status : 2;
-	unsigned can_0x61a_megasquirt_gp42_tx : 1;
-	unsigned can_0x61a_megasquirt_gp42_rx : 1;
-	unsigned can_0x61b_megasquirt_gp43_status : 2;
-	unsigned can_0x61b_megasquirt_gp43_tx : 1;
-	unsigned can_0x61b_megasquirt_gp43_rx : 1;
-	unsigned can_0x61c_megasquirt_gp44_status : 2;
-	unsigned can_0x61c_megasquirt_gp44_tx : 1;
-	unsigned can_0x61c_megasquirt_gp44_rx : 1;
-	unsigned can_0x61d_megasquirt_gp45_status : 2;
-	unsigned can_0x61d_megasquirt_gp45_tx : 1;
-	unsigned can_0x61d_megasquirt_gp45_rx : 1;
-	unsigned can_0x61e_megasquirt_gp46_status : 2;
-	unsigned can_0x61e_megasquirt_gp46_tx : 1;
-	unsigned can_0x61e_megasquirt_gp46_rx : 1;
-	unsigned can_0x61f_megasquirt_gp47_status : 2;
-	unsigned can_0x61f_megasquirt_gp47_tx : 1;
-	unsigned can_0x61f_megasquirt_gp47_rx : 1;
-	unsigned can_0x620_megasquirt_gp48_status : 2;
-	unsigned can_0x620_megasquirt_gp48_tx : 1;
-	unsigned can_0x620_megasquirt_gp48_rx : 1;
-	unsigned can_0x621_megasquirt_gp49_status : 2;
-	unsigned can_0x621_megasquirt_gp49_tx : 1;
-	unsigned can_0x621_megasquirt_gp49_rx : 1;
-	unsigned can_0x622_megasquirt_gp50_status : 2;
-	unsigned can_0x622_megasquirt_gp50_tx : 1;
-	unsigned can_0x622_megasquirt_gp50_rx : 1;
-	unsigned can_0x623_megasquirt_gp51_status : 2;
-	unsigned can_0x623_megasquirt_gp51_tx : 1;
-	unsigned can_0x623_megasquirt_gp51_rx : 1;
-	unsigned can_0x624_megasquirt_gp52_status : 2;
-	unsigned can_0x624_megasquirt_gp52_tx : 1;
-	unsigned can_0x624_megasquirt_gp52_rx : 1;
-	unsigned can_0x625_megasquirt_gp53_status : 2;
-	unsigned can_0x625_megasquirt_gp53_tx : 1;
-	unsigned can_0x625_megasquirt_gp53_rx : 1;
-	unsigned can_0x626_megasquirt_gp54_status : 2;
-	unsigned can_0x626_megasquirt_gp54_tx : 1;
-	unsigned can_0x626_megasquirt_gp54_rx : 1;
-	unsigned can_0x627_megasquirt_gp55_status : 2;
-	unsigned can_0x627_megasquirt_gp55_tx : 1;
-	unsigned can_0x627_megasquirt_gp55_rx : 1;
-	unsigned can_0x628_megasquirt_gp56_status : 2;
-	unsigned can_0x628_megasquirt_gp56_tx : 1;
-	unsigned can_0x628_megasquirt_gp56_rx : 1;
-	unsigned can_0x629_megasquirt_gp57_status : 2;
-	unsigned can_0x629_megasquirt_gp57_tx : 1;
-	unsigned can_0x629_megasquirt_gp57_rx : 1;
-	unsigned can_0x62a_megasquirt_gp58_status : 2;
-	unsigned can_0x62a_megasquirt_gp58_tx : 1;
-	unsigned can_0x62a_megasquirt_gp58_rx : 1;
-	unsigned can_0x62b_megasquirt_gp59_status : 2;
-	unsigned can_0x62b_megasquirt_gp59_tx : 1;
-	unsigned can_0x62b_megasquirt_gp59_rx : 1;
-	unsigned can_0x62c_megasquirt_gp60_status : 2;
-	unsigned can_0x62c_megasquirt_gp60_tx : 1;
-	unsigned can_0x62c_megasquirt_gp60_rx : 1;
-	unsigned can_0x62d_megasquirt_gp61_status : 2;
-	unsigned can_0x62d_megasquirt_gp61_tx : 1;
-	unsigned can_0x62d_megasquirt_gp61_rx : 1;
-	unsigned can_0x62e_megasquirt_gp62_status : 2;
-	unsigned can_0x62e_megasquirt_gp62_tx : 1;
-	unsigned can_0x62e_megasquirt_gp62_rx : 1;
-	unsigned can_0x62f_megasquirt_gp63_status : 2;
-	unsigned can_0x62f_megasquirt_gp63_tx : 1;
-	unsigned can_0x62f_megasquirt_gp63_rx : 1;
 	unsigned can_0x6b1_MSGID_0X6B1_status : 2;
 	unsigned can_0x6b1_MSGID_0X6B1_tx : 1;
 	unsigned can_0x6b1_MSGID_0X6B1_rx : 1;
@@ -1476,73 +688,11 @@ typedef PREPACK struct {
 	can_0x0c4_VCU_PEDAL_READINGS_t can_0x0c4_VCU_PEDAL_READINGS;
 	can_0x0c5_DAQ_SHOCKPOTS_t can_0x0c5_DAQ_SHOCKPOTS;
 	can_0x0c6_VCU_WHEELSPEED_READINGS_t can_0x0c6_VCU_WHEELSPEED_READINGS;
+	can_0x0c8_vcu_firmware_version_t can_0x0c8_vcu_firmware_version;
+	can_0x0eb_dash_buttons_t can_0x0eb_dash_buttons;
 	can_0x1d5_M188_U2C_Message_Rxd_t can_0x1d5_M188_U2C_Message_Rxd;
 	can_0x1d7_M187_U2C_Command_Txd_t can_0x1d7_M187_U2C_Command_Txd;
 	can_0x202_BMS_Current_Limit_t can_0x202_BMS_Current_Limit;
-	can_0x5f0_megasquirt_gp0_t can_0x5f0_megasquirt_gp0;
-	can_0x5f1_megasquirt_gp1_t can_0x5f1_megasquirt_gp1;
-	can_0x5f2_megasquirt_gp2_t can_0x5f2_megasquirt_gp2;
-	can_0x5f3_megasquirt_gp3_t can_0x5f3_megasquirt_gp3;
-	can_0x5f4_megasquirt_gp4_t can_0x5f4_megasquirt_gp4;
-	can_0x5f5_megasquirt_gp5_t can_0x5f5_megasquirt_gp5;
-	can_0x5f6_megasquirt_gp6_t can_0x5f6_megasquirt_gp6;
-	can_0x5f7_megasquirt_gp7_t can_0x5f7_megasquirt_gp7;
-	can_0x5f8_megasquirt_gp8_t can_0x5f8_megasquirt_gp8;
-	can_0x5f9_megasquirt_gp9_t can_0x5f9_megasquirt_gp9;
-	can_0x5fa_megasquirt_gp10_t can_0x5fa_megasquirt_gp10;
-	can_0x5fb_megasquirt_gp11_t can_0x5fb_megasquirt_gp11;
-	can_0x5fc_megasquirt_gp12_t can_0x5fc_megasquirt_gp12;
-	can_0x5fd_megasquirt_gp13_t can_0x5fd_megasquirt_gp13;
-	can_0x5fe_megasquirt_gp14_t can_0x5fe_megasquirt_gp14;
-	can_0x5ff_megasquirt_gp15_t can_0x5ff_megasquirt_gp15;
-	can_0x600_megasquirt_gp16_t can_0x600_megasquirt_gp16;
-	can_0x601_megasquirt_gp17_t can_0x601_megasquirt_gp17;
-	can_0x602_megasquirt_gp18_t can_0x602_megasquirt_gp18;
-	can_0x603_megasquirt_gp19_t can_0x603_megasquirt_gp19;
-	can_0x604_megasquirt_gp20_t can_0x604_megasquirt_gp20;
-	can_0x605_megasquirt_gp21_t can_0x605_megasquirt_gp21;
-	can_0x606_megasquirt_gp22_t can_0x606_megasquirt_gp22;
-	can_0x607_megasquirt_gp23_t can_0x607_megasquirt_gp23;
-	can_0x608_megasquirt_gp24_t can_0x608_megasquirt_gp24;
-	can_0x609_megasquirt_gp25_t can_0x609_megasquirt_gp25;
-	can_0x60a_megasquirt_gp26_t can_0x60a_megasquirt_gp26;
-	can_0x60b_megasquirt_gp27_t can_0x60b_megasquirt_gp27;
-	can_0x60c_megasquirt_gp28_t can_0x60c_megasquirt_gp28;
-	can_0x60d_megasquirt_gp29_t can_0x60d_megasquirt_gp29;
-	can_0x60e_megasquirt_gp30_t can_0x60e_megasquirt_gp30;
-	can_0x60f_megasquirt_gp31_t can_0x60f_megasquirt_gp31;
-	can_0x610_megasquirt_gp32_t can_0x610_megasquirt_gp32;
-	can_0x611_megasquirt_gp33_t can_0x611_megasquirt_gp33;
-	can_0x612_megasquirt_gp34_t can_0x612_megasquirt_gp34;
-	can_0x613_megasquirt_gp35_t can_0x613_megasquirt_gp35;
-	can_0x614_megasquirt_gp36_t can_0x614_megasquirt_gp36;
-	can_0x615_megasquirt_gp37_t can_0x615_megasquirt_gp37;
-	can_0x616_megasquirt_gp38_t can_0x616_megasquirt_gp38;
-	can_0x617_megasquirt_gp39_t can_0x617_megasquirt_gp39;
-	can_0x618_megasquirt_gp40_t can_0x618_megasquirt_gp40;
-	can_0x619_megasquirt_gp41_t can_0x619_megasquirt_gp41;
-	can_0x61a_megasquirt_gp42_t can_0x61a_megasquirt_gp42;
-	can_0x61b_megasquirt_gp43_t can_0x61b_megasquirt_gp43;
-	can_0x61c_megasquirt_gp44_t can_0x61c_megasquirt_gp44;
-	can_0x61d_megasquirt_gp45_t can_0x61d_megasquirt_gp45;
-	can_0x61e_megasquirt_gp46_t can_0x61e_megasquirt_gp46;
-	can_0x61f_megasquirt_gp47_t can_0x61f_megasquirt_gp47;
-	can_0x620_megasquirt_gp48_t can_0x620_megasquirt_gp48;
-	can_0x621_megasquirt_gp49_t can_0x621_megasquirt_gp49;
-	can_0x622_megasquirt_gp50_t can_0x622_megasquirt_gp50;
-	can_0x623_megasquirt_gp51_t can_0x623_megasquirt_gp51;
-	can_0x624_megasquirt_gp52_t can_0x624_megasquirt_gp52;
-	can_0x625_megasquirt_gp53_t can_0x625_megasquirt_gp53;
-	can_0x626_megasquirt_gp54_t can_0x626_megasquirt_gp54;
-	can_0x627_megasquirt_gp55_t can_0x627_megasquirt_gp55;
-	can_0x628_megasquirt_gp56_t can_0x628_megasquirt_gp56;
-	can_0x629_megasquirt_gp57_t can_0x629_megasquirt_gp57;
-	can_0x62a_megasquirt_gp58_t can_0x62a_megasquirt_gp58;
-	can_0x62b_megasquirt_gp59_t can_0x62b_megasquirt_gp59;
-	can_0x62c_megasquirt_gp60_t can_0x62c_megasquirt_gp60;
-	can_0x62d_megasquirt_gp61_t can_0x62d_megasquirt_gp61;
-	can_0x62e_megasquirt_gp62_t can_0x62e_megasquirt_gp62;
-	can_0x62f_megasquirt_gp63_t can_0x62f_megasquirt_gp63;
 	can_0x6b1_MSGID_0X6B1_t can_0x6b1_MSGID_0X6B1;
 	can_0x6b2_MSGID_0X6B2_t can_0x6b2_MSGID_0X6B2;
 	can_0x6b3_MSGID_0X6B3_t can_0x6b3_MSGID_0X6B3;
@@ -1588,184 +738,184 @@ int decode_can_0x01b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
 int encode_can_0x01b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x02a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell14temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell14temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell15temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell15temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell16temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell16temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell17temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell17temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell18temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell18temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_mintemp13to18(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_mintemp13to18(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_maxtemp13to18(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_maxtemp13to18(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02a_cell13temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02a_cell13temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x02b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x02b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x02b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell20temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell20temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell21temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell21temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell22temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell22temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell23temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell23temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell24temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell24temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_mintemp19to24(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_mintemp19to24(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_maxtemp19to24(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_maxtemp19to24(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x02b_cell19temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x02b_cell19temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x03a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell26temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell26temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell27temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell27temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell28temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell28temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell29temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell29temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell30temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell30temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_mintemp25to30(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_mintemp25to30(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_maxtemp25to30(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_maxtemp25to30(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03a_cell25temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03a_cell25temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x03b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x03b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x03b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell32temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell32temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell33temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell33temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell34temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell34temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell35temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell35temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell36temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell36temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_mintemp31to36(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_mintemp31to36(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_maxtemp31to36(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_maxtemp31to36(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x03b_cell31temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x03b_cell31temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x04a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell38temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell38temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell39temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell39temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell40temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell40temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell41temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell41temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell42temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell42temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_mintemp37to42(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_mintemp37to42(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_maxtemp37to42(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_maxtemp37to42(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04a_cell37temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04a_cell37temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x04b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x04b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x04b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell44temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell44temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell45temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell45temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell46temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell46temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell47temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell47temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell48temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell48temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_mintemp43to48(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_mintemp43to48(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_maxtemp43to48(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_maxtemp43to48(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x04b_cell43temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x04b_cell43temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x05a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell50temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell50temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell51temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell51temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell52temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell52temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell53temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell53temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell54temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell54temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_mintemp49to54(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_mintemp49to54(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_maxtemp49to54(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_maxtemp49to54(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05a_cell49temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05a_cell49temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x05b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x05b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x05b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell56temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell56temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell57temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell57temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell58temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell58temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell59temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell59temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell60temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell60temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_mintemp55to60(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_mintemp55to60(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_maxtemp55to60(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_maxtemp55to60(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x05b_cell55temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x05b_cell55temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x06a_cell2temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_cell2temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_cell3temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_cell3temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_cell4temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_cell4temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_cell5temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_cell5temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_cell6temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_cell6temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_mintemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_mintemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_maxtemp1to6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_maxtemp1to6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06a_cell1temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06a_cell1temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell62temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell62temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell63temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell63temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell64temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell64temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell65temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell65temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell66temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell66temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_mintemp61to66(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_mintemp61to66(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_maxtemp61to66(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_maxtemp61to66(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06a_cell61temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06a_cell61temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
-int decode_can_0x06b_cell8temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_cell8temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_cell9temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_cell9temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_cell10temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_cell10temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_cell11temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_cell11temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_cell12temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_cell12temp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_mintemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_mintemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_maxtemp7to12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_maxtemp7to12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x06b_cell7temp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x06b_cell7temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell68temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell68temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell69temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell69temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell70temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell70temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell71temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell71temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell72temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell72temp(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_mintemp67to72(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_mintemp67to72(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_maxtemp67to72(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_maxtemp67to72(can_obj_ksu_dbc_h_t *o, double in);
+int decode_can_0x06b_cell67temp(const can_obj_ksu_dbc_h_t *o, double *out);
+int encode_can_0x06b_cell67temp(can_obj_ksu_dbc_h_t *o, double in);
 
 
 int decode_can_0x0a0_D2_Module_B(const can_obj_ksu_dbc_h_t *o, double *out);
@@ -2036,6 +1186,24 @@ int decode_can_0x0c6_RPM_FL(const can_obj_ksu_dbc_h_t *o, double *out);
 int encode_can_0x0c6_RPM_FL(can_obj_ksu_dbc_h_t *o, double in);
 
 
+int decode_can_0x0c8_fw_version(const can_obj_ksu_dbc_h_t *o, uint32_t *out);
+int encode_can_0x0c8_fw_version(can_obj_ksu_dbc_h_t *o, uint32_t in);
+
+
+int decode_can_0x0eb_dash_button5status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button5status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button4status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button4status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button3status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button3status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button2status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button2status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button1status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button1status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button6status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button6status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+
+
 int decode_can_0x1d5_D6_14V_Monitor(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
 int encode_can_0x1d5_D6_14V_Monitor(can_obj_ksu_dbc_h_t *o, uint8_t in);
 int decode_can_0x1d5_D3_HV_Input_Current(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
@@ -2064,736 +1232,6 @@ int decode_can_0x202_D2_Max_Charge_Current(const can_obj_ksu_dbc_h_t *o, uint16_
 int encode_can_0x202_D2_Max_Charge_Current(can_obj_ksu_dbc_h_t *o, uint16_t in);
 int decode_can_0x202_D1_Max_Discharge_Current(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
 int encode_can_0x202_D1_Max_Discharge_Current(can_obj_ksu_dbc_h_t *o, uint16_t in);
-
-
-int decode_can_0x5f0_pw1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f0_pw1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f0_pw2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f0_pw2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f0_rpm(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x5f0_rpm(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x5f0_seconds(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x5f0_seconds(can_obj_ksu_dbc_h_t *o, uint16_t in);
-
-
-int decode_can_0x5f1_adv_deg(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f1_adv_deg(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f1_engine(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5f1_engine(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5f1_afrtgt1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f1_afrtgt1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f1_afrtgt2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f1_afrtgt2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f1_wbo2_en1(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5f1_wbo2_en1(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5f1_wbo2_en2(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5f1_wbo2_en2(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5f1_squirt(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5f1_squirt(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x5f2_map(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f2_map(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f2_mat(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f2_mat(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f2_clt(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f2_clt(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f2_baro(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f2_baro(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f3_batt(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f3_batt(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f3_afr1_old(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f3_afr1_old(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f3_afr2_old(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f3_afr2_old(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f3_tps(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f3_tps(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f4_egocor1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f4_egocor1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f4_egocor2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f4_egocor2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f4_aircor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f4_aircor(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f4_knock(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f4_knock(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f5_tpsaccel(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f5_tpsaccel(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f5_tpsfuelcut(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f5_tpsfuelcut(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f5_barocor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f5_barocor(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f5_warmcor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f5_warmcor(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f6_ve1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f6_ve1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f6_ve2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f6_ve2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f6_iacstep(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x5f6_iacstep(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x5f6_totalcor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f6_totalcor(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f7_TPSdot(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f7_TPSdot(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f7_MAPdot(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x5f7_MAPdot(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x5f7_RPMdot(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x5f7_RPMdot(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x5f7_cold_adv_deg(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f7_cold_adv_deg(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f8_fuelload(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f8_fuelload(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f8_fuelcor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f8_fuelcor(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f8_MAF(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f8_MAF(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f8_MAFload(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f8_MAFload(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5f9_egoV2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f9_egoV2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f9_dwell(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f9_dwell(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f9_dwell_trl(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f9_dwell_trl(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5f9_egoV1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5f9_egoV1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5fa_status5(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x5fa_status5(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x5fa_status3(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5fa_status3(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5fa_status4(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5fa_status4(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5fa_status2(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5fa_status2(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5fa_status6(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5fa_status6(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5fa_status7(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5fa_status7(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x5fa_status1(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x5fa_status1(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x5fb_ignload(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fb_ignload(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fb_ignload2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fb_ignload2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fb_airtemp(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fb_airtemp(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fb_fuelload2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fb_fuelload2(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5fc_wallfuel2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fc_wallfuel2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fc_wallfuel1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fc_wallfuel1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5fd_sensors2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fd_sensors2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fd_sensors3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fd_sensors3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fd_sensors4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fd_sensors4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fd_sensors1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fd_sensors1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5fe_sensors6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fe_sensors6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fe_sensors7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fe_sensors7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fe_sensors8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fe_sensors8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5fe_sensors5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5fe_sensors5(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x5ff_sensors10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5ff_sensors10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5ff_sensors11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5ff_sensors11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5ff_sensors12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5ff_sensors12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x5ff_sensors9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x5ff_sensors9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x600_sensors14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x600_sensors14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x600_sensors15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x600_sensors15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x600_sensors16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x600_sensors16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x600_sensors13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x600_sensors13(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x601_boost_targ_2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x601_boost_targ_2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x601_maf_volts(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x601_maf_volts(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x601_boost_targ_1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x601_boost_targ_1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x601_boostduty2(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x601_boostduty2(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x601_boostduty(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x601_boostduty(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x602_pwseq2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x602_pwseq2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x602_pwseq3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x602_pwseq3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x602_pwseq4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x602_pwseq4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x602_pwseq1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x602_pwseq1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x603_pwseq6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x603_pwseq6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x603_pwseq7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x603_pwseq7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x603_pwseq8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x603_pwseq8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x603_pwseq5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x603_pwseq5(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x604_pwseq10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x604_pwseq10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x604_pwseq11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x604_pwseq11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x604_pwseq12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x604_pwseq12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x604_pwseq9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x604_pwseq9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x605_pwseq14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x605_pwseq14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x605_pwseq15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x605_pwseq15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x605_pwseq16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x605_pwseq16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x605_pwseq13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x605_pwseq13(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x606_egt2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x606_egt2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x606_egt3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x606_egt3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x606_egt4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x606_egt4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x606_egt1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x606_egt1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x607_egt6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x607_egt6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x607_egt7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x607_egt7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x607_egt8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x607_egt8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x607_egt5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x607_egt5(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x608_egt10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x608_egt10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x608_egt11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x608_egt11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x608_egt12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x608_egt12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x608_egt9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x608_egt9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x609_egt14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x609_egt14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x609_egt15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x609_egt15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x609_egt16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x609_egt16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x609_egt13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x609_egt13(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x60a_n2o_addfuel(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60a_n2o_addfuel(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60a_nitrous_timer_out(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60a_nitrous_timer_out(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60a_n2o_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60a_n2o_retard(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60a_nitrous2_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x60a_nitrous2_duty(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x60a_nitrous1_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x60a_nitrous1_duty(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x60b_canpwmin2(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x60b_canpwmin2(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x60b_canpwmin3(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x60b_canpwmin3(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x60b_canpwmin4(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x60b_canpwmin4(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x60b_canpwmin1(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x60b_canpwmin1(can_obj_ksu_dbc_h_t *o, int16_t in);
-
-
-int decode_can_0x60c_tpsadc(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x60c_tpsadc(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x60c_eaeload(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60c_eaeload(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60c_afrload(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60c_afrload(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60c_cl_idle_targ_rpm(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x60c_cl_idle_targ_rpm(can_obj_ksu_dbc_h_t *o, uint16_t in);
-
-
-int decode_can_0x60d_EAEfcor2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60d_EAEfcor2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60d_VSS1dot(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60d_VSS1dot(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60d_VSS2dot(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60d_VSS2dot(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60d_EAEfcor1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60d_EAEfcor1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x60e_accely(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60e_accely(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60e_accelz(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60e_accelz(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60e_accelx(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60e_accelx(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60e_water_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x60e_water_duty(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x60e_stream_level(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x60e_stream_level(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x60f_AFR2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR5(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x60f_AFR1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x60f_AFR1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x610_AFR10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR13(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x610_AFR9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x610_AFR9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x611_duty_pwm2(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_duty_pwm2(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_duty_pwm3(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_duty_pwm3(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_duty_pwm4(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_duty_pwm4(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_duty_pwm5(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_duty_pwm5(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_duty_pwm6(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_duty_pwm6(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_gear(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_gear(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_status8(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_status8(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x611_duty_pwm1(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x611_duty_pwm1(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x612_EGOv2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x612_EGOv2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x612_EGOv3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x612_EGOv3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x612_EGOv4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x612_EGOv4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x612_EGOv1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x612_EGOv1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x613_EGOv6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x613_EGOv6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x613_EGOv7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x613_EGOv7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x613_EGOv8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x613_EGOv8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x613_EGOv5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x613_EGOv5(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x614_EGOv10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x614_EGOv10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x614_EGOv11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x614_EGOv11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x614_EGOv12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x614_EGOv12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x614_EGOv9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x614_EGOv9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x615_EGOv14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x615_EGOv14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x615_EGOv15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x615_EGOv15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x615_EGOv16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x615_EGOv16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x615_EGOv13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x615_EGOv13(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x616_EGOcor2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x616_EGOcor2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x616_EGOcor3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x616_EGOcor3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x616_EGOcor4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x616_EGOcor4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x616_EGOcor1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x616_EGOcor1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x617_EGOcor6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x617_EGOcor6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x617_EGOcor7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x617_EGOcor7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x617_EGOcor8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x617_EGOcor8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x617_EGOcor5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x617_EGOcor5(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x618_EGOcor10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x618_EGOcor10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x618_EGOcor11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x618_EGOcor11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x618_EGOcor12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x618_EGOcor12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x618_EGOcor9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x618_EGOcor9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x619_EGOcor14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x619_EGOcor14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x619_EGOcor15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x619_EGOcor15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x619_EGOcor16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x619_EGOcor16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x619_EGOcor13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x619_EGOcor13(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x61a_VSS2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61a_VSS2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61a_VSS3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61a_VSS3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61a_VSS4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61a_VSS4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61a_VSS1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61a_VSS1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x61b_sd_filenum(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x61b_sd_filenum(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x61b_syncreason(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x61b_syncreason(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x61b_sd_error(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x61b_sd_error(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x61b_sd_phase(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x61b_sd_phase(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x61b_sd_status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x61b_sd_status(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x61b_timing_err(const can_obj_ksu_dbc_h_t *o, int8_t *out);
-int encode_can_0x61b_timing_err(can_obj_ksu_dbc_h_t *o, int8_t in);
-int decode_can_0x61b_synccnt(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x61b_synccnt(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x61c_vvt_ang2(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61c_vvt_ang2(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x61c_vvt_ang3(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61c_vvt_ang3(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x61c_vvt_ang4(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61c_vvt_ang4(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x61c_vvt_ang1(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61c_vvt_ang1(can_obj_ksu_dbc_h_t *o, int16_t in);
-
-
-int decode_can_0x61d_vvt_target2(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61d_vvt_target2(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x61d_vvt_target3(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61d_vvt_target3(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x61d_vvt_target4(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61d_vvt_target4(can_obj_ksu_dbc_h_t *o, int16_t in);
-int decode_can_0x61d_vvt_target1(const can_obj_ksu_dbc_h_t *o, int16_t *out);
-int encode_can_0x61d_vvt_target1(can_obj_ksu_dbc_h_t *o, int16_t in);
-
-
-int decode_can_0x61e_inj_timing_pri(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61e_inj_timing_pri(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61e_inj_timing_sec(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61e_inj_timing_sec(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61e_vvt_duty4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61e_vvt_duty4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61e_vvt_duty3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61e_vvt_duty3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61e_vvt_duty2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61e_vvt_duty2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61e_vvt_duty1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61e_vvt_duty1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x61f_tps_accel(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61f_tps_accel(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x61f_SS1(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x61f_SS1(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x61f_SS2(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x61f_SS2(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x61f_fuel_pct(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x61f_fuel_pct(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x620_knock_cyl2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl5(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl5(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl6(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl6(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl7(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl7(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl8(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl8(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x620_knock_cyl1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x620_knock_cyl1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x621_knock_cyl10(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl10(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl11(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl11(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl12(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl12(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl13(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl13(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl14(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl14(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl15(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl15(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl16(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl16(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x621_knock_cyl9(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x621_knock_cyl9(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x622_total_accel(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x622_total_accel(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x622_launch_timer(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x622_launch_timer(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x622_launch_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x622_launch_retard(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x622_map_accel(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x622_map_accel(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x623_portb(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_portb(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_porteh(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_porteh(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_portk(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_portk(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_portmj(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_portmj(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_portp(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_portp(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_portt(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_portt(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_cel_errorcode(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_cel_errorcode(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x623_porta(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x623_porta(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x624_fuelflow(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x624_fuelflow(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x624_fuelcons(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x624_fuelcons(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x624_knk_rtd(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x624_knk_rtd(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x624_canout(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x624_canout(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x624_canin2(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x624_canin2(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x624_canin1(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x624_canin1(can_obj_ksu_dbc_h_t *o, uint8_t in);
-
-
-int decode_can_0x625_fuel_press2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x625_fuel_press2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x625_fuel_temp1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x625_fuel_temp1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x625_fuel_temp2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x625_fuel_temp2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x625_fuel_press1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x625_fuel_press1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x626_cel_status(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x626_cel_status(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x626_batt_cur(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x626_batt_cur(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x626_alt_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x626_alt_duty(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x626_load_duty(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x626_load_duty(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x626_alt_targv(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x626_alt_targv(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x626_fp_duty(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x626_fp_duty(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x627_fueltemp_cor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x627_fueltemp_cor(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x627_fuelpress_cor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x627_fuelpress_cor(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x627_looptime(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x627_looptime(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x627_sp1(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x627_sp1(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x627_ltt_cor(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x627_ltt_cor(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x628_cel_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x628_cel_retard(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x628_fc_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x628_fc_retard(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x628_als_addfuel(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x628_als_addfuel(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x628_tc_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x628_tc_retard(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x629_idle_cor_advance(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x629_idle_cor_advance(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x629_mat_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x629_mat_retard(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x629_flex_advance(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x629_flex_advance(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x629_base_advance(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x629_base_advance(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x62a_adv2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62a_adv2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62a_adv3(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62a_adv3(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62a_adv4(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62a_adv4(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62a_adv1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62a_adv1(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x62b_als_timing(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62b_als_timing(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62b_ext_advance(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62b_ext_advance(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62b_deadtime1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62b_deadtime1(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62b_revlim_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62b_revlim_retard(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x62c_step3_timing(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62c_step3_timing(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62c_vsslaunch_retard(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62c_vsslaunch_retard(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62c_cel_status2(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62c_cel_status2(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62c_launch_timing(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62c_launch_timing(can_obj_ksu_dbc_h_t *o, double in);
-
-
-int decode_can_0x62d_gps_latmmin(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62d_gps_latmmin(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62d_gps_lonmmin(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62d_gps_lonmmin(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62d_gps_londeg(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x62d_gps_londeg(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x62d_gps_lonmin(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x62d_gps_lonmin(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x62d_gps_latmin(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x62d_gps_latmin(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x62d_gps_latdeg(const can_obj_ksu_dbc_h_t *o, int8_t *out);
-int encode_can_0x62d_gps_latdeg(can_obj_ksu_dbc_h_t *o, int8_t in);
-
-
-int decode_can_0x62e_gps_speed(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62e_gps_speed(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62e_gps_altm(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62e_gps_altm(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62e_gps_course(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62e_gps_course(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62e_gps_altk(const can_obj_ksu_dbc_h_t *o, int8_t *out);
-int encode_can_0x62e_gps_altk(can_obj_ksu_dbc_h_t *o, int8_t in);
-int decode_can_0x62e_gps_west(const can_obj_ksu_dbc_h_t *o, int8_t *out);
-int encode_can_0x62e_gps_west(can_obj_ksu_dbc_h_t *o, int8_t in);
-
-
-int decode_can_0x62f_spare63_2(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62f_spare63_2(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62f_spare63_1(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62f_spare63_1(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62f_spare63_3(const can_obj_ksu_dbc_h_t *o, uint16_t *out);
-int encode_can_0x62f_spare63_3(can_obj_ksu_dbc_h_t *o, uint16_t in);
-int decode_can_0x62f_generic_pid_duty2(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62f_generic_pid_duty2(can_obj_ksu_dbc_h_t *o, double in);
-int decode_can_0x62f_generic_pid_duty1(const can_obj_ksu_dbc_h_t *o, double *out);
-int encode_can_0x62f_generic_pid_duty1(can_obj_ksu_dbc_h_t *o, double in);
 
 
 int decode_can_0x6b1_Pack_CCL(const can_obj_ksu_dbc_h_t *o, uint16_t *out);

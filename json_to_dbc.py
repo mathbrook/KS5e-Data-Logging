@@ -27,7 +27,9 @@ def cantools_json_to_dbc(input_json: str,outfilename: str):
                 new_signal.offset = signal["conversion"]["offset"]
             if "choices" in signal["conversion"]:
                 new_signal.choices = signal["conversion"]["choices"]
-
+        # new_signal.is_multiplexer=signal["is_multipexer"]
+        # new_signal.comment=signal["comment"]
+        # new_signal.unit=signal["units"]
         new_signal_dict[new_signal.name]=new_signal
 
     list_of_cantools_msgs = []
@@ -49,10 +51,16 @@ def cantools_json_to_dbc(input_json: str,outfilename: str):
         new_message.bus_name=message_info["bus_name"]
         list_of_cantools_msgs.append(new_message)
 
-    nodes = [cantools.db.Node('vcu',"the vehicle control unit"),cantools.db.Node('bms'),cantools.db.Node('inverter')]
+    nodes = [cantools.db.Node('vcu',"the vehicle control unit"),
+             cantools.db.Node('bms'),
+             cantools.db.Node('inverter'),
+             cantools.db.Node('dash')]
+    
     buses = [cantools.db.Bus('ks8', None, 500000)]
+    
     new_db = cantools.db.Database(list_of_cantools_msgs,nodes=nodes,buses=buses)
     cantools.db.dump_file(new_db,outfilename+'.dbc')
+    cantools.db.dump_file(new_db,outfilename+'.sym',database_format='sym')
 
 def cantools_dbc_to_json(db: cantools.db.Database,outfilename: str):
 
@@ -80,6 +88,8 @@ def cantools_dbc_to_json(db: cantools.db.Database,outfilename: str):
             signal_dict["byte_order"]=signal.byte_order
             signal_dict["is_signed"]=signal.is_signed
             signal_dict["initial"]=signal.initial
+            signal_dict["comment"]=signal.comment
+            signal_dict["units"]=signal.unit
             signal_conv_type = (type(signal.conversion))
 
             if signal_conv_type == conversion.IdentityConversion:
@@ -139,6 +149,5 @@ def json_gen():
     subprocess.run(["make","-C",".\dbcc"])
     subprocess.run([".\dbcc\dbcc","ksu_dbc.dbc"])
 
-    # subprocess.run([".\dbcc\dbcc ksu_dbc.dbc"])
 if __name__ == "__main__":
     json_gen()
