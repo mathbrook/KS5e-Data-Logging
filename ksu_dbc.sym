@@ -133,12 +133,12 @@ Sig="MAX_TORQUE" unsigned 8 /max:255 /min:0
 Sig="TORQUE_MODE" unsigned 8 /max:255 /min:0
 Sig="DISTANCE_TRAVELLED" unsigned 16 /max:65535 /min:0
 Sig="fw_version" unsigned 32
-Sig="dash_button6status" unsigned 1
-Sig="dash_button5status" unsigned 1
-Sig="dash_button4status" unsigned 1
-Sig="dash_button3status" unsigned 1
-Sig="dash_button2status" unsigned 1
 Sig="dash_button1status" unsigned 1
+Sig="dash_button2status" unsigned 1
+Sig="dash_button3status" unsigned 1
+Sig="dash_button4status" unsigned 1
+Sig="dash_button5status" unsigned 1
+Sig="dash_button6status" unsigned 1
 Sig="Pack_DCL" unsigned 16
 Sig="Pack_CCL" unsigned 16
 Sig="High_Temperature" unsigned 8 -m
@@ -515,12 +515,12 @@ Sig="RPM_FR" 32
 ["dash_buttons"]
 ID=0EBh // commit hash of the firmware on the VCU
 Len=8
-Sig="dash_button6status" 2
-Sig="dash_button5status" 3
-Sig="dash_button4status" 4
-Sig="dash_button3status" 5
-Sig="dash_button2status" 6
-Sig="dash_button1status" 7
+Sig="dash_button1status" 0
+Sig="dash_button2status" 1
+Sig="dash_button3status" 2
+Sig="dash_button4status" 3
+Sig="dash_button5status" 4
+Sig="dash_button6status" 5
 
 ["segment1_temps1"]
 ID=01Ah // raw ADC voltage reading of module1 cells 1-6

@@ -2837,7 +2837,7 @@
         },
         {
             "name":"dash_button1status",
-            "start":7,
+            "start":0,
             "length":1,
             "byte_order": "little_endian",
             "is_signed": false,
@@ -2851,7 +2851,7 @@
         },
         {
             "name":"dash_button2status",
-            "start":6,
+            "start":1,
             "length":1,
             "byte_order": "little_endian",
             "is_signed": false,
@@ -2865,7 +2865,7 @@
         },
         {
             "name":"dash_button3status",
-            "start":5,
+            "start":2,
             "length":1,
             "byte_order": "little_endian",
             "is_signed": false,
@@ -2879,20 +2879,6 @@
         },
         {
             "name":"dash_button4status",
-            "start":4,
-            "length":1,
-            "byte_order": "little_endian",
-            "is_signed": false,
-            "initial": null,
-            "conversion": {
-                "is_float": false
-            },
-            "min": null,
-            "max": null,
-            "is_multiplexer": false
-        },
-        {
-            "name":"dash_button5status",
             "start":3,
             "length":1,
             "byte_order": "little_endian",
@@ -2906,8 +2892,22 @@
             "is_multiplexer": false
         },
         {
+            "name":"dash_button5status",
+            "start":4,
+            "length":1,
+            "byte_order": "little_endian",
+            "is_signed": false,
+            "initial": null,
+            "conversion": {
+                "is_float": false
+            },
+            "min": null,
+            "max": null,
+            "is_multiplexer": false
+        },
+        {
             "name":"dash_button6status",
-            "start":2,
+            "start":5,
             "length":1,
             "byte_order": "little_endian",
             "is_signed": false,

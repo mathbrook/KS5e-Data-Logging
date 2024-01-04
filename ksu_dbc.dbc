@@ -215,12 +215,12 @@ BO_ 200 vcu_firmware_version: 4 vcu
  SG_ fw_version : 0|32@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 235 dash_buttons: 8 dash
- SG_ dash_button1status : 7|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dash_button2status : 6|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dash_button3status : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dash_button4status : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dash_button5status : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dash_button6status : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dash_button6status : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dash_button5status : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dash_button4status : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dash_button3status : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dash_button2status : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dash_button1status : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1713 MSGID_0X6B1: 8 BMS
  SG_ CRC_Checksum : 63|8@0+ (1,0) [0|0] "" Vector__XXX

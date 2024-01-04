@@ -7161,29 +7161,28 @@ static int pack_can_0x0eb_dash_buttons(can_obj_ksu_dbc_h_t *o, uint64_t *data) {
 	assert(data);
 	register uint64_t x;
 	register uint64_t i = 0;
-	/* dash_button5status: start-bit 3, length 1, endianess intel, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button5status)) & 0x1;
+	/* dash_button2status: start-bit 1, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button2status)) & 0x1;
+	x <<= 1; 
+	i |= x;
+	/* dash_button3status: start-bit 2, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button3status)) & 0x1;
+	x <<= 2; 
+	i |= x;
+	/* dash_button4status: start-bit 3, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button4status)) & 0x1;
 	x <<= 3; 
 	i |= x;
-	/* dash_button4status: start-bit 4, length 1, endianess intel, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button4status)) & 0x1;
+	/* dash_button5status: start-bit 4, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button5status)) & 0x1;
 	x <<= 4; 
 	i |= x;
-	/* dash_button3status: start-bit 5, length 1, endianess intel, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button3status)) & 0x1;
+	/* dash_button6status: start-bit 5, length 1, endianess intel, scaling 1, offset 0 */
+	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button6status)) & 0x1;
 	x <<= 5; 
 	i |= x;
-	/* dash_button2status: start-bit 6, length 1, endianess intel, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button2status)) & 0x1;
-	x <<= 6; 
-	i |= x;
-	/* dash_button1status: start-bit 7, length 1, endianess intel, scaling 1, offset 0 */
+	/* dash_button1status: start-bit 0, length 1, endianess intel, scaling 1, offset 0 */
 	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button1status)) & 0x1;
-	x <<= 7; 
-	i |= x;
-	/* dash_button6status: start-bit 2, length 1, endianess intel, scaling 1, offset 0 */
-	x = ((uint8_t)(o->can_0x0eb_dash_buttons.dash_button6status)) & 0x1;
-	x <<= 2; 
 	i |= x;
 	*data = (i);
 	o->can_0x0eb_dash_buttons_tx = 1;
@@ -7197,54 +7196,40 @@ static int unpack_can_0x0eb_dash_buttons(can_obj_ksu_dbc_h_t *o, uint64_t data, 
 	register uint64_t i = (data);
 	if (dlc < 8)
 		return -1;
-	/* dash_button5status: start-bit 3, length 1, endianess intel, scaling 1, offset 0 */
-	x = (i >> 3) & 0x1;
-	o->can_0x0eb_dash_buttons.dash_button5status = x;
-	/* dash_button4status: start-bit 4, length 1, endianess intel, scaling 1, offset 0 */
-	x = (i >> 4) & 0x1;
-	o->can_0x0eb_dash_buttons.dash_button4status = x;
-	/* dash_button3status: start-bit 5, length 1, endianess intel, scaling 1, offset 0 */
-	x = (i >> 5) & 0x1;
-	o->can_0x0eb_dash_buttons.dash_button3status = x;
-	/* dash_button2status: start-bit 6, length 1, endianess intel, scaling 1, offset 0 */
-	x = (i >> 6) & 0x1;
+	/* dash_button2status: start-bit 1, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 1) & 0x1;
 	o->can_0x0eb_dash_buttons.dash_button2status = x;
-	/* dash_button1status: start-bit 7, length 1, endianess intel, scaling 1, offset 0 */
-	x = (i >> 7) & 0x1;
-	o->can_0x0eb_dash_buttons.dash_button1status = x;
-	/* dash_button6status: start-bit 2, length 1, endianess intel, scaling 1, offset 0 */
+	/* dash_button3status: start-bit 2, length 1, endianess intel, scaling 1, offset 0 */
 	x = (i >> 2) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button3status = x;
+	/* dash_button4status: start-bit 3, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 3) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button4status = x;
+	/* dash_button5status: start-bit 4, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 4) & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button5status = x;
+	/* dash_button6status: start-bit 5, length 1, endianess intel, scaling 1, offset 0 */
+	x = (i >> 5) & 0x1;
 	o->can_0x0eb_dash_buttons.dash_button6status = x;
+	/* dash_button1status: start-bit 0, length 1, endianess intel, scaling 1, offset 0 */
+	x = i & 0x1;
+	o->can_0x0eb_dash_buttons.dash_button1status = x;
 	o->can_0x0eb_dash_buttons_rx = 1;
 	o->can_0x0eb_dash_buttons_time_stamp_rx = time_stamp;
 	return 8;
 }
 
-int decode_can_0x0eb_dash_button5status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+int decode_can_0x0eb_dash_button2status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
 	assert(o);
 	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button5status);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button2status);
 	*out = rval;
 	return 0;
 }
 
-int encode_can_0x0eb_dash_button5status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+int encode_can_0x0eb_dash_button2status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
 	assert(o);
-	o->can_0x0eb_dash_buttons.dash_button5status = in;
-	return 0;
-}
-
-int decode_can_0x0eb_dash_button4status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
-	assert(o);
-	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button4status);
-	*out = rval;
-	return 0;
-}
-
-int encode_can_0x0eb_dash_button4status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
-	assert(o);
-	o->can_0x0eb_dash_buttons.dash_button4status = in;
+	o->can_0x0eb_dash_buttons.dash_button2status = in;
 	return 0;
 }
 
@@ -7262,31 +7247,31 @@ int encode_can_0x0eb_dash_button3status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
 	return 0;
 }
 
-int decode_can_0x0eb_dash_button2status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+int decode_can_0x0eb_dash_button4status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
 	assert(o);
 	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button2status);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button4status);
 	*out = rval;
 	return 0;
 }
 
-int encode_can_0x0eb_dash_button2status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+int encode_can_0x0eb_dash_button4status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
 	assert(o);
-	o->can_0x0eb_dash_buttons.dash_button2status = in;
+	o->can_0x0eb_dash_buttons.dash_button4status = in;
 	return 0;
 }
 
-int decode_can_0x0eb_dash_button1status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+int decode_can_0x0eb_dash_button5status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
 	assert(o);
 	assert(out);
-	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button1status);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button5status);
 	*out = rval;
 	return 0;
 }
 
-int encode_can_0x0eb_dash_button1status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+int encode_can_0x0eb_dash_button5status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
 	assert(o);
-	o->can_0x0eb_dash_buttons.dash_button1status = in;
+	o->can_0x0eb_dash_buttons.dash_button5status = in;
 	return 0;
 }
 
@@ -7304,16 +7289,30 @@ int encode_can_0x0eb_dash_button6status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
 	return 0;
 }
 
+int decode_can_0x0eb_dash_button1status(const can_obj_ksu_dbc_h_t *o, uint8_t *out) {
+	assert(o);
+	assert(out);
+	uint8_t rval = (uint8_t)(o->can_0x0eb_dash_buttons.dash_button1status);
+	*out = rval;
+	return 0;
+}
+
+int encode_can_0x0eb_dash_button1status(can_obj_ksu_dbc_h_t *o, uint8_t in) {
+	assert(o);
+	o->can_0x0eb_dash_buttons.dash_button1status = in;
+	return 0;
+}
+
 int print_can_0x0eb_dash_buttons(const can_obj_ksu_dbc_h_t *o, FILE *output) {
 	assert(o);
 	assert(output);
 	int r = 0;
-	r = print_helper(r, fprintf(output, "dash_button5status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button5status)));
-	r = print_helper(r, fprintf(output, "dash_button4status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button4status)));
-	r = print_helper(r, fprintf(output, "dash_button3status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button3status)));
 	r = print_helper(r, fprintf(output, "dash_button2status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button2status)));
-	r = print_helper(r, fprintf(output, "dash_button1status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button1status)));
+	r = print_helper(r, fprintf(output, "dash_button3status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button3status)));
+	r = print_helper(r, fprintf(output, "dash_button4status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button4status)));
+	r = print_helper(r, fprintf(output, "dash_button5status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button5status)));
 	r = print_helper(r, fprintf(output, "dash_button6status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button6status)));
+	r = print_helper(r, fprintf(output, "dash_button1status = (wire: %.0f)\n", (double)(o->can_0x0eb_dash_buttons.dash_button1status)));
 	return r;
 }
 

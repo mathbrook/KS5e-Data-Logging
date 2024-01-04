@@ -421,12 +421,12 @@ typedef PREPACK struct {
 
 /* commit hash of the firmware on the VCU */
 typedef PREPACK struct {
-	uint8_t dash_button5status; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t dash_button4status; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t dash_button3status; /* scaling 1.0, offset 0.0, units none  */
 	uint8_t dash_button2status; /* scaling 1.0, offset 0.0, units none  */
-	uint8_t dash_button1status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button3status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button4status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button5status; /* scaling 1.0, offset 0.0, units none  */
 	uint8_t dash_button6status; /* scaling 1.0, offset 0.0, units none  */
+	uint8_t dash_button1status; /* scaling 1.0, offset 0.0, units none  */
 } POSTPACK can_0x0eb_dash_buttons_t;
 
 typedef PREPACK struct {
@@ -1190,18 +1190,18 @@ int decode_can_0x0c8_fw_version(const can_obj_ksu_dbc_h_t *o, uint32_t *out);
 int encode_can_0x0c8_fw_version(can_obj_ksu_dbc_h_t *o, uint32_t in);
 
 
-int decode_can_0x0eb_dash_button5status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x0eb_dash_button5status(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x0eb_dash_button4status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x0eb_dash_button4status(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x0eb_dash_button3status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x0eb_dash_button3status(can_obj_ksu_dbc_h_t *o, uint8_t in);
 int decode_can_0x0eb_dash_button2status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
 int encode_can_0x0eb_dash_button2status(can_obj_ksu_dbc_h_t *o, uint8_t in);
-int decode_can_0x0eb_dash_button1status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
-int encode_can_0x0eb_dash_button1status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button3status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button3status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button4status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button4status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button5status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button5status(can_obj_ksu_dbc_h_t *o, uint8_t in);
 int decode_can_0x0eb_dash_button6status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
 int encode_can_0x0eb_dash_button6status(can_obj_ksu_dbc_h_t *o, uint8_t in);
+int decode_can_0x0eb_dash_button1status(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
+int encode_can_0x0eb_dash_button1status(can_obj_ksu_dbc_h_t *o, uint8_t in);
 
 
 int decode_can_0x1d5_D6_14V_Monitor(const can_obj_ksu_dbc_h_t *o, uint8_t *out);
