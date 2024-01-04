@@ -1,6 +1,7 @@
 import cantools
 from cantools.database import conversion
 import json
+import sys
 from parser_api import get_dbc_files
 import time
 
@@ -144,10 +145,12 @@ def test_json_gen():
                 print(line)
 import subprocess
 def json_gen():
-    cantools_json_to_dbc(input_json="can_descriptor.json",outfilename="ksu_dbc")
+    args=sys.argv[1]
+    filename=args
+    cantools_json_to_dbc(input_json="can_descriptor.json",outfilename=filename)
     # subprocess.run(["make -C .\dbcc"])
     subprocess.run(["make","-C",".\dbcc"])
-    subprocess.run([".\dbcc\dbcc","ksu_dbc.dbc"])
+    subprocess.run([".\dbcc\dbcc",filename+".dbc"])
 
 if __name__ == "__main__":
     json_gen()
