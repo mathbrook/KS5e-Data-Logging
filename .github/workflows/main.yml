@@ -1,0 +1,24 @@
+name: generate DBC and C code
+
+on:
+  push:
+    branches:
+      - main  # Replace 'main' with your main branch name a
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can change the OS if needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # This action checks out your repository's code
+
+      - name: Get current date and time
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H_%M_%S')"
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}-${{ steps.date.outputs.date }} 
+          files: |
+            ./*

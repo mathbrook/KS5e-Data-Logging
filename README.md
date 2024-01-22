@@ -14,9 +14,17 @@ _If you have any questions or need troubleshooting, feel free to reach out to Ma
     - Really the only thing you need MatLab for is to plot the data after parsing. Otherwise, just having Python is enough
 3. If you have not done so already, clone this GitHub repo or download it as a zip, extract, and save to somewhere safe
 4. Change directory to the repo. All you have to do is `cd KS5e-Data-Logging`
-5. optional step, create a python virtual environment by running these commands: `pip install virtualenv` `virtualenv venv` `.\venv\scripts\activate` (https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one)
-6. Once you are here, download the needed pip libraries by issuing the command `pip install -r requirements.txt`
+5. optional step, create a python virtual environment by running these commands:
+```python
+pip install virtualenv
+python -m virtualenv venv
+.\venv\scripts\activate
+pip install -r requirements.txt
+```
 
+(https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one)
+
+6. Once you are here, download the needed pip libraries by issuing the command `pip install -r requirements.txt`
 
 ## User's Guide
 If you are a user, everything you need to care about is in the `telemetry_exe` folder. Navigate to that directory.
@@ -45,3 +53,19 @@ _The next steps are optional - only if you want to plot the result_
 
 ## Developer's Guide
 _Way too lazy to do right now, I'll get to it after comp hopefully_
+
+## JSON to DBC GENERATOR
+
+the file ```json_to_db.py``` is a script that will parse the ```can_descriptor.json``` and generate a dbc file, ```ksu_dbc.dbc```
+this dbc file can be used to decode all of the CAN traffic on the KSU motorsports electric vehicle OR combustion vehicle.
+by using a json file as the generator's source, it is easy to add on signals and messages thanks to the human readable format.
+
+**TO ADD A MESSAGE:**
+
+follow an example
+
+**TO ADD A SIGNAL:**
+
+follow an example
+
+(I WILL EXPAND ON THESE SECTIONS SOON :TM:)
