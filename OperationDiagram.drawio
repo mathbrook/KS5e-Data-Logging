@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" modified="2023-10-22T01:27:33.983Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="RGuAcT9yOu9h3kkoYcEr" version="22.0.6" type="device">
+  <diagram name="Page-1" id="50k1JGjWik0fVtjj7pBr">
+    <mxGraphModel dx="896" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-1" target="UGzPLeG-0t3EQpkOzJZr-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-1" value="Drop raw data in &quot;Raw Data&quot; folder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="80" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-2" target="UGzPLeG-0t3EQpkOzJZr-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-2" value="Run &quot;python parser_exe.py&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-4" target="UGzPLeG-0t3EQpkOzJZr-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-11" value="Acquire new logs to&lt;br&gt;plot" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UGzPLeG-0t3EQpkOzJZr-5">
+          <mxGeometry x="-0.3505" y="-3" relative="1" as="geometry">
+            <mxPoint x="15" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-4" value="Clear &quot;Raw Data&quot; and &quot;Parsed Data&quot; folders, save &#39;output.mat&#39; somewhere" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="40" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-8" target="UGzPLeG-0t3EQpkOzJZr-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-8" value="Parsed data is output in &quot;Parsed Data&quot; folders, &quot;output.mat&quot; is put in repo root folder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-13" target="UGzPLeG-0t3EQpkOzJZr-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-13" value="Leave raw data in downloaded folder from Teams" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-14" target="UGzPLeG-0t3EQpkOzJZr-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-14" value="Run &quot;python parser_exe.py&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-18" target="UGzPLeG-0t3EQpkOzJZr-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-17" value="Acquire new logs to&lt;br&gt;plot" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UGzPLeG-0t3EQpkOzJZr-16">
+          <mxGeometry x="-0.3505" y="-3" relative="1" as="geometry">
+            <mxPoint x="15" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-18" value="&lt;strike&gt;Clear &quot;Raw Data&quot; and &quot;Parsed Data&quot; folders, save &#39;output.mat&#39; somewhere&lt;/strike&gt;&lt;br&gt;this step can be skipped because we aren&#39;t overwriting stuff anymore" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-20" target="UGzPLeG-0t3EQpkOzJZr-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-20" value="Parsed data is output in &quot;Parsed_data&quot; folder, which is put inside the same folder selected by user," style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-21" target="UGzPLeG-0t3EQpkOzJZr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-21" value="scripts automatically checks &quot;Raw Data&quot; folder for logs to parse" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UGzPLeG-0t3EQpkOzJZr-24" target="UGzPLeG-0t3EQpkOzJZr-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-24" value="script prompts user to select folder containing all raw logs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-27" value="Current parser workflow" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UGzPLeG-0t3EQpkOzJZr-28" value="Proposed revamp workflow" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

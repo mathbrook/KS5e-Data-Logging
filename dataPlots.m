@@ -24,6 +24,8 @@ runfaults_lo=S.D3_Run_Fault_Lo;
 rpm=S.D2_Motor_Speed;
 inverter_v = S.D1_DC_Bus_Voltage;
 acc_v = S.Pack_Inst_Voltage;
+torque_request=S.D1_Commanded_Torque;
+torque_command = S.Torque_Command;
 % get daxis and qaxis current and find magnitude of their vector
 % "By convention, the quadrature axis always will lead the direct axis
 % electrically by 90 deg."
@@ -40,12 +42,17 @@ plot(rpm(:,1)/1000,rpm(:,2)/10)
 plot(inverter_v(:,1)/1000,inverter_v(:,2))
 plot(acc_v(:,1)/1000,acc_v(:,2))
 plot(iq(:,1)/1000,total_motor_current)
+plot(torque_request(:,1)/1000,torque_request(:,2))
+plot(torque_command(:,1)/1000,torque_command(:,2))
+
 ylim([-100 600]);
 title('Motor Currents, RPM, Inverter Fault Code, Inverter and BMS voltage')
 xlabel('Time (s)')
 h = zoom;
 set(h,'Motion','horizontal','Enable','on');
-legend({'iq','id','faults_lo','rpm','inverter DC bus voltage','BMS battery pack voltage','total motor current'})
+legend({'iq','id','faults_lo','rpm/10','inverter DC bus voltage', ...
+    'BMS battery pack voltage','total motor current', ...
+    'torque request','torque command'})
 % everything after this point will not work due to incompatibility with DBC
 % parsing, these functions were designed for the manually written parsing
 %% Torque, Vehicle Speed, Current, mega plot
@@ -223,15 +230,15 @@ set(h,'Motion','horizontal','Enable','on');
 figure
 
 hold on
-plot(S.gate_driver_board_temperature(:,1)/1000,S.gate_driver_board_temperature(:,2))
-plot(S.control_board_temperature(:,1)/1000,S.control_board_temperature(:,2))
-plot(S.module_a_temperature(:,1)/1000,S.module_a_temperature(:,2))
-plot(S.module_b_temperature(:,1)/1000,S.module_b_temperature(:,2)) 
-plot(S.module_c_temperature(:,1)/1000,S.module_c_temperature(:,2))
-plot(S.motor_temperature(:,1)/1000,S.motor_temperature(:,2))
-plot(S.dc_bus_current(:,1)/1000,S.dc_bus_current(:,2)*0.25) 
-plot(S.hightemp(:,1)/1000,S.hightemp(:,2))
-plot(S.lowtemp(:,1)/1000,S.lowtemp(:,2))
+plot(S.D4_Gate_Driver_Board(:,1)/1000,S.D4_Gate_Driver_Board(:,2))
+plot(S.D1_Control_Board_Temperature(:,1)/1000,S.D1_Control_Board_Temperature(:,2))
+plot(S.D1_Module_A(:,1)/1000,S.D1_Module_A(:,2))
+plot(S.D2_Module_B(:,1)/1000,S.D2_Module_B(:,2)) 
+plot(S.D3_Module_C(:,1)/1000,S.D3_Module_C(:,2))
+plot(S.D3_Motor_Temperature(:,1)/1000,S.D3_Motor_Temperature(:,2))
+plot(S.D4_DC_Bus_Current(:,1)/1000,S.D4_DC_Bus_Current(:,2)*0.25) 
+plot(S.High_Temperature(:,1)/1000,S.High_Temperature(:,2))
+plot(S.Low_Temperature(:,1)/1000,S.Low_Temperature(:,2))
 %%plot(S.DCL(:,1)/1000,S.DCL(:,2));
 grid on
 
