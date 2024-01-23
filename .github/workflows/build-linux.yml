@@ -45,6 +45,18 @@ jobs:
       run: |
         ls -R
 
+
+
+    - name: release-downloader
+      uses: robinraju/release-downloader@v1.8
+      with:
+        repository:
+          KSU-MS/ksu-ms-dbc
+        latest: true
+        fileName: "*.dbc"
+        out-file-path: |
+          ./dist/dbc-files
+  
     - name: upload artifacts     
       uses: actions/upload-artifact@v2
       with:
