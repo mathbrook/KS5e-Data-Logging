@@ -15,14 +15,14 @@ jobs:
     - name: checkout code
       uses: actions/checkout@v2
       
-    - name: Get current date and time
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H_%M_%S')"
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: ${{ github.ref_name }}-${{ steps.date.outputs.date }} 
-        files: ./*
+    # - name: Get current date and time
+    #   id: date
+    #   run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H_%M_%S')"
+    # - name: Release
+    #   uses: softprops/action-gh-release@v1
+    #   with:
+    #     tag_name: ${{ github.ref_name }}-${{ steps.date.outputs.date }} 
+    #     files: ./*
         
     - name: Set up Python
       uses: actions/setup-python@v2
