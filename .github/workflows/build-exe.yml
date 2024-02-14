@@ -67,6 +67,7 @@ jobs:
         path: |
           ./dist/*
           ./build/*
+          ./test/*.csv
 
   test-exe:
     needs: build

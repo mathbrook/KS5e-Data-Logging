@@ -64,6 +64,8 @@ jobs:
         path: |
           ./build/*
           ./dist/*
+          ./test/*.csv
+          
   test-bin:
     needs: build
     runs-on: ubuntu-latest

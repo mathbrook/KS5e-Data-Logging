@@ -62,6 +62,8 @@ def main(args):
         except:
             logging.critical("could not open tkinter prompt to select folder")
     elif args.test:
+        # 'test' folder includes a csv with a bit of meaningful data in it so we can test parsing against it
+        # TODO: long term, host a batch of example csvs, and download them rather than storing here
         logging.info(f"Setting path to test due to 'test' arg being true: {args.test}")
         parsing_folder_path='./test'
     try:
