@@ -70,9 +70,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: parser-exe-windows
-          path: parser-exe
+          path: parser-exe-download
       - name: run exe
         run: |
+          ls -r
+          cd parser-exe-download
           ls
           cd parser-exe
           ls
