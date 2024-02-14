@@ -1,4 +1,4 @@
-name: build windows executable
+name: build and run windows executable
 
 on:
   push:
@@ -71,11 +71,11 @@ jobs:
         with:
           name: parser-exe-windows
           path: parser-exe-download
-      - name: run exe
+      - name: run exe # watch the - and _ here lol
         run: |
           ls -r
           cd parser-exe-download
-          cd parser-exe
+          cd parser_exe
           parser_exe.exe
           
 
