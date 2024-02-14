@@ -2,9 +2,9 @@ name: build windows executable
 
 on:
   push:
-    branches: "**"
+    branches: "main"
   pull_request:
-    branches: "**"
+    branches: "main"
 
 jobs:
   build:
@@ -62,7 +62,26 @@ jobs:
         name: parser-exe-windows
         path: |
           ./dist/windows/*
+  test-exe:
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: parser-exe-windows
+          path: parser-exe
+      - name: run exe
+        run: |
+          ls
+          cd parser-exe
+          ls
+          tar -xf parser-exe-windows.zip
+          cd parser-exe-windows
+          cd parser-exe
+          parser_exe.exe
           
+
     # - uses: actions/upload-artifact@v2
     #   with:
     #     name: parser-exe-linux
