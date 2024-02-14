@@ -3,21 +3,20 @@
 
 Welcome to the folder containing all the BENNESAW BATE Racing data acquisition services. The entire system is Python and MatLab based.
 
-
-  - If you have any questions or need troubleshooting, feel free to reach out to Matthew Samson on Teams, Discord: mathbrook or via email: <msamson1@students.kennesaw.edu>
+- If you have any questions or need troubleshooting, feel free to reach out to Matthew Samson on Teams, Discord: mathbrook or via email: <msamson1@students.kennesaw.edu>
 
 # parser setup
 
 the parser is the tool to decode our vehicle [CAN](https://www.csselectronics.com/pages/can-bus-simple-intro-tutorial) logs, which look like this:
 
-```
+```csv
 time,msg.id,msg.len,data
 1698174558627,C0,8,0000000001020000
 ```
 
 into this:
 
-```
+```csv
 time,id,message,label,value,unit
 2023-10-24T19:09:18.627Z,0xC0,M192_Command_Message,Torque_Command,0.0,Nm
 ```
@@ -28,7 +27,7 @@ there are two options for using the parser:
 
 2. install python, clone repo, install packages and run script (more complicated but easier to update)
 
-### downloading executable
+## downloading executable
 
 1. go to <https://github.com/KSU-MS/KS5e-Data-Logging/actions/workflows/build-exe.yml?query=branch%3Adevelop+branch%3Amain++>
     - you should see this: ![picture of workflow run page](readmepics/image.png)
@@ -40,7 +39,6 @@ there are two options for using the parser:
 
 4. once that download is complete, extract the contents of the .zip file to a folder
 5. run `parser_exe.exe`
-
 
 ### manual python install
 
@@ -59,7 +57,7 @@ python -m virtualenv venv
 pip install -r requirements.txt
 ```
 
-<https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one>
+why venv is good to use: <https://stackoverflow.com/questions/41972261/what-is-a-virtualenv-and-why-should-i-use-one>
 
 6. Once you are here, download the needed pip libraries by issuing the command `pip install -r requirements.txt`
 
@@ -69,13 +67,10 @@ If you are a user, everything you need to care about is in the `telemetry_exe` f
 
 There are two services: the **Live Console**, the **Parser and Plotter**
 
-
 ### Parser and Plotter
 
 1. Get the raw data CSVs from the SD card on the vehicle
 2. Copy them to a folder on your computer
-   
- 
 3. If you chose to manually set up the parser, you can either run the file `parser_exe.py` with the Python Interpreter or issue the command `python parser_exe.py`
 4. Otherwise if you downloaded the executable, run `parser_exe.exe`
 5. Wait for the process to finish (a success message from `parser_exe.py` followed by termination)
@@ -86,8 +81,8 @@ If you run the parser in the same raw data folder again, it will overwrite the f
 
 _The next steps are optional - only if you want to plot the results_
 
-6. Open `dataPlots.m` in MatLab
-7. In MatLab, first load `output.mat` by double clicking it on the sidebar. Then click run on `dataPlots.m`
+7. Open `dataPlots.m` in MatLab
+8. In MatLab, first load `output.mat` by double clicking it on the sidebar. Then click run on `dataPlots.m`
     - This script will not execute fully if there is not enough data, and it will stop on the first plot it is missing data for
 
 ### Live Console

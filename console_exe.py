@@ -313,7 +313,7 @@ def user_prompt(prompt,options):
 
 def read_from_teensy_thread(window, comport):
     db = get_dbc_files('dbc-files')
-    dbc_ids = print_all_the_shit_in_dbc_file(db)
+    dbc_ids = parse_ids_in_database(db)
     unknown_ids=[]
     ser = Serial(comport)
     # ser.port = comport #Arduino serial port
@@ -371,7 +371,7 @@ def read_from_teensy_thread(window, comport):
 '''
 def read_from_csv_thread(window):
     db = get_dbc_files('dbc-files')
-    dbc_ids = print_all_the_shit_in_dbc_file(db)
+    dbc_ids = parse_ids_in_database(db)
     unknown_ids=[]
     infile = open("raw_data.csv", "r")
     line_count =  1 # bypass first header line

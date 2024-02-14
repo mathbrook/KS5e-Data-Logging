@@ -1,31 +1,68 @@
-import sys
-sys.path.insert(1, "../telemetry_parsers")
-from parser_api import *
 from folder_selection_utils import select_folder_and_get_path
+from download_latest_dbc_from_releases import download_latest_release
+from parser_api import *
+import sys
+import argparse
+import subprocess
+import parser_logger, logging
+sys.path.insert(1, "../telemetry_parsers")
 ########################################################################
 # Entry Point to Framework
 ########################################################################
-print("Welcome to KSU motorsports parser")
-print("The process will be of two parts: CSV to CSV parsing, and then CSV to MAT parsing.")
-print("----------------------------------------------------------------------------------")
-print("Looking for dbc-files folder: ")
-if not os.path.exists("dbc-files"):
-    print("FATAL ERROR: 'dbc-files' folder was not found.")
-    print("please select the folder with dbc files to use for parsing...")
-    dbc_files_path=select_folder_and_get_path()
-elif os.path.exists("dbc-files"):
-    print("dbc-files found")
-    dbc_files_path = ('dbc-files')
-    
-dbc_file = get_dbc_files(dbc_files_path)
-print("Beginning CSV to CSV parsing...")
-print("Select a folder which contains the raw logs to be parsed")
-parse_folder(select_folder_and_get_path(),dbc_file=dbc_file)
-print("Finished CSV to CSV parsing.")
-print("----------------------------------------------------------------------------------")
-print("Beginning CSV to MAT parsing...")
-create_mat()
-print("Finished CSV to MAT parsing.")
-print("----------------------------------------------------------------------------------")
-print("SUCCESS: Parsing Complete.")
-input("press enter to exit")
+
+
+def main(args):
+    logging.info("Welcome to KSU motorsports parser")
+    logging.info("The process will be of two parts: CSV to CSV parsing, and then CSV to MAT parsing.")
+    dbc_found = False
+    dbc_files_folder_good = True
+    if args.getdbc:
+        logging.info("Downloading latest dbc")
+        download_latest_release()
+        
+    logging.info("Looking for dbc-files folder: ")
+    while not dbc_found:
+        if not os.path.exists("dbc-files") or dbc_files_folder_good == False:
+            logging.error("'dbc-files' folder was not found or failed to load dbcs.")
+            logging.error("please select the folder with dbc files to use for parsing...")
+            while True:
+                dbc_files_path = select_folder_and_get_path()
+                for file_name in os.listdir(dbc_files_path):
+                    if file_name.endswith(".dbc"):
+                        logging.info(f"Found DBC file: {file_name}")
+                        dbc_found = True
+                dbc_file = get_dbc_files(dbc_files_path)
+                if dbc_found and dbc_file is not None:
+                    break
+                else:
+                    logging.error(f"No DBCs found in {dbc_files_path}")
+                    logging.error("Please select another folder...")
+
+        elif os.path.exists("dbc-files") and dbc_files_folder_good:
+            logging.info("dbc-files folder found")
+            dbc_files_path = ('dbc-files')
+
+            dbc_file = get_dbc_files(dbc_files_path)
+            if dbc_file is not None:
+                break
+            elif dbc_file is None:
+                dbc_files_folder_good = False
+
+    logging.info("Beginning CSV to CSV parsing...")
+    logging.info("Select a folder which contains the raw logs to be parsed")
+    parse_folder(select_folder_and_get_path(), dbc_file=dbc_file)
+    logging.info("Finished CSV to CSV parsing.")
+    logging.info("Beginning CSV to MAT parsing...")
+    create_mat()
+    logging.info("Finished CSV to MAT parsing.")
+    logging.info("SUCCESS: Parsing Complete.")
+    input("press enter to exit")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description='KSU Motorsports parser! \nThese args configure how the parser is run')
+    parser.add_argument('--getdbc' ,type=bool, help='True if you want to download the latest dbc.')
+
+    args = parser.parse_args()
+    main(args)

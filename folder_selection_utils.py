@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog
-
+import parser_logger,logging
 def select_folder_and_get_path():
     root = tk.Tk()
     root.withdraw()  # Hide the main window
@@ -8,10 +8,10 @@ def select_folder_and_get_path():
     folder_path = filedialog.askdirectory()
     
     if folder_path:
-        print(f"Selected folder path: {folder_path}")
+        logging.info(f"Selected folder path: {folder_path}")
         return folder_path
     else:
-        print("No folder selected")
+        logging.error("No folder selected")
         return None
 
 # # Call the method to select a folder and get its path
