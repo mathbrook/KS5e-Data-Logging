@@ -44,6 +44,7 @@ jobs:
     - name: check what files we cooked up
       run: |
         ls -R
+        cp -r ./test ./dist
 
 
 
@@ -64,8 +65,7 @@ jobs:
         path: |
           ./build/*
           ./dist/*
-          ./test/*.csv
-          
+
   test-bin:
     needs: build
     runs-on: ubuntu-latest

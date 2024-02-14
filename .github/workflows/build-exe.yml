@@ -49,6 +49,10 @@ jobs:
     - name: run pyinstaller
       run: |
         pyinstaller --onefile ./parser_exe.py
+    - name: copy test into dist folder
+      run: |
+        ls -r
+        xcopy "./test" "./dist" /E
 
     - name: release-downloader
       uses: robinraju/release-downloader@v1.8
@@ -67,7 +71,6 @@ jobs:
         path: |
           ./dist/*
           ./build/*
-          ./test/*.csv
 
   test-exe:
     needs: build
