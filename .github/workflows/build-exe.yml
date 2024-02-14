@@ -53,7 +53,8 @@ jobs:
     - name: copy test into dist folder
       run: |
         ls -r
-        xcopy ".\test" ".\dist" /E
+        mkdir .\dist\test
+        xcopy ".\test" ".\dist\test" /E
 
     - name: release-downloader
       uses: robinraju/release-downloader@v1.8
