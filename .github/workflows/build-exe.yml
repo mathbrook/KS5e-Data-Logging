@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: checkout code
@@ -40,11 +40,15 @@ jobs:
     # - name: check what files we cooked up
     #   run: |
     #     ls -R
-        
+    - name: install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip freeze
+
     - name: run pyinstaller
-      uses: mathbrook/pyinstaller-action-windows@python310
-      with:
-        path: .
+      run: |
+        pyinstaller --onefile ./parser_exe.py
 
     - name: release-downloader
       uses: robinraju/release-downloader@v1.8
@@ -54,14 +58,16 @@ jobs:
         latest: true
         fileName: "*.dbc"
         out-file-path: |
-          ./dist/windows/parser_exe/dbc-files/
+          ./dist/dbc-files/
 
     - name: upload artifacts
       uses: actions/upload-artifact@v2
       with:
         name: parser-exe-windows
         path: |
-          ./dist/windows/*
+          ./dist/*
+          ./build/*
+
   test-exe:
     needs: build
     runs-on: windows-latest
@@ -75,10 +81,9 @@ jobs:
         run: |
           ls -r
           cd parser-exe-download
-          cd parser_exe
-          ls
+          cd dist
           echo "trying to run"
-          .\parser_exe.exe
+          .\parser_exe.exe --getdbc True --test True
           
 
     # - uses: actions/upload-artifact@v2

@@ -324,7 +324,7 @@ def parse_folder(input_path, dbc_file: cantools.db.Database):
     logging.info("Selected path is: " + str(newpath))
     os.chdir(newpath)
     logging.info("Current path is: " + os.getcwd())
-
+    newpath = os.getcwd()
     # Creates Parsed_Data folder if not there.
     if not os.path.exists("temp-parsed-data"):
         logging.info("created 'temp-parsed-data' folder")

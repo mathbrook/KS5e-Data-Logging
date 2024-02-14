@@ -75,15 +75,9 @@ jobs:
           path: parser-exe-download
       - name: run exe
         run: |
-          ls -R
-          echo "before first cd"
           cd parser-exe-download
-          echo "after first cd"
-          ls -R
           cd dist
-          echo "after third CD"
-          ls -R
           chmod u+x ./parser_exe
-          ./parser_exe
+          ./parser_exe --getdbc True --test True
           
         

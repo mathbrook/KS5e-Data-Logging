@@ -26,7 +26,12 @@ def main(args):
             logging.error("'dbc-files' folder was not found or failed to load dbcs.")
             logging.error("please select the folder with dbc files to use for parsing...")
             while True:
-                dbc_files_path = select_folder_and_get_path()
+                try:
+                    dbc_files_path = select_folder_and_get_path()
+                except:
+                    logging.critical("could not open tkinter prompt to select folder")
+                    logging.critical("please get your dbc files in 'dbc-files' then try to run the program again")
+                    break
                 for file_name in os.listdir(dbc_files_path):
                     if file_name.endswith(".dbc"):
                         logging.info(f"Found DBC file: {file_name}")
@@ -49,20 +54,32 @@ def main(args):
                 dbc_files_folder_good = False
 
     logging.info("Beginning CSV to CSV parsing...")
-    logging.info("Select a folder which contains the raw logs to be parsed")
-    parse_folder(select_folder_and_get_path(), dbc_file=dbc_file)
+    parsing_folder_path=None
+    if  not args.test:
+        logging.info("Select a folder which contains the raw logs to be parsed")
+        try:
+            parsing_folder_path = select_folder_and_get_path()
+        except:
+            logging.critical("could not open tkinter prompt to select folder")
+    elif args.test:
+        logging.info(f"Setting path to test due to 'test' arg being true: {args.test}")
+        parsing_folder_path='./test'
+    try:
+        parse_folder(parsing_folder_path, dbc_file=dbc_file)
+    except (TypeError,FileNotFoundError) as e:
+        logging.critical(f"Error ({e}) when trying to parse folder {parsing_folder_path} :(")
     logging.info("Finished CSV to CSV parsing.")
     logging.info("Beginning CSV to MAT parsing...")
     create_mat()
     logging.info("Finished CSV to MAT parsing.")
     logging.info("SUCCESS: Parsing Complete.")
-    input("press enter to exit")
+    time.sleep(3)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='KSU Motorsports parser! \nThese args configure how the parser is run')
     parser.add_argument('--getdbc' ,type=bool, help='True if you want to download the latest dbc.')
-
+    parser.add_argument('--test', type=bool,help='"True" will make the parser target the "test" directory for folders')
     args = parser.parse_args()
     main(args)
