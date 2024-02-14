@@ -64,3 +64,21 @@ jobs:
         path: |
           ./build/*
           ./dist/*
+  test-exe:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: parser-exe-linux
+          path: parser-exe-download
+      - name: run exe
+        run: |
+          ls -r
+          cd parser-exe-download
+          cd dist
+          chmod u+x parser_exe
+          parser_exe
+          
+        
