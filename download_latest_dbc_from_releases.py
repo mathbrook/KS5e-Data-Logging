@@ -19,7 +19,7 @@ def download_latest_release(repo_owner=repo_owner, repo_name=repo_name, download
     release_info = response.json()
     assets = release_info.get('assets', [])
     if not assets:
-        logging.error("No assets found for the latest release")
+        logging.warning("No assets found for the latest release")
         return
 
     # Download assets with the specified file extension
@@ -34,11 +34,11 @@ def download_latest_release(repo_owner=repo_owner, repo_name=repo_name, download
             with open(download_path, 'wb') as f:
                 asset_response = requests.get(asset_url)
                 f.write(asset_response.content)
-                print(asset['name'])
-            logging.info("test")
-            logging.info(f"printf test {9}")
+                logging.debug(f"asset['name] = {asset['name']}")
             logging.info(f"Downloaded asset '{asset['name']}' to: {download_path}")
-
+                                            
+if __name__ == "__main__":
+    download_latest_release()
 # Example usage
 
 # print(sys.executable)

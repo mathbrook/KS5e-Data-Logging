@@ -50,11 +50,11 @@ def get_dbc_files(path_name='dbc-files') -> cantools.db.Database:
                     file_count += 1
     except:
         logging.error('error: dbc scraping failed')
-        logging.error('get_dbc_files('+path_name+')')
+        logging.error('get_dbc_files('+str(path_name)+')')
         return None
 
     logging.info(f'Found {file_count} .dbc files in the dbc-files folder')
-    mega_dbc = cantools.database.Database()
+    mega_dbc = cantools.db.Database()
     for filename in file_path:
         with open(filename, 'r') as newdbc:
             try:
@@ -68,7 +68,7 @@ def get_dbc_files(path_name='dbc-files') -> cantools.db.Database:
             f"dbc successfully created with {len(mega_dbc.messages)} messages")
         return mega_dbc
     else:
-        logging.error(f"error: dbc was empty! it has no messages :(")
+        logging.warning(f"error: dbc was empty! it has no messages :(")
         return None
 
 
@@ -133,6 +133,16 @@ def parse_message_to_cantools_msg(id: int, data: bytearray, db: Database, decode
         return parsed_message
     except (cantools.db.DecodeError, KeyError) as e:
         logging.debug(f"{e}: Error decoding {id}")
+
+    # except (cantools.db.DecodeError) as e:
+    #     logging.error(f"{e}: Error decoding {id}")
+    #     logging.warning(f"going to remove {id} from database")
+    #     actual_message = db.get_message_by_frame_id(id)
+    #     print(db.messages)
+    #     index = (db.messages).index(actual_message)
+    #     print(index)
+    #     removed_message = db.messages.pop(index)
+    #     logging.warning(f"removed message: {removed_message.frame_id} {removed_message.name}")
     return "INVALID_ID"
 
 
@@ -209,26 +219,35 @@ def parse_file(filename, dbc: Database, dbc_ids: list):
     @return: N/A
     '''
     logging.info("start parsing: "+filename)
-    # Delete any lines that contain this blank glitchy CAN message of ID 0 and data 0
+    expected_columns = "time,msg.id,msg.len,data"
+    infile = open(filename, "r")
+    first_line = infile.readline().strip()    # Delete any lines that contain this blank glitchy CAN message of ID 0 and data 0
+    logging.debug(f"first line of {filename} = {first_line}")
+    if (first_line) != (expected_columns):
+        raise ValueError("columns in the CSV file do not match the expected format.")
     # Replace with the specified string to be removed
     specified_string = ',0,8,0000000000000000'
     # delete_lines_containing_string(filename,specified_string)
 
-    # Array to keep track of IDs we can't parse
-
-    # Array to keep track of IDs we CAN parse
     dbc_ids = dbc_ids
+    
     ids_used_in_log = parse_ids_used_in_log(filename, dbc)
     header_list = ids_used_in_log[0]
     unknown_ids = ids_used_in_log[1]
     # Miscellaneous shit lol
     nextline = [""] * len(header_list)
     header_string = ",".join(header_list)
-
-    infile = open(filename, "r")
-    outfile = open("temp-parsed-data/" + filename, "w")
-    outfile2 = open("parsed-data/parsed" + filename, "w")
-
+    try:
+        outfile = open("temp-parsed-data/" + filename, "w")
+    except PermissionError as e:
+        logging.error(f"could not open {'temp-parsed-data/' + filename} to write, {e}")
+        raise e
+    try:  
+        outfile2 = open("parsed-data/parsed" + filename, "w")
+    except PermissionError as e:
+        logging.error(f"could not open {'parsed-data/parsed' + filename} to write, {e}")
+        raise e
+        
     flag_second_line = True
     flag_first_line = True
     last_time = ''
@@ -321,17 +340,17 @@ def parse_folder(input_path, dbc_file: cantools.db.Database):
     @return: N/A
     '''
     newpath = input_path
-    logging.info("Selected path is: " + str(newpath))
+    logging.debug("Selected path is: " + str(newpath))
     os.chdir(newpath)
-    logging.info("Current path is: " + os.getcwd())
+    logging.debug("Current path is: " + os.getcwd())
     newpath = os.getcwd()
     # Creates Parsed_Data folder if not there.
     if not os.path.exists("temp-parsed-data"):
-        logging.info("created 'temp-parsed-data' folder")
+        logging.debug("created 'temp-parsed-data' folder")
         os.makedirs("temp-parsed-data")
         # Creates Parsed_Data folder if not there.
     if not os.path.exists("parsed-data"):
-        logging.info("created 'parsed-data' folder")
+        logging.debug("created 'parsed-data' folder")
         os.makedirs("parsed-data")
     # Generate the main DBC file object for parsing
     dbc_file = dbc_file
@@ -341,14 +360,16 @@ def parse_folder(input_path, dbc_file: cantools.db.Database):
         filename = os.fsdecode(file)
         if filename.endswith(".CSV") or filename.endswith(".csv"):
             start_time = time.time()
-            parsed_file_stats = parse_file(filename, dbc_file, dbc_ids)
-            length = parsed_file_stats["length"]
-            logging.info(
-                f"Successfully parsed: {filename} with {length} lines")
-            end_time = time.time()
-            logging.info(f"In {end_time-start_time} seconds")
+            try:
+                parsed_file_stats = parse_file(filename, dbc_file, dbc_ids)
+                length = parsed_file_stats["length"]
+                end_time = time.time()
+                logging.info(
+                    f"Successfully parsed: {filename} with {length} lines in {end_time-start_time} seconds")
+            except (ValueError,PermissionError) as e:
+                logging.error(f"attemp to parse {filename} raised error {e}")
         else:
-            logging.warning("Skipped " + filename +
+            logging.debug("Skipped " + filename +
                             " because it does not end in .csv")
             continue
 
@@ -391,8 +412,9 @@ def read_files(folder):
                     file_path.append(fp)
                     file_count += 1
     except:
-        logging.critical('error: Process failed at step 1.')
-        input("press enter to exit")
+        logging.error('error: Process failed at step 1.')
+        logging.warning('exiting in 3 seconds...')
+        time.sleep(3)
         sys.exit(0)
 
     logging.info('Step 1: found ' + str(file_count) +
@@ -413,10 +435,8 @@ def create_dataframe(files=[]):
             df = pd.read_csv(f)
             df_list.append(df)
     except:
-        logging.critical('error: Process failed at step 2.')
-        input("press enter to exit")
-        sys.exit(0)
-
+        logging.error('error: Process failed at step 2.')
+        
     logging.info('Step 2: created dataframes')
 
     return df_list
@@ -460,8 +480,9 @@ def get_time_elapsed(frames=[]):
                                     "was skipped in elapsed time calculation.")
                 continue
     except:
-        logging.critical('error: Process failed at step 3.')
-        input("press enter to exit")
+        logging.error('error: Process failed at step 3.')
+        logging.error('exiting in 3 seconds...')
+        time.sleep(3)
         sys.exit(0)
 
     logging.info('Step 3: calculated elapsed time')
@@ -520,8 +541,9 @@ def create_struct(frames=[]):
                         same_time_count[label] = 1
 
     except:
-        logging.critical('error: Process failed at step 4.')
-        input("press enter to exit")
+        logging.error('error: Process failed at step 4.')
+        logging.warning('exiting in 3 seconds...')
+        time.sleep(3)
         sys.exit(0)
 
     logging.info('Step 4: created struct')
@@ -556,5 +578,7 @@ def create_mat():
         savemat('parsed-data/output.mat',
                 {'S': struct2}, long_field_names=True)
         logging.info('Saved struct in output.mat file.')
+        return True
     except:
-        logging.critical('error: Failed to create .mat file')
+        logging.error('error: Failed to create .mat file')
+        return False
