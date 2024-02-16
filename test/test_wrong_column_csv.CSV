@@ -1,0 +1,7 @@
+time,id,message,label,value,unit
+2023-10-24T22:21:09.595Z,0xC0,M192_Command_Message,Torque_Command,0.0,Nm
+2023-10-24T22:21:09.595Z,0xC0,M192_Command_Message,Speed_Command,0,rpm
+2023-10-24T22:21:09.595Z,0xC0,M192_Command_Message,Direction_Command,1,Bit
+2023-10-24T22:21:09.595Z,0xC0,M192_Command_Message,Inverter_Enable,0,Bit
+2023-10-24T22:21:09.595Z,0xC0,M192_Command_Message,Inverter_Discharge,1,Bit
+2023-10-24T22:21:09.595Z,0xC0,M192_Command_Message,Speed_Mode_Enable,0,Bit

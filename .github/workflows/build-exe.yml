@@ -1,0 +1,100 @@
+name: build and run windows executable
+
+on:
+  push:
+    branches: "main"
+  pull_request:
+    branches: "main"
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+      
+    # - name: Get current date and time
+    #   id: date
+    #   run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H_%M_%S')"
+    # - name: Release
+    #   uses: softprops/action-gh-release@v1
+    #   with:
+    #     tag_name: ${{ github.ref_name }}-${{ steps.date.outputs.date }} 
+    #     files: ./*
+        
+    # - name: Set up Python
+    #   uses: actions/setup-python@v2
+    #   with:
+    #     python-version: '3.8'  # Replace '3.x' with your Python version
+        
+    # - name: install dependencies
+    #   run: |
+    #     python -m pip install --upgrade pip
+    #     pip install -r requirements.txt
+        
+    # - name: run pyinstaller
+    #   run: |
+    #     pyinstaller --onefile ./parser_exe.py
+    # - name: check what files we cooked up
+    #   run: |
+    #     ls -R
+    - name: install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip freeze
+
+    - name: run pyinstaller
+      run: |
+        pyinstaller --onefile ./parser_exe.py
+
+    - name: copy test into dist folder
+      run: |
+        ls -r
+        mkdir .\dist\test
+        xcopy ".\test" ".\dist\test" /E
+
+    - name: release-downloader
+      uses: robinraju/release-downloader@v1.8
+      with:
+        repository:
+          KSU-MS/ksu-ms-dbc
+        latest: true
+        fileName: "*.dbc"
+        out-file-path: |
+          ./dist/dbc-files/
+
+    - name: upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: parser-exe-windows
+        path: |
+          ./dist/*
+          ./build/*
+
+  test-exe:
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: parser-exe-windows
+          path: parser-exe-download
+      - name: run executable # watch the - and _ here lol
+        run: |
+          ls -r
+          cd parser-exe-download
+          cd dist
+          .\parser_exe.exe -h
+          .\parser_exe.exe --getdbc --test -v
+         
+
+    # - uses: actions/upload-artifact@v2
+    #   with:
+    #     name: parser-exe-linux
+    #     path: |
+    #       ./build/*
+    #       ./dist/parser_exe
