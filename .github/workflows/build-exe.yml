@@ -83,13 +83,11 @@ jobs:
         with:
           name: parser-exe-windows
           path: parser-exe-download
-      - name: go to exe path # watch the - and _ here lol
+      - name: run executable # watch the - and _ here lol
         run: |
           ls -r
           cd parser-exe-download
           cd dist
-      - name: run executable
-        run: |
           .\parser_exe.exe -h
           .\parser_exe.exe --getdbc --test -v
          
