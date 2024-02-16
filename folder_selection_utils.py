@@ -3,6 +3,7 @@ from tkinter import filedialog
 import parser_logger,logging
 def select_folder_and_get_path():
     root = tk.Tk()
+    root.attributes("-topmost", True)
     root.withdraw()  # Hide the main window
 
     folder_path = filedialog.askdirectory()
@@ -17,7 +18,7 @@ def select_folder_and_get_path():
 def select_folder_and_get_path_dbc():
     root = tk.Tk()
     root.withdraw()  # Hide the main window
-
+    root.attributes("-topmost", True)
     folder_path = filedialog.askdirectory()
     
     if folder_path:

@@ -74,9 +74,10 @@ def main(args):
         parsing_folder_path='./test'
     try:
         parse_folder(parsing_folder_path, dbc_file=dbc_file)
+        logging.info("Finished CSV to CSV parsing.")
     except (TypeError,FileNotFoundError) as e:
         logging.error(f"Error ({type(e)}-{e}) when trying to parse folder {parsing_folder_path} :(")
-    logging.info("Finished CSV to CSV parsing.")
+        logging.warning("Parsing folder step failed")
     logging.info("Beginning CSV to MAT parsing...")
     create_mat_success = create_mat()
     if create_mat_success:
@@ -84,7 +85,7 @@ def main(args):
     elif not create_mat_success:
         logging.warning("CSV to MAT parsing step failed")
         
-    logging.info("SUCCESS: Parsing Complete.")
+    logging.info("Parsing Complete.")
     logging.info('Program exiting in 3 seconds...')
     time.sleep(3)
 
