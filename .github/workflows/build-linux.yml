@@ -75,11 +75,14 @@ jobs:
         with:
           name: parser-exe-linux
           path: parser-exe-download
-      - name: run exe
+      - name: go to exe path
         run: |
           cd parser-exe-download
           cd dist
           chmod u+x ./parser_exe
-          ./parser_exe --getdbc True --test True
+      - name: run executable
+        run: |
+          ./parser_exe -h
+          ./parser_exe --getdbc --test -v
           
         
