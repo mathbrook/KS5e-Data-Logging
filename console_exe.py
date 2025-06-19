@@ -11,13 +11,12 @@ import threading
 from os import path
 from enum import Enum
 from datetime import datetime
-import paho.mqtt.client as mqtt
 import itertools
 import binascii
 import struct
 import sys
 import argparse
-import serial
+from serial import Serial
 import glob
 from parser_api import *
 from decimal import Decimal
@@ -30,6 +29,45 @@ parser.add_argument('--title_size', '-ts', action='store', default='14', require
 parser.add_argument('--body_size', '-bs', action='store', default='10', required=False, help='Body font size')
 
 args = parser.parse_args()
+
+def telem_parse_message(id, data, db):
+    labels=[]
+    values=[]
+    units=[]
+    try:
+        actual_message = db.get_message_by_frame_id(int(id,16))
+        for signal in actual_message.signals:
+            units.append(str(signal.unit))
+        parsed_message = db.decode_message(int(id,16),bytearray.fromhex(data),decode_choices=False)
+        for i in parsed_message:
+            message_label = str(i)
+            labels.append(message_label)
+            values.append(str(round(parsed_message[i],3)))
+        message_name = actual_message.name
+        return [message_name,labels,values,units]
+    except:
+        return "INVALID_ID"
+def telem_parse_message_with_raw_bytes(id, data, db):
+    labels=[]
+    values=[]
+    units=[]
+    try:
+        # print("id for parse")
+        # print(id)
+        actual_message = db.get_message_by_frame_id(int.from_bytes(id,'little'))
+        for signal in actual_message.signals:
+            units.append(str(signal.unit))
+        # print("Data for decode")
+        # print(data)
+        parsed_message = db.decode_message(int.from_bytes(id,'little'),data,decode_choices=False)
+        for i in parsed_message:
+            message_label = str(i)
+            labels.append(message_label)
+            values.append(str(round(parsed_message[i],3)))
+        message_name = actual_message.name
+        return [message_name,labels,values,units]
+    except:
+        return "INVALID_ID"
 
 class ReadLine:
     def __init__(self, s):
@@ -248,13 +286,14 @@ def serial_ports():
         raise EnvironmentError('Unsupported platform')
 
     result = []
-    for port in ports:
-        try:
-            s = serial.Serial(port)
-            s.close()
-            result.append(port)
-        except (OSError, serial.SerialException):
-            pass
+    # print(ports)
+    # for port in ports:
+    #     try:
+    #         s = Serial(port)
+    #         s.close()
+    #         result.append(port)
+    #     except:
+    #         pass
     return result
 
 def user_prompt(prompt,options):
@@ -273,14 +312,14 @@ def user_prompt(prompt,options):
     return values[0]
 
 def read_from_teensy_thread(window, comport):
-    db = get_dbc_files()
-    dbc_ids = print_all_the_shit_in_dbc_file(db)
+    db = get_dbc_files('dbc-files')
+    dbc_ids = parse_ids_in_database(db)
     unknown_ids=[]
-    ser = serial.Serial()
-    ser.port = comport #Arduino serial port
-    ser.baudrate = 256000
-    ser.timeout = 10 #specify timeout when using readline()
-    ser.open()
+    ser = Serial(comport)
+    # ser.port = comport #Arduino serial port
+    ser.baudrate = 921600
+    ser.timeout = None #specify timeout when using readline()
+    # ser.open()
     rl=ReadLine(ser)
     if ser.is_open==True:
         print("\nAll right, serial port now open. Configuration:\n")
@@ -291,26 +330,37 @@ def read_from_teensy_thread(window, comport):
     while True:
         while (ser.in_waiting > 0):
             # print(ser.in_waiting)
-            line=ser.readline()
-            line=line.replace(b'\r\n',b'')
-            raw_id = (line.split(b',')[0]).decode()
-            raw_message = (line.split(b',')[1]).decode()
-            length = 8
-            # raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
-            # raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
-            table = parse_message(raw_id, raw_message,db,dbc_ids,unknown_ids)
-            #print(table)
-            if table != "INVALID_ID" and table != "UNPARSEABLE":
-                for i in range(len(table[1])):
-                    name = table[1][i]
-                    data = table[2][i]
-                    units = table[3][i]
-                    if name == "MCU_STATE":
-                        window.write_event_value("-MCU State Change-", [data.replace("_", " ")])
-                    elif recursive_lookup(name, DICT):
-                        #print("found a thing\n\tname: " + name + "\n\tdata: "+data + "\n\tunits: " + units)
-                        window.write_event_value("-Update Data-", [name, name.replace("_", " ") + ": " + str(data) + " " + units])
-                        handle_inverter_power(name, data, window)
+            line1=ser.read_until(b'\n')
+            # print(line1)
+            # print(line1[:-3])
+            # print(line1[0:1])
+            # print(line1[1:-3])
+            # for i in line1:
+            #     print(i)
+            # print(line1)
+            try:
+                raw_id = (line1[0:4])
+                raw_message = line1[4:-3]
+                length = 8
+                # raw_message = raw_message[:(int(length) * 2)] # Strip trailing end of line/file characters that may cause bad parsing
+                # raw_message = raw_message.zfill(16) # Sometimes messages come truncated if 0s on the left. Append 0s so field-width is 16.
+                # table = telem_parse_message(raw_id, raw_message,db)
+                table = telem_parse_message_with_raw_bytes(raw_id,raw_message,db)
+                #print(table)
+                if table != "INVALID_ID" and table != "UNPARSEABLE":
+                    for i in range(len(table[1])):
+                        name = table[1][i]
+                        data = table[2][i]
+                        units = table[3][i]
+                        print(name)
+                        if name == "VCU_STATUS":
+                            window.write_event_value("-MCU State Change-", [data.replace("_", " ")])
+                        elif recursive_lookup(name, DICT):
+                            #print("found a thing\n\tname: " + name + "\n\tdata: "+data + "\n\tunits: " + units)
+                            window.write_event_value("-Update Data-", [name, name.replace("_", " ") + ": " + str(data) + " " + units])
+                            handle_inverter_power(name, data, window)
+            except:
+                pass
 
 
 '''
@@ -320,8 +370,8 @@ def read_from_teensy_thread(window, comport):
 @param[in]: window - the PySimpleGUI window object
 '''
 def read_from_csv_thread(window):
-    db = get_dbc_files()
-    dbc_ids = print_all_the_shit_in_dbc_file(db)
+    db = get_dbc_files('dbc-files')
+    dbc_ids = parse_ids_in_database(db)
     unknown_ids=[]
     infile = open("raw_data.csv", "r")
     line_count =  1 # bypass first header line
@@ -329,7 +379,7 @@ def read_from_csv_thread(window):
     window.write_event_value("-Test Connection Success-", "good job!")
 
     while line_count < len(raw_data_lines):
-        print("Linecount: "+ str(line_count))
+        # print("Linecount: "+ str(line_count))
         raw_id = raw_data_lines[line_count].split(",")[1]
         length = raw_data_lines[line_count].split(",")[2]
         raw_message = raw_data_lines[line_count].split(",")[3]
@@ -342,7 +392,7 @@ def read_from_csv_thread(window):
                 name = table[1][i]
                 data = table[2][i]
                 units = table[3][i]
-                if name == "MCU_STATE":
+                if name == "VCU_STATUS":
                     window.write_event_value("-MCU State Change-", [data.replace("_", " ")])
                 elif recursive_lookup(name, DICT):
                     #print("found a thing\n\tname: " + name + "\n\tdata: "+data + "\n\tunits: " + units)
